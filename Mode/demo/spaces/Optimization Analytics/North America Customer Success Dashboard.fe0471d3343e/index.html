@@ -1,0 +1,244 @@
+<style>
+  #Sid {
+    color: red;
+  }
+</style>
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row" data-row-height="small">
+    <div class="col-md-3">
+      <mode-chart id="chart_4b2b569b7fcb" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_dfd77d6c2232" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_1459d0afcd07" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_88a5292e8ec2" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row" data-row-height="small">
+    <div class="col-md-3">
+      <mode-text id="text_c50a4307-f0b1-4ae4-9021-b222292f14aa" dataset="dataset" options="text_options">
+        <h2><br></h2>
+        <h2 id="Sid">New Customers</h2>
+        <p><br></p>
+      </mode-text>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_e1f4292ecf04" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_cc604aba9c4a" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_2e2038cd90c7" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row" data-row-height="small">
+    <div class="col-md-3">
+      <mode-text id="text_b978649e-0993-4ad0-8e49-6b457718908f" dataset="dataset" options="text_options">
+        <h2><br></h2>
+        <h2>Upsell</h2>
+        <p><br></p>
+      </mode-text>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_cc60888892cd" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_0c810699587c" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_f77369c06a74" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row" data-row-height="small">
+    <div class="col-md-3">
+      <mode-text id="text_1597f3e4-0c7c-4722-aaea-93d933bee683" dataset="dataset" options="text_options">
+        <h2><br></h2>
+        <h2>Downgrade</h2>
+        <p><br></p>
+      </mode-text>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_84e269ebd5e2" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_90435275237f" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_6412544d4587" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row" data-row-height="small">
+    <div class="col-md-3">
+      <mode-text id="text_24552d97-09cd-439e-e791-1adfbc9d4e71" dataset="dataset" options="text_options">
+        <h2><br></h2>
+        <h2>Churn</h2>
+        <p><br></p>
+      </mode-text>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_4a3eefa33d32" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_6b1b9456497c" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_69b8761471f7" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-6">
+      <mode-chart id="chart_9575a30c4008" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_4c4077966c0a" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+</div>
+<style>
+  .mode-bullet-chart,
+  .mode-funnel,
+  .mode-sunburst,
+  .mode-sunburst-sequence,
+  .mode-graphic-title {
+    background-color: white;
+  }
+
+  .mode-graphic-container {
+    margin: 1px !important;
+  }
+</style>
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+<script src="https://cdn.rawgit.com/mode/playbook/master/assets/leaflet-heatmap.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<div class="mode-header embed-hidden">
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-3">
+      <mode-chart id="chart_398cfbafa441" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_f2d1cef4c6ec" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_ff39ed1cd30c" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_d8d05f16b206" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-3">
+      <mode-chart id="chart_9df73eb2be83" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-9">
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-8">
+      <mode-chart id="chart_a52848fb0077" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_718557ff3bb6" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="bullet"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_3da81b1d7dd1" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_411b57c4f790" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div id="map"></div>
+  </div>
+  <script>
+    alamode.leafletMap({
+      html_element: "#map",
+      title: "Customers by Location",
+      height: 500,
+      lat_column: "lat",
+      lng_column: "long",
+      query_name: "Heat map",
+      center_lat: 39.5,
+      center_lng: -98.35,
+      starting_zoom: 5,
+      dot_size: .4,
+      dot_opacity: .7
+    })
+  </script>
+</div>
+<style>
+  #chart_5a90c55a023d .fb-content {
+    color: #00b200;
+  }
+</style>
+<style>
+  #chart_ac6f8fed80a7 .fb-content {
+    color: #00b200;
+  }
+</style>
+<style>
+  #chart_b70fe67a20b5 .fb-content {
+    color: #00b200;
+  }
+</style>
+<style>
+  #chart_566288e62c8e .fb-content {
+    color: #00b200;
+  }
+</style>
+<style>
+  #chart_2df025efcb17 .fb-content {
+    color: #00b200;
+  }
+</style>
+<style>
+  #chart_8f114c9383cc .fb-content {
+    color: #00b200;
+  }
+</style>
+<style>
+  #chart_0e5ea9cc8f80 .fb-content {
+    color: #e52d00;
+  }
+</style>
+<style>
+  #chart_750fa3bb65d4 .fb-content {
+    color: #e52d00;
+  }
+</style>
+<style>
+  #chart_6f830a1000b9 .fb-content {
+    color: #e52d00;
+  }
+</style>
+<style>
+  #chart_8e83557e5e44 .fb-content {
+    color: #e52d00;
+  }
+</style>
+<style>
+  #chart_075c467660df .fb-content {
+    color: #e52d00;
+  }
+</style>
+<style>
+  #chart_40b8c6ddefda .fb-content {
+    color: #e52d00;
+  }
+</style>

@@ -1,0 +1,65 @@
+<style>
+  .mode-graphic-title {
+    background-color: white;
+  }
+</style>
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="//cdn.rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <hr>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-4">
+      <mode-text id="text_abefc4bf-808c-4246-f531-3faa6a2b9700" dataset="dataset" options="text_options">
+        <p>Preliminary analysis shows:</p>
+        <ol>
+          <li>All returns are from the Southeast and West of the US.</li>
+          <li>The only product triggering this problem is Sport-100 Helmet.</li>
+        </ol>
+        <p><br></p>
+      </mode-text>
+    </div>
+    <div class="col-md-8">
+      <mode-chart id="chart_255d449f14c0" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-4">
+      <mode-text id="text_8d522308-6926-4cdf-944c-30156e279a71" dataset="dataset" options="text_options">
+        <p>Because of this sudden spike in returns, the forecast for the 'Sport-100' helmet does not look very encouraging for the next few weeks. </p>
+        <p><br></p>
+        <p>The sales team will need to take corrective measures and/or revise January goals for sales representatives in these two areas.</p>
+      </mode-text>
+    </div>
+    <div class="col-md-8">
+      <mode-python id="python_fe5a35ca7298" options="python_options"></mode-python>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-5">
+    </div>
+    <div class="col-md-7">
+      <mode-text id="text_fce29e7c-c776-465c-d07e-3b366a45d0a3" dataset="dataset" options="text_options">
+        <p><br></p>
+        <p><br></p>
+        <p>The word cloud for all product reviews in these regions shows that the wrong color seems to be the primary driver of order returns. We should expect an influx of calls to customer support reps in the affected areas.</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-python id="python_eac450a36b04" options="python_options"></mode-python>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-python id="python_e0a7b68385a4" options="python_options"></mode-python>
+    </div>
+  </div>
+</div>

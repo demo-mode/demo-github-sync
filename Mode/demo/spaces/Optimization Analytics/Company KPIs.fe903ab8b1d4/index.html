@@ -1,0 +1,101 @@
+<style>
+  .mode-bullet-chart,
+  .mode-funnel,
+  .mode-sunburst,
+  .mode-sunburst-sequence,
+  .mode-graphic-title {
+    background-color: white;
+  }
+
+  .mode-graphic-container {
+    margin: 1px !important;
+  }
+</style>
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+<script src="https://cdn.rawgit.com/mode/playbook/master/assets/leaflet-heatmap.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<div class="mode-header embed-hidden">
+
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_5c5fc83e-d2f0-49d8-8fc7-501e3b2cd7ea" dataset="dataset" options="text_options">
+        <h1>Company KPIs</h1>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <mode-chart id="chart_ae6f01c12c2a" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_d8dc55d2e49b" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_83a35b1d9038" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_9a1650859ba2" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_65dfd68c3618" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_7b84f0bbafd2" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-3">
+      <mode-chart id="chart_2e56547ba371" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-9">
+      <mode-python id="python_5d54e8d8e14d" options="python_options"></mode-python>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="bullet"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_41c03c18c207" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_330b9916e427" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div id="map"></div>
+  </div>
+  <script>
+    alamode.leafletMap({
+      html_element: "#map",
+      title: "Subscriber Growth",
+      height: 500,
+      lat_column: "lat",
+      lng_column: "long",
+      query_name: "Heat map",
+      center_lat: 39.5,
+      center_lng: -98.35,
+      starting_zoom: 5,
+      dot_size: .4,
+      dot_opacity: .7
+    })
+
+    alamode.bulletChart({
+      html_element: "#bullet",
+      color: "#113c55",
+      chart_width: 550,
+      left_pad: 75,
+      query_name: "Bullet",
+      title: "Region Performance: Sales ($100k)",
+      title_column: "region",
+      bar_column: "sales_16",
+      marker_column: "goal",
+      scale_columns: ["sales_14", "sales_15", "max"]
+    })
+  </script>
+</div>

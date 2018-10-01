@@ -1,0 +1,95 @@
+/* ===============================
+   External Styleshees & Web Fonts
+=============================== */
+/*Import a stylesheet*/
+/*@import url("https://raw.githubusercontent.com/foo/project/master/stylesheets/mode_reports.css");*/
+/* Use a web font */
+/*@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400');*/
+/* ===============================
+   Backgrounds
+=============================== */
+/* Report Background Color */
+body {
+  background-color: white;
+}
+/* Report Layout */
+.mode-grid.container {
+  background-color: white;
+  margin-bottom: 32px;
+}
+/* Chart Backgrounds */
+.mode-embed .mode-object.editor-chart {
+  background-color: rgb(244,244,248);
+  border: 1px solid rgb(231,231,231);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  &:hover {
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+  }
+}
+/* ===============================
+   Gutters
+=============================== */
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12 {
+  padding: 0;
+}
+.mode-embed .mode-object.editor-chart {
+  margin: 3px 2px;
+  border: 0;
+}
+/* ===============================
+   Fonts
+=============================== */
+/*Report title*/
+.mode-embed .mode-header h1 {
+  color: #53535C; /* $gray-800*/
+  margin-bottom: 0;
+}
+/*Report description*/
+.mode-embed .mode-header p {
+  color: #63656E; /* $gray-700*/
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+/* Titles */
+.mode-object.big-number .chart-title .in-place-edit-text, .embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+.editor-table .chart-header,
+.editor-chart .chart-header {
+  font-size: 18px;
+  font-weight: 400;
+}
+/* Descriptions */
+.mode-object .chart-title.chart-description .in-place-edit-text, .mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #C9CAD1; /* $gray-500*/
+}
+/* ===============================
+   Tooltips
+=============================== */
+/* Tooltip */
+div.nvtooltip.xy-tooltip {
+  border: none;
+  background-color: white;
+  color: #63656E; /* $gray-700*/
+}
+/* Legend color */
+td div {
+  border: none !important;
+  border-radius: 50%;
+}
+/*Correct font weight for bold*/
+/*.nvtooltip.xy-tooltip strong,*/
+/*td.value {*/
+/*  font-weight: 500 !important;*/
+/*}*/

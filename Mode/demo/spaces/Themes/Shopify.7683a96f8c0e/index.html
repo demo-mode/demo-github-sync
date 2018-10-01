@@ -1,0 +1,353 @@
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+
+<!--<script src="https://use.typekit.net/olj7tse.js"></script>-->
+<!--<script>-->
+<!--  try {-->
+<!--    Typekit.load({-->
+<!--      async: true-->
+<!--    });-->
+<!--  } catch (e) {}-->
+<!--</script>-->
+<style>
+  /* Define the "system" font family */
+
+  @font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 300;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+  }
+  /* Colors */
+
+   :root {
+    --subdued: #637381;
+    --purple: #9C6ADE;
+    --teal: #47C1BF;
+    --orange: #F49342;
+    --indigoDark: #202E78;
+    --inkLighter: #637381;
+    --pink: #FF6CC7;
+    --red: #ED6347;
+    --green: #50B83C;
+  }
+  /* CUSTOM FONT */
+  /*@font-face {*/
+  /*  font-family: 'Brandon Text Thin';*/
+  /*  font-weight: normal;*/
+  /*  font-style: normal;*/
+  /*  src: url(/v2/eot?YdioJGmBmVQgMkMCehvSFmkYb2r7ERKHuuNdFMVq2npXJ28Fpf05Bmp4NvHsF10nRe74hFs8TlgE3bfWpllL1dWMe1WfBMrtu0rpU65YdJ7M1qioEHfF2nkDCJVD8CRlEBFqC4nmAhqmXYWJGUJo8KlhgC9u19tIIveHN9e6KVVoaJtUmfeTjNJ4TR&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly8qL3YyL2VvdD9ZZGlvSkdtQm1WUWdNa01DZWh2U0Zta1liMnI3RVJLSHV1TmRGTVZxMm5wWEoyOEZwZjA1Qm1wNE52SHNGMTBuUmU3NGhGczhUbGdFM2JmV3BsbEwxZFdNZTFXZkJNcnR1MHJwVTY1WWRKN00xcWlvRUhmRjJua0RDSlZEOENSbEVCRnFDNG5tQWhxbVhZV0pHVUpvOEtsaGdDOXUxOXRJSXZlSE45ZTZLVlZvYUp0VW1mZVRqTko0VFIiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE0OTM1MTA0MDB9fX1dfQ__&Signature=D89JwBnT-r9Qi1SepMwCDDzcJYzOt6EizOLnRTnSf6KB1QNbOh~phrIoStvTCktyWarMjL~f5exnuIX19OQpsJTI9Z9dy80Yha0xz9FMFS2hDXqCzA7hbak0EEc-DbYHUBuarp-HNPqijBkvai9LNLmChMusUxtuI5FesOJ0PYnw-VPI0eHCT5gd5inUpBOd0QoEDTef4Eef9HpEaaeiHAwvnXEuRDBB~mB0l6fs8jHwBKkJ2fGvy992~uE-RE~ckhO5v347gWN3ZseWqRPIwJBHClIKfhXIJI-iTGCI8Awyq1IZRzcLcibl2pX5zsqOJfZB3kfRuylxJQt6HrW~7Q__&Key-Pair-Id=APKAJN6QFZEE4BZCL6XQ);src: url(/v2/eot?YdioJGmBmVQgMkMCehvSFmkYb2r7ERKHuuNdFMVq2npXJ28Fpf05Bmp4NvHsF10nRe74hFs8TlgE3bfWpllL1dWMe1WfBMrtu0rpU65YdJ7M1qioEHfF2nkDCJVD8CRlEBFqC4nmAhqmXYWJGUJo8KlhgC9u19tIIveHN9e6KVVoaJtUmfeTjNJ4TR&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly8qL3YyL2VvdD9ZZGlvSkdtQm1WUWdNa01DZWh2U0Zta1liMnI3RVJLSHV1TmRGTVZxMm5wWEoyOEZwZjA1Qm1wNE52SHNGMTBuUmU3NGhGczhUbGdFM2JmV3BsbEwxZFdNZTFXZkJNcnR1MHJwVTY1WWRKN00xcWlvRUhmRjJua0RDSlZEOENSbEVCRnFDNG5tQWhxbVhZV0pHVUpvOEtsaGdDOXUxOXRJSXZlSE45ZTZLVlZvYUp0VW1mZVRqTko0VFIiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE0OTM1MTA0MDB9fX1dfQ__&Signature=D89JwBnT-r9Qi1SepMwCDDzcJYzOt6EizOLnRTnSf6KB1QNbOh~phrIoStvTCktyWarMjL~f5exnuIX19OQpsJTI9Z9dy80Yha0xz9FMFS2hDXqCzA7hbak0EEc-DbYHUBuarp-HNPqijBkvai9LNLmChMusUxtuI5FesOJ0PYnw-VPI0eHCT5gd5inUpBOd0QoEDTef4Eef9HpEaaeiHAwvnXEuRDBB~mB0l6fs8jHwBKkJ2fGvy992~uE-RE~ckhO5v347gWN3ZseWqRPIwJBHClIKfhXIJI-iTGCI8Awyq1IZRzcLcibl2pX5zsqOJfZB3kfRuylxJQt6HrW~7Q__&Key-Pair-Id=APKAJN6QFZEE4BZCL6XQ#iefix) format('embedded-opentype'),url(/v2/woff2?Z3nR8FCaHmEOB7caH06NqHKkhE37UnrjHEPA2vmjbpJo5YPad0StkrirFosJoP8p9qAoqqfoVmqC9FFlla1YWe9rgIfHVHZFoR9UZ93nIWG0MR1g3UH16E5FUCY58CuEZK3UudPstaXsCFSa76AHcLbiNUhXnHB7a9Hm0SRs1fDHRn28OgZtlhoOLbQrA&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly8qL3YyL3dvZmYyP1ozblI4RkNhSG1FT0I3Y2FIMDZOcUhLa2hFMzdVbnJqSEVQQTJ2bWpicEpvNVlQYWQwU3RrcmlyRm9zSm9QOHA5cUFvcXFmb1ZtcUM5RkZsbGExWVdlOXJnSWZIVkhaRm9SOVVaOTNuSVdHME1SMWczVUgxNkU1RlVDWTU4Q3VFWkszVXVkUHN0YVhzQ0ZTYTc2QUhjTGJpTlVoWG5IQjdhOUhtMFNSczFmREhSbjI4T2dadGxob09MYlFyQSIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTQ5MzUxMDQwMH19fV19&Signature=cvKwJSBXCWk5uV57BbZRRZUYJRiVc10vQ4skasSUBmoukQrvBvhsM0LrIYFjJE4NmmUl0fMFLKv9~n4O7YCu79SQ5McBP5XJrns0if6Mlpnuiy1l~79ScKBpSg~lFPa-SsvzOWVUdPxujL4C4~TSbqIwEXnjWV7kmy5rBwKX9BdTum9xRi5EJgIJo1jSUgUM9n1cmq5S8ATtRzSZ8UlN9KuoZUsUQJ-I1UrfdiA5Q1qanXNsdWh5Lhcrfh7v-PhFP03cYMI2VmcDA5CoNAx9HQIJMzqJUzMpJvutIPnrqQAD2xYqRPuYsjXvpK6f8En8D93yGq16v3yViKbTm1FixA__&Key-Pair-Id=APKAJN6QFZEE4BZCL6XQ) format('woff2'),url(/v2/woff?1hum7sf2OAYlbGeKsgSvVpB8scg86F2AhKsTsjBeIWEC7hAtJ9dgLEoXdHtmMUo81C5rqC7MJgjbMvEkk5MFE85hDk22SuMSiV7fhahFXXLQCpg00Ja7QqGlpejK9GZqVAoBYaYiMAC8EDc3hKB95cReehnlpKPoh2YHY6ZS0o0BiLPhg5AiM5MEGQepA&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly8qL3YyL3dvZmY~MWh1bTdzZjJPQVlsYkdlS3NnU3ZWcEI4c2NnODZGMkFoS3NUc2pCZUlXRUM3aEF0SjlkZ0xFb1hkSHRtTVVvODFDNXJxQzdNSmdqYk12RWtrNU1GRTg1aERrMjJTdU1TaVY3ZmhhaEZYWExRQ3BnMDBKYTdRcUdscGVqSzlHWnFWQW9CWWFZaU1BQzhFRGMzaEtCOTVjUmVlaG5scEtQb2gyWUhZNlpTMG8wQmlMUGhnNUFpTTVNRUdRZXBBIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNDkzNTEwNDAwfX19XX0_&Signature=NfahWbY87YXPg8T1VmvUaNVdJFMC0eC10ylzd9N82i-0GPK4ATGb78cEGuE8b-IEzOQp~ifQ23R27shfyJ0ORimZa0bD-8FOZBOOwwOzZhOOmfUvPqb92o0R2hIuYABThQk5EszpMAMPEzUxY~vIYP6N4kDwXAswsogbg-yyuCsEnso42HNfuXw-zJIGhh9IuZkKLwM0gcaO4brAGHVdLojsaadXmvg6o7vNlezHR~7HrNX9eOP3nlqo~RxeXEbwFHO18UbAt38uHCv-Bqh-wglFkshV~Kdk1mu7pFmeclpwcdIvfYsT61-TN1dNGDjv14rZTUeCcZG3Y4-TqCMYDw__&Key-Pair-Id=APKAJN6QFZEE4BZCL6XQ) format('woff'),url(/v2/ttf?Gna77eXjfeTIA3fm9esYkCL58ClPSvlpcdquo6dVZhINKbm4TdPMLusRsWH2p8N10uJEYsAHhv7vLIo2Y2r7ITVCq9UElOa9K1JI7eqZG8sKcgrMWCc1NfGKXC3DCFm2719OmUUW39WUbU5MrOKenIgl9QJINVvce3YNA8vqHqcMcYYgpDbANhbkMlH&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly8qL3YyL3R0Zj9HbmE3N2VYamZlVElBM2ZtOWVzWWtDTDU4Q2xQU3ZscGNkcXVvNmRWWmhJTktibTRUZFBNTHVzUnNXSDJwOE4xMHVKRVlzQUhodjd2TElvMlkycjdJVFZDcTlVRWxPYTlLMUpJN2VxWkc4c0tjZ3JNV0NjMU5mR0tYQzNEQ0ZtMjcxOU9tVVVXMzlXVWJVNU1yT0tlbklnbDlRSklOVnZjZTNZTkE4dnFIcWNNY1lZZ3BEYkFOaGJrTWxIIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNDkzNTEwNDAwfX19XX0_&Signature=PR~biF1iaE5DTti5mE9oIqL7LsDdBF-y9vPInXmomDWhY5PDLtzUTkl8yjhix05hvDsiOSXQ-K2AnsZcWhZVPXn6BGlGMm2R8SZR88WZF4Tgx6mvciv4tNZzw9VcNW~MrZC9sqj~EI8PY1gURDn9MA2Pg1s~GZReVkHyFRcTewlKIoRFGBz10-tODJsjoqdqRf78yT-Q0SwzvwR9Kn6t8OJWlnRkCFCDboRKKOYTiKBPy2rpVtmME8h4c0n808rIKwGMZZ~HUqpBYKWpqizCIyutc4TLiQnb7thBudorA~EWXR6~MYuqzHyJ93UjTJlZ8v80KfXbc4YDy03VfyYP3Q__&Key-Pair-Id=APKAJN6QFZEE4BZCL6XQ) format('truetype');*/
+  /*}*/
+
+  body,
+  body.mode-embed.embed-preview,
+  .mode-embed .mode-object h2 {
+    background-color: #F9FAFB;
+    /* Sky lighter */
+    color: #212B35;
+    /* Ink */
+    font-family: "system";
+    font-style: normal;
+    font-weight: 400;
+    padding-bottom: 32px;
+  }
+  /* TEXT */
+
+  .ql-snow .ql-editor img {
+    width: 300px !important;
+    margin-bottom: 36px;
+  }
+  /*Report title*/
+
+  .mode-embed .mode-header h1 {
+    color: #212B35;
+    /* Ink */
+    font-family: "system";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500 !important;
+    line-height: 1.33;
+  }
+  /*Report Description*/
+
+  .mode-header p,
+  .mode-embed .mode-header p {
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 30.6px;
+    font-style: normal;
+    font-weight: 400;
+    color: #767676;
+  }
+  /* TEXT */
+  /* Container */
+
+  .ql-editor {
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  /* h2 */
+
+  .editor-chart.mode-object.text-block-container .ql-editor h2 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .row:nth-child(0n+6) {
+    padding-top: 36px;
+  }
+  /* MODE TEXT BLOCKS */
+  /* Text Dividers */
+
+  .mode-embed .mode-object h2 {
+    font-size: 42px;
+    line-height: 55.86px;
+    font-weight: 500;
+    letter-spacing: auto;
+  }
+  /* Chart Titles */
+
+  .mode-object.big-number .chart-title .in-place-edit-text,
+  .embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+  .editor-table .chart-header,
+  .editor-chart .chart-header {
+    font-size: 16px;
+    /*line-height: 24px;*/
+    font-weight: 500;
+    letter-spacing: auto;
+  }
+
+  .mode-object.big-number .chart-title .in-place-edit-text,
+  .embed-preview .mode-object.big-number .chart-title .in-place-edit-text {
+    height: 30px;
+  }
+  /*.chart-header {*/
+  /*    padding-top: 10px;*/
+  /*}*/
+  /* Big Number Descriptions */
+
+  .mode-object .chart-title.chart-description .in-place-edit-text,
+  .mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    letter-spacing: auto;
+    text-transform: uppercase;
+    color: var(--subdued);
+  }
+  /* Big Number */
+
+  span.fb-content {
+    color: var(--subdued);
+    font-weight: 400;
+    letter-spacing: auto;
+  }
+  /* Big Number Trend */
+
+  span.trend-value {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: auto;
+  }
+  /* Big Number Trends */
+
+  div.trend.trend-positive.color-scale-ggr::before {
+    border-bottom-color: var(--green);
+  }
+
+  .trend-positive .trend-value {
+    color: var(--green);
+  }
+
+  div.trend.trend-negative.color-scale-ggr::before {
+    border-top-color: var(--red);
+  }
+
+  .trend-negative .trend-value {
+    color: var(--red);
+  }
+  /* CHARTS */
+  /* Chart Background */
+
+  .editor-module.editor-chart.mode-object.editor-multi.ng-scope {
+    /*transition: all 0.2s ease;*/
+    /*background-color: #191925;*/
+  }
+  /* Chart Hover */
+
+  .editor-module.editor-chart.mode-object.editor-multi.ng-scope:hover {
+    /*background-color: hsl(240, 19%, 17%);*/
+  }
+  /* Axis Labels */
+
+  .mode-object .chart .xlabel,
+  .mode-object .chart .ylabel {
+    background: none;
+    color: var(--subdued);
+  }
+
+  .mode-object .chart .xlabel h4.ng-binding,
+  .mode-object .chart .ylabel h4.ng-binding {
+    color: var(--subdued);
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: auto;
+  }
+  /* Tick Labels */
+
+  .chart-svg .nv-x text,
+  .chart-svg .nv-y text {
+    color: var(--subdued);
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: auto;
+  }
+  /* Y Ticks */
+
+  .chart-svg .nv-y line {
+    stroke: #F4F6F8;
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+  /* Legend Labels */
+
+  text.nv-legend-text {
+    color: var(--subdued) !important;
+  }
+  /* Bars */
+
+  .nvd3 .nv-multibar .nv-groups rect,
+  .nvd3 .nv-multibarHorizontal .nv-groups rect,
+  .nvd3 .nv-candlestickBar .nv-ticks rect,
+  .nvd3 .nv-discretebar .nv-groups rect,
+  .nv-linePlusBar .nv-bars rect {
+    fill-opacity: 1;
+  }
+
+  .nvd3 .nv-multibar .nv-groups rect:hover,
+  .nvd3 .nv-multibarHorizontal .nv-groups rect:hover,
+  .nvd3 .nv-candlestickBar .nv-ticks rect:hover,
+  .nvd3 .nv-discretebar .nv-groups rect:hover {
+    fill-opacity: 0.6;
+  }
+
+  .nv-point-paths {
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+  /* TOOLTIPS */
+  /* Tooltip */
+
+  div.nvtooltip.xy-tooltip {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.98);
+    colorcolor: #808284;
+  }
+  /* Legend color */
+
+  td div {
+    border: none !important;
+    border-radius: 50%;
+  }
+  /* Correct font weight for bold */
+
+  .nvtooltip.xy-tooltip strong,
+  td.value {
+    font-weight: 400 !important;
+  }
+  /* TEXT */
+  /* Container */
+
+  .ql-editor {
+    padding: 0;
+  }
+  /* h2 */
+
+  .editor-chart.mode-object.text-block-container .ql-editor h2 {
+    margin-bottom: 0;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 400;
+    letter-spacing: auto;
+  }
+</style>
+<div class="mode-grid container">
+  <div class="row">
+    <img style="float:right; height:50px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTAwIDE0Mi44IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MDAgMTQyLjgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGZpbGw9IiM5NUJGNDciIGQ9Ik0xMDcuNCwyNy4yYy0wLjEtMC43LTAuNy0xLjEtMS4yLTEuMWMtMC41LDAtMTEuMi0wLjgtMTEuMi0wLjhzLTcuNC03LjQtOC4zLTguMmMtMC44LTAuOC0yLjQtMC42LTMtMC40DQoJCQljLTAuMSwwLTEuNiwwLjUtNC4yLDEuM0M3NywxMC43LDcyLjYsNC4xLDY0LjksNC4xYy0wLjIsMC0wLjQsMC0wLjcsMEM2Mi4xLDEuMyw1OS4zLDAsNTcsMEMzOSwwLDMwLjQsMjIuNSwyNy43LDMzLjkNCgkJCWMtNywyLjItMTIsMy43LTEyLjYsMy45Yy0zLjksMS4yLTQsMS4zLTQuNSw1QzEwLjIsNDUuNiwwLDEyNC42LDAsMTI0LjZsNzkuNSwxNC45bDQzLjEtOS4zQzEyMi42LDEzMC4xLDEwNy41LDI3LjksMTA3LjQsMjcuMnoNCgkJCSBNNzUuMSwxOS4yYy0yLDAuNi00LjMsMS4zLTYuNywyLjFjMC0wLjUsMC0wLjksMC0xLjVjMC00LjQtMC42LTgtMS42LTEwLjlDNzAuOCw5LjUsNzMuNCwxNCw3NS4xLDE5LjJ6IE02MS44LDkuOQ0KCQkJYzEuMSwyLjgsMS44LDYuNywxLjgsMTIuMWMwLDAuMywwLDAuNSwwLDAuOGMtNC40LDEuNC05LjEsMi44LTEzLjksNC4zQzUyLjQsMTYuOCw1Ny41LDExLjgsNjEuOCw5Ljl6IE01Ni41LDQuOA0KCQkJYzAuOCwwLDEuNiwwLjMsMi4zLDAuOEM1Myw4LjMsNDYuOSwxNS4xLDQ0LjMsMjguOGMtMy44LDEuMi03LjUsMi4zLTExLDMuNEMzNi4zLDIxLjgsNDMuNiw0LjgsNTYuNSw0Ljh6Ii8+DQoJCTxwYXRoIGZpbGw9IiM1RThFM0UiIGQ9Ik0xMDYuMiwyNmMtMC41LDAtMTEuMi0wLjgtMTEuMi0wLjhzLTcuNC03LjQtOC4zLTguMmMtMC4zLTAuMy0wLjctMC41LTEuMS0wLjVsLTYsMTIzbDQzLjEtOS4zDQoJCQljMCwwLTE1LjEtMTAyLjMtMTUuMi0xMDNDMTA3LjMsMjYuNSwxMDYuNywyNi4xLDEwNi4yLDI2eiIvPg0KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNjQuOSw0OS44bC01LjMsMTUuOGMwLDAtNC43LTIuNS0xMC40LTIuNWMtOC40LDAtOC44LDUuMy04LjgsNi42YzAsNy4yLDE4LjgsMTAsMTguOCwyNi45DQoJCQljMCwxMy4zLTguNCwyMS45LTE5LjgsMjEuOWMtMTMuNywwLTIwLjYtOC41LTIwLjYtOC41bDMuNy0xMi4xYzAsMCw3LjIsNi4yLDEzLjIsNi4yYzQsMCw1LjYtMy4xLDUuNi01LjQNCgkJCWMwLTkuNC0xNS40LTkuOC0xNS40LTI1LjNjMC0xMyw5LjMtMjUuNiwyOC4yLTI1LjZDNjEuMyw0Ny43LDY0LjksNDkuOCw2NC45LDQ5Ljh6Ii8+DQoJPC9nPg0KCTxwYXRoIGlkPSJzIiBkPSJNMTcyLjksNzkuNWMtNC4zLTIuMy02LjUtNC4zLTYuNS03YzAtMy40LDMuMS01LjYsNy45LTUuNmM1LjYsMCwxMC42LDIuMywxMC42LDIuM2wzLjktMTJjMCwwLTMuNi0yLjgtMTQuMi0yLjgNCgkJYy0xNC44LDAtMjUuMSw4LjUtMjUuMSwyMC40YzAsNi44LDQuOCwxMS45LDExLjIsMTUuNmM1LjIsMi45LDcsNSw3LDguMWMwLDMuMi0yLjYsNS44LTcuNCw1LjhjLTcuMSwwLTEzLjktMy43LTEzLjktMy43bC00LjIsMTINCgkJYzAsMCw2LjIsNC4yLDE2LjcsNC4yYzE1LjIsMCwyNi4yLTcuNSwyNi4yLTIxQzE4NSw4OC40LDE3OS41LDgzLjMsMTcyLjksNzkuNXoiLz4NCgk8cGF0aCBpZD0iaCIgZD0iTTIzMy41LDU0LjJjLTcuNSwwLTEzLjQsMy42LTE3LjksOWwtMC4yLTAuMWw2LjUtMzRoLTE2LjlsLTE2LjUsODYuNmgxNi45bDUuNi0yOS42YzIuMi0xMS4yLDgtMTguMSwxMy40LTE4LjENCgkJYzMuOCwwLDUuMywyLjYsNS4zLDYuM2MwLDIuMy0wLjIsNS4yLTAuNyw3LjVsLTYuNCwzMy45aDE2LjlsNi42LTM1YzAuNy0zLjcsMS4yLTguMSwxLjItMTEuMUMyNDcuNCw1OS45LDI0Mi40LDU0LjIsMjMzLjUsNTQuMnoiDQoJCS8+DQoJPHBhdGggaWQ9Im8iIGQ9Ik0yODUuNyw1NC4yYy0yMC40LDAtMzMuOSwxOC40LTMzLjksMzguOWMwLDEzLjEsOC4xLDIzLjcsMjMuMywyMy43YzIwLDAsMzMuNS0xNy45LDMzLjUtMzguOQ0KCQlDMzA4LjcsNjUuNywzMDEuNiw1NC4yLDI4NS43LDU0LjJ6IE0yNzcuNCwxMDMuOGMtNS44LDAtOC4yLTQuOS04LjItMTEuMWMwLTkuNyw1LTI1LjUsMTQuMi0yNS41YzYsMCw4LDUuMiw4LDEwLjINCgkJQzI5MS40LDg3LjgsMjg2LjMsMTAzLjgsMjc3LjQsMTAzLjh6Ii8+DQoJPHBhdGggaWQ9InAiIGQ9Ik0zNTIsNTQuMmMtMTEuNCwwLTE3LjksMTAuMS0xNy45LDEwLjFoLTAuMmwxLTkuMWgtMTVjLTAuNyw2LjEtMi4xLDE1LjUtMy40LDIyLjVsLTExLjgsNjJoMTYuOWw0LjctMjUuMWgwLjQNCgkJYzAsMCwzLjUsMi4yLDkuOSwyLjJjMTkuOSwwLDMyLjktMjAuNCwzMi45LTQxQzM2OS41LDY0LjQsMzY0LjQsNTQuMiwzNTIsNTQuMnogTTMzNS44LDEwNGMtNC40LDAtNy0yLjUtNy0yLjVsMi44LTE1LjgNCgkJYzItMTAuNiw3LjUtMTcuNiwxMy40LTE3LjZjNS4yLDAsNi44LDQuOCw2LjgsOS4zQzM1MS44LDg4LjQsMzQ1LjMsMTA0LDMzNS44LDEwNHoiLz4NCgk8cGF0aCBpZD0iZG90IiBkPSJNMzkzLjcsMjkuOWMtNS40LDAtOS43LDQuMy05LjcsOS44YzAsNSwzLjIsOC41LDgsOC41aDAuMmM1LjMsMCw5LjgtMy42LDkuOS05LjgNCgkJQzQwMi4xLDMzLjQsMzk4LjgsMjkuOSwzOTMuNywyOS45eiIvPg0KCTxwb2x5Z29uIGlkPSJpIiBwb2ludHM9IjM3MCwxMTUuNiAzODYuOSwxMTUuNiAzOTguNCw1NS41IDM4MS40LDU1LjUgCSIvPg0KCTxwYXRoIGlkPSJmIiBkPSJNNDQxLjUsNTUuNGgtMTEuOGwwLjYtMi44YzEtNS44LDQuNC0xMC45LDEwLjEtMTAuOWMzLDAsNS40LDAuOSw1LjQsMC45bDMuMy0xMy4zYzAsMC0yLjktMS41LTkuMi0xLjUNCgkJYy02LDAtMTIsMS43LTE2LjYsNS42Yy01LjgsNC45LTguNSwxMi05LjgsMTkuMmwtMC41LDIuOGgtNy45bC0yLjUsMTIuOGg3LjlsLTksNDcuNGgxNi45bDktNDcuNGgxMS43TDQ0MS41LDU1LjR6Ii8+DQoJPHBhdGggaWQ9InkiIGQ9Ik00ODIuMyw1NS41YzAsMC0xMC42LDI2LjctMTUuMyw0MS4zaC0wLjJjLTAuMy00LjctNC4yLTQxLjMtNC4yLTQxLjNoLTE3LjhsMTAuMiw1NS4xYzAuMiwxLjIsMC4xLDItMC40LDIuOA0KCQljLTIsMy44LTUuMyw3LjUtOS4yLDEwLjJjLTMuMiwyLjMtNi44LDMuOC05LjYsNC44bDQuNywxNC40YzMuNC0wLjcsMTAuNi0zLjYsMTYuNi05LjJjNy43LTcuMiwxNC45LTE4LjQsMjIuMi0zMy42TDUwMCw1NS41DQoJCUg0ODIuM3oiLz4NCjwvZz4NCjwvc3ZnPg0K">
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_dceb45a1-3629-4574-86fe-ed2f1da557dd" dataset="dataset" options="text_options">
+        <h2>Sales Performance</h2>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <mode-chart id="chart_80a735a936c4" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_de3691d118f9" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_b2a2da530144" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_755f0d91a011" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_a3042acd79e6" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_b30bd2633973" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_3045aa51b714" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_bede39d2-2e11-4970-f60b-505a3af9b1cb" dataset="dataset" options="text_options" class="">
+        <h2>Marketing Performance</h2>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_7d29115d4eee" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_d6a374afae47" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <mode-chart id="chart_738516ce2ee7" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_a91c9a2d75bc" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+</div>
+
+<!-- Custom chart colors -->
+<script>
+  alamode.customChartColors({
+    charts: ["chart_b30bd2633973", "chart_a3042acd79e6", "chart_3045aa51b714", "chart_738516ce2ee7", "chart_a91c9a2d75bc"],
+    colors: {
+      0: "#9C6ADE",
+      1: "#47C1BF",
+      2: "#F49342",
+      3: "#202E78",
+      4: "#637381",
+      5: "#FF6CC7"
+    }
+  })
+</script>

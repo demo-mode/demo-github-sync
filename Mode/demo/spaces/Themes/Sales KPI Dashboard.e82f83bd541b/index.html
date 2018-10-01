@@ -1,0 +1,287 @@
+<style>
+  /* Background color */
+
+  body,
+  body.mode-embed.embed-preview {
+    background-color: #393945;
+  }
+  /* Chart background */
+
+  .mode-embed .mode-object {
+    background-color: #191925;
+  }
+
+  .mode-embed .mode-object.editor-chart,
+  .mode-embed .mode-object.editor-table {
+    border: transparent;
+  }
+  /* Text background */
+
+  .editor-module.editor-chart.editor-multi.mode-object.text-block-container.report-view,
+  .chart-content.text-block-content {
+    background: transparent:
+  }
+  /* Report title */
+
+  .mode-embed .mode-header h1 {
+    color: #B1B3BA;
+    margin-bottom: 0;
+  }
+  /*Report description*/
+
+  .mode-embed .mode-header p {
+    color: #B1B3BA;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+  /* Chart titles */
+
+  .mode-object.big-number .chart-title .in-place-edit-text,
+  .embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+  .editor-table .chart-header,
+  .editor-chart .chart-header {
+    color: #B1B3BA;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  /* Big number descriptions */
+
+  .mode-object .chart-title.chart-description .in-place-edit-text,
+  .mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
+    color: #63656E;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  /* Big number numbers */
+
+  span.fb-content.ng-binding {
+    color: #C9CAD1;
+  }
+  /* Y grid lines */
+
+  .nvd3 .nv-axis line {
+    stroke: #393945;
+  }
+  /* Axis labels */
+
+  .mode-object .chart .xlabel,
+  .mode-object .chart .ylabel {
+    background: rgba(0, 0, 0, 0);
+  }
+  /* Chart text */
+
+  text {
+    fill: #63656E !important;
+  }
+  /* Tooltip */
+
+  div.nvtooltip.xy-tooltip {
+    background-color: #53535C;
+    border: none;
+    color: #D6D9DE;
+  }
+  /* Tooltip Legend Color */
+
+  td div {
+    border: none !important;
+    border-radius: 50%;
+  }
+  /* Text Editor */
+
+  .mode-embed .mode-object h1,
+  .mode-embed .mode-object h2,
+  .mode-embed .mode-object h3,
+  .mode-embed .mode-object h4,
+  .editor-chart.mode-object.text-block-container .ql-editor h5,
+  .mode-embed .mode-object h6,
+  .mode-embed .mode-object p,
+  .mode-embed .mode-object li {
+    color: #B1B3BA;
+  }
+  /* TABLES */
+
+  .mode-table-grid,
+  .mode-table-grid th {
+    background: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .mode-table-grid:not(.pivot-table-container),
+  .mode-table-grid:not(.pivot-table-container) td,
+  .mode-table-grid:not(.pivot-table-container) thead th,
+  .mode-table-grid:not(.pivot-table-container) tbody th {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .mode-table-grid thead {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .mode-table-grid thead th {
+    background: rgba(25, 25, 37, 0.8);
+  }
+  /* Table filter */
+
+  .filter-module.with-lightbox {
+    background: rgba(255, 255, 255, 0.2);
+    border: rgba(255, 255, 255, 0.8);
+  }
+
+  .filter-module .filter-field:focus {
+    background: rgba(255, 255, 255, 0.6);
+  }
+  /* Table filter text */
+
+  input.filter-field {
+    color: rgba(255, 255, 255, 0.65);
+  }
+  /* Sort toggle */
+
+  .axel-dropdown:hover .axel-dropdown-toggle {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  /* Selected table header */
+
+  .mode-table-grid th.is-selected-col {
+    color: #fff;
+  }
+  /* Selected table rows */
+
+  .mode-table-grid td.is-selected-col {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
+
+  .axel-text-highlight .highlight {
+    background: #0078A3;
+  }
+  /* PIVOT TABLES */
+  /* Table container, Column head bottom divider */
+
+  .pivot-table-container,
+  .pivot-table .pvtMainHeaderWrapper {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .pivot-table .pvtMainHeaderWrapper {
+    border-top: 0;
+    border-left: 0;
+  }
+  /* Table base color */
+
+  .pivot-table .mode-table-grid td,
+  .pivot-table .mode-table-grid th {
+    background-color: #191925;
+  }
+  /* Pivot table row and column header panels */
+
+  .pivot-table .pvtFixedHeaderPanel {
+    background: #191925;
+  }
+  /* Coarse dividers */
+  /* Row header divider */
+
+  tbody tr th:last-of-type .pvtFixedHeader {
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  /* Column section divider */
+
+  .pivot-table-container .pvtDividerVertical.pvtVal,
+  .pivot-table-container .pvtDividerVertical.pvtTotal,
+  .pivot-table-container .pvtDividerVertical .pvtFixedHeader,
+  thead tr:last-child th:last-child .pvtFixedHeader {
+    border-right: 1px solid rgba(255, 255, 255, 0.4) !important;
+  }
+  /* Row header row section divider */
+
+  .pivot-table-container .pvtDivider.pvtVal,
+  .pivot-table-container .pvtDivider.pvtTotal,
+  .pivot-table-container .pvtDivider .pvtFixedHeader {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
+  }
+  /* Cell dividers */
+  /* Column header row dividers, Row header column dividers */
+
+  .pvtFixedHeader {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  /* Column section subdivider */
+
+  .pivot-table .pivot-table-container td {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  /* Row header subdivider zebra striping, Table row zebra striping */
+
+  .pivot-table-container tbody>tr:nth-child(even) .pvtRowLabel:last-of-type .pvtFixedHeader,
+  .pivot-table-container tbody>tr:nth-child(even) td {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  /* Sort hovers */
+
+  .pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper):hover,
+  .pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper).dropdown-open {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper):hover .table-header-label,
+  .pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper).dropdown-open .table-header-label {
+    color: rgba(0, 0, 0, 0.8);
+  }
+  /* Sort toggles */
+
+  .pvtFixedHeader .axel-dropdown-toggle {
+    border-radius: 0;
+  }
+</style>
+
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-2">
+      <mode-chart id="chart_5f623bb7776a" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_b11b489a06c9" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_6ca09146bc6b" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_fc0b6b6a4f04" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_82d46a5397ad" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_1179415c5907" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <mode-chart id="chart_70546a915fa4" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_49efafe59f2e" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_3d165609ad94" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_4bfb1ea21842" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <mode-chart id="chart_79d7ec4a5405" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>

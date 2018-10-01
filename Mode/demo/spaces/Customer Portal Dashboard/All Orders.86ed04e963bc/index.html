@@ -1,0 +1,293 @@
+<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+<style>
+  .full {
+    font-family: 'Karla', sans-serif;
+    width: 1150px;
+    margin: 0 auto;
+  }
+  
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #c4dbed;
+    shape-rendering: crispEdges;
+  }
+  
+  .axis path {
+    display: none;
+  }
+  
+  .axis text {
+    font-size: 12px;
+    fill: #234f74;
+  }
+  
+  .date {
+    padding-left: 40px;
+    color: #234f74;
+    font-size: 14px;
+    margin: 5px 0px;
+    color: #999999;
+  }
+  
+  svg {
+    cursor: crosshair;
+  }
+  
+  .dot {
+    opacity: .5;
+  }
+  
+  .dot:hover {
+    opacity: 1;
+    stroke-width: 1px;
+    stroke: #2B2B2B;
+  }
+  
+  .buttons {
+    display: block;
+    margin: 0 auto;
+    padding-left: 30px;
+  }
+  
+  .button {
+    font-family: 'Karla', sans-serif;
+    display: inline-block;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #234f74;
+    border-radius: 3px;
+    margin: 10px 5px 5px 5px;
+    color: #234f74;
+  }
+  
+  .button:hover {
+    background: #c4dbed;
+  }
+  
+  .button.active {
+    background: #234f74;
+    color: #FCFCFC;
+  }
+  
+  .d3-tip {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 8px;
+    background: white;
+    color: #666;
+    border: 1px solid #234f74;
+    border-radius: 2px;
+  }
+  
+  .hl {
+    color: red;
+  }
+</style>
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="full">
+  <div class="buttons">
+    <div id="quantity" class="button active">Reams</div>
+    <div id="value" class="button">Order Value</div>
+  </div>
+  <div id="graphic"></div>
+  <p class="date">
+    Data updated: <span id="run-time"></span>
+  </p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.7/d3-tip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script>
+  $(".button").click(function() {
+    $(".button").removeClass("active")
+    $(this).addClass("active")
+    var id = $(this).attr("id")
+    draw(id)
+  })
+
+  var format = d3.time.format("%B %d, %Y");
+  var precise = d3.time.format("%b %d, %I:%M:%S %p");
+  var comma = d3.format(",")
+  var orderTypes = ["Standard", "Glossy", "Poster"];
+
+  var runtime = datasets[1].content[0].runtime,
+    runtime = new Date(runtime);
+
+  $("#run-time").text(precise(runtime) + " (" + timeSince(runtime) + " ago)")
+
+  var data = datasets[0].content,
+    reshapedData = [];
+
+  data.forEach(function(d) {
+    var o = new Date(d.occurred_at),
+      ts = o.getTime();
+
+    reshapedData.push({
+      "ts": ts + ((Math.random() - .5) * 1000 * 60 * 60 * 24 * 28),
+      "type": 'Standard',
+      "quantity": d.standard_qty,
+      "value": d.standard_amt_usd * (Math.random() + .5)
+    })
+    reshapedData.push({
+      "ts": ts + ((Math.random() - .5) * 1000 * 60 * 60 * 24 * 28),
+      "type": 'Glossy',
+      "quantity": d.gloss_qty,
+      "value": d.gloss_amt_usd * (Math.random() + .5) * 2
+    })
+    reshapedData.push({
+      "ts": ts + ((Math.random() - .5) * 1000 * 60 * 60 * 24 * 28),
+      "type": 'Poster',
+      "quantity": d.poster_qty,
+      "value": d.poster_amt_usd * (Math.random() + .5) * 3
+    })
+    reshapedData.push({
+      "ts": ts + ((Math.random() - .5) * 1000 * 60 * 60 * 24 * 28),
+      "type": 'Total',
+      "quantity": d.total,
+      "value": d.total_amt_usd * (Math.random() + .5)
+    })
+  })
+
+  var markerMargin = 50;
+
+  var margin = {
+      top: 75,
+      right: 50,
+      bottom: 50,
+      left: 100
+    },
+    width = 1000,
+    height = markerMargin * 4;
+
+  var r = d3.scale.linear()
+    .range([0, 50])
+    .clamp(true);
+
+  var x = d3.time.scale()
+    .domain(d3.extent(reshapedData, function(d) {
+      return d.ts;
+    }))
+    .range([0, width]);
+
+  var y = d3.scale.ordinal()
+    .domain(orderTypes.map(function(d) {
+      return d;
+    }))
+    .rangePoints([0, height]);
+
+  var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    .tickSize(width);
+
+  var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("top")
+    .tickPadding(50)
+    .tickSize(height);
+
+  var tip = d3.tip()
+    .attr("class", "d3-tip")
+    .offset([-10, 0])
+    .html(function(d) {
+      return format(new Date(d.ts)) +
+        "<br>Reams ordered: <span class='hl'>" + comma(d.quantity) + "</span><br>" +
+        "Order value: <span class='hl'>$" + comma(d3.round(d.value)) + "</span>";
+    })
+
+  var svg = d3.select("#graphic").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg.call(tip);
+
+  svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
+
+  svg.append("g")
+    .attr("class", "y axis")
+    .attr("transform", "translate(" + width + ",0)")
+    .call(yAxis)
+
+  svg.selectAll(".dot")
+    .data(reshapedData)
+    .enter().append("circle")
+    .attr("class", "dot")
+    .attr("fill", "#37B067")
+    .attr("stroke", "red")
+    .attr("stroke-width", "0px")
+    .attr("r", function(d) {
+      return r(d.quantity);
+    })
+    .attr("cx", function(d) {
+      return x(d.ts);
+    })
+    .attr("cy", function(d) {
+      return y(d.type);
+    })
+    .on("mouseover", tip.show)
+    .on("mouseout", tip.hide)
+
+  function draw(display) {
+
+    var t = svg.transition().duration(750);
+
+    if (display == 'quantity') {
+      r.domain([0, d3.max(reshapedData, function(d) {
+        return d.quantity;
+      })])
+      t.selectAll(".dot").attr("r", function(d) {
+        return r(d.quantity);
+      })
+    } else {
+      r.domain([0, d3.max(reshapedData, function(d) {
+        return d.value;
+      })])
+      t.selectAll(".dot").attr("r", function(d) {
+        return r(d.value);
+      })
+    }
+  }
+
+  function timeSince(date) {
+
+    var seconds = Math.floor((new Date() - date) / 1000);
+
+    var interval = Math.floor(seconds / 31536000);
+
+    if (interval > 1) {
+      return interval + " years";
+    }
+    interval = Math.floor(seconds / 2592000);
+    if (interval > 1) {
+      return interval + " months";
+    }
+    interval = Math.floor(seconds / 86400);
+    if (interval > 1) {
+      return interval + " days";
+    }
+    interval = Math.floor(seconds / 3600);
+    if (interval > 1) {
+      return interval + " hours";
+    }
+    interval = Math.floor(seconds / 60);
+    if (interval > 1) {
+      return interval + " minutes";
+    }
+    return Math.floor(seconds) + " seconds";
+  }
+
+  draw('quantity')
+</script>
+<div class="mode-grid container">
+</div>

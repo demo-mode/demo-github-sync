@@ -1,0 +1,126 @@
+<br><br><br><br.
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<script>
+  alamode.customChartColors({
+    charts: ["chart_b5959f63f9f1", "chart_4ef5b375735a", "chart_0d0e1431c828", "chart_2f695302183b", "chart_f7fccddefc00", "chart_e6a83b712e87", "chart_d457e7a032ec", "chart_f37d4669bb30", "chart_1c99d8f37f55", "chart_a797040d3222"],
+    colors: {
+      0: "#77448b",
+      1: "#0f4880",
+      2: "#006648",
+      3: "#a22c2a",
+      4: "a8641a"
+    }
+  })
+</script>
+<style>
+  .chart-header {
+    font-size: 24px !important;
+    font-family: "Tiempos Headline", Georgia, serif !important;
+  }
+
+  .mode-embed {
+    background: white !important;
+  }
+
+  .mode-embed .mode-object.editor-chart {
+    border: none !important;
+  }
+
+  mode-chart {
+    /* font-family: "Graphik" !important;*/
+    font-size: 16px !important;
+  }
+
+  mode-table tr:nth-child(even) {
+    background: #d3d3d3 !important;
+  }
+
+  mode-table td:nth-of-type(2) {
+    text-align: center !important
+  }
+
+  mode-table td:nth-of-type(3) {
+    text-align: center !important
+  }
+
+  mode-table td:nth-of-type(4) {
+    text-align: center !important
+  }
+
+  mode-table td {
+    /* height: 40px !important; */
+    /* font-family: "Graphik" !important;*/
+    font-size: 14px !important;
+    text-align: left !important;
+  }
+
+  mode-table th {
+    border: none !important;
+    /* font-family: "Graphik" !important;*/
+    color: black !important;
+  }
+</style>
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_b5959f63f9f1" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_51bee6933f17" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_75cf200d9a5b" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row network">
+    <div class="col-md-12">
+      <mode-chart id="chart_c31f36729e1a" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_4af447265ad7" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_a1e8b2eb0091" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_fb92854959e7" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-table id="table_76968e4dd052" dataset="dataset" options="table_options"></mode-table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-table id="table_07414091fb59" dataset="dataset" options="table_options"></mode-table>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function() {
+    var data = datasets.filter(function(d) {
+      return d.queryName == "Query 1";
+    })[0].content;
+
+    if (data[0]['month'] === '2013-12-01T00:00:00.000Z') {
+      $('.network').hide();
+    }
+
+  });
+</script>

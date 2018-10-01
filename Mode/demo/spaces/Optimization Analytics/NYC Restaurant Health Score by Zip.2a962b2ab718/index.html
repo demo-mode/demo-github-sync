@@ -1,0 +1,185 @@
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+<script src="https://cdn.rawgit.com/mode/playbook/master/assets/leaflet-heatmap.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+
+<style>
+
+#legend{
+  position: absolute;
+  margin-left: 65px;
+  width: 100px;
+  height: 225px;
+  top: 20px;
+  background: rgba(255,255,255,0.3);
+  border-radius:5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.color{
+  position: relative;
+  float: left;
+  width: 20px;
+  height: 10px;
+  margin: 2px 5px;
+}
+p{
+  display:inline;
+  position: relative;
+}
+.info{
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: rgba(255,255,255,0.7);
+  border-radius: 5px;
+  position: relative;
+  display: block;
+  width: 100px;
+  clear: left;
+}
+
+</style>
+
+
+<html>
+<head>
+  <title>A Leaflet map!</title>
+  <style>
+    #map{ width: 600px; height: 600px; }
+  </style>
+</head>
+<body>
+  <div id="map">
+  <div id="legend">
+  <div class="info"><div class="color" style="background-color:#1F4B99;"></div>Under 6</div>
+  <div class="info"><div class="color" style="background-color:#4383A7;"></div>6-9</div>
+  <div class="info"><div class="color" style="background-color:#7CB9C0;"></div>9-10</div>
+  <div class="info"><div class="color" style="background-color:#CEE9E7;"></div>10-11</div>
+  <div class="info"><div class="color" style="background-color:#FCE0CC;"></div>11-12</div>
+  <div class="info"><div class="color" style="background-color:#E7A375;"></div>12-13</div>
+  <div class="info"><div class="color" style="background-color:#C66834;"></div>13-16</div>
+  <div class="info"><div class="color" style="background-color:#9E2B0E;"></div>Over 16</div>
+  </div>
+  </div>
+  <script>
+  console.log(datasets)
+
+  // initialize the map
+  var map = L.map('map').setView([40.728, -73.97], 11);
+
+  // load a tile layer
+  L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
+    {
+      maxZoom: 17,
+      minZoom: 9
+    }).addTo(map);
+
+
+var info = L.control();
+info.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'info');
+    this.update();
+    return this._div;
+};
+
+
+function style(feature) {
+    return {
+        color: 'white',
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.7,
+        fillColor: getColor(feature.properties)
+    };
+}
+
+// Ajax call to read in external geoJson data for choropleth
+// This is where I've tried to insert functions to filter the data based on the
+// slider, but this has failed thus far.
+$.ajax({
+    dataType: 'json',
+    url: 'https://s3-us-west-2.amazonaws.com/mode-asset-files/nyc_zips.geojson',
+    success: function (data) {
+        $(data.features).each(function (key, data) {
+            function highlightFeature(e) {
+                var layer = e.target;
+
+                layer.setStyle({
+                    weight: 5,
+                    color: '#666',
+                    dashArray: '',
+                    fillOpacity: 0.5
+                });
+                if (!L.Browser.ie && !L.Browser.opera) {
+                    layer.bringToFront();
+                }
+                info.update(layer.feature.properties.geoid10)
+            }
+
+            function resetHighlight(e) {
+                zips.resetStyle(e.target);
+                info.update('');
+            }
+
+            function zoomToFeature(e) {
+                map.fitBounds(e.target.getBounds());
+            }
+
+            function onEachFeature(feature, layer) {
+                layer.on({
+                    mouseover: highlightFeature,
+                    mouseout: resetHighlight,
+                    click: zoomToFeature
+                });
+            }
+            var zips = L.geoJson(data, {
+                onEachFeature: onEachFeature,
+                style: style
+            }) /*.addTo(map)*/
+            ;
+
+            var group = L.featureGroup([zips]).addLayer(zips).addTo(map);
+
+        });
+    }
+}).error(function () {});
+
+  function getColor(d) {
+    
+    var zipcode = d.geoid10
+    
+    var queryresult = datasets[0].content
+    
+    var score = queryresult.filter(function(d) { return d.zipcode == zipcode; })[0].avg;
+    
+      return score > 16 ? '#9E2B0E' :
+          score > 13  ? '#C66834' :
+          score > 12  ? '#E7A375' :
+          score > 11  ? '#FCE0CC' :
+          score > 10  ? '#CEE9E7' :
+          score > 9  ? '#7CB9C0' :
+          score > 6   ? '#4383A7' :
+          '#1F4B99';
+  }
+  
+info.update = function (props) {
+  
+    var zipcode = props 
+    
+    var queryresult = datasets[0].content
+    
+    var score_row = queryresult.filter(function(d) { return d.zipcode == zipcode; });
+    
+    if (score_row.length > 0)
+    { score = score_row[0].avg }
+    else {score = ' '}
+    
+    this._div.innerHTML = (props ? '<b>Score: ' + 
+        + score + '<br />' + '</b>ZIP: ' + zipcode : 'Hover over a ZIP Code');
+};
+info.addTo(map);
+
+  </script>
+</body>
+</html>
