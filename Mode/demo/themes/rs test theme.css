@@ -1,0 +1,21 @@
+<style>
+
+mode-table tr:nth-child(even) {
+  background: #fde9f1 !important;
+}
+
+mode-table td { 
+  /*height: 40px !important;*/
+  font-family: "Futura", Arial, sans-serif !important;
+  border: 1px solid grey !important;
+  text-align: left !important;
+}
+
+mode-table th { 
+  background: #ADD8E6 !important;
+  border: none !important;
+  font-family: "Futura", Arial, sans-serif !important;
+  color: black !important;
+}
+
+</style>
