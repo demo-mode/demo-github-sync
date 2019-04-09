@@ -6,9 +6,8 @@
         ON oc.order_id = o.id
        AND o.occurred_at BETWEEN '2016-01-01' AND '2016-12-31 23:59:59'
      WHERE oc.channel NOT IN ('direct','organic')
-     and channel = {{'channel'}}
+     and oc.channel = {{'channel'}}
   GROUP BY 1,2
   ORDER BY 1,2
   
-
-
+  
