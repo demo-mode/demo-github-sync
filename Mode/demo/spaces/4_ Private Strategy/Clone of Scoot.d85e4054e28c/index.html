@@ -20,7 +20,9 @@
     font-weight: 400;
     font-style: normal;
   }
+
   /* REPORT */
+
   /* General */
 
   body,
@@ -36,26 +38,30 @@
 
   body,
   body.mode-embed.embed-preview {
-    background-color: rgb(250,250,250);
+    background-color: rgb(250, 250, 250);
   }
-  
+
   /* Chart background */
+
   .editor-chart:not(.text-block-container),
   .mode-embed .mode-object.editor-table {
     background-color: #FFFFFF;
     border-radius: 6px;
     transition: box-shadow 0.2s ease;
   }
+
   /* TEXT */
+
   /*Report title*/
 
- .mode-embed .mode-header h1 {
+  .mode-embed .mode-header h1 {
     font-size: 36px;
     font-family: "sofia-pro";
     color: #4A4A4A;
     font-family: sofia-semi-bold, sans-serif;
     line-height: 1.33;
   }
+
   /*Report Description*/
 
   .mode-header p,
@@ -67,7 +73,9 @@
     line-height: 24px;
     color: #220303;
   }
+
   /* MODE TEXT BLOCKS */
+
   /* Text Dividers */
 
   .editor-chart.mode-object.text-block-container .ql-editor h2 {
@@ -75,19 +83,23 @@
     font-weight: 500;
     letter-spacing: auto;
   }
+
   /* TEXT */
+
   /* Container */
 
   .ql-editor {
     padding: 0;
     background-color: rgba(255, 255, 255, 0);
   }
+
   /* h2 */
 
   .editor-chart.mode-object.text-block-container .ql-editor h2 {
     margin-bottom: 0;
     padding-bottom: 0;
   }
+
   /* Chart Titles */
 
   .mode-object.big-number .chart-title .in-place-edit-text,
@@ -107,6 +119,7 @@
   .chart-header {
     padding-top: 10px;
   }
+
   /* Big Number Descriptions */
 
   .mode-object .chart-title.chart-description .in-place-edit-text,
@@ -118,11 +131,13 @@
     font-family: sofia-light, sans-serif;
     text-transform: uppercase;
   }
+
   /* Big Number */
 
   span.fb-content {
     font-family: sofia-light, sans-serif;
   }
+
   /* Big Number Trend */
 
   span.trend-value {
@@ -131,17 +146,21 @@
     font-weight: 500;
     letter-spacing: auto;
   }
+
   /* CHARTS */
+
   /* Chart Background */
 
   .editor-module.editor-chart.mode-object.editor-multi.ng-scope {
     transition: all 0.2s ease;
   }
+
   /* Chart Hover */
 
   .editor-module.editor-chart.mode-object.editor-multi.ng-scope:hover {
     /*background-color: hsl(240, 19%, 17%);*/
   }
+
   /* Axis Labels */
 
   .mode-object .chart .xlabel,
@@ -159,6 +178,7 @@
     font-weight: 400;
     letter-spacing: auto;
   }
+
   /* Tick Labels */
 
   .chart-svg .nv-x text,
@@ -170,17 +190,20 @@
     font-weight: 400;
     letter-spacing: auto;
   }
+
   /* Y Ticks */
 
   .chart-svg .nv-y line {
     stroke: #393945;
     /* $gray-900*/
   }
+
   /* Legend Labels */
 
   text.nv-legend-text {
     text-transform: uppercase;
   }
+
   /* Bars */
 
   .nvd3 .nv-multibar .nv-groups rect,
@@ -196,7 +219,9 @@
   .nvd3 .nv-discretebar .nv-groups rect:hover {
     fill-opacity: 0.6;
   }
+
   /* TOOLTIPS */
+
   /* Tooltip */
 
   div.nvtooltip.xy-tooltip {
@@ -204,12 +229,14 @@
     background-color: rgba(255, 255, 255, 0.98);
     colorcolor: #808284;
   }
+
   /* Legend color */
 
   td div {
     border: none !important;
     border-radius: 50%;
   }
+
   /*Correct font weight for bold*/
 
   .nvtooltip.xy-tooltip strong,
@@ -218,7 +245,7 @@
   }
 </style>
 <div class="mode-header embed-hidden">
-  <svg width="120" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 679.45 197.66"><defs><style>.cls-1{fill:red;}</style></defs><title>svg-logo-retina2</title><path class="cls-1" d="M46.67 87.66c0-9.14 11.8-9.73 20.64-9.73a104 104 0 0 1 34.21 5.6c10 3.54 17.11-5 17.11-13.86a14 14 0 0 0-9.14-13.57C98.57 51.68 84.42 49 67.31 49c-19.46 0-55.74 3.27-55.74 39 0 46.3 76.09 26.84 76.09 47.78 0 9.44-10.62 13-25.07 13-13.27 0-26.25-2.95-37.16-6.19-10.91-3.83-17.7 5-17.7 13.86 0 5.31 2.36 10.91 8.55 13.57 11.5 3.83 25.36 7.08 46 7.08 23 0 60.76-5.6 60.76-40.11.01-48.99-76.37-31.34-76.37-49.33zM239.55 142.81c-9.14 6.49-16.81 8.26-28.31 8.26-19.47 0-35.69-12.68-35.69-36.87 0-24.48 16.22-38.34 35.69-38.34 14.75 0 21.82 3.83 28.61 8.26 11.21 5.6 20.65-2.36 20.65-11.5A15.11 15.11 0 0 0 255.78 62c-10.32-8.55-31-13.57-46.89-13.57-41 0-66.95 27.72-66.95 65.77 0 37.75 26 64.3 66.95 64.3 13.27 0 33.92-1.77 46.89-13.57 3.54-3.25 5-6.78 5-10.32.01-9.14-10.02-17.4-21.23-11.8zM347.8 48.44c-42.47 0-69.9 26.84-69.9 64.89s27.43 64.89 70.19 64.89c42.18 0 69.9-26.55 69.9-64.89.01-38.06-27.72-64.89-70.19-64.89zm0 102.64c-21.53 0-36.28-15.34-36.28-37.75 0-22.12 14.75-37.75 36.28-37.75 21.83 0 36.57 15.63 36.57 37.75 0 22.41-14.75 37.74-36.57 37.74zM507.35 48.44c-42.47 0-69.9 26.84-69.9 64.89s27.43 64.89 70.19 64.89c42.18 0 69.9-26.55 69.9-64.89.01-38.06-27.71-64.89-70.19-64.89zm0 102.64c-21.53 0-36.28-15.34-36.28-37.75 0-22.12 14.75-37.75 36.28-37.75 21.83 0 36.57 15.63 36.57 37.75.01 22.41-14.74 37.74-36.57 37.74zM655.7 145.17c-18 0-26.54-8.26-26.54-29.2v-34.5h20.06c10.62 0 15.63-7.37 15.63-15 0-7.37-5.31-15-15.63-15h-20.06V26.91c0-9.73-7.67-14.45-15.34-14.45s-15.34 4.72-15.34 14.45V116c0 38.93 13 59.28 55.74 59.28 10.62 0 15.34-7.67 15.34-15 .01-7.73-4.12-15.11-13.86-15.11z"/></svg>
+  <svg width="120" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 679.45 197.66"><defs><style>.cls-1{fill:red;}</style></defs><title>svg-logo-retina2</title><path class="cls-1" d="M46.67 87.66c0-9.14 11.8-9.73 20.64-9.73a104 104 0 0 1 34.21 5.6c10 3.54 17.11-5 17.11-13.86a14 14 0 0 0-9.14-13.57C98.57 51.68 84.42 49 67.31 49c-19.46 0-55.74 3.27-55.74 39 0 46.3 76.09 26.84 76.09 47.78 0 9.44-10.62 13-25.07 13-13.27 0-26.25-2.95-37.16-6.19-10.91-3.83-17.7 5-17.7 13.86 0 5.31 2.36 10.91 8.55 13.57 11.5 3.83 25.36 7.08 46 7.08 23 0 60.76-5.6 60.76-40.11.01-48.99-76.37-31.34-76.37-49.33zM239.55 142.81c-9.14 6.49-16.81 8.26-28.31 8.26-19.47 0-35.69-12.68-35.69-36.87 0-24.48 16.22-38.34 35.69-38.34 14.75 0 21.82 3.83 28.61 8.26 11.21 5.6 20.65-2.36 20.65-11.5A15.11 15.11 0 0 0 255.78 62c-10.32-8.55-31-13.57-46.89-13.57-41 0-66.95 27.72-66.95 65.77 0 37.75 26 64.3 66.95 64.3 13.27 0 33.92-1.77 46.89-13.57 3.54-3.25 5-6.78 5-10.32.01-9.14-10.02-17.4-21.23-11.8zM347.8 48.44c-42.47 0-69.9 26.84-69.9 64.89s27.43 64.89 70.19 64.89c42.18 0 69.9-26.55 69.9-64.89.01-38.06-27.72-64.89-70.19-64.89zm0 102.64c-21.53 0-36.28-15.34-36.28-37.75 0-22.12 14.75-37.75 36.28-37.75 21.83 0 36.57 15.63 36.57 37.75 0 22.41-14.75 37.74-36.57 37.74zM507.35 48.44c-42.47 0-69.9 26.84-69.9 64.89s27.43 64.89 70.19 64.89c42.18 0 69.9-26.55 69.9-64.89.01-38.06-27.71-64.89-70.19-64.89zm0 102.64c-21.53 0-36.28-15.34-36.28-37.75 0-22.12 14.75-37.75 36.28-37.75 21.83 0 36.57 15.63 36.57 37.75.01 22.41-14.74 37.74-36.57 37.74zM655.7 145.17c-18 0-26.54-8.26-26.54-29.2v-34.5h20.06c10.62 0 15.63-7.37 15.63-15 0-7.37-5.31-15-15.63-15h-20.06V26.91c0-9.73-7.67-14.45-15.34-14.45s-15.34 4.72-15.34 14.45V116c0 38.93 13 59.28 55.74 59.28 10.62 0 15.34-7.67 15.34-15 .01-7.73-4.12-15.11-13.86-15.11z"></path></svg>
   <h1>KPI Dashboard</h1>
 </div>
 <div class="mode-grid container">
