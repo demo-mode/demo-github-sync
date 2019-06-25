@@ -1,1 +1,1 @@
-SELECT 1
+SELECT * from demo.orders

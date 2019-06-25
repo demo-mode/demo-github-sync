@@ -1,7 +1,0 @@
----
-report_description: |-
-  We examined a range of possible explanations and determined that the recent growth in global churn rate is due to international markets experiencing slower load times. We recommend launching international data centers to improve load times thus reducing churn.
-
-  While international churn rates are higher than US, this is due to discrepancies in load time and is therefore addressable. Investing in international data centers has the potential to reduce international churn levels down to US rates, which would significantly improve the Active User trajectory by 55-80% over a 12 month period.
-is_full_width: false
-hide_run_button: true

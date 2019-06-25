@@ -1,3 +1,7 @@
+-- Returns first 100 rows from demo.web_events_full
+SELECT * FROM demo.web_events_full LIMIT 100;
+
+
     SELECT TO_CHAR(occurred_at,'YYYY')as year,
            SUM(total) as reams_sold
       FROM demo.orders

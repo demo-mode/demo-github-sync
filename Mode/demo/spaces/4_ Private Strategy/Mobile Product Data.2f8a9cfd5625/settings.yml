@@ -1,4 +1,4 @@
 ---
 report_description: Description
 is_full_width: false
-hide_run_button: false
+hide_run_button: true

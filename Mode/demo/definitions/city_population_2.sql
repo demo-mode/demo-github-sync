@@ -1,1 +1,3 @@
-SELECT 1
+SELECT city,
+       id
+FROM {{@city_population_1}}

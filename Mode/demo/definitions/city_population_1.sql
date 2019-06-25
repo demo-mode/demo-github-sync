@@ -1,1 +1,1 @@
-SELECT 1
+SELECT * FROM tutorial.city_populations
