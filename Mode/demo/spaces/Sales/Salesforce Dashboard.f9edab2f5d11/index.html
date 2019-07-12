@@ -1,0 +1,93 @@
+<style>
+  * {
+    font-family: "Futura", Arial, sans-serif !important;
+  }
+</style>
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+<script src="https://cdn.rawgit.com/mode/playbook/master/assets/leaflet-heatmap.js"></script>
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row" data-row-height="small">
+    <div class="col-md-4">
+      <mode-chart id="chart_acb3538946d9" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_06f14872b79c" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_15d6bb4c4b0c" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_177bf3729a0d" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_307774275d8f" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-12">
+      <mode-python id="python_519039af086b" options="python_options"></mode-python>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_3991e9e763c9" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-table id="table_bfa8953b144b" dataset="dataset" options="table_options"></mode-table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-table id="table_0bd30e812bac" dataset="dataset" options="table_options"></mode-table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-table id="table_364e7fd8ab35" dataset="dataset" options="table_options"></mode-table>
+    </div>
+  </div>
+</div>
+<script>
+  var dot_size = datasets[0].content[0].dotsize;
+  console.log(dot_size);
+
+  alamode.leafletMap({
+    title: "Org's by Location",
+    height: 500,
+    lat_column: "lat",
+    lng_column: "lng",
+    label_column: "city",
+    query_name: "Heat Map",
+    center_lat: 39.5,
+    center_lng: -98.35,
+    starting_zoom: 4,
+    dot_size: dot_size,
+    dot_opacity: .7
+  })
+</script>
+<script>
+  Embed.Actions.subscribe('chart_3991e9e763c9', action => {
+    if (action.type === 'MARK_CLICK') {
+      var t = action.target;
+      var color = t.series.color.value;
+
+      var url = 'https://modeanalytics.com/demo/reports/8c0ed80545e8?run=now&param_rep={{rep}}'
+      url = url.replace(/{{rep}}/g, color)
+
+      var link = document.createElement('a');
+      link.href = url;
+      document.body.appendChild(link);
+      link.click();
+    }
+  }, 'unique-handler-name');
+</script>
