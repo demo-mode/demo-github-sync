@@ -1,1 +1,2 @@
-SELECT 1
+SELECT *
+from benn.college_football_players
