@@ -1,0 +1,120 @@
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+<script src="https://cdn.rawgit.com/mode/playbook/master/assets/leaflet-heatmap.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<div class="mode-header embed-hidden">
+
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_0d7ea739-e0cb-4df4-f618-c9071d7ac863" dataset="dataset" options="text_options" class="">
+        <h1 class="ql-align-center"><img src="https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/Twitter_Bird.svg/738px-Twitter_Bird.svg.png" alt="Image result for patreon" height="100" width="100"> Sales KPI Dashboard</h1>
+        <p><br></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="small">
+    <div class="col-md-2">
+      <mode-chart id="chart_67ab663dfffb" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_2089ee0fc6d4" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_a1ee574a1269" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_8f59d6741717" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_2392f2acd5ba" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_42a895a9dee1" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <mode-chart id="chart_165d38bc28bf" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_239ef1327e31" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_859fda1c60f8" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_6b07d4379a57" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_faaf5590e3a8" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-python id="python_47d2bb2d4722" options="python_options"></mode-python>
+    </div>
+  </div>
+  <div id="map"></div>
+</div>
+<script>
+  alamode.googleMap({
+    google_maps_api_key: "AIzaSyBmxYHMwhRR0SlYMyI9a-usl-MwyFy1nk4",
+    title: "Account by Location",
+    lat_column: "lat",
+    lng_column: "long",
+    label_column: "city",
+    query_name: "Heat Map",
+    center_lat: 36.75,
+    center_lng: -119.77,
+    starting_zoom: 6,
+    map_type: "terrain"
+  })
+</script>
+<script>
+  addDrilldownLink({
+    "bar_chart_id": "chart_239ef1327e31",
+    "url": "https://modeanalytics.com/sadavath/reports/18286d816cd5?run=now&param_region={{x}}&param_order_type={{series}}"
+  })
+
+
+  function addDrilldownLink(o) {
+    var id = "#" + o["bar_chart_id"],
+      url = o["url"];
+
+    $(id + " .highcharts-point").hover(function() {
+      $(this).css("cursor", "pointer");
+    });
+
+    if (url.indexOf("{{series}}") != -1) {
+      useSeries = true;
+    } else {
+      useSeries = false;
+    }
+
+    $(id + " .highcharts-point").click(function() {
+      var xIdx = $(this).index();
+      var xVar = $(id + " .highcharts-xaxis-labels text").eq(xIdx).text()
+
+      url = url.replace(/{{x}}/g, xVar)
+
+      if (useSeries) {
+        var classes = $(this).attr("class")
+        var seriesIdx = classes.split("highcharts-color-", 2)[1].split(" ")[0]
+        console.log(seriesIdx)
+        var series = $(id + " .highcharts-legend .highcharts-color-" + seriesIdx).text()
+        url = url.replace(/{{series}}/g, series)
+      }
+
+      var link = document.createElement('a');
+      link.href = url;
+      $(this).append(link);
+      link.click();
+
+    });
+  }
+</script>
