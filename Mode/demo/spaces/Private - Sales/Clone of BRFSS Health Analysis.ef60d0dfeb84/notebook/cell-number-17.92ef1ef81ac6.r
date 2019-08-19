@@ -1,0 +1,1 @@
+group_by(q3_states,x_state,winter) %>% summarise(count=n())

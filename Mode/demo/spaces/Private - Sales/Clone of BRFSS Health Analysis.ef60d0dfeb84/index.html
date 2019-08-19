@@ -1,0 +1,189 @@
+<style>
+  * {
+    font-family: "Futura", Arial, sans-serif !important;
+  }
+</style>
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_46923ac1-3453-4c7b-fdc5-b0f78399b8c3" dataset="dataset" options="text_options">
+        <h4 class="ql-align-center">Introduction</h4>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_81556bdc-6617-4ab7-c3e7-369a746e54e9" dataset="dataset" options="text_options">
+        <p>The Behavioral Risk Factor Surveillance System (BRFSS) is a collaborative project between all of the states in the United States and the Centers for Disease Control and Prevention (CDC). BRFSS conducts both landline telephone- and cellular telephone-based
+          surveys. In doing so, it collects data from a randomly selected adult in a household.</p>
+        <p><br></p>
+        <p><strong><u>Limitations of the Analysis</u></strong>: The survey implements random sampling when contacting US Adults, so results could be generalizable to US adults 18 years or older. Bias may exist as a result of the survey design, given that
+          only US adults, aged 18 or older were surveyed. Further, if an individual does not have a land or cellular phone number, he or she would not be included in the survey.</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_b25ad764-3d39-4abb-e6d8-5f7312d03908" dataset="dataset" options="text_options">
+        <h4 class="ql-align-center">Research Questions</h4>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_3858b457-bb96-4582-cf84-d39d434b7ed6" dataset="dataset" options="text_options">
+        <p><strong><u>Question 1</u></strong>: Is a respondent’s opinion of their health status related to their Body Mass Index (BMI)? Is there any difference between genders?</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_8dc4f635-d9ea-4dcb-e6a3-30c34dd7aeb6" dataset="dataset" options="text_options">
+        <p><u>Initial Thoughts</u>: This is an interesting question as it looks for linkage between one’s opinion of their health status to a slightly more objective measure of overall health. BMI is not without controversy (see&nbsp;<a href="http://www.obesityaction.org/educational-resources/resource-articles-2/general-articles/bmi-the-good-the-bad-and-the-ugly"
+            target="_blank" style="color: rgb(51, 153, 243);">here</a>&nbsp;for example) but it is widely recognized. The difference between genders is also interesting, as one can tease out different perceptions and pressures within society. This analysis
+          was done using the following variables:</p>
+        <ul>
+          <li>genhlth - Corresponds to General Health</li>
+          <li>x_bmi5cat - Computed variable that categorizes BMI into 4 categories. BMI is derived from reported height &amp; weight.</li>
+          <li>sex - Reported gender</li>
+        </ul>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+      <mode-python id="python_8e70a757a1ee" options="python_options"></mode-python>
+    </div>
+    <div class="col-md-5">
+      <mode-text id="text_4a5d0d22-997e-4072-904f-89ce34600825" dataset="dataset" options="text_options">
+        <p>Based on the data, there are interesting trends to observe:</p>
+        <ul>
+          <li>The proportion of reports of “Excellent” health increases from those that are Underweight to Normal Weight, but then decreases significantly from Normal Weight to Obese. This indicates there is a possible awareness of overall health status.</li>
+        </ul>
+        <p><br></p>
+        <ul>
+          <li>The “Excellent” decrease appears to be greater in magnitude than the mirror trend on the increase of those reporting “Poor” health. This may indicate a lack of awareness/education on what constitutes good health.</li>
+        </ul>
+        <p><br></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+      <mode-python id="python_9d06ab68b68d" options="python_options"></mode-python>
+    </div>
+    <div class="col-md-5">
+      <mode-text id="text_8eee6694-b99d-43f4-e2f8-581cb7c89d0c" dataset="dataset" options="text_options">
+        <p>Effect of Gender: In this case, we can observe the following:</p>
+        <p><br></p>
+        <ul>
+          <li>Females report a higher proportion of “Excellent” health status than males when their BMI categorization is “Underweight” or “Normal weight”. This could indicate a stronger association of health with slimness, reflecting broader societal opinions.</li>
+        </ul>
+        <p><br></p>
+        <ul>
+          <li>Females report a lower proportion of “Excellent” health status than males when their BMI categorization is “Overweight” or “Obese”. This could indicate an oversensitivity to weight as a component of overall health.</li>
+        </ul>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_db60c31b-7777-4d6b-d6af-3f517fc18311" dataset="dataset" options="text_options">
+        <p>In summary, the analysis seems to indicate that, given the research question: yes, there were noticeable relations between health perception and BMI, as well as gender-specific differences. Given the analysis performed, however, these relations
+          cannot be used to infer causality.</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_f79ac532-d846-4d66-f01e-12ec0655440c" dataset="dataset" options="text_options">
+        <p><strong><u>Question 2</u></strong>: How does being a parent of a young child affect the amount sleep time reported? How is this reported differently between genders?</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-7">
+      <mode-python id="python_b01c51bf6d8f" options="python_options"></mode-python>
+    </div>
+    <div class="col-md-5">
+      <mode-text id="text_f49dc509-87a2-45e2-ae6d-0a7e0d4e40a1" dataset="dataset" options="text_options">
+        <p><br></p>
+        <p><br></p>
+        <p>Looking at the characteristics of the distribution, and the research question, it appears that there are differences between the genders in reported hours of sleep both between the general population and those that responded as being parents of
+          small children. It is expected that further statistical techniques will allow us to quantify the significance of such differences.</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_876593a2-5607-4c6c-bd22-2bdf3ed68e8e" dataset="dataset" options="text_options">
+        <p><strong><u>Question 3</u></strong>: Are responses to general health perception related to the time of year of the survey was conducted? How do any differences show up across states?</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+      <mode-python id="python_241238ef3e2f" options="python_options"></mode-python>
+    </div>
+    <div class="col-md-5">
+      <mode-text id="text_10fb6082-5e33-4a49-aebd-e99379a13ba4" dataset="dataset" options="text_options">
+        <p>This plot shows some noticeable differences in the proportion of respondents indicating “Excellent” health in the winter months. This might be attributed to different factors such as:</p>
+        <p><br></p>
+        <ul>
+          <li>mood during the winter months (either enjoying colder temperatures or enjoying warmer temperatures compared to the rest of the country)</li>
+          <li>discrepancies in per-state data collection - California, for example, shows a very small number of cases in the winter</li>
+          <li>additional factors</li>
+        </ul>
+        <p><br></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+      <mode-python id="python_f7eb3379f246" options="python_options"></mode-python>
+    </div>
+    <div class="col-md-5">
+      <mode-text id="text_62362085-3402-429b-e43d-d60fc1be6534" dataset="dataset" options="text_options">
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p>Plotting results in a histogram yields results that are not meaningful</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+      <mode-python id="python_68a460d453b5" options="python_options"></mode-python>
+    </div>
+    <div class="col-md-5">
+      <mode-text id="text_1920dcdd-bfcf-42b1-8db3-6028f569e374" dataset="dataset" options="text_options">
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p>Plotting a heat map of average drinks within each state by general health status seems to show a trend of higher average drinks for poor and fair general health. </p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+      <mode-python id="python_d726b5d6b860" options="python_options"></mode-python>
+    </div>
+    <div class="col-md-5">
+      <mode-text id="text_dc0a51d3-7cca-4275-a2f9-aab6543e6d64" dataset="dataset" options="text_options">
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p>To further reduce the complexity, I looked at the proportion of respondents that were tagged as binge drinkers.There didn’t seem to be as strong of a relationship from the heat-map analysis.</p>
+      </mode-text>
+    </div>
+  </div>
+</div>

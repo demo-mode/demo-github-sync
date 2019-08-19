@@ -1,0 +1,1 @@
+ggplot(brfss_drink_state, aes(avedrnk2, ..density..))+geom_histogram(binwidth = 1)+facet_wrap(~x_state)+xlim(0,20)
