@@ -1,0 +1,117 @@
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+<script src="https://cdn.rawgit.com/mode/playbook/master/assets/leaflet-heatmap.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<div class="mode-header embed-hidden">
+
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_0d7ea739-e0cb-4df4-f618-c9071d7ac863" dataset="dataset" options="text_options" class="">
+        <h1 class="ql-align-center"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQsAAAC9CAMAAACTb6i8AAAAhFBMVEXqC4z////pAIXpAIj5xd/pAIb73+33v9nrFZDqCo3pAIPwbrDxgbf3tNX4v9v0nMfzlMLtPp361uf/+f7+8vj97PX85fH96vTsLZb60eXuWKbxerb2rtHyib772+v5yuHzkMHuTqLuVaXvYar1psz3uNfrJ5TyhbzwaK3tSKDxdbT1octyU7VxAAAJu0lEQVR4nO2da4OyLBCGFaJNWttO23bczj3V/v//92qJZAoOKolv3J/N0SsYRhgGx7Vicup+gJL6Wfv9z+78ctnu9ovVofc7Kn6vBrMY91ZbRBHBXAQh6p2/hsVu2FQWv5sBQhg7GcIY4flhrH5Px/2Cqd+u/oWKarLxaDaHmAehF1+1uzhuopGJRVtaXquAPrZUyoHhQHih9v85LuS+gZAhLJYdBHziAAedq7iOhrHwOwgKgtGYgG/eKBbDgRqJO40F1G80icUC5CfSNLAPu39zWKzlI4dMdAsaYRvDYkGLknDCpgF5+oawGA9ICRSB6Ge+kWawGBbvH/Hzb3OtNILFsUz/YMKd7xwzTWBxqAJFAMPJCTUawOKrGhThR4o8JjefxV9VKEIaUhjGs6iogzAYMp9hOotWpSgCByoJyA1n0Vb/AMmBMRAbM5yFVzqueBa5Co2ZzWJXOYogAl2KrBnN4q/qHnJ/kx+BOZNZtKv1m0xCl2Eyi4GGHnJ7la9sewaz0NNDQtHsXmIui7E2FA6eN4xFV1MPCZW9wGEsC02O8y48bRSLvcZmEbzNsUEstDYLQcMwlYVObyF6HUNZfOsbRO7Cl8aw6GtuFsFQkp7WMZRFRy+IQHjVEBZr3V0kkNcQFgvtXSR4oXUzWLwAhYMXjWAxfEEXyegkRrJQHEUwIp3TyUPwhJ2bUiOJkSwuKi+FvM3sNrn93TsrJWiQQwNYjBTib+w8Tl+OVTIT8Lksiw5Qj0auHugnbFVrBncXaP603jFUmTlPGO+ps4DZwokcWuDHBevAB3CuBfqXblTTYoMQKsICdnnCSQNZoIgFOLogqWExhNEpBMNQFlDXKZjQnhQakQ1lAbMQ9ClBPkW/SD6TmSxGwFfBwtXAIp3ETBbfwHEx46s70qYADDNZQCPwzPnbm4pMEJrJAvjBjtPjaSzgQyaMG8miBWNBJJnNBdbnzWTxAWMh+yi4vhuLmZjF57uxkGyTsSwsC8vCskhcbVnwqy0LfrVlwa+2LPjVlgW/2rLgV/9aFky4+y+lxew9WThZxRj8N2WRIWJZxLIsuCwLLsuCy7Lgsiy4LAsuy4LLsuCyLLgsCy7Lgsuy4LIsuCwLLkUWyE3ovVmMLIvYoGXBDVoW3KBlwQ1aFtygZcENWhbcoGXBDVoW3KBlwQ2+A4t/QIPjN2CxAhr8fQMWwM2+ZPkGLIA7GfH+DVj0gLdIOoz/Jwvobt9kQZD/JwtwuZ1ENTpdLMjj0L19NQvwTsTEFlddLBJVR6AmqmMB3sj9uMFfFwu85Tag+9MrZAHfZEX22lk46I+ZANcvVmRBUEpx/dolfOsynrZ1s3Bo5KOP4L9IjQXxh2mx8t8qO1QxvU40s3Cw87n0+1OFYhaV5f0qbuPGdNBvDccaWYQF/InKYRnV5YO77llt5QxjRDdaWSiqSha+cq0D3G8wC2kfUa+Q22gW8gM0gPEdV8gC+qCsdpCiCQWpsRBVAmGdRLVhhCyggaRxLOTndEErisQKWQBfDn3cbZwUTShIkYUUhfr+/pDFFHYpiaoFK9VEU5Mai46EQyjVgiAhC2ClehLF1IoDt4qUWOBdDgtV7xmyAE4u4P7dgsbSmmosJGVR7pqpNYyQBXDOmJW7PBjCggiPEYml1p1DFsBPOvYRDqzgUkRKLKg01CrQMEIW0LnByFdN9BUxV+sjuSgUa8+HLKAVImk0a2dGH8l3nS68Utf9jgELcIAR7f3UcYZQZEGFxZ+EQay+Qoe+sQCODMz6nxEsciJwJoUCljcWR+A+4egAk19tDkOFxQmEQiXgurGAft4yb6Xti0SBBRYcOZQS/KCfGwvoOMwcRpHKfzADcBaCE4cyNAevDtxYQFdio0hP26gKZ/G0KCwVtMzrnQV0VGXrgsrTJEDBWVBJzbVnQcu83llAv7fYFIZioA8WmIXsgMe0gI8bsRgCr2ZHYWn6bgezUGkWLvS45ogF9OXYoK5pWIWyEBxPJpYPeV7GYg1sGKzCrp4PdygLmnegdiEYjIVqw9ATYwBZIFD4nVQvH0bMAhifxa1TSy+Bscg6dSlf+afdxyzcf7AYg7K0ClAXVBSQhXz+W6SfUw4MzgIaksS5R/3qYUQ9UM6CSpcOZTrLn/iBBbDV464+GJFPlLKgvaIoXHcpPazlgYW7hL0bK9sE/gFcKJ8Ft15EPxfJrR9ZuJ/ANZp4onHmAIdWAluDibItJSzoRxkUgZZiF5pg4XaBExnx8D7ag4IYeoBNnkeTAkIW2CnsK2KNFqJzfJIs3Cts1tXjsU7rlPsTNJgAwxdPzgJtn86gKaaJ4FSjJxbuBha5ew8TbH5H5pEw8oIe/gO77VTGAqPno5YKq93NovHMwu3BzsVCj/22Nack+1eYTm++Dhays1TLLBaYdouFFdka9zspHCkW7vcANAudDHjGyx1CT14JY4SjsonApEY2V5RmgelZnnhSQOsFTj5ymkU4y5UbrdLn07ACnzT72p8QRYgQghClp/1f7OjyIr5IbFUwyQJj2tmAZ/SUNNsMwr8Qi1m440/pkWmYDoTTB5NZ6+j7rVn70ctBZxzZfGqPxjUoCaKDTfnBQ6zR+q87vaXJkjCPL0PjFRb4jeBf2qXOl5QLvLbEEm3aq+vuMhhcdteNP6xk6MjTd3vdOy5nmSwCHfdZHoAOvh6bK2AeoQ3sIE5+col2iVgEWm+23t0B3FyAd1n1nnz5aevL/7fRCn5CYepIvpdLwiLUeLj2l8ulvx5mDWkDjMh8KXRs3xuVrN/UUY0vVw4LucL0Jkxop+u3U+1jctgqnVopOZbqVSrN4ta8CcXT7sZv/U5+fibtmb/Ze6L4S6yqXqmwKmFx4xGOgEFgQUMXo9I32O+FJ7e9TJWxKCtUYpKmIhnDApJzpFmmsOBzh/XJFBayE7peJVNY1B50usawqD/Qcs1h8ZJvsByZwQJvqnqfMjKDBapyAq+wjGBB+lW9TikZwcKAOCuUCSzQsaq3KScDWBRLqNAgA1gg5ZQjTaqfRXXrYWVVOwuVFF7NqpsFNuFDJFLdLAhsH8hLVDMLqrjwpFX1sqCGRBZ31cqC5u8xfaXqZGFWq6iVBW1V9RIVqTYW2Kt9nexZdbFAFxNmspKqhwWmZsxYJFULCzTN35hfg2pggQl0c+mL9XIWmF6NmNzM0ItZYHQ1ZbYirVIsprDMWA7C65vaJkKVYvH7dSHPGW5iEPhs0odYhspmw4zWmy2i8uSTMAGwszAtykyrksygtr/addAtH+cRSpSt6m1XPT2JuxWruiyp0e962V+ct4NTx3M87zS9nK+rQy8zAdBM/QcrLsC7+efizQAAAABJRU5ErkJggg==">          Sales KPI Dashboard</h1>
+        <p><br></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="small">
+    <div class="col-md-2">
+      <mode-chart id="chart_bfa53979ff2b" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_8fff77bbce5e" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_04ce3ce3c882" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_febbfd63a212" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_b85ff1901f7e" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <mode-chart id="chart_345538f20885" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_96aa2b1eab5d" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_a3cdfe9c6dc1" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_72c73d78a0a7" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_519020388d1d" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_4136be1a7fb5" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div id="map"></div>
+</div>
+<script>
+  alamode.googleMap({
+    google_maps_api_key: "AIzaSyBmxYHMwhRR0SlYMyI9a-usl-MwyFy1nk4",
+    title: "Account by Location",
+    lat_column: "lat",
+    lng_column: "long",
+    label_column: "city",
+    query_name: "Heat Map",
+    center_lat: 36.75,
+    center_lng: -119.77,
+    starting_zoom: 6,
+    map_type: "terrain"
+  })
+</script>
+<script>
+  addDrilldownLink({
+    "bar_chart_id": "chart_a3cdfe9c6dc1",
+    "url": "https://modeanalytics.com/sadavath/reports/18286d816cd5?run=now&param_region={{x}}&param_order_type={{series}}"
+  })
+
+
+  function addDrilldownLink(o) {
+    var id = "#" + o["bar_chart_id"],
+      url = o["url"];
+
+    $(id + " .highcharts-point").hover(function() {
+      $(this).css("cursor", "pointer");
+    });
+
+    if (url.indexOf("{{series}}") != -1) {
+      useSeries = true;
+    } else {
+      useSeries = false;
+    }
+
+    $(id + " .highcharts-point").click(function() {
+      var xIdx = $(this).index();
+      var xVar = $(id + " .highcharts-xaxis-labels text").eq(xIdx).text()
+
+      url = url.replace(/{{x}}/g, xVar)
+
+      if (useSeries) {
+        var classes = $(this).attr("class")
+        var seriesIdx = classes.split("highcharts-color-", 2)[1].split(" ")[0]
+        console.log(seriesIdx)
+        var series = $(id + " .highcharts-legend .highcharts-color-" + seriesIdx).text()
+        url = url.replace(/{{series}}/g, series)
+      }
+
+      var link = document.createElement('a');
+      link.href = url;
+      $(this).append(link);
+      link.click();
+
+    });
+  }
+</script>
