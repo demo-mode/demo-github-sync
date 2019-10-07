@@ -1,0 +1,6 @@
+aisles      = datasets[["aisles"]]
+departments = datasets[["department"]]
+products    = datasets[["products"]]
+orders      = datasets[["orders"]]
+order_products_train = datasets[["order_products_train"]]
+order_products_prior = datasets[["order_products_prior"]]

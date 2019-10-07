@@ -1,0 +1,1 @@
+## To evaluate the performance of the model, we create a custom function to build a confusion matrix and derive other binary classification metrics.

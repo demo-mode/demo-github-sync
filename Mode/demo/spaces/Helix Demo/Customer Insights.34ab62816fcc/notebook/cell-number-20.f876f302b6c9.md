@@ -1,0 +1,1 @@
+## A right tailed distribution with the maximum value at 5

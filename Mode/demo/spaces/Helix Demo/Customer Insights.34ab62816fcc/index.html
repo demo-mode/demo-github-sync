@@ -1,0 +1,126 @@
+<div class="mode-header embed-hidden">
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_24014783-7f39-45b6-85ea-8f78006857f9" dataset="dataset" options="text_options">
+        <h3 class="ql-align-center">CUSTOMER INSIGHTS REPORT</h3>
+        <p><br></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_380458fa-21e1-4fb2-f7be-7f6debf6164e" dataset="dataset" options="text_options">
+        <p>The objective of this report is:</p>
+        <ul>
+          <li>to uncover hidden trends in customer purchases (<em>Exploratory Data Analysis</em>)</li>
+          <li>predict which previously purchased products will be in a customer’s next order (<em>Predictive Analysis</em>)</li>
+        </ul>
+        <p><br></p>
+        <p>The dataset used for this report contains a random sample of over 3 million orders from more than 200,000 customers. For each user, 4 to 100 of their prior orders are given, with the sequence of products purchased in each order. All orders made
+          were between January to March 2019</p>
+        <p><br></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_3d5bd869-1ab9-4d9c-ee26-15eb387cbae3" dataset="dataset" options="text_options">
+        <h4 class="ql-align-center">EXPLORATORY DATA ANALYSIS</h4>
+        <p><br></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_5309bbb8-f2f3-44dc-c71d-804e52f5c988" dataset="dataset" options="text_options">
+        <p>Seems like Sunday evenings and Monday mornings are the busiest, with almost 95% of the orders being placed between 8 AM and 9 PM</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="large">
+    <div class="col-md-6">
+      <mode-python id="python_00541e0ce651" options="python_options"></mode-python>
+    </div>
+    <div class="col-md-6">
+      <mode-python id="python_0b66e16c8876" options="python_options"></mode-python>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_dcad258ced02" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_a79760ed-72c2-48d7-8147-7021e85fcb63" dataset="dataset" options="text_options">
+        <p>Produce is the most popular <em>department</em> followed by dairy eggs. In terms of <em>aisles</em>, fresh vegetables and fresh fruits are the most popular aisles</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="large">
+    <div class="col-md-6">
+      <mode-python id="python_dfad26606e01" options="python_options"></mode-python>
+    </div>
+    <div class="col-md-6">
+      <mode-python id="python_f1005f954b49" options="python_options"></mode-python>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_c83d9a61-e1bb-4a1a-d5dd-2be31e3ec4f0" dataset="dataset" options="text_options">
+        <h4 class="ql-align-center">PURCHASE BEHAVIOR</h4>
+        <p class="ql-align-center"><br></p>
+        <ul>
+          <li>The frequency plot of products in an order is a right-tailed distribution (with maximum value at 5)</li>
+          <li>Looks like customers order once in every week (check the peak at 7 days) or once in a month (peak at 30 days). We could also see smaller peaks at 14, 21 and 28 days (weekly intervals)</li>
+        </ul>
+        <p><br></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="large">
+    <div class="col-md-6">
+      <mode-python id="python_373322fe23c3" options="python_options"></mode-python>
+    </div>
+    <div class="col-md-6">
+      <mode-python id="python_3f6abfb5ac50" options="python_options"></mode-python>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_244eab88-090a-4a31-c982-56ded86ef144" dataset="dataset" options="text_options">
+        <h4 class="ql-align-center">PREDICTIVE ANALYSIS</h4>
+        <p><br></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_770bde9c-ea32-45f0-d638-95096bff543e" dataset="dataset" options="text_options">
+        <p>We build machine learning models that predict what product will the customer purchase in the next basket. This is a classification problem, as well as a regression of probability of repurchases.</p>
+        <p><br></p>
+        <p>As a baseline, we build a Naive Prediction model that predict the basket based on just the last order of a user.</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="small">
+    <div class="col-md-6">
+      <mode-python id="python_84052436f7c9" options="python_options"></mode-python>
+    </div>
+    <div class="col-md-6">
+      <mode-python id="python_2f98c801ac5f" options="python_options"></mode-python>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_82765288-08b2-4501-a28a-b9b61378cacb" dataset="dataset" options="text_options">
+        <p>This model has an Accuracy (F Score) of 21.5%, which is not very good.</p>
+        <p><br></p>
+        <p>(As a next step, Julia and I will will build a Regression model that introduces a few more features in the model, and try to increase it's accuracy.)</p>
+      </mode-text>
+    </div>
+  </div>
+</div>
