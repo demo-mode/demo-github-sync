@@ -1,0 +1,1 @@
+SELECT * from sadavath.rollup_adwords
