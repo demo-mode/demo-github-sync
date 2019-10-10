@@ -1,0 +1,111 @@
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+<script src="https://cdn.rawgit.com/mode/playbook/master/assets/leaflet-heatmap.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<div class="mode-header embed-hidden">
+
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_0d7ea739-e0cb-4df4-f618-c9071d7ac863" dataset="dataset" options="text_options" class="">
+        <h1 class="ql-align-center"><img src="https://static1.squarespace.com/static/5134cbefe4b0c6fb04df8065/t/5bd1e194e2c483e58d76dfdc/1540481432971/squarespace-logo-stacked-black.jpg" alt="x" height="120" width="165"> Sales KPI Dashboard</h1>
+        <p><br></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="small">
+    <div class="col-md-3">
+      <mode-chart id="chart_ca3b9a8d7849" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_ff7f5270d3f9" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_9b628adeead7" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_161d1c54c58e" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_af7487d527ae" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_acc435e4c8a3" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_ee3c3bd11c22" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_6b39a68dc684" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-python id="python_9622d02cab0d" options="python_options"></mode-python>
+    </div>
+  </div>
+  <div id="map"></div>
+</div>
+<script>
+  alamode.googleMap({
+    google_maps_api_key: "AIzaSyBmxYHMwhRR0SlYMyI9a-usl-MwyFy1nk4",
+    title: "Account by Location",
+    lat_column: "lat",
+    lng_column: "long",
+    label_column: "city",
+    query_name: "Heat Map",
+    center_lat: 36.75,
+    center_lng: -119.77,
+    starting_zoom: 6,
+    map_type: "terrain"
+  })
+</script>
+<script>
+  addDrilldownLink({
+    "bar_chart_id": "chart_acc435e4c8a3",
+    "url": "https://modeanalytics.com/sadavath/reports/18286d816cd5?run=now&param_region={{x}}&param_order_type={{series}}"
+  })
+
+
+  function addDrilldownLink(o) {
+    var id = "#" + o["bar_chart_id"],
+      url = o["url"];
+
+    $(id + " .highcharts-point").hover(function() {
+      $(this).css("cursor", "pointer");
+    });
+
+    if (url.indexOf("{{series}}") != -1) {
+      useSeries = true;
+    } else {
+      useSeries = false;
+    }
+
+    $(id + " .highcharts-point").click(function() {
+      var xIdx = $(this).index();
+      var xVar = $(id + " .highcharts-xaxis-labels text").eq(xIdx).text()
+
+      url = url.replace(/{{x}}/g, xVar)
+
+      if (useSeries) {
+        var classes = $(this).attr("class")
+        var seriesIdx = classes.split("highcharts-color-", 2)[1].split(" ")[0]
+        console.log(seriesIdx)
+        var series = $(id + " .highcharts-legend .highcharts-color-" + seriesIdx).text()
+        url = url.replace(/{{series}}/g, series)
+      }
+
+      var link = document.createElement('a');
+      link.href = url;
+      $(this).append(link);
+      link.click();
+
+    });
+  }
+</script>
