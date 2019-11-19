@@ -1,0 +1,1 @@
+rpart.plot(model1)
