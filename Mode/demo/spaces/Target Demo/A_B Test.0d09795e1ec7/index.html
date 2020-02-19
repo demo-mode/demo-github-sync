@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<style>
+  .barcode {
+    white-space: pre;
+    /* or pre-wrap if you want wrapping to still work. */
+  }
+</style>
+<div class="mode-header embed-hidden">
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_6cb35cfb-d863-4d96-80da-7104f68b037f" dataset="dataset" options="text_options">
+        <h2 class="ql-align-center">A/B Test Dashboard</h2>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p align="right">
+      </p>
+      <font size="4" align="right"> <span class="barcode"> <font color="#37b067">                                                                                        ✅   Test is outperforming control by <b>28.88%</b></font>
+        </span>
+        <br>
+      </font>
+      <font size="3"><span class="barcode"><font color="#43a5da">                                                 <b>Control group</b></font>: no CTA banner<font color="#06d0ad">                                             <b>Test group</b></font>: received CTA banner when visiting homepage
+         </span></font>
+
+
+      <img src="https://dl.dropboxusercontent.com/s/4ghukjh0s6bcvx3/parch%26posey.png" alt="Experiment">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-python id="python_79ad7933cfa5" options="python_options"></mode-python>
+    </div>
+  </div>
+  <div class="row" data-row-height="small">
+    <div class="col-md-8">
+      <mode-chart id="chart_fae491457f99" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-python id="python_15758743fe2b" options="python_options"></mode-python>
+    </div>
+  </div>
+</div>
+<script>
+  alamode.resizeChartHeight({
+    chart: "python_79ad7933cfa5",
+    height: 450
+  })
+
+  alamode.resizeChartHeight({
+    chart: "table_20f2d5d9d998",
+    height: 550
+  })
+</script>
