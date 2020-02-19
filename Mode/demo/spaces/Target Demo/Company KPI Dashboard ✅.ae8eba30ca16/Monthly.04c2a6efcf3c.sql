@@ -1,0 +1,1 @@
+SELECT * FROM sadavath.demo_marketing where channel IN ('twitter','adwords','organic','facebook', 'direct')
