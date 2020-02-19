@@ -1,0 +1,29 @@
+<div id="output"></div>
+<ul id="table">
+</ul>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="https://cdn.plot.ly/plotly-basic-latest.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.22.0/pivot.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.22.0/plotly_renderers.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.6.0/tips_data.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.13.0/pivot.min.css">
+<script type="text/javascript">
+  var data = datasets[0]['content'];
+  var listParent = document.getElementById("table");
+  // $("#output").pivotUI(datasets[0]['content'])
+
+  $("#output").pivotUI(data, {
+    rows: ["purchased_or_manufactured"],
+    cols: ["product_color"],
+    vals: ["product_name"],
+    aggregatorName: "Count",
+    rendererName: "Table",
+    renderers: $.extend(
+      $.pivotUtilities.renderers,
+      $.pivotUtilities.plotly_renderers
+    )
+  });
+</script>
+<div class="mode-grid container">
+</div>
