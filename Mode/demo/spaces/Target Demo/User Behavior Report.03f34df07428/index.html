@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<div class="mode-header embed-hidden">
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_27bdd24e-e0f0-4d6c-c6a6-7f149fc9a55c" dataset="dataset" options="text_options">
+        <h3 class="ql-align-center">How users move through our product</h3>
+        <p class="ql-align-center"><span style="color: rgb(57, 57, 69);">_____________________________________________________________________________</span></p>
+        <p class="ql-align-center"><br></p>
+        <p class="ql-align-center"><span style="color: rgb(57, 57, 69);">﻿</span></p>
+        <p><em>The inner-most circle represents a user’s first action in a session. The second circle represents their second action; the third circle represents their third; and so on. The size of each section represents the percentage of users who followed exactly that path of actions to during their session. Hover over a section of the circle that highlights that particular user path, and you’ll see the percentage of users who followed it.</em></p>
+      </mode-text>
+    </div>
+  </div>
+</div>
+<script>
+  alamode.sunburstChart({
+    query_name: "Query 1",
+    title: " ",
+    event_columns: ["e1", "e2", "e3", "e4", "e5"],
+    event_counts: "occurrances"
+  })
+</script>
