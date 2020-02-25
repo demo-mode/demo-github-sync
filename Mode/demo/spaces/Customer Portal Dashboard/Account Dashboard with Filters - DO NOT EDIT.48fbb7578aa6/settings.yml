@@ -1,4 +1,4 @@
 ---
 report_description: Demo for Parch and Posey. Do not edit.
 is_full_width: false
-hide_run_button: false
+hide_run_button: true
