@@ -1,4 +1,4 @@
-    SELECT day + INTERVAL '946 DAYS' AS day,
+SELECT day + INTERVAL '1400 DAYS' AS day,
            orders,
            rolling_avg
       FROM (

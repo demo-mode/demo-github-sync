@@ -5,8 +5,8 @@ FROM demo.region
 
 region:
   label: "Select a Region"
-  type: select
-  default: 'West'
+  type: multiselect
+  default: all
   options:
     labels: region
     values: region
