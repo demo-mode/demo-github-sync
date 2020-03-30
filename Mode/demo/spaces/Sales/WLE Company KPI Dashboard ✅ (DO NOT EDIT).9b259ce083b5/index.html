@@ -69,7 +69,8 @@
       dot_size: .4,
       dot_opacity: .7
     })
-
+    
+if( $('#bullet:empty').length) {
     alamode.bulletChart({
       html_element: "#bullet",
       color: "#113c55",
@@ -82,5 +83,6 @@
       marker_column: "goal",
       scale_columns: ["sales_14", "sales_15", "max"]
     })
+}
   </script>
 </div>

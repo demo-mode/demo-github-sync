@@ -1,5 +1,5 @@
     SELECT DATE_TRUNC('day',o.occurred_at) + INTERVAL '1400 DAY' AS date,
-           r.name AS region,
+           a.name,
            we.channel,
            SUM(o.gloss_qty) AS gloss_units,
            SUM(o.poster_qty) AS poster_units,
@@ -16,6 +16,6 @@
       JOIN demo.web_events_new we
         ON we.account_id = o.account_id
        AND o.occurred_at BETWEEN we.occurred_at AND we.occurred_at + interval '31 minutes'
-    WHERE r.name in ({{region}})
-     GROUP BY 1,2,3
-     ORDER BY 1,2,3
+    Where a.id = {{ account_id }}
+    GROUP BY 1,2,3
+    ORDER BY 1,2,3

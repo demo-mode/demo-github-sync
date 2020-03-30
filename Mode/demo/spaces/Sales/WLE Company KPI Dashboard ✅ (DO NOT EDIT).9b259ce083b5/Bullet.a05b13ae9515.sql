@@ -12,7 +12,6 @@
         ON a.sales_rep_id = sr.id
       JOIN demo.region r
         ON sr.region_id = r.id
-    WHERE r.name in ({{region}})
 
      GROUP BY 1
      ORDER BY 1

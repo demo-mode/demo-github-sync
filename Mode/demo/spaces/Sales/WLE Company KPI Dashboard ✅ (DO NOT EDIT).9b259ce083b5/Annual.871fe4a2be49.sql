@@ -1,5 +1,5 @@
     SELECT DATE_TRUNC('month',o.occurred_at) + INTERVAL '1400 DAY' AS date,
-           r.name,
+           a.name,
            COUNT(DISTINCT o.account_id)+(random()*1000) AS customers,
            SUM(o.gloss_qty) AS gloss_units,
            SUM(o.poster_qty) AS poster_units,
@@ -11,6 +11,16 @@
       join demo.accounts a on a.id = o.account_id
       join demo.sales_reps sr on sr.id = a.sales_rep_id 
       join demo.region r on r.id = sr.region_id
-      WHERE r.name in ({{region}})
+    Where a.id = {{ account_id }}
+
       GROUP BY 1,2
       ORDER BY 1,2
+      
+      
+{% form %}
+
+account_id:
+  type: text
+  default: 1001
+
+{% endform %}
