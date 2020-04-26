@@ -1,1 +1,1 @@
-select * from {{ @walmart }} 
+select * from {{ @apple }} 
