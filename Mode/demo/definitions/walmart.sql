@@ -1,1 +1,2 @@
-SELECT 1
+select * from demo.accounts
+where name = 'Walmart'
