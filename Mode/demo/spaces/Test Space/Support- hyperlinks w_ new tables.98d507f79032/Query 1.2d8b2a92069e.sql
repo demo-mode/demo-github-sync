@@ -1,0 +1,1 @@
+select id, name, concat('https://www.', name, '.com') as hyperlink from demo.accounts
