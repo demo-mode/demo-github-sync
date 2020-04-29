@@ -1,0 +1,97 @@
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_e7b05b9d-beec-417a-f8f1-d8c7cbaf7c8b" dataset="dataset" options="text_options">
+        <h3>Methodology:</h3>
+        <p><br></p>
+        <p>Customer health scores are bucketed into three categories, Firm, Account and Product Usage Health each with its own health score determined by scores assigned to attributes within each category</p>
+        <p><strong>Firm</strong></p>
+        <ol>
+          <li>Industry health</li>
+          <li>Funding health</li>
+          <li>Revenue health</li>
+        </ol>
+        <p><strong>Account</strong></p>
+        <ol>
+          <li>Account penetration (Active seats/# Employees)</li>
+          <li>Time as customer</li>
+          <li>Product Feature usage (“Four By Four”) (Schedules, email subs, 5+ spaces, custom colors)</li>
+          <li>CSM Assessment of Renewal Risk</li>
+          <li>CSM Assessment of Customer Engagement</li>
+        </ol>
+        <p><strong>Product Usage</strong></p>
+        <ol>
+          <li>DAU/MAU</li>
+          <li>MAU/Active Seats (“Rolling 28-day Engagement Rate)</li>
+          <li>Seat penetration</li>
+        </ol>
+        <p><br></p>
+        <p>Each of these three scores are normalized to each have the same weight in determining the overall health score.</p>
+        <p>The sum of these three scores is the overall health score.</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="small">
+    <div class="col-md-12">
+      <mode-text id="text_a186c3e2-fc3f-4cc9-b2ac-928b839dfdea" dataset="dataset" options="text_options">
+        <h3>Scoring:</h3>
+        <p>Each attribute is assigned a risk score on a scale of 1 to 3, with 1 representing the lowest risk and 3 highest risk. Details on the calculation of attribute scores can be found in the documentation linked above</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_1bedecd3-5982-462f-f64b-26be07e39fc4" dataset="dataset" options="text_options">
+        <h2 class="ql-align-center"><strong>ARR by Risk Categories</strong></h2>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-12">
+      <mode-chart id="chart_8187d543a3ac" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <mode-chart id="chart_1da5b1a88780" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_426fd610e76b" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_5283a588fd8c" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_64056435-ecd0-4f6b-fe69-db8422e69d0c" dataset="dataset" options="text_options">
+        <h2 class="ql-align-center"><strong>Customer Counts by Risk Categories</strong></h2>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_628b37ccc85a" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <mode-chart id="chart_9cbe21591dce" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_63e12a8a6747" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_6f705dbb1d8b" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_f3e787a85d9e" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+</div>
