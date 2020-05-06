@@ -40,7 +40,7 @@
       <mode-chart id="chart_13ca99d388cf" dataset="dataset" options="chart_options"></mode-chart>
     </div>
   </div>
-  <div class="row">
+  <div class="row" data-row-height="medium">
     <div class="col-md-6">
       <mode-chart id="chart_bda6eeb8bbf1" dataset="dataset" options="chart_options"></mode-chart>
     </div>
@@ -79,18 +79,18 @@
     })
 
     if ($('#bullet:empty').length) {
-    alamode.bulletChart({
-      html_element: "#bullet",
-      color: "#113c55",
-      chart_width: 550,
-      left_pad: 75,
-      query_name: "Bullet",
-      title: "Region Performance: Sales ($100k)",
-      title_column: "region",
-      bar_column: "sales_16",
-      marker_column: "goal",
-      scale_columns: ["sales_14", "sales_15", "max"]
-    })
+      alamode.bulletChart({
+        html_element: "#bullet",
+        color: "#113c55",
+        chart_width: 550,
+        left_pad: 75,
+        query_name: "Bullet",
+        title: "Region Performance: Sales ($100k)",
+        title_column: "region",
+        bar_column: "sales_16",
+        marker_column: "goal",
+        scale_columns: ["sales_14", "sales_15", "max"]
+      })
     }
   </script>
 </div>
