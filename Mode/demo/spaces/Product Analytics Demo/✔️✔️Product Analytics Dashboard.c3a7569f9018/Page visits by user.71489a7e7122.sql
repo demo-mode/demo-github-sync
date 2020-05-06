@@ -1,0 +1,1 @@
+select * from sadavath.page_visits_by_user

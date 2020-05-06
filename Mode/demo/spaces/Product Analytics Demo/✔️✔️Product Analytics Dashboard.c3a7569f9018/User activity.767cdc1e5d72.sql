@@ -1,0 +1,1 @@
+SELECT * FROM sadavath.user_activity
