@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+<script src="https://cdn.rawgit.com/mode/playbook/master/assets/leaflet-heatmap.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<div class="mode-header embed-hidden">
+
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_0d7ea739-e0cb-4df4-f618-c9071d7ac863" dataset="dataset" options="text_options" class="">
+        <h1 class="ql-align-center"> Monthly Sales KPI Dashboard</h1>
+        <p><br></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="small">
+    <div class="col-md-2">
+      <mode-chart id="chart_c261d8f51b13" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_4795b2b042dc" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_ba02768df1bd" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_b4026d6d81d9" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_aeb844c6881c" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_fe93e395c87f" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <mode-chart id="chart_1cae906393d2" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_b7c1ce4c16fb" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_b12ee2b03162" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_a8ee21ee1c08" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_c1dea1c41e91" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row" data-row-height="large">
+    <div class="col-md-12">
+      <mode-python id="python_98f086c80dd7" options="python_options"></mode-python>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_2bae41da821f" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+</div>
+<script>
+  alamode.leafletMap({
+    title: "Top Sales by Geography",
+    height: 500,
+    lat_column: "lat",
+    lng_column: "long",
+    label_column: "city",
+    query_name: "Heat Map",
+    center_lat: 39.5,
+    center_lng: -98.35,
+    starting_zoom: 5,
+    dot_size: .4,
+    dot_opacity: .7
+  })
+
+  $("#Proposed").css("top", -13);
+  $("#Proposed").css("height", 395);
+</script>
