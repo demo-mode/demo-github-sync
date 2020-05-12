@@ -1,4 +1,6 @@
-    SELECT DATE_TRUNC('day',o.occurred_at) + INTERVAL '1400 DAY' AS date,
+   with model_cte AS (
+   
+    SELECT o.occurred_at+ INTERVAL '1400 DAY' AS date,
            a.name,
            we.channel,
            SUM(o.gloss_qty) AS gloss_units,
@@ -15,7 +17,14 @@
         ON sr.region_id = r.id
       JOIN demo.web_events_new we
         ON we.account_id = o.account_id
-       AND o.occurred_at BETWEEN we.occurred_at AND we.occurred_at + interval '31 minutes'
     Where a.id = {{ account_id }}
-    GROUP BY 1,2,3
-    ORDER BY 1,2,3
+    GROUP BY 1,2,3)
+    
+    select date, name, case when gloss_units > 2500 then 'North' when gloss_units > 700 then 'South'
+    when gloss_units > 200 then 'East' else 'West' end as region, channel, gloss_units, poster_units,
+    standard_units, total_sales_usd
+    
+    from model_cte
+    order by 1, 2, 3, 4
+    
+                 
