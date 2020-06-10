@@ -1,4 +1,4 @@
-rolling = pd.rolling_mean(daily['orders'], 7, 0)
+rolling = pd.rolling_mean(daily['orders'], 7, 0) 
 
 idx = daily.index
 idx = np.array(idx, dtype=float)
