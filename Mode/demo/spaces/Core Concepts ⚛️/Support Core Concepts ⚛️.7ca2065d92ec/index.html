@@ -1,0 +1,49 @@
+<style>
+  
+   .filters-container {
+    background: #DCDCDC;
+} 
+
+   .filter-panel-header {
+    background: #DCDCDC;
+} 
+</style>
+
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-4">
+      <mode-chart id="chart_cfdc6ce19c44" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_9535f3bca8b4" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_e857ebf009ba" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_aae43a2bf28b" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_9853c2743de4" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-python id="python_dd586ac0b6fa" options="python_options"></mode-python>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_1654bae52648" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_d88f7afd52bc" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+</div>
