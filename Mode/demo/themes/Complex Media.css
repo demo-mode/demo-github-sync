@@ -96,7 +96,7 @@ text.nv-legend-text,
 
 /*Report description*/
 .mode-embed .mode-header p {
-  color: var(--purple);
+  color: var(--gray-400);
   margin-bottom: 32px;
   margin-top: 0;
   padding-left: 50px;
