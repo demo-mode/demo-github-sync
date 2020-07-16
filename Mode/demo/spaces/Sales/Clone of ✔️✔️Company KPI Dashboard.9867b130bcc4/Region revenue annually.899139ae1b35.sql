@@ -17,4 +17,4 @@
         ON we.account_id = o.account_id
        AND o.occurred_at BETWEEN we.occurred_at AND we.occurred_at + interval '31 minutes'
      GROUP BY 1,2,3
-     ORDER BY 1,2,3
+     ORDER BY 1,2,3, 4
