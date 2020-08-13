@@ -56,3 +56,7 @@
   text-transform: uppercase;
 }
 
+/* Chart Legend */
+.highcharts-legend .highcharts-legend-title text, .highcharts-legend .highcharts-legend-item text, .highcharts-legend .highcharts-legend-item text tspan {
+    font-family: 'Roboto', sans-serif;
+}
