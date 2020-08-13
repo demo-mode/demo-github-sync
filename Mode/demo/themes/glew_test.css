@@ -38,7 +38,7 @@
   text-transform: uppercase;
 }
 
-.editor-chart.mode-object.text-block-container .ql-editor h1, mode-text .ql-editor h1 {
+.editor-chart.mode-object.text-block-container .ql-editor h2, mode-text .ql-editor h2 {
   color: #f7b600;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
