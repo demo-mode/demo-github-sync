@@ -38,6 +38,12 @@
   text-transform: uppercase;
 }
 
+.editor-chart.mode-object.text-block-container .ql-editor h1, mode-text .ql-editor h1 {
+  color: #f7b600;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
 /* Chart Background */
 .mode-embed .mode-object {
   background: #eef2f5;
