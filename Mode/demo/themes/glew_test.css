@@ -34,6 +34,8 @@
 
 .editor-chart.mode-object.text-block-container .ql-editor p, .editor-chart.mode-object.text-block-container .ql-editor ol, .editor-chart.mode-object.text-block-container .ql-editor ul, mode-text .ql-editor p, mode-text .ql-editor ol, mode-text .ql-editor ul {
   color: #f7b600;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
 }
 
 /* Chart Background */
