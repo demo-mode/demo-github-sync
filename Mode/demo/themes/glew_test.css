@@ -33,7 +33,12 @@
 }
 
 /* Chart Background */
-.mode-embed .full-width-report .editor-chart, .mode-embed .full-width-report .editor-table {
+.mode-embed .mode-object {
+  background: #eef2f5;
+}
+
+.mode-embed .mode-object:hover {
+  border-color: yellow;
 }
 
 /* Big Nummber Header */
