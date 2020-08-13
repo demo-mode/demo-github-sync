@@ -35,10 +35,13 @@
 /* Chart Background */
 .mode-embed .mode-object {
   background: #eef2f5;
+  border-radius: 0.5rem;
 }
 
 .mode-embed .mode-object:hover {
-  border-color: yellow;
+  border-color: #f7b600;
+  border-width: .25rem;
+  
 }
 
 /* Big Nummber Header */
