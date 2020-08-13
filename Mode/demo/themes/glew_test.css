@@ -12,7 +12,7 @@
 /* Report Background */
 .embed-preview,
 .mode-embed {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 /* Report Logo */
