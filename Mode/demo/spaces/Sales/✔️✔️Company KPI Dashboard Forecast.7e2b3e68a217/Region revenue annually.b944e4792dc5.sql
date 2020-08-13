@@ -1,0 +1,117 @@
+{% if Economic_Outlook == 'standard' %}
+
+    SELECT DATE_TRUNC('day',o.occurred_at) + INTERVAL '1400 DAY' AS date,
+           r.name AS region,
+           we.channel,
+           SUM(o.gloss_qty) AS gloss_units,
+           SUM(o.poster_qty) AS poster_units,
+           SUM(o.standard_qty) AS standard_units,
+           SUM(o.total_amt_usd) AS total_sales_usd,
+           (SUM(o.gloss_qty) * SUM(o.poster_qty)) AS non_standard_sales
+      FROM demo.accounts a
+      JOIN demo.orders o
+        ON o.account_id = a.id
+      JOIN demo.sales_reps sr
+        ON a.sales_rep_id = sr.id
+      JOIN demo.region r
+        ON sr.region_id = r.id
+      JOIN demo.web_events_new we
+        ON we.account_id = o.account_id
+       AND o.occurred_at BETWEEN we.occurred_at AND we.occurred_at + interval '31 minutes'
+     GROUP BY 1,2,3
+     ORDER BY 1,2,3
+     
+{% elsif Economic_Outlook == 'depression' %}
+
+  SELECT DATE_TRUNC('day',o.occurred_at) + INTERVAL '1400 DAY' AS date,
+           r.name AS region,
+           we.channel,
+           SUM(o.gloss_qty) * .6 AS gloss_units,
+           SUM(o.poster_qty) * .6 AS poster_units,
+           SUM(o.standard_qty) * .6 AS standard_units,
+           SUM(o.total_amt_usd) * .6 AS total_sales_usd,
+           (SUM(o.gloss_qty) * SUM(o.poster_qty)) AS non_standard_sales
+      FROM demo.accounts a
+      JOIN demo.orders o
+        ON o.account_id = a.id
+      JOIN demo.sales_reps sr
+        ON a.sales_rep_id = sr.id
+      JOIN demo.region r
+        ON sr.region_id = r.id
+      JOIN demo.web_events_new we
+        ON we.account_id = o.account_id
+       AND o.occurred_at BETWEEN we.occurred_at AND we.occurred_at + interval '31 minutes'
+     GROUP BY 1,2,3
+     ORDER BY 1,2,3
+     
+{% elsif Economic_Outlook == 'poor' %}
+
+  SELECT DATE_TRUNC('day',o.occurred_at) + INTERVAL '1400 DAY' AS date,
+           r.name AS region,
+           we.channel,
+           SUM(o.gloss_qty) * .8 AS gloss_units,
+           SUM(o.poster_qty) * .8 AS poster_units,
+           SUM(o.standard_qty) * .8 AS standard_units,
+           SUM(o.total_amt_usd) * .8 AS total_sales_usd,
+           (SUM(o.gloss_qty) * SUM(o.poster_qty)) AS non_standard_sales
+      FROM demo.accounts a
+      JOIN demo.orders o
+        ON o.account_id = a.id
+      JOIN demo.sales_reps sr
+        ON a.sales_rep_id = sr.id
+      JOIN demo.region r
+        ON sr.region_id = r.id
+      JOIN demo.web_events_new we
+        ON we.account_id = o.account_id
+       AND o.occurred_at BETWEEN we.occurred_at AND we.occurred_at + interval '31 minutes'
+     GROUP BY 1,2,3
+     ORDER BY 1,2,3
+     
+{% elsif Economic_Outlook == 'good' %}
+
+  SELECT DATE_TRUNC('day',o.occurred_at) + INTERVAL '1400 DAY' AS date,
+           r.name AS region,
+           we.channel,
+           SUM(o.gloss_qty) * 1.2 AS gloss_units,
+           SUM(o.poster_qty) * 1.2 AS poster_units,
+           SUM(o.standard_qty) * 1.2 AS standard_units,
+           SUM(o.total_amt_usd) * 1.2 AS total_sales_usd,
+           (SUM(o.gloss_qty) * SUM(o.poster_qty)) AS non_standard_sales
+      FROM demo.accounts a
+      JOIN demo.orders o
+        ON o.account_id = a.id
+      JOIN demo.sales_reps sr
+        ON a.sales_rep_id = sr.id
+      JOIN demo.region r
+        ON sr.region_id = r.id
+      JOIN demo.web_events_new we
+        ON we.account_id = o.account_id
+       AND o.occurred_at BETWEEN we.occurred_at AND we.occurred_at + interval '31 minutes'
+     GROUP BY 1,2,3
+     ORDER BY 1,2,3
+     
+{% elsif Economic_Outlook == 'amazing' %}
+
+  SELECT DATE_TRUNC('day',o.occurred_at) + INTERVAL '1400 DAY' AS date,
+           r.name AS region,
+           we.channel,
+           SUM(o.gloss_qty) * 1.4 AS gloss_units,
+           SUM(o.poster_qty) * 1.4 AS poster_units,
+           SUM(o.standard_qty) * 1.4 AS standard_units,
+           SUM(o.total_amt_usd) * 1.4 AS total_sales_usd,
+           (SUM(o.gloss_qty) * SUM(o.poster_qty)) AS non_standard_sales
+      FROM demo.accounts a
+      JOIN demo.orders o
+        ON o.account_id = a.id
+      JOIN demo.sales_reps sr
+        ON a.sales_rep_id = sr.id
+      JOIN demo.region r
+        ON sr.region_id = r.id
+      JOIN demo.web_events_new we
+        ON we.account_id = o.account_id
+       AND o.occurred_at BETWEEN we.occurred_at AND we.occurred_at + interval '31 minutes'
+     GROUP BY 1,2,3
+     ORDER BY 1,2,3
+
+{% endif %}
+
