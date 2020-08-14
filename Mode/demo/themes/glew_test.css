@@ -99,3 +99,12 @@ mode-text .ql-editor ul {
 .highcharts-legend .highcharts-legend-item text tspan {
     font-family: 'Roboto', sans-serif;
 }
+
+/* Twitter Sytling */
+.twitter_container {
+  display: flex;
+}
+
+.twitter_tweet .twitter_tweet_rendered {
+  max-width:none;
+}
