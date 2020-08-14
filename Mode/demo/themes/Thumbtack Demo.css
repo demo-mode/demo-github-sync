@@ -87,6 +87,7 @@ mode-text .ql-editor ul {
 }
 
 .notebook-chart:hover {
+  border-top: 4px solid var(--chart-border)
   border-color: var(--chart-highlight);
 }
 
