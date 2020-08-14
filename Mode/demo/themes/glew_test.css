@@ -105,6 +105,6 @@ mode-text .ql-editor ul {
   display: flex;
 }
 
-.twitter-tweet.twitter-tweet-rendered {
+.twitter_tweet_container {
   max-width:none;
 }
