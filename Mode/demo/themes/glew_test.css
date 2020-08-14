@@ -106,5 +106,5 @@ mode-text .ql-editor ul {
 }
 
 .twitter_tweet_container {
-  max-width:none;
+  flex: 1;
 }
