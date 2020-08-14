@@ -81,12 +81,12 @@ mode-text .ql-editor ul {
 }
 
 /* Chart Top Bar for Notebook Charts */
-.mode-graphic-container {
+.notebook-chart {
   border-top: 4px solid var(--chart-border);
   border: solid var(--chart-border);
 }
 
-.mode-graphic-container:hover {
+.notebook-chart:hover {
   border-color: var(--chart-highlight);
 }
 
