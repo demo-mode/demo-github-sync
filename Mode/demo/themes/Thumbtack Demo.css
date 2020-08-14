@@ -114,6 +114,11 @@ mode-text .ql-editor ul {
   text-transform: uppercase;
 }
 
+.mode-object.big-number .chart-title .in-place-edit-text, 
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text:hover {
+  color: var(--chart-highlight);
+}
+
 
 /* Deprecated Display Table Header */
 .mode-object .chart-title, 
