@@ -74,15 +74,14 @@ mode-text .ql-editor ul {
   font-weight: 400;
 }
 
-/* Chart Top Bar 
+/* Chart Top Bar */
 .mode-embed .mode-object.editor-chart,
 .mode-embed .full-width-report .editor-table { 
-  border-top: 4px solid var(--chart-highlight);
-  border-right: 1px solid var(--chart-highlight);
-  border-left: 1px solid var(--chart-highlight);
-  border-bottom: 1px solid var(--chart-highlight);
+  border-top: 4px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid transparent;
 }
-*/
 
 /* Chart Top Bar for Notebook Charts */
 .mode-graphic-container  {
