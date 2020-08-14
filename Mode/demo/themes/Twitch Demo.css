@@ -89,10 +89,12 @@ mode-text .ql-editor ul {
   margin: 0.5rem;
 }
 
+/*
 .mode-graphic-container :hover {
   border-left: 4px solid var(--chart-highlight);
   border-bottom: 4px solid var(--chart-highlight)
 }
+*/
 
 /* Chart Background */
 .mode-embed .mode-object {
