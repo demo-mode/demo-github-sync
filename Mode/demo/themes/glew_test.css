@@ -39,23 +39,31 @@
   font-family: 'Roboto', sans-serif;
 }
 
-/* Report Text 
-.editor-chart.mode-object.text-block-container .ql-editor p, 
-.editor-chart.mode-object.text-block-container .ql-editor ol, 
-.editor-chart.mode-object.text-block-container .ql-editor ul, 
-mode-text .ql-editor p, mode-text .ql-editor ol, 
-mode-text .ql-editor ul {
-  color: var(--primary-color);
-  font-family: 'Roboto', sans-serif;
-  text-transform: uppercase;
-}
-*/
+/* Report Text
 .editor-chart.mode-object.text-block-container .ql-editor h2, 
 mode-text .ql-editor h2 {
   color: var(--primary-color);
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
 }
+*/
+.editor-chart.mode-object.text-block-container .ql-editor h1, 
+.editor-chart.mode-object.text-block-container .ql-editor h2, 
+.editor-chart.mode-object.text-block-container .ql-editor h3, 
+.editor-chart.mode-object.text-block-container .ql-editor h4, 
+.editor-chart.mode-object.text-block-container .ql-editor h5, 
+.editor-chart.mode-object.text-block-container .ql-editor h6, 
+mode-text .ql-editor h1, 
+mode-text .ql-editor h2, 
+mode-text .ql-editor h3, 
+mode-text .ql-editor h4, 
+mode-text .ql-editor h5, 
+mode-text .ql-editor h6 {
+  color: var(--primary-color);
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
 
 /* Chart Background */
 .mode-embed .mode-object {
