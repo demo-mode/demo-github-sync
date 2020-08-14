@@ -39,13 +39,19 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.editor-chart.mode-object.text-block-container .ql-editor p, .editor-chart.mode-object.text-block-container .ql-editor ol, .editor-chart.mode-object.text-block-container .ql-editor ul, mode-text .ql-editor p, mode-text .ql-editor ol, mode-text .ql-editor ul {
+/* Report Text 
+.editor-chart.mode-object.text-block-container .ql-editor p, 
+.editor-chart.mode-object.text-block-container .ql-editor ol, 
+.editor-chart.mode-object.text-block-container .ql-editor ul, 
+mode-text .ql-editor p, mode-text .ql-editor ol, 
+mode-text .ql-editor ul {
   color: var(--primary-color);
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
 }
-
-.editor-chart.mode-object.text-block-container .ql-editor h2, mode-text .ql-editor h2 {
+*/
+.editor-chart.mode-object.text-block-container .ql-editor h2, 
+mode-text .ql-editor h2 {
   color: var(--primary-color);
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
@@ -62,20 +68,24 @@
 }
 
 /* Big Nummber Header */
-.mode-object.big-number .chart-title .in-place-edit-text, .embed-preview .mode-object.big-number .chart-title .in-place-edit-text {
+.mode-object.big-number .chart-title .in-place-edit-text, 
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text {
     color: var(--secondary-color);
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
 }
 
 /* Chart Header */
-.editor-table .chart-header .in-place-edit-text, .editor-chart .chart-header .in-place-edit-text {
+.editor-table .chart-header .in-place-edit-text, 
+.editor-chart .chart-header .in-place-edit-text {
   color: var(--secondary-color);
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
 }
 
 /* Chart Legend */
-.highcharts-legend .highcharts-legend-title text, .highcharts-legend .highcharts-legend-item text, .highcharts-legend .highcharts-legend-item text tspan {
+.highcharts-legend .highcharts-legend-title text, 
+.highcharts-legend .highcharts-legend-item text, 
+.highcharts-legend .highcharts-legend-item text tspan {
     font-family: 'Roboto', sans-serif;
 }
