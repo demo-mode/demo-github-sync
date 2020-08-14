@@ -91,8 +91,8 @@ mode-text .ql-editor ul {
 }
 
 .mode-graphic-container :hover {
-  border-top: 4px solid var(--chart-highlight)
-  border-color: var(--chart-highlight);
+  border-left: 4px solid var(--chart-highlight);
+  border-bottom: 4px solid var(--chart-highlight)
 }
 
 /* Chart Background */
@@ -103,7 +103,8 @@ mode-text .ql-editor ul {
 }
 
 .mode-embed .mode-object:hover {
-  border-color: var(--chart-border);
+  border-left: 4px solid var(--chart-border);
+  border-bottom: 4px solid var(--chart-border);
 }
 
 /* Big Number Header */
