@@ -80,6 +80,15 @@ mode-text .ql-editor ul {
   border-top: 4px solid var(--chart-border);
 }
 
+/* Chart Top Bar for Notebook Charts */
+.mode-graphic-container {
+  border-top: 4px solid var(--chart-border);
+}
+
+.mode-graphic-container:hover {
+  border-color: var(--chart-highlight);
+}
+
 /* Chart Background */
 .mode-embed .mode-object {
   border-radius: 0.5rem;
