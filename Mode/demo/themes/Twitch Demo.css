@@ -78,9 +78,9 @@ mode-text .ql-editor ul {
 .mode-embed .mode-object.editor-chart,
 .mode-embed .full-width-report .editor-table { 
   border-top: 4px solid transparent;
-  border-right: 1px solid transparent;
-  border-left: 1px solid transparent;
-  border-bottom: 1px solid transparent;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-bottom: 4px solid transparent;
 }
 
 /* Chart Top Bar for Notebook Charts */
