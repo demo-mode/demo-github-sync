@@ -4,8 +4,8 @@
 :root {
     --primary-color: #a770e1;
     --report-background-color: #000000;
-    --paragraph-color: #fefefe;
-    --chart-background: #fefefe;
+    --paragraph-color: #dfdfdf;
+    --chart-background: #dfdfdf;
     --chart-highlight: #a770e1;
     --font-family: 'Lato', sans-serif;
 
@@ -108,7 +108,7 @@ mode-text .ql-editor ul {
 /* Big Number Header */
 .mode-object.big-number .chart-title .in-place-edit-text, 
 .embed-preview .mode-object.big-number .chart-title .in-place-edit-text{
-  color: var(--paragraph-color);
+  color: var(--primary-color);
   font-family: var(--font-family);
   text-transform: uppercase;
 }
@@ -116,7 +116,7 @@ mode-text .ql-editor ul {
 /* Deprecated Display Table Header */
 .mode-object .chart-title, 
 .mode-embed .mode-object .chart-title {
-  color: var(--paragraph-color);
+  color: var(--primary-color);
   font-family: var(--font-family);
   text-transform: uppercase;
 }
@@ -124,7 +124,7 @@ mode-text .ql-editor ul {
 /* Chart Header */
 .editor-table .chart-header .in-place-edit-text, 
 .editor-chart .chart-header .in-place-edit-text {
-  color: var(--paragraph-color);
+  color: var(--primary-color);
   font-family: var(--font-family);
   text-transform: uppercase;
 }
