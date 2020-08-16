@@ -85,15 +85,6 @@ mode-text .ql-editor ul {
 /* Chart Top Bar for Notebook Charts */
 .mode-graphic-container  {
   margin: 0.5rem;
-  border-left: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  border-top: 4px solid transparent;
-  border-right:4px solid transparent;
-}
-
-.mode-graphic-container :hover {
-  border-left: 4px solid var(--chart-highlight);
-  border-bottom: 4px solid var(--chart-highlight);
 }
 
 /* Chart Background */
