@@ -80,8 +80,8 @@ mode-text .ql-editor ul {
 .mode-embed .full-width-report .editor-table { 
   border-left: 4px solid transparent;
   border-bottom: 4px solid transparent;
-  /*border-top: 4px solid transparent;
-  border-right:4px solid transparent;*/
+  border-top: 4px solid transparent;
+  border-right:4px solid transparent;
 }
 
 /* Chart Top Bar for Notebook Charts */
@@ -98,8 +98,6 @@ mode-text .ql-editor ul {
 .mode-embed .mode-object:hover {
   border-left: 4px solid var(--chart-highlight);
   border-bottom: 4px solid var(--chart-highlight);
-  border-top: 4px solid transparent;
-  border-right:4px solid transparent
 }
 
 
