@@ -75,7 +75,7 @@ mode-text .ql-editor h3:hover,
 mode-text .ql-editor h4:hover, 
 mode-text .ql-editor h5:hover, 
 mode-text .ql-editor h6:hover{
-  background: none;
+  background: transparent;
 }
 
 /* Report Text Paragraph */
