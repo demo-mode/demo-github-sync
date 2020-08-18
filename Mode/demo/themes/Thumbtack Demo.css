@@ -135,12 +135,3 @@ mode-text .ql-editor ul {
 .highcharts-legend .highcharts-legend-item text tspan {
   font-family: var(--font-family);
 }
-
-/* Twitter Sytling */
-.twitter_container {
-  display: flex;
-}
-
-.twitter_tweet_container {
-  flex: 1;
-}
