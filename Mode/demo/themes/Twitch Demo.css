@@ -84,6 +84,13 @@ mode-text .ql-editor ul {
   border-right:4px solid transparent;
 }
 
+.mode-embed .mode-object.editor-chart, 
+.mode-embed .full-width-report .editor-table:hover {
+  border-left: 4px solid var(--chart-highlight);
+  border-bottom: 4px solid var(--chart-highlight);
+  background: #f0f0ff;
+}
+
 /* Chart Top Bar for Notebook Charts */
 .mode-graphic-container  {
   margin: 0.5rem;
@@ -94,12 +101,14 @@ mode-text .ql-editor ul {
   margin: 0.5rem;
   background: var(--chart-background);
 }
+
 /* .mode-embed .mode-object:hover {
   border-left: 4px solid var(--chart-highlight);
   border-bottom: 4px solid var(--chart-highlight);
   background: #f0f0ff;
 }
 */
+
 /* Big Number Header */
 .mode-object.big-number .chart-title .in-place-edit-text, 
 .embed-preview .mode-object.big-number .chart-title .in-place-edit-text{
