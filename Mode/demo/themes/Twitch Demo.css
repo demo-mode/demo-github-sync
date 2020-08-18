@@ -84,13 +84,6 @@ mode-text .ql-editor ul {
   border-right:4px solid transparent;
 }
 
-.mode-embed .mode-object.editor-chart:hover,
-.mode-embed .full-width-report .editor-table:hover {
-  border-left: 4px solid var(--chart-highlight);
-  border-bottom: 4px solid var(--chart-highlight);
-  background: #f0f0ff;
-}
-
 /* Chart Top Bar for Notebook Charts */
 .mode-graphic-container  {
   margin: 0.5rem;
