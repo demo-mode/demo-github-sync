@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
 
 :root {
-    --primary-color: #a770e1;
+    --primary-color: #ffffff;
     --report-background-color: #000000;
-    --header-color: #8205b4;
+    --header-color: #a770e1;
     --paragraph-color: #dfdfdf;
     --chart-background: #d2d2e6;
     --chart-highlight: #a770e1;
