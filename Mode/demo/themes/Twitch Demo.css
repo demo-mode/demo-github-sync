@@ -6,7 +6,7 @@
     --report-background-color: #000000;
     --header-color: #41145f;
     --paragraph-color: #dfdfdf;
-    --chart-background: #f0f0ff;
+    --chart-background: #d2d2e6;
     --chart-highlight: #a770e1;
     --font-family: 'Roboto Condensed', sans-serif;
 
@@ -97,7 +97,7 @@ mode-text .ql-editor ul {
 .mode-embed .mode-object:hover {
   border-left: 4px solid var(--chart-highlight);
   border-bottom: 4px solid var(--chart-highlight);
-  background: #d2d2e6;
+  background: #f0f0ff;
 }
 
 /* Big Number Header */
