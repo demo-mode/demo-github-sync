@@ -63,6 +63,21 @@ mode-text .ql-editor h6 {
   font-weight: 700;
 }
 
+.editor-chart.mode-object.text-block-container .ql-editor h1:hover, 
+.editor-chart.mode-object.text-block-container .ql-editor h2:hover, 
+.editor-chart.mode-object.text-block-container .ql-editor h3:hover, 
+.editor-chart.mode-object.text-block-container .ql-editor h4:hover, 
+.editor-chart.mode-object.text-block-container .ql-editor h5:hover, 
+.editor-chart.mode-object.text-block-container .ql-editor h6:hover, 
+mode-text .ql-editor h1:hover, 
+mode-text .ql-editor h2:hover, 
+mode-text .ql-editor h3:hover, 
+mode-text .ql-editor h4:hover, 
+mode-text .ql-editor h5:hover, 
+mode-text .ql-editor h6:hover{
+  background: none;
+}
+
 /* Report Text Paragraph */
 .editor-chart.mode-object.text-block-container .ql-editor p, 
 .editor-chart.mode-object.text-block-container .ql-editor ol, 
