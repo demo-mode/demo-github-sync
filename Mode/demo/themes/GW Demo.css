@@ -52,7 +52,7 @@ mode-text .ql-editor h3,
 mode-text .ql-editor h4, 
 mode-text .ql-editor h5, 
 mode-text .ql-editor h6 {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-family: var(--family-font);
   text-transform: uppercase;
 }
