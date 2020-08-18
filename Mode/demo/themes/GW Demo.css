@@ -1,9 +1,9 @@
 /* Style Sheet */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
     --primary-color: #f1b458;
-    --secondary-color: #202736;
+    --report-background-color: #202736;
     --paragraph-color: #f5f5f5;
     --chart-background: #eef2f5;
     --family-font: 'Roboto', sans-serif;
@@ -12,7 +12,7 @@
 /* Report Background */
 .embed-preview,
 .mode-embed {
-  background-color: var(--secondary-color);
+  background-color: var(--report-background-color);
 }
 
 /* Report Logo */
