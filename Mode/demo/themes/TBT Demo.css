@@ -3,8 +3,9 @@
 
 :root {
     --primary-color: #2f3033;
+    --secondary-color:#007fad;
     --report-background-color: #ffff;
-    --paragraph-color: #333333;
+    --paragraph-color: #D3D4D5;
     --chart-background: #fefefe;
     --chart-border: #d3d4d5;
     --chart-highlight: #007fad;
@@ -56,7 +57,7 @@ mode-text .ql-editor h3,
 mode-text .ql-editor h4, 
 mode-text .ql-editor h5, 
 mode-text .ql-editor h6 {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-family: var(--font-family);
   text-transform: uppercase;
   font-weight: 700;
