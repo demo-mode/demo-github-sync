@@ -1,5 +1,5 @@
 /* Style Sheet */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 :root {
     --primary-color: #ff7546;
@@ -8,8 +8,8 @@
     --paragraph-color: #000000;
     --chart-background: #fefefe;
     --chart-border: #d3d4d5;
-    --chart-highlight: #007fad;
-    --font-family: 'Lato', sans-serif;
+    --chart-highlight: #ff581f;
+    --font-family: 'Poppins', sans-serif;
 
   }
 
