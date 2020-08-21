@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 :root {
-    --primary-color: #ff7546;
+    --primary-color: #00000;
     --secondary-color:#007fad;
     --report-background-color: #fff9f7;
-    --paragraph-color: #000000;
+    --paragraph-color: #333333;
     --chart-background: #fefefe;
     --chart-border: #d3d4d5;
     --chart-highlight: #ff581f;
