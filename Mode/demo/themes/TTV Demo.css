@@ -136,6 +136,13 @@ mode-text .ql-editor ul {
   font-weight: 700;
 }
 
+/* Table Column Headers */
+.flat-table .ag-theme-mode .ag-header-cell-text {
+  font-family: var(--font-family);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
 /* Chart Legend */
 .highcharts-legend .highcharts-legend-title text, 
 .highcharts-legend .highcharts-legend-item text, 
