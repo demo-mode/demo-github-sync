@@ -140,6 +140,12 @@ mode-text .ql-editor ul {
 .flat-table .ag-theme-mode .ag-header-cell-text {
   font-family: var(--font-family);
   text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Table Row Text */
+.flat-table .ag-theme-mode.with-col-gridlines .ag-ltr .ag-cell {
+  font-family: var(--font-family);
   font-weight: 400;
 }
 
