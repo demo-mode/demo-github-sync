@@ -110,6 +110,11 @@ mode-text .ql-editor ul {
   font-weight: 700;
 }
 
+/* Big Number Description */
+.mode-object .chart-title.chart-description .in-place-edit-text, .mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
+  color: #333333;
+}
+
 /* Deprecated Display Table Header */
 .mode-object .chart-title, 
 .mode-embed .mode-object .chart-title {
