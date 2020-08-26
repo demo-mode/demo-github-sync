@@ -35,6 +35,8 @@
   font-family: var(--font-family);
   font-weight: 700;
   margin-bottom: 2rem;
+  background: #891100;
+  opacity: 0.5;
 }
 
 /* Report Header Paragraph */
