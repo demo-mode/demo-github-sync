@@ -43,7 +43,6 @@
   color: var(--paragraph-color);
   font-weight: 400;
   font-family: var(--font-family);
-  padding: 1rem;
   background-image: linear-gradient(to right, rgba(137,17,0,1), rgba(137,17,0,.4));
 }
 
@@ -80,11 +79,7 @@ mode-text .ql-editor ul {
 
 /* Chart Top Bar */
 .mode-embed .mode-object.editor-chart,
-.mode-embed .full-width-report .editor-table { 
-  border-left: 2px solid transparent;
-  border-bottom: 2px solid transparent;
-  border-top: 4px solid transparent;
-  border-right:2px solid transparent;
+.mode-embed .full-width-report .editor-table {
 }
 
 /* Chart Top Bar for Notebook Charts */
@@ -99,10 +94,6 @@ mode-text .ql-editor ul {
 }
 
 .mode-embed .mode-object:hover {
-  border-left: solid var(--chart-highlight);
-  border-bottom: solid var(--chart-highlight);
-  border-top: solid var(--chart-highlight);
-  border-right: solid var(--chart-highlight);
 }
 
 
