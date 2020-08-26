@@ -5,9 +5,9 @@
     --primary-color: #ffffff;
     --secondary-color: #9146FF;
     --report-background-color: #000000;
-    --header-color: #8205B4;
+    --header-color: #3a3a3a;
     --paragraph-color: #dfdfdf;
-    --chart-background: #F0F0FF;
+    --chart-background: rgb(255, 255, 255, 0.75);
     --chart-highlight: #a770e1;
     --font-family: 'Roboto Condensed', sans-serif;
 
@@ -35,7 +35,7 @@
   font-family: var(--font-family);
   font-weight: 700;
   margin-bottom: 2rem;
-  background: rgb(137,17,0,0.5);
+  background: rgb(137,17,0,0.75);
 }
 
 /* Report Header Paragraph */
@@ -43,6 +43,7 @@
   color: var(--paragraph-color);
   font-weight: 400;
   font-family: var(--font-family);
+  background: rgb(137,17,0,0.75);
 }
 
 /* Report Text Header */
@@ -58,7 +59,7 @@ mode-text .ql-editor h3,
 mode-text .ql-editor h4, 
 mode-text .ql-editor h5, 
 mode-text .ql-editor h6 {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-family: var(--font-family);
   text-transform: uppercase;
   font-weight: 700;
