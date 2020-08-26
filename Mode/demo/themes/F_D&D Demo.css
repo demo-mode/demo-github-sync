@@ -35,7 +35,7 @@
   font-family: var(--font-family);
   font-weight: 700;
   margin-bottom: 2rem;
-  background: rgb(137,17,0,0.75);
+  background-image: linear-gradient(to left, rgba(137,17,0,1), rgba(137,17,0,.25));
 }
 
 /* Report Header Paragraph */
