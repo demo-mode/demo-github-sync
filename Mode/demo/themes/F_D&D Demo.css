@@ -4,11 +4,10 @@
 :root {
     --primary-color: #ffffff;
     --secondary-color: #9146FF;
-    --report-background-color: #000000;
     --header-color: #3a3a3a;
     --paragraph-color: #dfdfdf;
     --chart-background: rgb(255, 255, 255, 0.75);
-    --chart-highlight: #a770e1;
+    --chart-highlight: #891100;
     --font-family: 'Roboto Condensed', sans-serif;
 
   }
@@ -35,7 +34,8 @@
   font-family: var(--font-family);
   font-weight: 700;
   margin-bottom: 2rem;
-  background-image: linear-gradient(to right, rgba(137,17,0,1), rgba(137,17,0,.25));
+  padding: 1rem;
+  background-image: linear-gradient(to right, rgba(137,17,0,1), rgba(137,17,0,.4));
 }
 
 /* Report Header Paragraph */
@@ -43,7 +43,8 @@
   color: var(--paragraph-color);
   font-weight: 400;
   font-family: var(--font-family);
-  background: rgb(137,17,0,0.75);
+  padding: 1rem;
+  background-image: linear-gradient(to right, rgba(137,17,0,1), rgba(137,17,0,.4));
 }
 
 /* Report Text Header */
@@ -80,10 +81,10 @@ mode-text .ql-editor ul {
 /* Chart Top Bar */
 .mode-embed .mode-object.editor-chart,
 .mode-embed .full-width-report .editor-table { 
-  border-left: 4px solid transparent;
-  border-bottom: 4px solid transparent;
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
   border-top: 4px solid transparent;
-  border-right:4px solid transparent;
+  border-right:2px solid transparent;
 }
 
 /* Chart Top Bar for Notebook Charts */
@@ -98,8 +99,10 @@ mode-text .ql-editor ul {
 }
 
 .mode-embed .mode-object:hover {
-  border-left: 4px solid var(--chart-highlight);
-  border-bottom: 4px solid var(--chart-highlight);
+  border-left: solid var(--chart-highlight);
+  border-bottom: solid var(--chart-highlight);
+  border-top: solid var(--chart-highlight);
+  border-right: solid var(--chart-highlight);
 }
 
 
