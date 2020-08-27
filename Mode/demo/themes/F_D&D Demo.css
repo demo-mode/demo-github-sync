@@ -90,8 +90,7 @@ mode-text .ql-editor ul {
 /* Chart Background */
 .mode-embed .mode-object {
   margin: 0.5rem;
-  /* background: var(--chart-background); */
-  background-image: url(url(https://static.wikia.nocookie.net/dungeons/images/0/0e/Community-header-background/revision/latest/zoom-crop/width/471/height/115?cb=20190531075152);
+  background: var(--chart-background);
 }
 
 .mode-embed .mode-object:hover {
