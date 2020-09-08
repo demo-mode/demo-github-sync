@@ -1,0 +1,13 @@
+animals=['giraffes', 'orangutans', 'monkeys']
+
+fig = go.Figure(data=[
+    go.Bar(name='SF Zoo', x=animals, y=[20, 14, 23]),
+    go.Bar(name='LA Zoo', x=animals, y=[12, 18, 29])
+])
+fig['layout'] = dict(barmode='group')
+
+#plotly3 syntax (backwards compatible in plotly4)
+iplot(fig)
+
+#plotly4 only syntax
+# fig.show()

@@ -1,0 +1,12 @@
+import pandas as pd; import numpy as np
+import plotly 
+import plotly.graph_objects as go
+import cufflinks as cf
+cf.go_offline()
+import plotly
+print("plotly version: {}".format(plotly.__version__))
+print("cufflinks version: {}".format(cf.__version__))
+
+# in plotly3, the below lines are required. in plotly4 it is optional
+from plotly.offline import init_notebook_mode, iplot
+init_notebook_mode()
