@@ -1,0 +1,138 @@
+/* Style Sheet */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+    --primary-color: ##e8652e;
+    --secondary-color:##fc101b;
+    --report-background-color: #ffff;
+    --paragraph-color: #676D73;
+    --chart-background: #fefefe;
+    --chart-border: #d3d4d5;
+    --chart-highlight: ##fc101b;
+    --font-family: 'Lato', sans-serif;
+
+  }
+
+/* Report Background */
+.embed-preview,
+.mode-embed {
+  background-color: var(--report-background-color);
+}
+
+/* Report Logo */
+.mode-embed .mode-header .logo {
+  text-align: right;
+  margin-bottom: 2rem;
+}
+
+.logo-img {
+  max-width: 15rem;
+}
+
+/* Report Header */
+.mode-embed .mode-header h1 {
+  color: var(--primary-color);
+  font-family: var(--font-family);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Report Header Paragraph */
+.mode-embed .mode-header p {
+  color: var(--paragraph-color);
+  font-weight: 400;
+  font-family: var(--font-family);
+}
+
+/* Report Text Header */
+.editor-chart.mode-object.text-block-container .ql-editor h1, 
+.editor-chart.mode-object.text-block-container .ql-editor h2, 
+.editor-chart.mode-object.text-block-container .ql-editor h3, 
+.editor-chart.mode-object.text-block-container .ql-editor h4, 
+.editor-chart.mode-object.text-block-container .ql-editor h5, 
+.editor-chart.mode-object.text-block-container .ql-editor h6, 
+mode-text .ql-editor h1, 
+mode-text .ql-editor h2, 
+mode-text .ql-editor h3, 
+mode-text .ql-editor h4, 
+mode-text .ql-editor h5, 
+mode-text .ql-editor h6 {
+  color: var(--secondary-color);
+  font-family: var(--font-family);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Report Text Paragraph */
+.editor-chart.mode-object.text-block-container .ql-editor p, 
+.editor-chart.mode-object.text-block-container .ql-editor ol, 
+.editor-chart.mode-object.text-block-container .ql-editor ul, 
+mode-text .ql-editor p, 
+mode-text .ql-editor ol, 
+mode-text .ql-editor ul {
+  color: var(--paragraph-color);
+  font-family: var(--font-family);
+  font-weight: 400;
+}
+
+/* Chart Top Bar */
+.mode-embed .mode-object.editor-chart,
+.mode-embed .full-width-report .editor-table { 
+  border-top: 4px solid var(--chart-highlight);
+  border-right: 1px solid var(--chart-highlight);
+  border-left: 1px solid var(--chart-highlight);
+  border-bottom: 1px solid var(--chart-highlight);
+}
+
+/* Chart Top Bar for Notebook Charts */
+.mode-graphic-container  {
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+}
+
+.mode-graphic-container :hover {
+  border-top: 4px solid var(--chart-border)
+  border-color: var(--chart-border);
+}
+
+/* Chart Background */
+.mode-embed .mode-object {
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  background: var(--chart-background);
+}
+
+.mode-embed .mode-object:hover {
+  border-color: var(--chart-border);
+}
+
+/* Big Number Header */
+.mode-object.big-number .chart-title .in-place-edit-text, 
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text{
+  color: var(--paragraph-color);
+  font-family: var(--font-family);
+  text-transform: uppercase;
+}
+
+/* Deprecated Display Table Header */
+.mode-object .chart-title, 
+.mode-embed .mode-object .chart-title {
+  color: var(--paragraph-color);
+  font-family: var(--font-family);
+  text-transform: uppercase;
+}
+
+/* Chart Header */
+.editor-table .chart-header .in-place-edit-text, 
+.editor-chart .chart-header .in-place-edit-text {
+  color: var(--paragraph-color);
+  font-family: var(--font-family);
+  text-transform: uppercase;
+}
+
+/* Chart Legend */
+.highcharts-legend .highcharts-legend-title text, 
+.highcharts-legend .highcharts-legend-item text, 
+.highcharts-legend .highcharts-legend-item text tspan {
+  font-family: var(--font-family);
+}
