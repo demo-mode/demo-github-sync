@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_beaa18a41b23" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+</div>
+
+<script>
+
+alamode.googleMap(
+  {
+      google_maps_api_key: "YOUR_API_KEY",
+      title: "Sales by State",
+      lat_column: "lat",
+      lng_column: "long",
+      label_column: "city",
+      query_name: "Query 1",
+      center_lat: 39.5,
+      center_lng: -98.35,
+      starting_zoom: 5,
+      map_type: "terrain",
+      height: 600
+  }
+)
+
+</script>
