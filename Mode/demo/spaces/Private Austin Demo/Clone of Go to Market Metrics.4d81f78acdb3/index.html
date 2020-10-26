@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-3">
+      <mode-chart id="chart_167c168a521b" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_bdbad0b2edca" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_987242dc6da4" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_5ad421540f81" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <mode-text id="text_4b530113-fe9f-44b7-afde-06a220333085" dataset="dataset" options="text_options">
+        <p>The visualization to your right highlights the sum of our sales by channel. </p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p>Directly below, there is a Histogram showing a performance test we running on an adwords campaign put together by our marketing team. </p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p>At the bottom of the page, find a geographic heat map on sales by state that will allow you to key in on key geographies </p>
+      </mode-text>
+    </div>
+    <div class="col-md-8">
+      <mode-chart id="chart_c6e7e0877c7b" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row" data-row-height="large">
+    <div class="col-md-12">
+      <mode-python id="python_cb08fa2b5d96" options="python_options"></mode-python>
+    </div>
+  </div>
+</div>
+<script>
+  alamode.googleMap({
+    google_maps_api_key: "AIzaSyBmxYHMwhRR0SlYMyI9a-usl-MwyFy1nk4",
+    title: "Sales by State",
+    lat_column: "lat",
+    lng_column: "long",
+    label_column: "city",
+    query_name: "Query 3",
+    center_lat: 39.5,
+    center_lng: -98.35,
+    starting_zoom: 5,
+    map_type: "terrain",
+    height: 600
+  })
+</script>
