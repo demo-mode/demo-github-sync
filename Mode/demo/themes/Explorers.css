@@ -131,10 +131,17 @@ span.trend-value.ng-binding,
   letter-spacing: 1px;
 }
 
-/* Output titles */
+/* Output styles */
 .mode-graphic-title {
 font-family:'Suez One', serif;, sans-serif;
   font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+  
+  .mode-retention-heatmap-label{
+  font-family:'Suez One', serif;, sans-serif;
+  font-size: 10px;
   font-weight: 300;
   letter-spacing: 1px;
 }
