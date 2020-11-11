@@ -131,6 +131,14 @@ span.trend-value.ng-binding,
   letter-spacing: 1px;
 }
 
+/* Output titles */
+.mode-graphic-title {
+font-family:'Suez One', serif;, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
 .mode-object.big-number .chart-title .in-place-edit-text,
 .embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
 .embed-preview .in-place-edit .in-place-edit-text {
