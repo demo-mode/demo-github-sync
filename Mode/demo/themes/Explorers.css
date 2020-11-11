@@ -134,7 +134,7 @@ span.trend-value.ng-binding,
 /* Output titles */
 .mode-graphic-title {
 font-family:'Suez One', serif;, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
 }
@@ -177,6 +177,13 @@ span.fb-content.ng-binding {
 .mode-embed .mode-object .error-message .message,
 .mode-embed .centered-content {
   color: #000;
+}
+
+.mode-embed .mode-object p{
+  font-family:'Suez One', serif;, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 
 /* CHARTS */
