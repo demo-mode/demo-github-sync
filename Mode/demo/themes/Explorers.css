@@ -56,11 +56,11 @@ body.mode-embed.embed-preview {
 }
 
 /* Green top Bar */
-.mode-object, .mode-placeholder {
+.mode-object, .mode-placeholder, .mode-graphic-container {
   border-top: 4px solid #52CC80 !important;
 }
 
-.mode-object:hover, .mode-placeholder:hover {
+.mode-object:hover, .mode-placeholder, .mode-graphic-container:hover {
   border-top-color: #52CC80 !important;
 }
 
@@ -146,6 +146,8 @@ font-family:'Suez One', serif;, sans-serif;
   letter-spacing: 1px;
 }
 
+  
+/* Big Number styles */
 .mode-object.big-number .chart-title .in-place-edit-text,
 .embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
 .embed-preview .in-place-edit .in-place-edit-text {
@@ -212,7 +214,7 @@ span.fb-content.ng-binding {
 }
 
 /* Chart background */
-.editor-module.editor-chart.mode-object.editor-multi, .mode-placeholder {
+.editor-module.editor-chart.mode-object.editor-multi, .mode-placeholder, .mode-graphic-container {
   transition: all 0.2s ease;
   background-color: #fff;
   border: 1px solid #D8D8D8;
@@ -224,7 +226,7 @@ span.fb-content.ng-binding {
 }
 
 /* Chart hover */
-.editor-module.editor-chart.mode-object.editor-multi:hover {
+.editor-module.editor-chart.mode-object.editor-multi, .mode-graphic-container:hover {
   background-color: #F7F7F9;
   box-shadow: 5px 10px 13px #D8D8D8;
   border: 1px solid #D8D8D8;
