@@ -588,7 +588,7 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 
 /* New Report Viz Toolbar */
 .new-viz-actions .tooltip {
-  color: #acacac;
+  color: #000000;
 }
 
 .new-viz-actions .table-filter-module {
@@ -597,7 +597,7 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 
 .new-viz-actions .table-filter-module.with-focus {
   background-color: #ffffff;
-  border: 1px solid #666666;
+  border: 1px solid #000000;
 }
 
 .new-viz-actions .table-filter-module.with-focus .filter-apply-btn {
@@ -605,7 +605,7 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 }
 
 .new-viz-actions .table-filter-module .filter-apply-btn {
-  border: 1px solid #666666;
+  border: 1px solid #000000;
   background-color: #ffffff;
 }
 
@@ -635,7 +635,7 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 
 .new-viz-actions .filter-apply-btn:active:not(.disabled), .new-viz-actions .new-viz-action:active:not(.disabled) {
   background-color: #ffffff;
-  border: 1px solid #666666;
+  border: 1px solid #000000;
 }
 
 .new-viz-actions .filter-apply-btn:hover:not(.disabled), .new-viz-actions .new-viz-action:hover:not(.disabled) {
@@ -683,4 +683,5 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 
 .tooltip.hierarchy-tooltip.top .tooltip-arrow {
   border-top-color: #000000;
+  stroke: #000000;
 }
