@@ -1,5 +1,5 @@
 /* CUSTOM FONT */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville');
 /* REPORT */
 /* Background color */
 body,
@@ -96,7 +96,7 @@ span.trend-value.ng-binding,
 .highcharts-axis-labels tspan,
 .highcharts-legend-item tspan,
 .nvd3 text {
-  font-family: "Noto+Sans", sans-serif;
+  font-family: "Libre+Baskerville", serif;
 }
 
 /* Report title */
@@ -113,7 +113,7 @@ span.trend-value.ng-binding,
 .mode-embed .mode-header p {
   color: #53535C, 100%;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1px;
   margin-top: 0;
   margin-bottom: 32px;
@@ -127,7 +127,7 @@ span.trend-value.ng-binding,
 .mode-placeholder .placeholder-title {
   color: #3D3D49, 100%;
   font-size: 24px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 1px;
 }
 
@@ -153,7 +153,7 @@ span.trend-value.ng-binding,
 /* Big number */
 span.fb-content.ng-binding,
 .chart-big-number span.fb-content {
-  color: #000000, 100%;
+  color: #000000;
 }
 
 /* Text editor text */
