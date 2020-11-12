@@ -103,7 +103,7 @@ span.trend-value.ng-binding,
 .mode-embed .mode-header h1 {
   color: #000000, 100%;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1px;
   margin-bottom: 0;
 }
@@ -227,7 +227,7 @@ span.fb-content.ng-binding,
 }
 
 .highcharts-root {
-  font-family: "Open+Sans", sans-serif;
+  font-family: "Libre+Baskerville", serif;
 }
 
 .highcharts-root tspan {
@@ -419,7 +419,7 @@ div.nvtooltip.xy-tooltip {
 }
 
 .chart-context-menu.has-explorer-icon .viz-action-icon .svg-icon-stroke {
-  stroke: #666666;
+  stroke: #000000;
 }
 
 .chart-context-menu.has-explorer-icon .viz-action-icon .svg-icon-fill {
