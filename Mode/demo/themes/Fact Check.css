@@ -397,19 +397,19 @@ div.nvtooltip.xy-tooltip {
 }
 
 .chart-context-menu {
-  color: #1e1e20;
+  color: #000000;
   background-color: #ffffff;
-  border-color: #666666;
+  border-color: #000000;
   box-shadow: 0px 3px 4px #53535C, 100%;
 }
 
 .chart-context-menu .section-descriptor {
   background-color: #ffffff;
-  border-color: #666666;
+  border-color: #000000;
 }
 
 .chart-context-menu .section-descriptor .value.label-section-name {
-  color: #666666;
+  color: #000000;
 }
 
 .chart-context-menu .context-menu-link:hover .context-menu-label-wrapper {
@@ -417,7 +417,7 @@ div.nvtooltip.xy-tooltip {
 }
 
 .chart-context-menu .section-divider {
-  border-color: #666666;
+  border-color: #000000;
 }
 
 .chart-context-menu.has-explorer-icon .viz-action-icon .svg-icon-stroke {
@@ -656,7 +656,7 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 }
 
 .new-viz-actions span.divider {
-  border-left-color: #666666;
+  border-left-color: #000000;
 }
 
 /* Hierarchy Buttons */
