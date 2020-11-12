@@ -594,7 +594,7 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 }
 
 .new-viz-actions .table-filter-module {
-  border: 1px solid transparent;
+  border: 1px solid #000000;
 }
 
 .new-viz-actions .table-filter-module.with-focus {
