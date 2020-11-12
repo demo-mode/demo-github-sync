@@ -104,8 +104,10 @@ span.trend-value.ng-binding,
   color: #000000, 100%;
   font-size: 48px;
   font-weight: 400;
+  font-family: "Libre+Baskerville", serif;
   letter-spacing: 1px;
   margin-bottom: 0;
+  
 }
 
 /* Report description */
