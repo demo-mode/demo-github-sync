@@ -430,6 +430,17 @@ div.nvtooltip.xy-tooltip {
  
 }
 
+.new-viz-actions .viz-explore-action {
+    margin-right: 12px;
+    color: #000000;
+}
+
+.btn-default, .btn-default:visited {
+    min-width: 90px;
+    color: #000000;
+    border-color: #000000;
+}
+
 /* Legend color */
 td div {
   border: none !important;
