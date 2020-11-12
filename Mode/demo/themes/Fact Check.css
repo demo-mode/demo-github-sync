@@ -422,10 +422,12 @@ div.nvtooltip.xy-tooltip {
 
 .chart-context-menu.has-explorer-icon .viz-action-icon .svg-icon-stroke {
   stroke: #000000;
+  border-color: #000000;
 }
 
 .chart-context-menu.has-explorer-icon .viz-action-icon .svg-icon-fill {
   fill: #000000;
+  border-color: #000000;
 }
 
 /* Legend color */
