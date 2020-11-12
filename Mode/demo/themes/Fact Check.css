@@ -610,7 +610,7 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 }
 
 .new-viz-actions .table-filter-module .filter-apply-btn .viz-action-icon .svg-icon-stroke {
-  stroke: #acacac;
+  stroke: #000000;
 }
 
 .new-viz-actions .table-filter-module .filter-apply-btn .viz-action-icon .svg-icon-fill {
@@ -622,11 +622,11 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 }
 
 .new-viz-actions .table-filter-module .filter-apply-btn:hover:not(.disabled) .viz-action-icon .svg-icon-stroke {
-  stroke: #666666;
+  stroke: #000000;
 }
 
 .new-viz-actions .filter-apply-btn .viz-action-icon .svg-icon-stroke, .new-viz-actions .new-viz-action .viz-action-icon .svg-icon-stroke {
-  stroke: #666666;
+  stroke: #000000;
 }
 
 .new-viz-actions .filter-apply-btn .viz-action-icon .svg-icon-fill, .new-viz-actions .new-viz-action .viz-action-icon .svg-icon-fill {
@@ -647,12 +647,12 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 }
 
 .new-viz-actions .filter-apply-btn:hover:not(.disabled) .viz-action-icon .svg-icon-stroke, .new-viz-actions .new-viz-action:hover:not(.disabled) .viz-action-icon .svg-icon-stroke {
-  stroke: #666666;
+  stroke: #000000;
 }
 
 .new-viz-actions .new-viz-action {
   background-color: #ffffff;
-  border: 1px solid #666666;
+  border: 1px solid #000000;
 }
 
 .new-viz-actions span.divider {
@@ -662,11 +662,11 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 /* Hierarchy Buttons */
 .drill-actions .drill-action-btn {
   background-color: #ffffff;
-  border: 1px solid #666666;
+  border: 1px solid #000000;
 }
 
 .drill-actions .drill-action-btn .icon-hierarchy-down rect, .drill-actions .drill-action-btn .icon-hierarchy-down path, .drill-actions .drill-action-btn .icon-hierarchy-up rect, .drill-actions .drill-action-btn .icon-hierarchy-up path {
-  stroke: #C9CAD1;
+  stroke: #000000;
 }
 
 .drill-actions .drill-action-btn:hover {
@@ -682,5 +682,5 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 }
 
 .tooltip.hierarchy-tooltip.top .tooltip-arrow {
-  border-top-color: #666666;
+  border-top-color: #000000;
 }
