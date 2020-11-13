@@ -657,7 +657,7 @@ thead tr:last-child th:last-child .pvtFixedHeader {
   border-left-color: #323773;
 }
 
-new-viz-actions .viz-explore-action {
+.new-viz-actions .viz-explore-action {
   margin-right: 12px;
   color: #F6019D;
 }
