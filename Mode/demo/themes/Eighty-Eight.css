@@ -515,6 +515,7 @@ input.filter-field {
 .flat-table .ag-theme-mode {
   color: #2DE2E6;
   background-color: #0d0121;
+  font-variant-numeric: tabular-nums;
 }
 
 .flat-table .ag-theme-mode .ag-header {
