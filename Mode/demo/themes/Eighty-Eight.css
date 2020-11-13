@@ -593,6 +593,11 @@ thead tr:last-child th:last-child .pvtFixedHeader {
   background: rgba(78,77,133, 0.05);
 }
 
+.flat-table .ag-theme-mode .ag-cell {
+  border-right: 1px  rgba(78,77,133, 1);
+  border-left: 1px rgba(78,77,133, 1);
+}
+
 /* Sort hovers */
 .pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper):hover,
 .pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper).dropdown-open {
