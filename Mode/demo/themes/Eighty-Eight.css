@@ -593,9 +593,25 @@ thead tr:last-child th:last-child .pvtFixedHeader {
   background: rgba(78,77,133, 0.05);
 }
 
+/* NEW Tables */
+
 .flat-table .ag-theme-mode .ag-cell {
   border-right: 1px  rgba(78,77,133, 1);
   border-left: 1px rgba(78,77,133, 1);
+}
+
+.flat-table-container .table-pagination-container .table-pagination li:first-child {
+  margin-left: 0;
+  background-color: #0d0121;
+  color: #2DE2E6;
+}
+.flat-table-container .table-pagination-container .table-pagination li {
+  display: flex;
+  align-items: center;
+}
+.mode-embed .mode-object h1, .mode-embed .mode-object h2, .mode-embed .mode-object h3, .mode-embed .mode-object h4, .editor-chart.mode-object.text-block-container .ql-editor h5, .mode-embed .mode-object h6, .mode-embed .mode-object p, .mode-embed .mode-object li, .mode-embed .mode-object .error-message .message, .mode-embed .centered-content {
+  color: #2DE2E6;
+  background-color: #0d0121;
 }
 
 /* Sort hovers */
