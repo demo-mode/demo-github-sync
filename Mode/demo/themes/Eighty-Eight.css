@@ -667,10 +667,6 @@ new-viz-actions .viz-explore-action {
   border-color: #323773;
 }
 
-.btn-default:not(.btn-icon), .btn-default:visited:not(.btn-icon) {
-  background: #15143d;
-}
-
 /* Hierarchy Buttons */
 .drill-actions .drill-action-btn {
   background-color: #15143d;
