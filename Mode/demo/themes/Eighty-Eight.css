@@ -640,11 +640,11 @@ thead tr:last-child th:last-child .pvtFixedHeader {
   box-shadow: 0 3px 4px #282f46;
 }
 
-.new-viz-actions .filter-apply-btn:hover:not(.disabled) .viz-action-icon .svg-icon-fill, .new-viz-actions .new-viz-action:hover:not(.disabled) .viz-action-icon .svg-icon-fill {
+.new-viz-actions .filter-apply-btn:hover:not(.disabled) .viz-action-icon .svg-icon-fill, .new-viz-actions .new-viz-action:hover:not(.disabled) .viz-action-icon .svg-icon-fill .viz-explore-action {
   fill: #F6019D;
 }
 
-.new-viz-actions .filter-apply-btn:hover:not(.disabled) .viz-action-icon .svg-icon-stroke, .new-viz-actions .new-viz-action:hover:not(.disabled) .viz-action-icon .svg-icon-stroke {
+.new-viz-actions .filter-apply-btn:hover:not(.disabled) .viz-action-icon .svg-icon-stroke, .new-viz-actions .new-viz-action:hover:not(.disabled) .viz-action-icon .svg-icon-stroke .viz-explore-action {
   stroke: #F6019D;
 }
 
@@ -655,20 +655,6 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 
 .new-viz-actions span.divider {
   border-left-color: #323773;
-}
-
-.new-viz-actions .viz-explore-action {
-  margin-right: 12px;
-  color: #F6019D;
-}
-.btn-default, .btn-default:visited {
-  min-width: 90px;
-  color: #F6019D;
-  border-color: #323773;
-}
-
-.btn-default:not(.btn-icon), .btn-default:visited:not(.btn-icon) {
-  background: #15143d;
 }
 
 /* Hierarchy Buttons */
