@@ -1,0 +1,341 @@
+
+/* CUSTOM FONT */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+/* REPORT */
+/* Background color */
+body,
+body.mode-embed.embed-preview {
+  background-color: #ffffff;
+}
+/* Gutters */
+.editor-module.editor-chart.mode-object.editor-multi.big-number.ng-scope.is-report-mode,
+.editor-module.editor-chart.mode-object.editor-multi {
+  border: 0;
+  margin: 0 8px 16px 8px;
+}
+@media (max-width: 768px) {
+  .editor-module.editor-chart.mode-object.editor-multi.big-number.ng-scope.is-report-mode,
+  .editor-module.editor-chart.mode-object.editor-multi {
+    border: 0;
+    margin: 0;
+  }
+}
+.row .mode-object:first-of-type {
+  margin-left: 0;
+}
+.row .mode-object:last-of-type {
+  margin-right: 0;
+}
+
+/* Brown top Bar */
+.mode-object {
+  border-top: 4px solid #d97b55 !important;
+}
+span.chart-title,
+in-place-edit {
+  line-height: 40px;
+}
+.row {
+  margin-top: 16px;
+}
+
+/* TEXT */
+/* Use custom font for all type on the page */
+.mode-embed .mode-header,
+.mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+.editor-table .chart-header,
+.editor-chart .chart-header,
+.mode-object .chart-title.chart-description .in-place-edit-text,
+.mode-embed .mode-object .chart-title.chart-description .in-place-edit-text,
+span.fb-content.ng-binding,
+span.trend-value.ng-binding,
+text.nv-legend-text,
+.chart-svg .nv-x text,
+.chart-svg .nv-y text {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
+/* Report title */
+.mode-embed .mode-header h1 {
+  color: #d97b55;
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+/* Report description */
+.mode-header p,
+.mode-embed .mode-header p {
+  color: #63656E;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+/* Chart titles */
+.mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+.editor-table .chart-header,
+.editor-chart .chart-header {
+  color: #121212;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .in-place-edit .in-place-edit-text {
+  line-height: 21px;
+}
+.chart-header {
+  padding-top: 10px;
+}
+
+/* Big number descriptions */
+.mode-object .chart-title.chart-description .in-place-edit-text,
+.mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
+  color: rgba(37, 37, 39, 0.5);
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  margin-top: 4px;
+}
+
+/* Big number */
+span.fb-content.ng-binding {
+  color: #121212;
+}
+
+/* Text editor text */
+.mode-embed .mode-object h1,
+.mode-embed .mode-object h2,
+.mode-embed .mode-object h3,
+.mode-embed .mode-object h4,
+.editor-chart.mode-object.text-block-container .ql-editor h5,
+.mode-embed .mode-object h6,
+.mode-embed .mode-object p,
+.mode-embed .mode-object li,
+.mode-embed .mode-object .error-message .message {
+  color: #121212;
+}
+
+/* CHARTS */
+/* Chart background */
+.editor-module.editor-chart.mode-object.editor-multi {
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+}
+.mode-embed .editor-table {
+  background: transparent;
+}
+/* Chart hover */
+.editor-module.editor-chart.mode-object.editor-multi:hover {
+  background-color: hsl(47, 36%, 95%);
+}
+.mode-embed .mode-object.editor-chart,
+.mode-embed .mode-object.editor-table {
+  border: transparent;
+}
+
+/* Pies */
+.nvd3.nv-pie path {
+  fill-opacity: 1;
+  stroke: #fff;
+  stroke-width: 0;
+  stroke-opacity: 0;
+}
+
+/* Text background */
+.editor-module.editor-chart.editor-multi.mode-object.text-block-container.report-view,
+.chart-content.text-block-content {
+  background: transparent;
+}
+
+/* Chart text */
+text {
+  fill: rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Chart tick text, Chart legend */
+.nvd3 .tick text,
+.nvd3 .nv-legend .nv-legend-text {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+/* Axis labels */
+.mode-object .chart .xlabel,
+.mode-object .chart .ylabel {
+  background: none;
+}
+.mode-object .chart .xlabel h4,
+.mode-object .chart .ylabel h4 {
+  font-style: italic;
+}
+
+/* Y Ticks */
+.chart-svg .nv-y line {
+  stroke: #393945;
+}
+
+/* Bars */
+.nvd3 .nv-multibar .nv-groups rect,
+.nvd3 .nv-multibarHorizontal .nv-groups rect,
+.nvd3 .nv-candlestickBar .nv-ticks rect,
+.nvd3 .nv-discretebar .nv-groups rect {
+  fill-opacity: 1;
+}
+.nvd3 .nv-multibar .nv-groups rect:hover,
+.nvd3 .nv-multibarHorizontal .nv-groups rect:hover,
+.nvd3 .nv-candlestickBar .nv-ticks rect:hover,
+.nvd3 .nv-discretebar .nv-groups rect:hover {
+  fill-opacity: 0.6;
+}
+
+/* TOOLTIPS */
+/* Tooltip */
+div.nvtooltip.xy-tooltip {
+  border: none;
+  background-color: #5c5953;
+  color: #deded6;
+}
+
+/* Legend color */
+td div {
+  border: none !important;
+  border-radius: 50%;
+}
+
+/* TABLES */
+.mode-table-grid,
+.mode-table-grid th {
+  background: transparent;
+  color: rgba(0, 0, 0, 0.65);
+}
+.mode-table-grid:not(.pivot-table-container),
+.mode-table-grid:not(.pivot-table-container) td,
+.mode-table-grid:not(.pivot-table-container) thead th,
+.mode-table-grid:not(.pivot-table-container) tbody th {
+  border-right: 1px solid rgba(217,123,85, 0.2);
+  border-bottom: 1px solid rgba(217,123,85, 0.2);
+}
+.mode-table-grid thead {
+  background-color: rgba(241,179,32, 0.2);
+}
+.mode-table-grid thead th {
+  background: rgba(241,179,32, 0.8);
+}
+
+/* Table filter */
+.filter-module.with-lightbox {
+  background: rgba(255, 255, 255, 0.2);
+  border: rgba(255, 255, 255, 0.8);
+}
+.filter-module .filter-field:focus {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Table filter text */
+input.filter-field {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Sort toggle */
+.axel-dropdown:hover .axel-dropdown-toggle {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Selected table header */
+.mode-table-grid th.is-selected-col {
+  color: #fff;
+}
+
+/* Selected table rows */
+.mode-table-grid td.is-selected-col {
+  color: #fff;
+  background: rgba(241,179,32, 0.15);
+}
+.axel-text-highlight .highlight {
+  background: #d97b55;
+}
+
+/* PIVOT TABLES */
+/* Table container, Column head bottom divider */
+.pivot-table-container,
+.pivot-table .pvtMainHeaderWrapper {
+  border: 1px solid rgba(217,123,85, 0.2);
+}
+.pivot-table .pvtMainHeaderWrapper {
+  border-left: 0;
+  border-top: 0;
+}
+
+/* Table base color */
+.pivot-table .mode-table-grid td,
+.pivot-table .mode-table-grid th {
+  background-color: #ffffff;
+}
+
+/* Pivot table row and column header panels */
+.pivot-table .pvtFixedHeaderPanel {
+  background: #ffffff;
+}
+
+/* Coarse dividers */
+/* Row header divider */
+tbody tr th:last-of-type .pvtFixedHeader {
+  border-right: 1px solid rgba(217,123,85, 0.4);
+}
+
+/* Column section divider */
+.pivot-table-container .pvtDividerVertical.pvtVal,
+.pivot-table-container .pvtDividerVertical.pvtTotal,
+.pivot-table-container .pvtDividerVertical .pvtFixedHeader,
+thead tr:last-child th:last-child .pvtFixedHeader {
+  border-right: 1px solid rgba(217,123,85, 0.4) !important;
+}
+
+/* Row header row section divider */
+.pivot-table-container .pvtDivider.pvtVal,
+.pivot-table-container .pvtDivider.pvtTotal,
+.pivot-table-container .pvtDivider .pvtFixedHeader {
+  border-bottom: 1px solid rgba(217,123,85, 0.4) !important;
+}
+
+/* Cell dividers */
+/* Column header row dividers, Row header column dividers */
+.pvtFixedHeader {
+  border-bottom: 1px solid rgba(217,123,85, 0.2);
+  border-right: 1px solid rgba(217,123,85, 0.2);
+}
+
+/* Column section subdivider */
+.pivot-table .pivot-table-container td {
+  border-color: rgba(217,123,85, 0.2);
+}
+
+/* Row header subdivider zebra striping, Table row zebra striping */
+.pivot-table-container tbody>tr:nth-child(even) .pvtRowLabel:last-of-type .pvtFixedHeader,
+.pivot-table-container tbody>tr:nth-child(even) td {
+  background: rgba(217,123,85, 0.05);
+}
+
+/* Sort hovers */
+.pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper):hover,
+.pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper).dropdown-open {
+  background: rgba(209, 209, 209, 0.8);
+}
+.pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper):hover .table-header-label,
+.pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper).dropdown-open .table-header-label {
+  color: rgba(217,123,85, 0.8);
+}
+
+/* Sort toggles */
+.pvtFixedHeader .axel-dropdown-toggle {
+  border-radius: 0;
+}
