@@ -657,6 +657,20 @@ thead tr:last-child th:last-child .pvtFixedHeader {
   border-left-color: #323773;
 }
 
+.new-viz-actions .viz-explore-action {
+  margin-right: 12px;
+  color: #C9CAD1;
+}
+.btn-default, .btn-default:visited {
+  min-width: 90px;
+  color: #F6019D;
+  border-color: #323773;
+}
+
+.btn-default:not(.btn-icon), .btn-default:visited:not(.btn-icon) {
+  background: #15143d;
+}
+
 /* Hierarchy Buttons */
 .drill-actions .drill-action-btn {
   background-color: #15143d;
