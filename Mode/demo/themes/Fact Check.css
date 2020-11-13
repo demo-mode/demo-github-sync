@@ -1,5 +1,6 @@
 /* CUSTOM FONT */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css2?family=Novo+Sans');
 /* REPORT */
 /* Background color */
 body,
@@ -83,7 +84,6 @@ in-place-edit {
 
 /* TEXT */
 /* Use custom font for all charting */
-.mode-embed .mode-header,
 .mode-object.big-number .chart-title .in-place-edit-text,
 .embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
 .editor-table .chart-header,
@@ -96,7 +96,7 @@ span.trend-value.ng-binding,
 .highcharts-axis-labels tspan,
 .highcharts-legend-item tspan,
 .nvd3 text {
-  font-family: "Libre+Baskerville", serif;
+  font-family: "Novo+Sans", sans-serif;
 }
 
 /* Report title */
