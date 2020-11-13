@@ -649,7 +649,7 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 }
 
 .new-viz-actions .new-viz-action {
-  background-color: #15143d;
+  background-color: #F6019D;
   border: 1px solid #323773;
 }
 
@@ -663,7 +663,7 @@ new-viz-actions .viz-explore-action {
 }
 .btn-default, .btn-default:visited {
   min-width: 90px;
-  color: #F6019D;
+  color: #15143d;
   border-color: #323773;
 }
 
