@@ -91,6 +91,7 @@ in-place-edit {
 .mode-placeholder .placeholder-title,
 .mode-object .chart-title.chart-description .in-place-edit-text,
 .mode-embed .mode-object .chart-title.chart-description .in-place-edit-text,
+.new-viz-actions .viz-explore-action,
 span.fb-content.ng-binding,
 span.trend-value.ng-binding,
 .highcharts-axis-labels tspan,
