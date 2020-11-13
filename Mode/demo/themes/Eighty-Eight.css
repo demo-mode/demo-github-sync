@@ -527,9 +527,14 @@ input.filter-field {
 .ag-cell {
   color: #2DE2E6;
   background-color: #0d0121;
+  border: 1px solid #4e4d85;
   display: inline-block;
   position: absolute;
   white-space: nowrap;
+}
+
+.flat-table .ag-theme-mode .ag-cell-range-selected-1 {
+  background-color: rgba(38, 20, 71, 0.8); 
 }
 
 /* Table base color */
@@ -592,7 +597,7 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 /* Sort hovers */
 .pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper):hover,
 .pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper).dropdown-open {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(13, 1, 33, 0.8);
 }
 
 .pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper):hover .table-header-label,
