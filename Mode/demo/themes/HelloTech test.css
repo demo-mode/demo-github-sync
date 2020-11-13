@@ -31,7 +31,7 @@
 
 /* Report Header */
 .mode-embed .mode-header h1 {
-  color: var(--blue);
+  color: var(--secondary-color);
   font-family: var(--secondary-color);
   font-weight: 700;
   margin-bottom: 2rem;
