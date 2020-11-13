@@ -487,13 +487,13 @@ input.filter-field {
 
 /* Selected table header */
 .mode-table-grid th.is-selected-col {
-  color: #fff;
+  color: #2DE2E6;
 }
 
 /* Selected table rows */
 .mode-table-grid td.is-selected-col {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.15);
+  color: #2DE2E6;
+  background: rgba(13, 1, 33, 1);
 }
 
 .axel-text-highlight .highlight {
