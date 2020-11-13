@@ -512,6 +512,12 @@ input.filter-field {
   border-top: 0;
 }
 
+.flat-table .ag-theme-mode {
+  color: #2DE2E6;
+  background-color: #0d0121;
+  font-variant-numeric: tabular-nums;
+}
+
 /* Table base color */
 .pivot-table .mode-table-grid td,
 .pivot-table .mode-table-grid th {
