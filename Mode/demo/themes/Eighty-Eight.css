@@ -453,7 +453,7 @@ td div {
 }
 
 .mode-table-grid thead {
-  background-color: rgba((78, 77, 133, 1));
+  background-color: rgba(13, 1, 33, 1);
 }
 
 .mode-table-grid thead tr th .table-header-label,
@@ -515,12 +515,12 @@ input.filter-field {
 /* Table base color */
 .pivot-table .mode-table-grid td,
 .pivot-table .mode-table-grid th {
-  background-color: #191925;
+  background-color: #0d0121;
 }
 
 /* Pivot table row and column header panels */
 .pivot-table .pvtFixedHeaderPanel {
-  background: #191925;
+  background: #0d0121;
 }
 
 /* Coarse dividers */
