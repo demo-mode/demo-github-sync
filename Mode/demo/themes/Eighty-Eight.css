@@ -628,6 +628,17 @@ thead tr:last-child th:last-child .pvtFixedHeader {
   background-color: #0d0121;
 }
 
+.flat-table-container .table-pagination-container .table-pagination {
+  display: flex;
+  flex: 0 1;
+  height: 100%;
+  margin: 0 5px;
+  padding: 0;
+  list-style-type: none;
+  color: #2DE2E6;
+  background-color: #0d0121;
+}
+
 /* Sort hovers */
 .pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper):hover,
 .pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper).dropdown-open {
