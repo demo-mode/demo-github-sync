@@ -524,6 +524,14 @@ input.filter-field {
   background-color: #0d0121;
 }
 
+.ag-cell {
+  color: #2DE2E6;
+  background-color: #0d0121;
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+}
+
 /* Table base color */
 .pivot-table .mode-table-grid td,
 .pivot-table .mode-table-grid th {
