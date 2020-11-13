@@ -5,8 +5,8 @@
     --primary-color: #263746;
     --secondary-color: #6D7D8C;
     --report-background-color: #263746;
-    --header-color: #8205B4;
-    --paragraph-color: #dfdfdf;
+    --header-color: #263746;
+    --paragraph-color: #0992E9;
     --chart-background: #384C5E;
     --chart-highlight: #6D7D8C;
     --font-family: 'Roboto Condensed', sans-serif;
@@ -31,8 +31,8 @@
 
 /* Report Header */
 .mode-embed .mode-header h1 {
-  color: var(--primary-color);
-  font-family: var(--font-family);
+  color: var(--blue);
+  font-family: var(--secondary-color);
   font-weight: 700;
   margin-bottom: 2rem;
 }
