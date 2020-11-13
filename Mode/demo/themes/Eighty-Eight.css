@@ -441,19 +441,19 @@ td div {
 .mode-table-grid,
 .mode-table-grid th {
   background: transparent;
-  color: rgba(255, 255, 255, 0.65) !important;
+  color: rgba(13, 1, 33, 0.65) !important;
 }
 
 .mode-table-grid:not(.pivot-table-container),
 .mode-table-grid:not(.pivot-table-container) td,
 .mode-table-grid:not(.pivot-table-container) thead th,
 .mode-table-grid:not(.pivot-table-container) tbody th {
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(78, 77, 133, 1); 
+  border-bottom: 1px solid rgba((78, 77, 133, 1));
 }
 
 .mode-table-grid thead {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba((78, 77, 133, 1));
 }
 
 .mode-table-grid thead tr th .table-header-label,
