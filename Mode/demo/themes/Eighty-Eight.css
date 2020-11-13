@@ -449,7 +449,7 @@ td div {
 .mode-table-grid:not(.pivot-table-container) thead th,
 .mode-table-grid:not(.pivot-table-container) tbody th {
   border-right: 1px solid rgba(78, 77, 133, 1); 
-  border-bottom: 1px solid rgba((78, 77, 133, 1));
+  border-bottom: 1px solid rgba(78, 77, 133, 1);
 }
 
 .mode-table-grid thead {
@@ -458,11 +458,11 @@ td div {
 
 .mode-table-grid thead tr th .table-header-label,
 .mode-table-grid thead tr th .axel-table-header-label {
-  color: #FCFCFC !important;
+  color: #0d0221 !important;
 }
 
 .mode-table-grid thead th {
-  background: rgba(25, 25, 37, 0.8);
+  background: rgba(13, 1, 33, 1);
 }
 
 /* Table filter */
