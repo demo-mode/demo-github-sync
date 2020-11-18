@@ -137,6 +137,15 @@ span.trend-value.ng-binding,
   letter-spacing: 1px;
 }
 
+.mode-graphic-title {
+    font-size: 14px;
+    line-height: 48px;
+    height: 48px;
+    padding-left: 16px;
+    font-weight: 500;
+    color: #3D3D49, 100%;
+}
+
 .mode-object.big-number .chart-title .in-place-edit-text,
 .embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
 .embed-preview .in-place-edit .in-place-edit-text {
