@@ -95,6 +95,8 @@ span.fb-content.ng-binding,
 span.trend-value.ng-binding,
 .highcharts-axis-labels tspan,
 .highcharts-legend-item tspan,
+.mode-graphic-title,
+.mode-world-chorolpleth-legend,
 .nvd3 text {
   font-family: "Novo+Sans", sans-serif;
 }
@@ -126,6 +128,8 @@ span.trend-value.ng-binding,
 .embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
 .editor-table .chart-header,
 .editor-chart .chart-header,
+.mode-graphic-title,
+.mode-world-chorolpleth-legend,
 .mode-placeholder .placeholder-title {
   color: #3D3D49, 100%;
   font-size: 24px;
@@ -697,4 +701,10 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 .tooltip.hierarchy-tooltip.top .tooltip-arrow {
   border-top-color: #000000;
   stroke: #000000;
+}
+
+.mode-graphic-container {
+    border: transparent; 
+    margin: 15px auto;
+    overflow: scroll;
 }
