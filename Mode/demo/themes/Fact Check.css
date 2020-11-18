@@ -702,9 +702,3 @@ thead tr:last-child th:last-child .pvtFixedHeader {
   border-top-color: #000000;
   stroke: #000000;
 }
-
-.mode-graphic-container {
-    border: transparent; 
-    margin: 15px auto;
-    overflow: scroll;
-}
