@@ -1,0 +1,1 @@
+SELECT * FROM samw.global_covid_data_2020_11_17

@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="https://d3js.org/d3-geo.v1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.4/queue.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.1.0/topojson.min.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<div class="mode-header embed-hidden">
+
+
+
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+
+ 
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_643665a2d749" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_c1000c41c4ce" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_ed2c44ac667e" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_e5b7a5296eda" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+</div>
+
+ <script>
+    alamode.worldChoropleth({
+      query_name: "10-31 Snapshot",
+      width: 1200,
+      country_column: "iso_code",
+      country_code_type: "iso_code_alpha_3",
+      // Options for country_code_type:
+      //    name
+      //    iso_code_numeric
+      //    iso_code_alpha_2
+      //    iso_code_alpha_3
+      value_column: "new_cases",
+      title: "New Cases by Country",
+      color_gradient: [ "#f8c1a8", "#ef9198", "#e8608a", "#c0458a", "#8f3191", "#62218f", "#4b186c", "#33104a"]
+    })
+  </script>
