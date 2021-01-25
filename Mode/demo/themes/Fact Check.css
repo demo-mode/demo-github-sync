@@ -8,7 +8,7 @@ body.mode-embed.embed-preview {
   background-color: #ffffff;
   background: linear-gradient(to top, #ffffff, #ffffff);
   background-attachment: fixed;
-  color: #393945;
+  color: #ffffff;
 }
 }
 
@@ -62,10 +62,13 @@ body.mode-embed.embed-preview {
 /* Grey top Bar */
 .mode-object, .mode-placeholder {
   border-top: 4px solid #ffffff !important;
+  border-radius: 0px 0px 15px 15px;
+  
 }
 
 .mode-object:hover, .mode-placeholder:hover {
-  border-top-color: #53535C, 100% !important;
+  border-top-color: #53535C !important;
+  border-radius: 0px 0px 15px 15px;
 }
 
 /* Placeholder header */
@@ -84,6 +87,7 @@ in-place-edit {
 
 /* TEXT */
 /* Use custom font for all charting */
+.mode-embed .mode-header,
 .mode-object.big-number .chart-title .in-place-edit-text,
 .embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
 .editor-table .chart-header,
@@ -95,32 +99,29 @@ span.fb-content.ng-binding,
 span.trend-value.ng-binding,
 .highcharts-axis-labels tspan,
 .highcharts-legend-item tspan,
-.mode-graphic-title,
-.mode-world-chorolpleth-legend,
 .nvd3 text {
   font-family: "Novo+Sans", sans-serif;
 }
 
 /* Report title */
 .mode-embed .mode-header h1 {
-  color: #000000, 100%;
+  color: #1e1e20;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 600;
   font-family: "Libre+Baskerville", serif;
   letter-spacing: 1px;
   margin-bottom: 0;
-  
 }
 
 /* Report description */
 .mode-header p,
 .mode-embed .mode-header p {
-  color: #53535C, 100%;
+  color: #53535C;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 1px;
-  margin-top: 0;
-  margin-bottom: 32px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 /* Chart titles */
@@ -128,22 +129,11 @@ span.trend-value.ng-binding,
 .embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
 .editor-table .chart-header,
 .editor-chart .chart-header,
-.mode-graphic-title,
-.mode-world-chorolpleth-legend,
 .mode-placeholder .placeholder-title {
-  color: #3D3D49, 100%;
+  color: #3D3D49;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 1px;
-}
-
-.mode-graphic-title {
-    font-size: 24px;
-    line-height: 48px;
-    height: 48px;
-    padding-left: 16px;
-    font-weight: 700;
-    color: #3D3D49, 100%;
 }
 
 .mode-object.big-number .chart-title .in-place-edit-text,
@@ -159,7 +149,7 @@ span.trend-value.ng-binding,
 /* Big number descriptions */
 .mode-object .chart-title.chart-description .in-place-edit-text,
 .mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
-  color: #53535C, 100%;
+  color: #53535C;
   font-size: 16px;
   letter-spacing: 0.4px;
   margin-top: 4px;
@@ -168,7 +158,7 @@ span.trend-value.ng-binding,
 /* Big number */
 span.fb-content.ng-binding,
 .chart-big-number span.fb-content {
-  color: #000000;
+  color: #1e1e20;
 }
 
 /* Text editor text */
@@ -182,7 +172,7 @@ span.fb-content.ng-binding,
 .mode-embed .mode-object li,
 .mode-embed .mode-object .error-message .message,
 .mode-embed .centered-content {
-  color: #000000, 100%;
+  color: #1e1e20;
 }
 
 /* CHARTS */
@@ -215,7 +205,7 @@ span.fb-content.ng-binding,
 
 /* Chart hover */
 .editor-module.editor-chart.mode-object.editor-multi:hover {
-  background-color: rgba(255,255,255,0);
+  background-color: rgba(226, 226, 226, 0.2);
 }
 
 .mode-embed .mode-object.editor-chart,
@@ -238,15 +228,15 @@ span.fb-content.ng-binding,
 
 /* Chart text */
 .nvd3 text {
-  fill: rgba(102,102,102,1);
+  fill: rgba(30, 30, 32, 0.45);
 }
 
 .highcharts-root {
-  font-family: "Libre+Baskerville", serif;
+  font-family: "Open+Sans", sans-serif;
 }
 
 .highcharts-root tspan {
-  fill: #000000;
+  fill: #1e1e20;
 }
 
 .highcharts-text-outline {
@@ -260,14 +250,14 @@ span.fb-content.ng-binding,
 .highcharts-axis-labels tspan,
 .highcharts-legend-item tspan,
 .highcharts-legend-item text tspan {
-  fill: #666666, 100% !important;
-  color: #666666 !important; 
+  fill: #1e1e20 !important;
+  color: #1e1e20 !important; 
   font-size: 13px;
   font-weight: 300;
 }
 
 .highcharts-legend .highcharts-legend-title text {
-  fill: #666666;
+  fill: #1e1e20;
   font-style: italic;
   font-weight: 500 !important;
 }
@@ -287,7 +277,7 @@ span.fb-content.ng-binding,
   font-style: italic;
   font-weight: 500;
   font-size: 12px;
-  fill: #666666;
+  fill: #1e1e20;
 }
 
 /* Y Ticks */
@@ -295,7 +285,7 @@ span.fb-content.ng-binding,
 .highcharts-yaxis-grid .highcharts-grid-line,
 .highcharts-xaxis .highcharts-axis-line,
 .highcharts-xaxis .highcharts-tick {
-  stroke: #666666;
+  stroke: #acacac;
 }
 
 /* Bars */
@@ -365,7 +355,7 @@ rect.updated-column-mark {
 div.nvtooltip.xy-tooltip {
   border: none;
   background-color: #ffffff;
-  color: #000000;
+  color: #1e1e20;
 }
 
 .highcharts-tooltip,
@@ -377,26 +367,26 @@ div.nvtooltip.xy-tooltip {
 .highcharts-tooltip .tooltip-container,
 .highcharts-tooltip-box .tooltip-container {
   background-color: #ffffff;
-  border-color: #000000;
-  color: #000000;
-  box-shadow: 0px 3px 4px #53535C, 100%;
+  border-color: #acacac;
+  color: #1e1e20;
+  box-shadow: 0px 3px 4px #8f8f8f;
 }
 
 .highcharts-tooltip .tooltip-container .tooltip-header,
 .highcharts-tooltip-box .tooltip-container .tooltip-header {
   background-color: #ffffff;
-  border-color: #000000;
-  color: #000000;
+  border-color: #acacac;
+  color: #1e1e20;
 }
 
 .highcharts-tooltip .tooltip-container .tooltip-body,
 .highcharts-tooltip-box .tooltip-container .tooltip-body {
-  color: #000000;
+  color: #1e1e20;
 }
 
 .highcharts-tooltip .tooltip-container .tooltip-body .tooltip-row > .tooltip-label > .percent-label,
 .highcharts-tooltip-box .tooltip-container .tooltip-body .tooltip-row > .tooltip-label > .percent-label {
-  color: #000000;
+  color: #1e1e20;
 }
 
 .highcharts-tooltip .tooltip-container .tooltip-body tr.highlight,
@@ -410,19 +400,19 @@ div.nvtooltip.xy-tooltip {
 }
 
 .chart-context-menu {
-  color: #000000;
+  color: #1e1e20;
   background-color: #ffffff;
-  border-color: #000000;
-  box-shadow: 0px 3px 4px #53535C, 100%;
+  border-color: #acacac;
+  box-shadow: 0px 3px 4px #8f8f8f;
 }
 
 .chart-context-menu .section-descriptor {
   background-color: #ffffff;
-  border-color: #000000;
+  border-color: #acacac;
 }
 
 .chart-context-menu .section-descriptor .value.label-section-name {
-  color: #000000;
+  color: #acacac;
 }
 
 .chart-context-menu .context-menu-link:hover .context-menu-label-wrapper {
@@ -430,28 +420,15 @@ div.nvtooltip.xy-tooltip {
 }
 
 .chart-context-menu .section-divider {
-  border-color: #000000;
+  border-color: #acacac;
 }
 
 .chart-context-menu.has-explorer-icon .viz-action-icon .svg-icon-stroke {
-  stroke: #000000;
- 
+  stroke: #acacac;
 }
 
 .chart-context-menu.has-explorer-icon .viz-action-icon .svg-icon-fill {
-  fill: #000000;
- 
-}
-
-.new-viz-actions .viz-explore-action {
-    margin-right: 12px;
-    color: #000000;
-}
-
-.btn-default, .btn-default:visited {
-    min-width: 90px;
-    color: #000000;
-    border-color: #000000;
+  fill: #1e1e20;
 }
 
 /* Legend color */
@@ -499,12 +476,16 @@ td div {
 }
 
 .filter-module.with-lightbox.with-focus {
-  border: 1px solid #000000;
+  border: 1px solid #acacac;
 }
 
 /* Table filter text */
-input.filter-field {
-  color: rgba(0,0,0,1);
+.filter-field,
+.filter-heading,
+.filter-module,
+.radio-icon,
+.checkbox-icon {
+  color: #1e1e20
 }
 
 /* Sort toggle */
@@ -524,14 +505,14 @@ input.filter-field {
 }
 
 .axel-text-highlight .highlight {
-  background: #B3CFDB, 100%;
+  background: #f1b320;
 }
 
 /* PIVOT TABLES */
 /* Table container, Column head bottom divider */
 .pivot-table-container,
 .pivot-table .pvtMainHeaderWrapper {
-  border: 1px solid rgba(255,255,255,1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .pivot-table .pvtMainHeaderWrapper {
@@ -542,7 +523,7 @@ input.filter-field {
 /* Table base color */
 .pivot-table .mode-table-grid td,
 .pivot-table .mode-table-grid th {
-  background-color: #FFFFFF, 100%;
+  background-color: #ffffff;
 }
 
 /* Pivot table row and column header panels */
@@ -553,7 +534,7 @@ input.filter-field {
 /* Coarse dividers */
 /* Row header divider */
 tbody tr th:last-of-type .pvtFixedHeader {
-  border-right: 1px solid rgba(214,217,222,1);
+  border-right: 1px solid rgba(30, 30, 32, 0.4);
 }
 
 /* Column section divider */
@@ -561,30 +542,30 @@ tbody tr th:last-of-type .pvtFixedHeader {
 .pivot-table-container .pvtDividerVertical.pvtTotal,
 .pivot-table-container .pvtDividerVertical .pvtFixedHeader,
 thead tr:last-child th:last-child .pvtFixedHeader {
-  border-right: 1px solid rgba(214,217,222,1) !important;
+  border-right: 1px solid rgba(30, 30, 32, 0.4) !important;
 }
 
 /* Row header row section divider */
 .pivot-table-container .pvtDivider.pvtVal,
 .pivot-table-container .pvtDivider.pvtTotal,
 .pivot-table-container .pvtDivider .pvtFixedHeader {
-  border-bottom: 1px solid rgba(214,217,222,1) !important;
+  border-bottom: 1px solid rgba(30, 30, 32, 0.4) !important;
 }
 
 /* Cell dividers */
 /* Column header row dividers, Row header column dividers */
 .pvtFixedHeader {
-  border-bottom: 1px solid rgba(214,217,222,1);
-  border-right: 1px solid rgba(214,217,222,1);
+  border-bottom: 1px solid rgba(30, 30, 32, 0.4);
+  border-right: 1px solid rgba(30, 30, 32, 0.4);
 }
 
 .pvtFixedHeader .table-header-label {
-  color: #000000 !important;
+  color: #acacac !important;
 }
 
 /* Column section subdivider */
 .pivot-table .pivot-table-container td {
-  border-color: rgba(214,217,222,1);
+  border-color: rgba(30, 30, 32, 0.2);
 }
 
 /* Row header subdivider zebra striping, Table row zebra striping */
@@ -593,18 +574,18 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 .pivot-table-container tbody > tr:nth-child(even) .pvtRowLabel:last-of-type .pvtFixedHeader,
 .pivot-table-container tbody > tr:nth-child(even) .pvtTotalFillerLabel .pvtFixedHeader,
 .pivot-table-container tbody > tr:nth-child(even) .pvtTotalLabel .pvtFixedHeader {
-  background: rgba(83, 83, 92, 0.05);
+  background: rgba(30, 30, 32, 0.05);
 }
 
 /* Sort hovers */
 .pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper):hover,
 .pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper).dropdown-open {
-  background: rgba(83, 83, 92, 0.8);
+  background: rgba(30, 30, 32, 0.8);
 }
 
 .pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper):hover .table-header-label,
 .pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper).dropdown-open .table-header-label {
-  color: rgba(0, 0, 0, 1);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 /* Sort toggles */
@@ -614,16 +595,16 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 
 /* New Report Viz Toolbar */
 .new-viz-actions .tooltip {
-  color: #000000;
+  color: #acacac;
 }
 
 .new-viz-actions .table-filter-module {
-  border: 1px solid #000000;
+  border: 1px solid transparent;
 }
 
 .new-viz-actions .table-filter-module.with-focus {
-  background-color: #ffffff;
-  border: 1px solid #000000;
+  background-color: #1e1e20;
+  border: 1px solid #acacac;
 }
 
 .new-viz-actions .table-filter-module.with-focus .filter-apply-btn {
@@ -631,72 +612,72 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 }
 
 .new-viz-actions .table-filter-module .filter-apply-btn {
-  border: 1px solid #000000;
-  background-color: #ffffff;
+  border: 1px solid #acacac;
+  background-color: #1e1e20;
 }
 
 .new-viz-actions .table-filter-module .filter-apply-btn .viz-action-icon .svg-icon-stroke {
-  stroke: #000000;
+  stroke: #acacac;
 }
 
 .new-viz-actions .table-filter-module .filter-apply-btn .viz-action-icon .svg-icon-fill {
-  fill: #000000;
+  fill: #1e1e20;
 }
 
 .new-viz-actions .table-filter-module .filter-apply-btn:hover:not(.disabled) .viz-action-icon .svg-icon-fill {
-  fill: #000000;
+  fill: #1e1e20;
 }
 
 .new-viz-actions .table-filter-module .filter-apply-btn:hover:not(.disabled) .viz-action-icon .svg-icon-stroke {
-  stroke: #000000;
+  stroke: #acacac;
 }
 
 .new-viz-actions .filter-apply-btn .viz-action-icon .svg-icon-stroke, .new-viz-actions .new-viz-action .viz-action-icon .svg-icon-stroke {
-  stroke: #000000;
+  stroke: #acacac;
 }
 
 .new-viz-actions .filter-apply-btn .viz-action-icon .svg-icon-fill, .new-viz-actions .new-viz-action .viz-action-icon .svg-icon-fill {
-  fill: #000000;
+  fill: #1e1e20;
 }
 
 .new-viz-actions .filter-apply-btn:active:not(.disabled), .new-viz-actions .new-viz-action:active:not(.disabled) {
   background-color: #ffffff;
-  border: 1px solid #000000;
+  border: 1px solid #acacac;
 }
 
 .new-viz-actions .filter-apply-btn:hover:not(.disabled), .new-viz-actions .new-viz-action:hover:not(.disabled) {
-  box-shadow: 0 3px 4px #53535C, 100%;
+  box-shadow: 0 3px 4px #8f8f8f;
 }
 
 .new-viz-actions .filter-apply-btn:hover:not(.disabled) .viz-action-icon .svg-icon-fill, .new-viz-actions .new-viz-action:hover:not(.disabled) .viz-action-icon .svg-icon-fill {
-  fill: #000000;
+  fill: #1e1e20;
 }
 
 .new-viz-actions .filter-apply-btn:hover:not(.disabled) .viz-action-icon .svg-icon-stroke, .new-viz-actions .new-viz-action:hover:not(.disabled) .viz-action-icon .svg-icon-stroke {
-  stroke: #000000;
+  stroke: #acacac;
 }
 
 .new-viz-actions .new-viz-action {
   background-color: #ffffff;
-  border: 1px solid #000000;
+  border: 1px solid #acacac;
 }
 
 .new-viz-actions span.divider {
-  border-left-color: #000000;
+  border-left-color: #acacac;
 }
 
 /* Hierarchy Buttons */
 .drill-actions .drill-action-btn {
   background-color: #ffffff;
-  border: 1px solid #000000;
+  border: 1px solid #acacac;
 }
 
 .drill-actions .drill-action-btn .icon-hierarchy-down rect, .drill-actions .drill-action-btn .icon-hierarchy-down path, .drill-actions .drill-action-btn .icon-hierarchy-up rect, .drill-actions .drill-action-btn .icon-hierarchy-up path {
-  stroke: #000000;
+  stroke: #C9CAD1;
 }
 
 .drill-actions .drill-action-btn:hover {
-  box-shadow: 0px 3px 4px #53535C, 100%;
+  box-shadow: 0px 3px 4px #8f8f8f;
 }
 
 .drill-actions .drill-action-btn:active {
@@ -704,10 +685,9 @@ thead tr:last-child th:last-child .pvtFixedHeader {
 }
 
 .tooltip.hierarchy-tooltip.top .tooltip-inner {
-  background-color: #ffffff;
+  background-color: #53535C;
 }
 
 .tooltip.hierarchy-tooltip.top .tooltip-arrow {
-  border-top-color: #000000;
-  stroke: #000000;
+  border-top-color: #acacac;
 }
