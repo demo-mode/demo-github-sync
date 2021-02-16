@@ -25,10 +25,6 @@
   margin-bottom: 2rem;
 }
 
-.img {
-  height: 5rem;
-}
-
 /* Report Header */
 .mode-embed .mode-header h1 {
   color: var(--primary-color);
