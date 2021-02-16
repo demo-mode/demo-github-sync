@@ -3,12 +3,12 @@
 
 :root {
     --primary-color: #0d2c40;
-    --secondary-color:#778692;
+    --secondary-color:#4783aa;
     --report-background-color: #ffffff;
     --paragraph-color: #333333;
     --chart-background: #fefefe;
-    --chart-border: #b6bcc0;
-    --chart-highlight: #4783aa;
+    --chart-border: #4783aa;
+    --chart-highlight: #b6bcc0;
     --font-family: 'Poppins', sans-serif;
 
   }
