@@ -3,10 +3,10 @@
 
 :root {
     --primary-color: #0d2c40;
-    --secondary-color:#007fad;
-    --report-background-color: #b6bcc0;
+    --secondary-color:#778692;
+    --report-background-color: #ffffff;
     --paragraph-color: #333333;
-    --chart-background: #fefefe;
+    --chart-background: #b6bcc0;
     --chart-border: #d3d4d5;
     --chart-highlight: #ff581f;
     --font-family: 'Poppins', sans-serif;
