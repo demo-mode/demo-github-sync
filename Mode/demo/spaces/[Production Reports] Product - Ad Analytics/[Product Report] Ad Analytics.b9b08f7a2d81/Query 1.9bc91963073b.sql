@@ -1,0 +1,2 @@
+SELECT *
+FROM carloshernandez.real_estate_sales_2001_2017
