@@ -1,0 +1,5 @@
+---
+report_description: "Use this Report to show how to surface data freshness information
+  from dbt. \n\nThe data in this Report is dummy data modeled in dbt."
+is_full_width: false
+hide_run_button: false
