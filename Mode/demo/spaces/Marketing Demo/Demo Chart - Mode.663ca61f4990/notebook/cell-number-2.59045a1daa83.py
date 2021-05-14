@@ -24,10 +24,11 @@ group_labels = ['Control', 'Variant #1']
 fig = ff.create_distplot(hist_data, group_labels, bin_size=.2)
 
 fig.layout.update(
-    title = "Distribution of Outcomes by Test Group", 
-      font = dict(family="Courier New, monospace", size=14, color="#7f7f7f"),
-    autosize=False,
-    width=900,
-    height=500,
+  font = dict(color= "#5f5f60"), 
+  paper_bgcolor= "#191924",
+  plot_bgcolor="#191924"
   )
+  
+
+
 iplot(fig)
