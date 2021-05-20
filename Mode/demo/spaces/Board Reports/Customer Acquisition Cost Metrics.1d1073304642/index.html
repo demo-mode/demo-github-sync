@@ -1,0 +1,182 @@
+<style>
+  #chartdiv,
+  #hbar {
+    width: 100%;
+    height: 395px;
+    background-color: rgb(244, 244, 248);
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    }
+</style>
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+<script src="https://cdn.rawgit.com/mode/playbook/master/assets/leaflet-heatmap.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://dl.dropboxusercontent.com/s/0l580yreyj3t2n6/plus.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://dl.dropboxusercontent.com/s/m92xtejrqfymjkx/plus.js"></script>
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/funnel.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all">
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_ae0551b8-f24e-41e1-cb32-d52d79615777" dataset="dataset" options="text_options">
+        <h3 class="ql-align-center">Overview</h3>
+        <p><br></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-2">
+      <mode-chart id="chart_87330e564e4f" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_a94ee4b390bd" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-2">
+      <mode-chart id="chart_dee3ce96380c" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <div class="col-md-6" id="chartdiv"></div>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-6">
+      <mode-chart id="chart_3b6878cda0d0" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <div class="col-md-6" id="hbar"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_5f5e7fb8-5859-45c1-c0a0-b0390ae0a308" dataset="dataset" options="text_options">
+        <h3 class="ql-align-center">Top of Funnel</h3>
+        <p><br></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-12">
+      <mode-chart id="chart_f51faaabb271" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+</div>
+<script>
+  console.log(datasets);
+  var chart = AmCharts.makeChart("chartdiv", {
+    "hideCredits": true,
+    "type": "funnel",
+    "theme": "light",
+    "dataProvider": datasets[1].content,
+    "balloon": {
+      "fixedPosition": true
+    },
+    "valueField": "value",
+    "titleField": "title",
+    "marginRight": 240,
+    "marginLeft": 50,
+    "startX": 0,
+    "depth3D": 100,
+    "angle": 40,
+    "outlineAlpha": 1,
+    "outlineColor": "#FFFFFF",
+    "outlineThickness": 2,
+    "labelPosition": "right",
+    "balloonText": "[[title]]: [[value]] [[description]]",
+    "export": {
+      "enabled": false
+    }
+  });
+
+  var chart = AmCharts.makeChart("hbar", {
+    "hideCredits": true,
+    "legend": {
+      "useGraphSettings": true,
+      "position": "top",
+      "align": "right"
+    },
+    "type": "serial",
+    "theme": "light",
+    "categoryField": "title",
+    "rotate": true,
+    "startDuration": 1,
+    "categoryAxis": {
+      "gridPosition": "start",
+      "position": "left"
+    },
+    "trendLines": [],
+    "graphs": [{
+        "balloonText": "[[title]]<br>Median: <b>[[value]] days</b>",
+        "fillAlphas": 0.8,
+        "id": "AmGraph-1",
+        "lineAlpha": 0.2,
+        "title": "Median",
+        "type": "column",
+        "valueField": "median"
+      },
+      {
+        "balloonText": "[[title]]<br>Mean: <b>[[value]] days</b>",
+        "fillAlphas": 0.8,
+        "id": "AmGraph-2",
+        "lineAlpha": 0.2,
+        "title": "Mean",
+        "type": "column",
+        "valueField": "mean"
+      }
+    ],
+    "guides": [],
+    "valueAxes": [{
+      "id": "ValueAxis-1",
+      "position": "top",
+      "axisAlpha": 0
+    }],
+    "allLabels": [],
+    "balloon": {},
+    "titles": [{
+      "text": "Days to Complete Step"
+    }],
+    "dataProvider": datasets[2].content,
+
+  });
+
+
+  funnelCharts = ["#chart_745d91d5b607"]
+
+  funnelCharts.forEach(function(c) {
+    shawn.barChartFunnel({
+      chart_id: c,
+      include_overall_rate: false,
+      subtract_100: false,
+      overall_location: "right",
+      dont_shrink_bars: true
+    })
+  })
+
+  alamode.leafletMap({
+    title: "Organic Traffic",
+    height: 500,
+    lat_column: "lat",
+    lng_column: "lng",
+    query_name: "Heat Map",
+    center_lat: 39.5,
+    center_lng: -98.35,
+    starting_zoom: 4,
+    dot_size: .4,
+    dot_opacity: .7
+  })
+</script>
