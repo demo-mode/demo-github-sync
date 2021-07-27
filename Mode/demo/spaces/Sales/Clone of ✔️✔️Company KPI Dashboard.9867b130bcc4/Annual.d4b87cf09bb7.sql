@@ -12,5 +12,5 @@
       join demo.sales_reps sr on sr.id = a.sales_rep_id 
       join demo.region r on r.id = sr.region_id
       WHERE r.name in ({{region}})
-      GROUP BY 1,2
+      GROUP BY 1
       ORDER BY 1,2,3,4
