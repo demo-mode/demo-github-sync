@@ -1,0 +1,175 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/css/uikit.min.css">
+<script src="https://cdn.plot.ly/plotly-1.8.0.min.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.38/js/uikit-icons.min.js"></script>
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<link rel="stylesheet" href="https://dl.dropboxusercontent.com/s/eq4ou5ovkovqxwk/mode.css">
+<script src="https://dl.dropboxusercontent.com/s/3wdjg4h422lfn1m/mode.js"></script>
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<style>
+  button {
+    font-size: 14px;
+  }
+
+  button {
+    background-color: #fff;
+  }
+
+  button {
+    border: none;
+  }
+
+  button:hover {
+    background-color: #F3F4F7;
+  }
+
+  button:active {
+    background-color: #3399FF;
+    color: white;
+  }
+
+  button:focus {
+    background-color: #3399FF;
+    color: white;
+  }
+
+  button: {
+    font-family: "Graphik", Helvetica, Arial, sans-serif;
+  }
+</style>
+<div class="mode-grid container">
+  <h1><b><center>------------- Website Viewership Metrics ------------</center></b> </h1>
+  <div class="row" data-row-height="large">
+    <div class="col-md-12">
+      <mode-python id="python_aa6c8c49fa79" options="python_options"></mode-python>
+    </div>
+  </div>
+  <h1><b><center>--------------- User Trend &amp; Composition -------------</center></b> </h1>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_47e514d39a62" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_072fa9100f8a" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+
+  <h3>
+  </h3>
+  <h1><b><center>-------------------- KPI &amp; Ad Revenue -------------------</center></b> </h1>
+
+  <center>
+    <button id="kpi">KPI Summary</button> &nbsp;
+    <button id="ad">Ad Revenue by Platform</button> &nbsp;
+  </center>
+  <p></p>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <mode-python id="python_11a3c7147822" options="python_options"></mode-python>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_2491f5f35386" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-table id="table_4059d2b96bb2" class="ad" dataset="dataset" options="table_options"></mode-table>
+    </div>
+  </div>
+
+  <h3>
+  </h3>
+  <h1><b><center>---------------------- Session KPIs ---------------------</center></b> </h1>
+
+  <div class="mode-grid container">
+    <ul class="uk-subnav uk-subnav-pill" uk-switcher="">
+      <li><a href="#">Sessions by Device Category</a></li>
+      <li><a href="#">Sessions by New or Returning Users</a></li>
+    </ul>
+    <ul class="uk-switcher uk-margin">
+      <li>
+        <div class="mode-grid container">
+          <div class="row">
+            <div class="col-md-12">
+              <mode-chart id="chart_b60f2459f523" dataset="dataset" options="chart_options"></mode-chart>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <div class="col-md-12">
+            <mode-chart id="chart_f23ee1517399" dataset="dataset" options="chart_options"></mode-chart>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <h3>
+  </h3>
+  <h1><b><center>--------- Advertising Revenue: Goal Vs Actual -----------</center></b> </h1>
+
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_9463def15fb3" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+
+  <h3>
+  </h3>
+  <h1><b><center>------------------ Social Media Trends -------------------</center></b> </h1>
+
+  <div class="mode-grid container">
+    <ul class="uk-subnav uk-subnav-pill" uk-switcher="">
+      <li><a href="#">Previous Month</a></li>
+      <li><a href="#">Monthly Trend</a></li>
+    </ul>
+    <ul class="uk-switcher uk-margin">
+      <li>
+        <div class="mode-grid container">
+          <div class="row">
+            <div class="col-md-12">
+              <mode-chart id="chart_6664b1ea2757" dataset="dataset" options="chart_options"></mode-chart>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <div class="col-md-12">
+            <mode-chart id="chart_48775561ba72" dataset="dataset" options="chart_options"></mode-chart>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <script>
+    $("#kpi").focus();
+    $(".ad").hide();
+    $(".kpi").show();
+
+    $("button").click(function() {
+      $(".ad").hide();
+      $(".kpi").hide();
+      $("." + this.id).show();
+    });
+  </script>
+
+  <script>
+    alamode.addLinksToTables({
+      table_id: "table_dd26c7d1569a",
+      query_name: "KPI Summary",
+      link_columns: ["brand"],
+      link_urls: ["{{brand}}"]
+    })
+  </script>
+</div>

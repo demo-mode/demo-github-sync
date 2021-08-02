@@ -1,0 +1,1 @@
+select * from sadavath.executive_dashboard_sessions_new_vs_return

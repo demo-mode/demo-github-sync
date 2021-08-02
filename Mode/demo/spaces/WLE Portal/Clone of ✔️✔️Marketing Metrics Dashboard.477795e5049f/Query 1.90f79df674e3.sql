@@ -1,0 +1,1 @@
+select * from sadavath.executive_dashboard_query_1

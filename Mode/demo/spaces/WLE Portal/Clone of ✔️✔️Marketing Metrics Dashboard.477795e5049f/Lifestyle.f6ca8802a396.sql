@@ -1,0 +1,1 @@
+Select * from sadavath.executive_dashboard_lifestyle

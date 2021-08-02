@@ -1,0 +1,1 @@
+select * from sadavath.executive_dashboard_revenue_against_goal
