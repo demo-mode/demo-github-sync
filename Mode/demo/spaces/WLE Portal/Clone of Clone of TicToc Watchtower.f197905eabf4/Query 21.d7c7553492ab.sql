@@ -1,0 +1,1 @@
+select * from sadavath.executive_dashboard_social_followers_last_month
