@@ -1,0 +1,1 @@
+select physician_last_name, age from tutorial.patient_list order by 2 limit 6
