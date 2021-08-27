@@ -1,3 +1,4 @@
+
    with model_cte AS (
    
     SELECT o.occurred_at+ INTERVAL '1400 DAY' AS date,
