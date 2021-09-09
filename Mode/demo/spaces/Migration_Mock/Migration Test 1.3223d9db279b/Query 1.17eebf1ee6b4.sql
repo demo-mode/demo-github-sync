@@ -1,0 +1,1 @@
+SELECT 'Migration Mock' as "Mock"
