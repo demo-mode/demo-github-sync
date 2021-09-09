@@ -1,0 +1,117 @@
+/* ===============================
+   External Styleshees & Web Fonts
+=============================== */
+
+/*Import a stylesheet*/
+/*@import url("https://raw.githubusercontent.com/foo/project/master/stylesheets/mode_reports.css");*/
+
+/* Use a web font */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+/* ===============================
+   Backgrounds
+=============================== */
+
+/* Report Background Color */
+body {
+  background-color: #bababa;
+}
+.hline { width:100%; height:1px; background: #fff }
+/* Report Layout */
+.mode-grid.container {
+  background-color: #bababa;
+  margin-bottom: 32px;
+}
+
+/* Chart Backgrounds */
+.mode-embed .mode-object.editor-chart {
+  background-color: #bababa;
+  border: 8px solid #040404;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  &:hover {
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+  }
+}
+
+/* ===============================
+   Gutters
+=============================== */
+
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12 {
+  padding: 0;
+}
+.mode-embed .mode-object.editor-chart {
+  margin: 3px 2px;
+  border: 0;
+}
+
+/* ===============================
+   Fonts
+=============================== */
+
+/*Report title*/
+.mode-embed .mode-header h1 {
+  color: ; /* $gray-800*/
+  margin-bottom: 0; font-family: 'Lato', sans-serif; font-size:49px;
+}
+/*Report description*/
+.mode-embed .mode-header p {
+  color: #013220;
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+/* Titles */
+.mode-object.big-number .chart-title .in-place-edit-text, .embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+.editor-table .chart-header,
+.editor-chart .chart-header {
+  font-size: 36px;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+}
+/* Descriptions */
+.mode-object .chart-title.chart-description .in-place-edit-text, .mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #C9CAD1; /* $gray-500*/
+}
+
+/* ===============================
+   Tooltips
+=============================== */
+
+/* Tooltip */
+div.nvtooltip.xy-tooltip {
+  border: none;
+  background-color: white;
+  color: #63656E;
+}
+/* Legend color */
+td div {
+  border: none !important;
+  border-radius: 50%;
+}
+/*Correct font weight for bold*/
+/*.nvtooltip.xy-tooltip strong,*/
+/*td.value {*/
+/*  font-weight: 500 !important;*/
+/*}*/
+h1,
+h2,
+h3,
+h4,
+p,
+li{
+  font-family: 'Lato', sans-serif;
+  color: #013220;
+}
