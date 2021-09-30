@@ -1,0 +1,15 @@
+import plotly.express as px
+df = datasets[4]
+fig = px.histogram(df, x="Store Number",y="Transaction Count")
+
+fig2 = px.scatter(df, x="Store Number",y="Transaction Count")
+
+
+fig.update_layout({
+"plot_bgcolor": "rgba(0, 0, 0, 0)",
+"paper_bgcolor": "rgba(0, 0, 0, 0)",
+})
+fig2.update_layout({
+"plot_bgcolor": "rgba(0, 0, 0, 0)",
+"paper_bgcolor": "rgba(0, 0, 0, 0)",
+})
