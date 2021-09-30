@@ -1,95 +1,102 @@
 <style>
-<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
-<script src="https://cdn.rawgit.com/mode/playbook/master/assets/leaflet-heatmap.js"></script>
-<script src="https://mode.github.io/alamode/alamode.min.js"></script>
-  * {
+  <link rel="stylesheet"href="https://mode.github.io/alamode/alamode.min.css"><link rel="stylesheet"href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css"><script src="https://cdn.rawgit.com/mode/playbook/master/assets/leaflet-heatmap.js"></script><script src="https://mode.github.io/alamode/alamode.min.js"></script>* {
     font-family: 'Graphik Web', 'Helvetica Neue', bold, Helvetica, Arial, sans-serif;
      !important;
   }
-    .img-holder {
+
+  .img-holder {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 25%;
   }
-  .title{
+
+  .title {
     text-align: center;
   }
-  h1{
+
+  h1 {
     font-size: 40px;
   }
-  </style>
-      <h1 class="title">McQuery Store Performance</h1>
+</style>
+<h1 class="title">McQuery Store Performance</h1>
 <div class="mode-header embed-hidden">
-      <div class="img-holder">
-        <img src="https://assets.codepen.io/6554302/mcquerylogo--1-.png" />
-     </div>
-<div class="mode-header embed-hidden">
-<div class="mode-grid container"></div>
-<div class="row">
-  <div class="col-md-12">
-    <mode-chart id="chart_add8aed8be3c" dataset="dataset" options="chart_options"></mode-chart>
+  <div class="img-holder">
+    <img src="https://assets.codepen.io/6554302/mcquerylogo--1-.png">
+  </div>
+  <div class="mode-header embed-hidden">
+    <div class="mode-grid container"></div>
+    <div class="row">
+      <div class="col-md-12">
+        <mode-chart id="chart_add8aed8be3c" dataset="dataset" options="chart_options"></mode-chart>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <mode-chart id="chart_54340334e244" dataset="dataset" options="chart_options"></mode-chart>
+      </div>
+      <div class="col-md-7">
+        <mode-chart id="chart_028a8c134694" dataset="dataset" options="chart_options"></mode-chart>
+      </div>
+    </div>
+    <div class="row" data-row-height="small">
+      <div class="col-md-12">
+        <mode-chart id="chart_f9a04ee821c5" dataset="dataset" options="chart_options"></mode-chart>
+      </div>
+    </div>
+    <div class="row" data-row-height="small">
+      <div class="col-md-12">
+        <mode-chart id="chart_f2037953379b" dataset="dataset" options="chart_options"></mode-chart>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <mode-chart id="chart_e1b81fc37edf" dataset="dataset" options="chart_options"></mode-chart>
+      </div>
+      <div class="col-md-4">
+        <mode-chart id="chart_9615335a0a24" dataset="dataset" options="chart_options"></mode-chart>
+      </div>
+      <div class="col-md-4">
+        <mode-chart id="chart_4b3276a37d51" dataset="dataset" options="chart_options"></mode-chart>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <mode-chart id="chart_31ab9dbafcdd" dataset="dataset" options="chart_options"></mode-chart>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <mode-chart id="chart_4bdc74c5ad15" dataset="dataset" options="chart_options"></mode-chart>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+      </div>
+    </div>
+    <div class="mode-grid container"></div>
+    <div class="mode-grid container">
+      <div class="row">
+        <div class="col-md-12">
+          <mode-chart id="chart_720892e02630" dataset="dataset" options="chart_options"></mode-chart>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <mode-python id="python_3bdfbc0db6c6" options="python_options"></mode-python>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<div class="row">
-  <div class="col-md-5">
-    <mode-chart id="chart_54340334e244" dataset="dataset" options="chart_options"></mode-chart>
-  </div>
-  <div class="col-md-7">
-    <mode-chart id="chart_028a8c134694" dataset="dataset" options="chart_options"></mode-chart>
-  </div>
-</div>
-<div class="row" data-row-height="small">
-  <div class="col-md-12">
-    <mode-chart id="chart_f9a04ee821c5" dataset="dataset" options="chart_options"></mode-chart>
-  </div>
-</div>
-<div class="row" data-row-height="small">
-  <div class="col-md-12">
-    <mode-chart id="chart_f2037953379b" dataset="dataset" options="chart_options"></mode-chart>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-4">
-    <mode-chart id="chart_e1b81fc37edf" dataset="dataset" options="chart_options"></mode-chart>
-  </div>
-  <div class="col-md-4">
-    <mode-chart id="chart_9615335a0a24" dataset="dataset" options="chart_options"></mode-chart>
-  </div>
-  <div class="col-md-4">
-    <mode-chart id="chart_4b3276a37d51" dataset="dataset" options="chart_options"></mode-chart>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <mode-chart id="chart_31ab9dbafcdd" dataset="dataset" options="chart_options"></mode-chart>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-    <mode-chart id="chart_4bdc74c5ad15" dataset="dataset" options="chart_options"></mode-chart>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
-  </div>
-</div>
-<div class="mode-grid container"></div>
 <div class="mode-grid container">
   <div class="row">
     <div class="col-md-12">
-      <mode-chart id="chart_720892e02630" dataset="dataset" options="chart_options"></mode-chart>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
       <mode-chart id="chart_f6204437dab7" dataset="dataset" options="chart_options"></mode-chart>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <mode-python id="python_3bdfbc0db6c6" options="python_options"></mode-python>
     </div>
   </div>
 </div>

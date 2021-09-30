@@ -1,3 +1,4 @@
--- Returns first 100 rows from mode_onboarding.mcquery_restaurants
-SELECT * FROM mode_onboarding.mcquery_restaurants
-ORDER BY location_id;
+select 
+home_address_latitude,
+home_address_longitude
+FROM mode_onboarding.mcquery_consumers
