@@ -1,0 +1,1 @@
+SELECT * from {{ @joining_defs1 }}
