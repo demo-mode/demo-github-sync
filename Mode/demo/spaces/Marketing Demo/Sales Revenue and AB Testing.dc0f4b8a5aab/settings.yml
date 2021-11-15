@@ -1,7 +1,0 @@
----
-report_description: |-
-  Total Sales with multiple layers to drill down by Unit type, region, and timeframe
-
-  AB testing results
-is_full_width: false
-hide_run_button: false
