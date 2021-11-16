@@ -1,0 +1,1 @@
+SELECT * From {{ @Sales_Data }}
