@@ -1,0 +1,117 @@
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<style>
+  .mode-object,
+  #churnHeatMap {
+    border-top: 4px solid #d97b55 !important;
+  }
+
+  h4 {
+    color: white !important;
+  }
+
+  .bigValues .chart-content {
+    height: calc(510px/3) !important;
+  }
+
+  #churnHeatMap {
+    background: white;
+  }
+</style>
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_a2680f76-d202-4d1f-918c-8796b77a0810" dataset="dataset" options="text_options">
+        <h4 class="ql-align-center">Marketing Campaign Engagement</h4>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="large">
+    <div class="col-md-8">
+
+      <mode-chart id="chart_4ba06b65a664" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4 bigValues">
+      <mode-chart id="chart_c64d65bea997" dataset="dataset" options="chart_options"></mode-chart>
+      <mode-chart id="chart_1941d7d787b9" dataset="dataset" options="chart_options"></mode-chart>
+      <mode-chart id="chart_ef7ecd08bf34" dataset="dataset" options="chart_options"></mode-chart>
+
+    </div>
+
+  </div>
+  <div class="row" data-row-height="large">
+    <div class="col-md-12">
+      <mode-chart id="chart_cbb1849f81c0" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-12">
+      <mode-chart id="chart_12307cfd5a92" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_c7d74559-c07f-4e87-8205-4669c1620db3" dataset="dataset" options="text_options">
+        <h4 class="ql-align-center">Velocity</h4>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_2e0ae8ef28f3" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_74bfe34bb3f5" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_334cf0778081" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_ab4f64ec-39cd-4425-ca4f-1710c395b75f" dataset="dataset" options="text_options">
+        <h4 class="ql-align-center">Churn</h4>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-4">
+      <mode-text id="text_8aca996a-24e9-4801-b7a3-40cdd5a5d234" dataset="dataset" options="text_options">
+        <p>The values that are above 1 increase the chances of churn, and the values below decrease the chances. </p>
+      </mode-text>
+    </div>
+    <div class="col-md-8">
+      <mode-python id="python_8ef6bb0e240b" options="python_options"></mode-python>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <mode-python id="python_fe0331f45298" options="python_options"></mode-python>
+    </div>
+    <div class="col-md-7">
+      <mode-text id="text_41d712da-c855-431e-9b88-fe1d7904f923" dataset="dataset" options="text_options">
+        <p>Relational Mode to display correlational between account variables and the rate of churn</p>
+        <p><br></p>
+        <p><br></p>
+        <ul>
+          <li>total_charges and tenure have high correlation (0.83)</li>
+          <li>total_charges and monthly_charges have medium correlation (0.65)</li>
+        </ul>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_a9f4be6a1cce" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+
+</div>
