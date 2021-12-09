@@ -1,0 +1,1 @@
+## 2. Encode cateogrical variables

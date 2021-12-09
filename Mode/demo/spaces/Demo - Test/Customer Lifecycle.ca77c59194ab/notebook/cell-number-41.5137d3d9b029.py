@@ -1,0 +1,1 @@
+# Compare with other types of models - KNN, Decision trees, SVM

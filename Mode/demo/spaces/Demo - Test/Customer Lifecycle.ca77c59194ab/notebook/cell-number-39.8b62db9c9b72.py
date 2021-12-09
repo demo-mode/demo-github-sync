@@ -1,0 +1,13 @@
+# Assess Model Performance
+precision_train = precision_score(y_train, y_train_pred)
+precision_test = precision_score(y_test, y_test_pred)
+print('precision_train: ', precision_train, '\nprecision_test: ', precision_test, '\n')
+recall_train = recall_score(y_train, y_train_pred)
+recall_test = recall_score(y_test, y_test_pred)
+print('recall_train: ', recall_train, '\nrecall_test: ', recall_test, '\n')
+accuracy_train = accuracy_score(y_train, y_train_pred)
+accuracy_test = accuracy_score(y_test, y_test_pred)
+print('accuracy_train: ', accuracy_train, '\naccuracy_test: ', accuracy_test, '\n')
+f1_train = f1_score(y_train, y_train_pred)
+f1_test = f1_score(y_test, y_test_pred)
+print('f1_train: ', f1_train, '\nf1_test: ', f1_test)
