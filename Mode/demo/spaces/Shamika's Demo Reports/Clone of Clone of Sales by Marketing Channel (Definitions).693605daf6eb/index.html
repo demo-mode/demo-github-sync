@@ -1,0 +1,63 @@
+<style>
+  * {
+    font-family: "Futura", Arial, sans-serif !important;
+  }
+</style>
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<style>
+  mode-table td {
+    height: 30px !important;
+    font-family: "Futura", Arial, sans-serif !important;
+    border: 1 px solid grey;
+    text-align: left !important;
+    padding: 12px;
+    white-space: normal !important;
+  }
+
+  mode-table th {
+    background: steelblue;
+    font-family: "Futura", Arial, sans-serif !important;
+    color: black !important;
+    padding: 12px;
+    white-space: normal !important;
+  }
+
+  mode-table tr:hover {
+    background-color: #d5f0cd;
+    border-bottom: 1px solid #ddd;
+  }
+</style>
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row" data-row-height="medium">
+    <div class="col-md-3">
+      <mode-chart id="chart_c1e234d3e621" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_99b612c4e0df" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_a02bcee86679" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <mode-chart id="chart_6ce944ff5b35" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-8">
+      <mode-chart id="chart_633d74ce6185" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+      <mode-python id="python_aefedba5259f" options="python_options"></mode-python>
+    </div>
+    <div class="col-md-5">
+      <mode-chart id="chart_936e5a19e848" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+</div>
