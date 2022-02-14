@@ -250,3 +250,8 @@ border-radius: 100px !important;
   
   .nv-linePlusBar .nv-scatter .nv-group { fill: var(--series-1) !important; stroke: var(--series-1) !important; }
   .nv-linePlusBar .nv-series:nth-child(5n + 2) circle { fill: var(--series-1) !important; stroke: var(--series-1) !important; }
+  
+  
+  .chart-container-component:hover{
+    border-top-color: red !important;
+  }
