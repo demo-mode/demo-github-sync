@@ -131,6 +131,16 @@
     background: #0052CC !important;
     border: none !important;
   }
+  
+/* ===============================
+   Filter Panel
+=============================== */
+
+.filter-panel-action{
+    border: 1px solid #38D9C5;
+    box-sizing: border-box;
+    border-radius: 100px;
+}
 
 /* ===============================
    Tooltips
