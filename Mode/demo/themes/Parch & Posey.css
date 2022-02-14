@@ -147,6 +147,10 @@ input[type=radio]:checked{
   color:red !important;
 }
 
+.icon-radio-on{
+  color:red !important;
+}
+
 /* ===============================
    Tooltips
 =============================== */
