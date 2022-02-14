@@ -143,16 +143,10 @@
     color:#38D9C5;
 }
 
- /*appearance of checked radiobutton */
-input[type="radio"]:checked + label:before {
-  background-color: red;
-}
-
-/* resetting default box-sizing */
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+input[type="text"]{
+border: 1px solid #D6D9DE;
+box-sizing: border-box;
+border-radius: 100px;
 }
 
 /* ===============================
