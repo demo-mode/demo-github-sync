@@ -156,7 +156,7 @@ input[type="radio"] + label:before {
   width: 15px;
   height: 15px;
   padding: 3px;
-  margin-right: 5px;
+  margin-right: 10px;
   background-color only for content 
   background-clip: content-box;
   border: 1px solid #bbbbbb;
