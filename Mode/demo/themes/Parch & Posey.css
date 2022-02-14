@@ -142,27 +142,6 @@
     border-radius: 100px;
     color:#38D9C5;
 }
-/* completely hiding radio button */
-
-.icon-radio-on,.icon-radio-off {
-  background-image:none !important;
-}
-
- /*simulate radiobutton appearance using pseudoselector */
-input[type="radio"] + label:before {
-  content: "";
-   /*create custom radiobutton appearance */
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  padding: 3px;
-  margin-right: 10px;
-  background-color only for content 
-  background-clip: content-box;
-  border: 1px solid #bbbbbb;
-  background-color: #e7e6e7;
-  border-radius: 50%;
-}
 
  /*appearance of checked radiobutton */
 input[type="radio"]:checked + label:before {
