@@ -140,6 +140,11 @@
     border: 1px solid #38D9C5;
     box-sizing: border-box;
     border-radius: 100px;
+    color:#38D9C5;
+}
+
+input[type=radio]:checked{
+  color:red !important;
 }
 
 /* ===============================
