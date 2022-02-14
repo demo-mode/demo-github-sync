@@ -149,6 +149,13 @@ box-sizing: border-box !important;
 border-radius: 100px !important;
 }
 
+.action-reset{
+    border: none !important;
+    color: #38D9C5;
+    font-weight: 600 !important;
+    font-style: normal;
+}
+
 /* ===============================
    Tooltips
 =============================== */
