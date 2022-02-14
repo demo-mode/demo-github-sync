@@ -144,8 +144,8 @@
 }
 /* completely hiding radio button */
 
-.icon-radio-on input[type="radio"],.icon-radio-off input[type="radio"] {
-  display: none !important;
+.icon-radio-on,.icon-radio-off {
+  background-image:none !important;
 }
 
  /*simulate radiobutton appearance using pseudoselector */
