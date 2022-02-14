@@ -151,7 +151,7 @@ border-radius: 100px !important;
 
 .action-reset{
     border: none !important;
-    color: #38D9C5;
+    color: #38D9C5 !important;
     font-weight: 600 !important;
     font-style: normal;
 }
