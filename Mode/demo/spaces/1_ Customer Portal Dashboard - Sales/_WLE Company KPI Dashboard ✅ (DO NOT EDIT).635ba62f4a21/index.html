@@ -1,0 +1,61 @@
+<style>
+  .mode-bullet-chart,
+  .mode-funnel,
+  .mode-sunburst,
+  .mode-sunburst-sequence,
+  .mode-graphic-title {
+    background-color: white;
+  }
+
+  .mode-graphic-container {
+    margin: 1px !important;
+  }
+
+  .filters-container {
+    background: #DCDCDC;
+  }
+
+  .filter-panel-header {
+    background: #DCDCDC;
+  }
+</style>
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+<script src="https://cdn.rawgit.com/mode/playbook/master/assets/leaflet-heatmap.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<div class="mode-header embed-hidden">
+
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-4">
+      <mode-chart id="chart_0052ba8a43ab" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_88eb4286ad88" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-chart id="chart_5a8f9d83c166" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_218740482e94" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_f34e9f102b9e" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_cf95389c453f" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_1c5a73deec4e" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+</div>
