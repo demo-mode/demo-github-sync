@@ -143,6 +143,10 @@
     color:#38D9C5;
 }
 
+.filters-container{
+  background-color: #FFFFF !important;
+}
+
 input[type="text"]{
 border: 1px solid #D6D9DE !important;
 box-sizing: border-box !important;
