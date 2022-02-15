@@ -144,21 +144,9 @@
 }
 
 .filters-container{
-  background: #FFFFF !important;
+  background: white !important;
 }
 
-input[type="text"]{
-border: 1px solid #D6D9DE !important;
-box-sizing: border-box !important;
-border-radius: 100px !important;
-}
-
-.action-reset{
-    border: none !important;
-    color: #38D9C5 !important;
-    font-weight: 600 !important;
-    font-style: normal;
-}
 
 /* ===============================
    Tooltips
