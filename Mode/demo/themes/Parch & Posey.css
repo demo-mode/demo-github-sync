@@ -144,7 +144,7 @@
 }
 
 .filters-container{
-  background-color: #FFFFF !important;
+  background: #FFFFF !important;
 }
 
 input[type="text"]{
