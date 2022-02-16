@@ -147,6 +147,11 @@
   background: white !important;
 }
 
+.action-reset {
+  border:none !important;
+  color:#38D9C5;
+}
+
 
 /* ===============================
    Tooltips
