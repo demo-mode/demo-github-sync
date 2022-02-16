@@ -256,6 +256,7 @@
   }
   
    .editor-chart:hover{
+    position:sticky;
     border: 1px solid #F1F2F5;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-top-color: #38D9C5 !important;
