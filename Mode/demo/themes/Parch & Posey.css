@@ -261,3 +261,7 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
   }
+  
+  .mode-object.big-number .chart-title{
+    text-align:center !important;
+  }
