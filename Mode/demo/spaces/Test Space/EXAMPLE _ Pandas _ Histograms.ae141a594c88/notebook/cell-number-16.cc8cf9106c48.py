@@ -1,0 +1,1 @@
+df.hist(column='session_duration_seconds', bins=25, grid=False, figsize=(12,8))
