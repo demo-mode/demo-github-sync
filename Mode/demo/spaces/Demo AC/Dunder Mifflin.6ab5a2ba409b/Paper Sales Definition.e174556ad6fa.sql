@@ -1,1 +1,0 @@
-select * FROM {{ @Paper_Sales }}
