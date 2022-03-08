@@ -1,0 +1,1 @@
+Select * from {{ @paper_co_test }}
