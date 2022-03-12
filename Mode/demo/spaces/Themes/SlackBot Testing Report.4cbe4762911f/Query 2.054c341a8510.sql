@@ -1,1 +1,0 @@
-SELECT * from benn.nfl_touchdowns LIMIt 300
