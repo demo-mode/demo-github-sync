@@ -1,1 +1,0 @@
-#### Plot histogram for a single column

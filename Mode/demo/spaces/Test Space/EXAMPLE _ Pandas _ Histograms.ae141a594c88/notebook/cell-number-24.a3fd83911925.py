@@ -1,1 +1,0 @@
-df.hist(column='session_duration_seconds', by='user_type', bins=25, grid=False, figsize=(6,8), layout=(3,1), sharex=True, color='#86bf91')
