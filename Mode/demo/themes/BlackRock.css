@@ -131,8 +131,8 @@ mode-text .ql-editor ul {
 
 }
 /* Chart TEXT */
-.editor-table .chart-text .in-place-edit-text, 
-.editor-chart .chart-text .in-place-edit-text {
+.mode-object .chart-title.chart-description .in-place-edit-text,
+.mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
   color: var(--paragraph-color);
   font-family: var(--font-family);
   text-transform: uppercase;
