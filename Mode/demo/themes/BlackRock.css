@@ -5,13 +5,14 @@
     --primary-color: #fe4712;
     --secondary-color: ##ffce00;
     --paragraph-color: #f5f5f5;
-    --chart-background: #000000;
+    --chart-background: #ffffff;
+    --background-color: #000000;
   }
 
 /* Report Background */
 .embed-preview,
 .mode-embed {
-  background-color: var(--secondary-color);
+  background-color: var(--background-color);
 }
 
 /* Report Logo */
