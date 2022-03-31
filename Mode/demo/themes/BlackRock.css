@@ -60,7 +60,7 @@ body.mode-embed.embed-preview {
 
 /* Blue top Bar */
 .mode-object, .mode-placeholder {
-  border-top: 4px solid #2DE2E6 !important;
+  border-top: 4px solid #fe4712 !important;
 }
 
 .mode-object:hover, .mode-placeholder:hover {
