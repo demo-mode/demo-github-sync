@@ -12,6 +12,46 @@
     --font-family: 'Poppins', sans-serif;
 
   }
+  
+/* TEXT */
+/* Use custom font for all charting */
+.mode-embed .mode-header,
+.mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+.editor-table .chart-header,
+.editor-chart .chart-header,
+.mode-placeholder .placeholder-title,
+.mode-object .chart-title.chart-description .in-place-edit-text,
+.mode-embed .mode-object .chart-title.chart-description .in-place-edit-text,
+.new-viz-actions .viz-explore-action,
+span.fb-content.ng-binding,
+span.trend-value.ng-binding,
+.highcharts-axis-labels tspan,
+.highcharts-legend-item tspan,
+.nvd3 text {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Chart titles */
+.mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+.editor-table .chart-header,
+.editor-chart .chart-header,
+.mode-placeholder .placeholder-title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .in-place-edit .in-place-edit-text {
+  line-height: 21px;
+}
+
+.chart-header {
+  padding-top: 10px;
 
 /* Report Background */
 .embed-preview,
