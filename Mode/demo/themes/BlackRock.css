@@ -1,13 +1,14 @@
 /* CUSTOM FONT */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 /* REPORT */
 /* Background color */
 body,
 body.mode-embed.embed-preview {
-  background-color: #000000;
-  background: linear-gradient(to top, #0d0221, #0d0221);
+  background-color: #ffffff;
+  background: linear-gradient(to top, #ffffff, #000000);
   background-attachment: fixed;
-  color: #aca0ba;
+  color: #ffffff;
 }
 }
 
