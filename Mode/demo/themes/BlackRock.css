@@ -6,9 +6,9 @@ font-face {
   }
 
    :root {
-    --series-1: #FF5630;
-    --series-2: #FFAB00;
-    --series-3: #36B37E;
+    --series-1: ##ffce00;
+    --series-2: #fe4712;
+    --series-3: #000000;
     --series-4: #00B8D9;
     --series-5: #6554C0;
   }
