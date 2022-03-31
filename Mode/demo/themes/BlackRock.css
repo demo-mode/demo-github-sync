@@ -6,7 +6,6 @@
 body,
 body.mode-embed.embed-preview {
   background-color: #ffffff;
-  background: linear-gradient(to top, #ffffff, #000000);
   background-attachment: fixed;
   color: #ffffff;
 }
