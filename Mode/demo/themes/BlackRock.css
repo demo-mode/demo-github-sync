@@ -130,16 +130,36 @@ mode-text .ql-editor ul {
   text-transform: uppercase;
 
 }
-/* Chart TEXT */
-.mode-object .chart-title.chart-description .in-place-edit-text,
-.mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
-  color: var(--paragraph-color);
-  font-family: var(--font-family);
-  text-transform: uppercase;
-
-}
 /* Chart Legend */
 .highcharts-legend .highcharts-legend-title text, 
 .highcharts-legend .highcharts-legend-item text, 
 .highcharts-legend .highcharts-legend-item text tspan {
   font-family: var(--font-family);
+  
+  /* Big number descriptions */
+.mode-object .chart-title.chart-description .in-place-edit-text,
+.mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
+  color: #ada2bb;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  margin-top: 4px;
+}
+
+/* Big number */
+span.fb-content.ng-binding {
+  color: #ada2bb;
+}
+
+/* Text editor text */
+.mode-embed .mode-object h1,
+.mode-embed .mode-object h2,
+.mode-embed .mode-object h3,
+.mode-embed .mode-object h4,
+.editor-chart.mode-object.text-block-container .ql-editor h5,
+.mode-embed .mode-object h6,
+.mode-embed .mode-object p,
+.mode-embed .mode-object li,
+.mode-embed .mode-object .error-message .message,
+.mode-embed .centered-content {
+  color: #ada2bb;
+}
