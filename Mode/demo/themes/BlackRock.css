@@ -579,19 +579,7 @@ thead tr:last-child th:last-child .pvtFixedHeader {
   color: #FCFCFC !important;
 }
 
-/* Column section subdivider */
-.pivot-table .pivot-table-container td {
-  border-color: rgba(255, 255, 255, 0.2);
-}
 
-/* Row header subdivider zebra striping, Table row zebra striping */
-.pivot-table-container tbody > tr:nth-child(even) td,
-.pivot-table-container tbody > tr:nth-child(even) th,
-.pivot-table-container tbody > tr:nth-child(even) .pvtRowLabel:last-of-type .pvtFixedHeader,
-.pivot-table-container tbody > tr:nth-child(even) .pvtTotalFillerLabel .pvtFixedHeader,
-.pivot-table-container tbody > tr:nth-child(even) .pvtTotalLabel .pvtFixedHeader {
-  background: rgba(78,77,133, 0.05);
-}
 
 /* NEW Tables */
 
@@ -612,8 +600,8 @@ thead tr:last-child th:last-child .pvtFixedHeader {
   background-color: #0d0121
 }
 .mode-embed .mode-object h1, .mode-embed .mode-object h2, .mode-embed .mode-object h3, .mode-embed .mode-object h4, .editor-chart.mode-object.text-block-container .ql-editor h5, .mode-embed .mode-object h6, .mode-embed .mode-object p, .mode-embed .mode-object li, .mode-embed .mode-object .error-message .message, .mode-embed .centered-content {
-  color: #2DE2E6;
-  background-color: #0d0121;
+  color: #ffffff;
+  background-color: #000000;
 }
 
 .flat-table-container .table-pagination-container .pagination-info p {
@@ -635,8 +623,8 @@ thead tr:last-child th:last-child .pvtFixedHeader {
   margin: 0 5px;
   padding: 0;
   list-style-type: none;
-  color: #2DE2E6;
-  background-color: #0d0121;
+  color: #ffffff;
+  background-color: #000000;
 }
 
 .flat-table-container .table-pagination-container {
@@ -644,8 +632,8 @@ thead tr:last-child th:last-child .pvtFixedHeader {
   display: flex;
   height: 32px;
   padding-top: 1px;
-  background-color: #0d0121;
-  color: #2DE2E6;
+  background-color: #000000;
+  color: #ffffff;
 }
 /* Sort hovers */
 .pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper):hover,
