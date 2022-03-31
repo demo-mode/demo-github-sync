@@ -27,7 +27,7 @@
 
 /* Report Header */
 .mode-embed .mode-header h1 {
-  color: var(--primary-color);
+  color: var(--chart-background);
   font-family: 'Roboto', sans-serif;
   text-align: center;
   margin-bottom: 2rem;
