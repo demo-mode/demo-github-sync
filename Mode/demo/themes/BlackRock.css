@@ -5,10 +5,10 @@
     --primary-color: #00000;
     --secondary-color:#000000;
     --report-background-color: #ffffff;
-    --paragraph-color: #333333;
+    --paragraph-color: #000000;
     --chart-background: #fefefe;
     --chart-border: #ffce00;
-    --chart-highlight: #000000;
+    --chart-highlight: #fe4712;
     --font-family: 'Poppins', sans-serif;
 
   }
