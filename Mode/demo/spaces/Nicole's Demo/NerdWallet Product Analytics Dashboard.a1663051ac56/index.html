@@ -1,0 +1,184 @@
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_9615ff15-ffaf-4cd2-fa35-be3f4de05e9a" dataset="dataset" options="text_options">
+        <p class="ql-align-center">Monthly active users and customers within our product including the change from the previous month.</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_29000fa378de" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_d2b9f0519ef6" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_f71b8abd-b50a-482d-e8d1-6b1c6d5177a1" dataset="dataset" options="text_options">
+        <p class="ql-align-center">This funnel chart shows the drop off in engagement between features within our product.</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_eee03d01a1b5" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_acad7102-df86-4344-f4a7-bf6a2fc55d22" dataset="dataset" options="text_options">
+        <p class="ql-align-center">These cohort analyses show how long different cohorts of users stay engaged within our product as well as the change by which each cohort log in to the product for the first time.</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_8a8c740f48b7" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_567fe58e2a82" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_dfcefdb7-cebf-4071-f7cb-90a99fef093f" dataset="dataset" options="text_options">
+        <p class="ql-align-center">These charts illustrate how engagement and ARR have been changing over time.</p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_4b07250abd49" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_8e235d415952" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_16af4d53-8a33-48d8-fc7f-ff6b4d5dfe49" dataset="dataset" options="text_options">
+        <h3 class="ql-align-center"><strong>Appendix</strong></h3>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-chart id="chart_bcd96b03c927" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+</div>
+<script>
+  function funnel(chart) {
+    var pct = d3.format(".1%")
+    var s2Color = chart.series[1].color
+
+
+    chart.update({
+      series: [{
+        color: s2Color,
+        opacity: 0.6
+      }, {
+        dataLabels: {
+          enabled: true,
+          useHTML: true,
+          borderRadius: 5,
+          padding: 10,
+          formatter: function() {
+            var idx = this.point.index;
+            // var data = this.series.data;
+
+            if (idx == 0) {
+              return null
+            } else {
+              return pct(this.percentage / 100);
+            }
+
+            // if (idx < data.length - 1) {
+            //   return pct(data[idx + 1].percentage / 100);
+            // } else {
+            //   return null;
+            // }
+          },
+          border: "black",
+          shape: "square",
+          backgroundColor: 'rgba(0, 0, 0, 0.75)',
+          style: {
+            fontSize: "11px",
+            color: "black",
+            fontWeight: 100,
+            color: '#FFFFFF',
+            textOutline: 'none'
+          }
+        }
+      }],
+
+      plotOptions: {
+        series: {
+          dataLabels: {
+            x: -150,
+            y: 150
+          }
+        }
+      }
+
+    });
+
+    let overallRate = pct(chart.yAxis[0].dataMin / chart.yAxis[0].dataMax)
+
+
+    chart.renderer.text(`Overall Rate <br/><br/>${overallRate}`, chart.plotSizeX - 20, chart.plotTop + 20)
+      .attr({
+        zIndex: 5
+      })
+      .css({
+        fontSize: '14px',
+        color: '#FFFFFF'
+      })
+      .add();
+
+
+    chart.renderer.rect(chart.plotSizeX - 30, chart.plotTop, 124, 50, 2)
+      .attr({
+        'stroke-width': 2,
+        stroke: 'black',
+        fill: 'black',
+        zIndex: 4
+      })
+      .add();
+
+    console.log(chart)
+  }
+
+  function cohort(chart) {
+    var series = chart.series;
+
+    function moveFirst(i) {
+      var oldSeries = series[i],
+        newSeries = chart.addSeries(oldSeries.options, false);
+      oldSeries.remove();
+    }
+
+    series.forEach(function(s, i) {
+      moveFirst(series.length - 1)
+    })
+
+  }
+
+  setTimeout(function() {
+    var charts = Highcharts.charts;
+
+    // funnel(charts[0]);
+    //    cohort(charts[1]);
+    //    funnel(charts[2])
+
+    // console.log(charts)
+  }, 1000);
+</script>
