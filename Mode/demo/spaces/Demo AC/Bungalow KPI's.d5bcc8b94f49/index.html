@@ -1,0 +1,124 @@
+<style>
+  .mode-bullet-chart,
+  .mode-funnel,
+  .mode-sunburst,
+  .mode-sunburst-sequence,
+  .mode-graphic-title {
+    background-color: white;
+  }
+
+  .mode-graphic-container {
+    margin: 1px !important;
+  }
+</style>
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+<script src="https://cdn.rawgit.com/mode/playbook/master/assets/leaflet-heatmap.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<div class="mode-header embed-hidden">
+
+</div>
+<div class="mode-grid container">
+  <div class="row" data-row-height="small">
+    <div class="col-md-4">
+      <mode-text id="text_b6b90a44-0868-43c8-d0b8-93bc6127f82e" dataset="dataset" options="text_options">
+        <h1><br></h1>
+        <h1>Bungalow KPI's </h1>
+      </mode-text>
+    </div>
+    <div class="col-md-6"></div>
+    <div class="col-md-2">
+      <mode-text id="text_b935afa5-6cac-49fd-e280-fc635dd0d351" dataset="dataset" options="text_options">
+        <p><br></p>
+        <p><img src="data:image/png;base64,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"></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_c164476c-670a-4f57-82cc-7933e0aa3751" dataset="dataset" options="text_options">
+        <p><em>How are we tracking to fulfill our mission to fix residential real estate?</em></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <mode-chart id="chart_59208f031562" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_b4af44aa9f37" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_403e22802221" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_60ad595702f1" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-6">
+      <mode-chart id="chart_fb80c40a81dd" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_1eeff6cee98e" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="bullet"></div>
+    </div>
+  </div>
+  <div class="row" data-row-height="large">
+    <div class="col-md-6">
+      <mode-chart id="chart_975070e42257" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_b4251f486764" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="map"></div>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-12">
+      <mode-chart id="chart_94703ee83d22" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row" data-row-height="large">
+    <div class="col-md-12">
+      <mode-chart id="chart_7147bf98a441" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <script>
+    alamode.leafletMap({
+      html_element: "#map",
+      title: "Subscriber Growth",
+      height: 500,
+      lat_column: "lat",
+      lng_column: "long",
+      query_name: "Heat map",
+      center_lat: 39.5,
+      center_lng: -98.35,
+      starting_zoom: 5,
+      dot_size: .4,
+      dot_opacity: .7
+    })
+
+    if ($('#bullet:empty').length) {
+      alamode.bulletChart({
+        html_element: "#bullet",
+        color: "#113c55",
+        chart_width: 550,
+        left_pad: 75,
+        query_name: "Bullet",
+        title: "Region Performance: Sales ($100k)",
+        title_column: "region",
+        bar_column: "sales_16",
+        marker_column: "goal",
+        scale_columns: ["sales_14", "sales_15", "max"]
+      })
+    }
+  </script>
+</div>
