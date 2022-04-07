@@ -5,15 +5,17 @@
   #churnHeatMap {
     border-top: 4px solid #d97b55 !important;
   }
-
+  
   h4 {
     color: white !important;
   }
 
   .bigValues .chart-content {
-    height: calc(510px/3) !important;
+    height: calc(515px/3) !important;
   }
-
+  .churn,.velocity,.marketingEng {
+    display:none;
+  }
   #churnHeatMap {
     background: white;
   }
@@ -23,6 +25,7 @@
   <p>{{ description }}</p>
 </div>
 <div class="mode-grid container">
+  <section class="marketingEng">
   <div class="row">
     <div class="col-md-12">
       <mode-text id="text_a2680f76-d202-4d1f-918c-8796b77a0810" dataset="dataset" options="text_options">
@@ -53,6 +56,9 @@
       <mode-chart id="chart_11844175b8d2" dataset="dataset" options="chart_options"></mode-chart>
     </div>
   </div>
+  </section>
+  
+  <section class="velocity">
   <div class="row">
     <div class="col-md-12">
       <mode-text id="text_c7d74559-c07f-4e87-8205-4669c1620db3" dataset="dataset" options="text_options">
@@ -75,6 +81,9 @@
       <mode-chart id="chart_802fa7a5b81d" dataset="dataset" options="chart_options"></mode-chart>
     </div>
   </div>
+  </section>
+  
+  <section class="churn">
   <div class="row">
     <div class="col-md-12">
       <mode-text id="text_ab4f64ec-39cd-4425-ca4f-1710c395b75f" dataset="dataset" options="text_options">
@@ -89,12 +98,12 @@
       </mode-text>
     </div>
     <div class="col-md-8">
-      <mode-python id="python_8ef6bb0e240b" options="python_options"></mode-python>
+      <mode-python id="python_e725baf7f276" options="python_options"></mode-python>
     </div>
   </div>
   <div class="row">
     <div class="col-md-5">
-      <mode-python id="python_fe0331f45298" options="python_options"></mode-python>
+      <mode-python id="python_6260e2b11590" options="python_options"></mode-python>
     </div>
     <div class="col-md-7">
       <mode-text id="text_41d712da-c855-431e-9b88-fe1d7904f923" dataset="dataset" options="text_options">
@@ -113,5 +122,21 @@
       <mode-chart id="chart_72f2851e6621" dataset="dataset" options="chart_options"></mode-chart>
     </div>
   </div>
-
+  </section>
 </div>
+
+<script>
+  var params = datasets.filter((q)=>{
+    return q.queryName === "Query 7"
+  })[0].content;
+  setTimeout(()=>{
+    var sections = Object.values(params[0])
+    console.log(sections)
+    sections.forEach((s)=>{
+     
+     $(`.${s}`).show();
+     $
+    })
+  },400)
+  console.log(params)
+</script>
