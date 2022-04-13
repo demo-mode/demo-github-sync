@@ -12,10 +12,15 @@ WHERE
 ORDER BY
   LAST_EDITED_AT_UTC ASC
 
+{% assign day_of_week = 'now' | date:'%w' | plus: 0 | times: 86400 %}
+{% assign today = 'now' | date:'%s' %}
+{% assign sunday = {{today | minus: {{day_of_week}} | date:'%Y-%m-%d'}} %} 
+
 {% form %}
+
 
 reports_start_date_default:
   type: date
-  default: {{ 'now' | date: "%Y-%m-%d"}}
+  default: {{ sunday }}
   
 {% endform %}
