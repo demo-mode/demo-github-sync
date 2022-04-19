@@ -1,229 +1,138 @@
-@font-face {
-    font-family: system;
-    font-style: normal;
-    font-weight: 300;
-    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+/* Style Sheet */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #2F3033;
+    --secondary-color:#007fad;
+    --report-background-color: #0e09de;
+    --paragraph-color: #676D73;
+    --chart-background: #fefefe;
+    --chart-border: #d3d4d5;
+    --chart-highlight: #007fad;
+    --font-family: 'Lato', sans-serif;
+
   }
 
-   :root {
-    --series-1: #FF5630;
-    --series-2: #FFAB00;
-    --series-3: #36B37E;
-    --series-4: #00B8D9;
-    --series-5: #6554C0;
-  }
-  /* Now, let's apply it on an element */
+/* Report Background */
+.embed-preview,
+.mode-embed {
+  background-color: var(--report-background-color);
+}
 
-  body {
-    background-color: #0e09de;
-    font-family: "system";
-  }
-  /* Report Layout */
+/* Report Logo */
+.mode-embed .mode-header .logo {
+  text-align: right;
+  margin-bottom: 2rem;
+}
 
-  .mode-grid.container {
-    margin-bottom: 32px;
-  }
-  
-  /* Chart Backgrounds */
-  .mode-embed .mode-object.editor-chart {
-    background-color: #ffffff;
-    border-radius: 3px;
-  }
+.logo-img {
+  max-width: 15rem;
+}
 
-  .mode-embed .mode-object.editor-table {
-    background-color: : #ffffff;
-    border-radius: 3px;
-  }
+/* Report Header */
+.mode-embed .mode-header h1 {
+  color: var(--primary-color);
+  font-family: var(--font-family);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
 
-/* ===============================
-   Gutters
-=============================== */
+/* Report Header Paragraph */
+.mode-embed .mode-header p {
+  color: var(--paragraph-color);
+  font-weight: 400;
+  font-family: var(--font-family);
+}
 
-  .chart-container-component {
-    padding: 8px;
-  }
+/* Report Text Header */
+.editor-chart.mode-object.text-block-container .ql-editor h1, 
+.editor-chart.mode-object.text-block-container .ql-editor h2, 
+.editor-chart.mode-object.text-block-container .ql-editor h3, 
+.editor-chart.mode-object.text-block-container .ql-editor h4, 
+.editor-chart.mode-object.text-block-container .ql-editor h5, 
+.editor-chart.mode-object.text-block-container .ql-editor h6, 
+mode-text .ql-editor h1, 
+mode-text .ql-editor h2, 
+mode-text .ql-editor h3, 
+mode-text .ql-editor h4, 
+mode-text .ql-editor h5, 
+mode-text .ql-editor h6 {
+  color: var(--secondary-color);
+  font-family: var(--font-family);
+  text-transform: uppercase;
+  font-weight: 700;
+}
 
-/* ===============================
-   Fonts
-=============================== */
-  /*Report title*/
+/* Report Text Paragraph */
+.editor-chart.mode-object.text-block-container .ql-editor p, 
+.editor-chart.mode-object.text-block-container .ql-editor ol, 
+.editor-chart.mode-object.text-block-container .ql-editor ul, 
+mode-text .ql-editor p, 
+mode-text .ql-editor ol, 
+mode-text .ql-editor ul {
+  color: var(--paragraph-color);
+  font-family: var(--font-family);
+  font-weight: 400;
+}
 
-  .mode-embed .mode-header h1 {
-    color: #FFFFFF;
-    margin-bottom: 0;
-    font-size: 29px;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-  }
-  /*Report description*/
+/* Chart Top Bar */
+.mode-embed .mode-object.editor-chart,
+.mode-embed .full-width-report .editor-table { 
+  border-top: 4px solid var(--chart-highlight);
+  border-right: 1px solid var(--chart-highlight);
+  border-left: 1px solid var(--chart-highlight);
+  border-bottom: 1px solid var(--chart-highlight);
+}
 
-  .mode-embed .mode-header p {
-    color: #FFFFFF;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: -0.006em;
-    margin-top: 20px;
-  }
-  /* Titles */
+/* Chart Top Bar for Notebook Charts */
+.mode-graphic-container  {
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+}
 
-  .mode-object.big-number .chart-title .in-place-edit-text,
-  .embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
-  .editor-table .chart-header,
-  .editor-chart .chart-header {
-    color: #172B4D;
-    font-size: 14px;
-    font-weight: 500;
-  }
+.mode-graphic-container :hover {
+  border-top: 4px solid var(--chart-border)
+  border-color: var(--chart-border);
+}
 
-  .mode-object.big-number .chart-title {
-    text-align: left !important;
-    margin: 0;
-    font-size: 14px;
-    font-weight: 500;
-  }
+/* Chart Background */
+.mode-embed .mode-object {
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  background: var(--chart-background);
+}
 
-  .mode-object.big-number .chart-content {
-    height: 160px;
-  }
-  /* Descriptions */
+.mode-embed .mode-object:hover {
+  border-color: var(--chart-border);
+}
 
-  .mode-object .chart-title.chart-description .in-place-edit-text,
-  .mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
-    color: #172B4D;
-    font-size: 14px;
-    font-weight: 500;
-  }
+/* Big Number Header */
+.mode-object.big-number .chart-title .in-place-edit-text, 
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text{
+  color: var(--paragraph-color);
+  font-family: var(--font-family);
+  text-transform: uppercase;
+}
 
-/* ===============================
-   Tables
-=============================== */
+/* Deprecated Display Table Header */
+.mode-object .chart-title, 
+.mode-embed .mode-object .chart-title {
+  color: var(--paragraph-color);
+  font-family: var(--font-family);
+  text-transform: uppercase;
+}
 
-  .mode-table-grid th {
-    background: none;
-    color: #5E6C84;
-    font-size: 12px;
-    font-weight: 500;
-  }
-  
-  .js-table-header-container {
-    border-bottom: 2px solid #C1C7D0;
-  }
-  
-  .mode-table-grid td {
-    border: none !important;
-    color: #172B4D !important;
-    font-size: 12px !important;
-    font-family: "system" !important;
-  }
-  
-  .js-table-content-container tbody > tr > th {
-    visibility: hidden;
-  }
-  
-  mode-table .chart-content {
-    width: calc(100% - 16px) !important;
-    margin: 0 auto;
-    background: #ffffff;
-    border-radius: 3px;
-    margin-top: 8px;
-  }
-  
-  mode-table > div {
-    background: #0052CC !important;
-    border: none !important;
-  }
+/* Chart Header */
+.editor-table .chart-header .in-place-edit-text, 
+.editor-chart .chart-header .in-place-edit-text {
+  color: var(--paragraph-color);
+  font-family: var(--font-family);
+  text-transform: uppercase;
+}
 
-/* ===============================
-   Tooltips
-=============================== */
-  /* Tooltip */
-
-  div.nvtooltip.xy-tooltip {
-    border: none;
-    background-color: white;
-    color: #172B4D;
-    font-weight: 300;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
-  }
-  /* Legend color */
-
-  td div {
-    border: none !important;
-    border-radius: 50%;
-  }
-
-  text {
-    fill: #172B4D !important;
-    font-size: 12px !important;
-    font-family: "system" !important;
-  }
-  /*Bar charts*/
-  .nv-multiBarWithLegend .nv-group:nth-child(5n + 1) rect { fill: var(--series-1) !important; stroke: var(--series-1) !important; }
-  .nv-multiBarWithLegend .nv-group:nth-child(5n + 2) rect { fill: var(--series-2) !important; stroke: var(--series-2) !important; }
-  .nv-multiBarWithLegend .nv-group:nth-child(5n + 3) rect { fill: var(--series-3) !important; stroke: var(--series-3) !important; }
-  .nv-multiBarWithLegend .nv-group:nth-child(5n + 4) rect { fill: var(--series-4) !important; stroke: var(--series-4) !important; }
-  .nv-multiBarWithLegend .nv-group:nth-child(5n + 5) rect { fill: var(--series-5) !important; stroke: var(--series-5) !important; }
-
-  .nv-multiBarWithLegend .nv-series:nth-child(5n + 1) circle { fill: var(--series-1) !important; stroke: var(--series-1) !important; }
-  .nv-multiBarWithLegend .nv-series:nth-child(5n + 2) circle { fill: var(--series-2) !important; stroke: var(--series-2) !important; }
-  .nv-multiBarWithLegend .nv-series:nth-child(5n + 3) circle { fill: var(--series-3) !important; stroke: var(--series-3) !important; }
-  .nv-multiBarWithLegend .nv-series:nth-child(5n + 4) circle { fill: var(--series-4) !important; stroke: var(--series-4) !important; }
-  .nv-multiBarWithLegend .nv-series:nth-child(5n + 5) circle { fill: var(--series-5) !important; stroke: var(--series-5) !important; }
-  
-  /*Line charts*/
-  .nv-lineChart .nv-group:nth-child(5n + 1) { stroke: var(--series-1) !important; }
-  .nv-lineChart .nv-group:nth-child(5n + 2) { stroke: var(--series-2) !important; }
-  .nv-lineChart .nv-group:nth-child(5n + 3) { stroke: var(--series-3) !important; }
-  .nv-lineChart .nv-group:nth-child(5n + 4) { stroke: var(--series-4) !important; }
-  .nv-lineChart .nv-group:nth-child(5n + 5) { stroke: var(--series-5) !important; }
-
-  .nv-lineChart .nv-scatter .nv-group:nth-child(5n + 1) { fill: var(--series-1) !important; }
-  .nv-lineChart .nv-scatter .nv-group:nth-child(5n + 2) { fill: var(--series-2) !important; }
-  .nv-lineChart .nv-scatter .nv-group:nth-child(5n + 3) { fill: var(--series-3) !important; }
-  .nv-lineChart .nv-scatter .nv-group:nth-child(5n + 4) { fill: var(--series-4) !important; }
-  .nv-lineChart .nv-scatter .nv-group:nth-child(5n + 5) { fill: var(--series-5) !important; }
-
-  .nv-lineChart .nv-series:nth-child(5n + 1) circle { fill: var(--series-1) !important; stroke: var(--series-1) !important; }
-  .nv-lineChart .nv-series:nth-child(5n + 2) circle { fill: var(--series-2) !important; stroke: var(--series-2) !important; }
-  .nv-lineChart .nv-series:nth-child(5n + 3) circle { fill: var(--series-3) !important; stroke: var(--series-3) !important; }
-  .nv-lineChart .nv-series:nth-child(5n + 4) circle { fill: var(--series-4) !important; stroke: var(--series-4) !important; }
-  .nv-lineChart .nv-series:nth-child(5n + 5) circle { fill: var(--series-5) !important; stroke: var(--series-5) !important; }
-  
-  /*Area charts*/
-  .nv-stackedAreaChart .nv-area:nth-child(5n + 5) { fill: var(--series-1) !important; stroke: var(--series-1) !important; }
-  .nv-stackedAreaChart .nv-area:nth-child(5n + 4) { fill: var(--series-2) !important; stroke: var(--series-2) !important; }
-  .nv-stackedAreaChart .nv-area:nth-child(5n + 3) { fill: var(--series-3) !important; stroke: var(--series-3) !important; }
-  .nv-stackedAreaChart .nv-area:nth-child(5n + 2) { fill: var(--series-4) !important; stroke: var(--series-4) !important; }
-  .nv-stackedAreaChart .nv-area:nth-child(5n + 1) { fill: var(--series-5) !important; stroke: var(--series-5) !important; }
-  
-  .nv-stackedAreaChart .nv-scatter .nv-group:nth-child(5n + 5) { fill: var(--series-1) !important; stroke: var(--series-1) !important; }
-  .nv-stackedAreaChart .nv-scatter .nv-group:nth-child(5n + 4) { fill: var(--series-2) !important; stroke: var(--series-2) !important; }
-  .nv-stackedAreaChart .nv-scatter .nv-group:nth-child(5n + 3) { fill: var(--series-3) !important; stroke: var(--series-3) !important; }
-  .nv-stackedAreaChart .nv-scatter .nv-group:nth-child(5n + 2) { fill: var(--series-4) !important; stroke: var(--series-4) !important; }
-  .nv-stackedAreaChart .nv-scatter .nv-group:nth-child(5n + 1) { fill: var(--series-5) !important; stroke: var(--series-5) !important; }
-
-  .nv-stackedAreaChart .nv-series:nth-child(5n + 5) circle { fill: var(--series-1) !important; stroke: var(--series-1) !important; }
-  .nv-stackedAreaChart .nv-series:nth-child(5n + 4) circle { fill: var(--series-2) !important; stroke: var(--series-2) !important; }
-  .nv-stackedAreaChart .nv-series:nth-child(5n + 3) circle { fill: var(--series-3) !important; stroke: var(--series-3) !important; }
-  .nv-stackedAreaChart .nv-series:nth-child(5n + 2) circle { fill: var(--series-4) !important; stroke: var(--series-4) !important; }
-  .nv-stackedAreaChart .nv-series:nth-child(5n + 1) circle { fill: var(--series-5) !important; stroke: var(--series-5) !important; }
-  
-  /*Pie chart*/
-  .nv-pieChart .nv-slice:nth-child(5n + 2) path { fill: var(--series-1) !important; }
-  .nv-pieChart .nv-slice:nth-child(5n + 4) path { fill: var(--series-2) !important; }
-  .nv-pieChart .nv-slice:nth-child(5n + 1) path { fill: var(--series-3) !important; }
-  .nv-pieChart .nv-slice:nth-child(5n + 3) path { fill: var(--series-4) !important; }
-  .nv-pieChart .nv-slice:nth-child(5n + 5) path { fill: var(--series-5) !important; }
-
-  .nv-pieChart .nv-series:nth-child(5n + 2) circle { fill: var(--series-1) !important; stroke: var(--series-1) !important; }
-  .nv-pieChart .nv-series:nth-child(5n + 4) circle { fill: var(--series-2) !important; stroke: var(--series-2) !important; }
-  .nv-pieChart .nv-series:nth-child(5n + 1) circle { fill: var(--series-3) !important; stroke: var(--series-3) !important; }
-  .nv-pieChart .nv-series:nth-child(5n + 3) circle { fill: var(--series-4) !important; stroke: var(--series-4) !important; }
-  .nv-pieChart .nv-series:nth-child(5n + 5) circle { fill: var(--series-5) !important; stroke: var(--series-5) !important; }
-  
-  /*Line + bar charts*/
-  .nv-linePlusBar .nv-bars rect { fill: var(--series-3) !important; stroke: none !important; }
-  .nv-linePlusBar .nv-line path { stroke: var(--series-1) !important; }
-  
-  .nv-linePlusBar .nv-scatter .nv-group { fill: var(--series-1) !important; stroke: var(--series-1) !important; }
-  .nv-linePlusBar .nv-series:nth-child(5n + 2) circle { fill: var(--series-1) !important; stroke: var(--series-1) !important; }
+/* Chart Legend */
+.highcharts-legend .highcharts-legend-title text, 
+.highcharts-legend .highcharts-legend-item text, 
+.highcharts-legend .highcharts-legend-item text tspan {
+  font-family: var(--font-family);
+}
