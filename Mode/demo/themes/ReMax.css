@@ -98,7 +98,7 @@ span.trend-value.ng-binding,
 
 /* Report title */
 .mode-embed .mode-header h1 {
-  color: #000;
+  color: #003da5;
   font-family: "Suez One", serif;, sans-serif;
   font-size: 36px;
   font-weight: 300;
@@ -109,7 +109,7 @@ span.trend-value.ng-binding,
 /* Report description */
 .mode-header p,
 .mode-embed .mode-header p {
-  color: #000;
+  color: #003da5;
   font-family: "Suez One", serif;, sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -124,7 +124,7 @@ span.trend-value.ng-binding,
 .editor-table .chart-header,
 .editor-chart .chart-header,
 .mode-placeholder .placeholder-title {
-  color: #000;
+  color: #003da5;
   font-family:'Suez One', serif;, sans-serif;
   font-size: 18px;
   font-weight: 300;
