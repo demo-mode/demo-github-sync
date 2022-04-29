@@ -4,7 +4,7 @@
 /* Background color */
 body,
 body.mode-embed.embed-preview {
-  background-color: #2b59b3;
+  background-color: #003da5;
   background-attachment: fixed;
 }
 
@@ -57,11 +57,11 @@ body.mode-embed.embed-preview {
 
 /* Green top Bar */
 .mode-object, .mode-placeholder, .mode-graphic-container {
-  border-top: 4px solid #52CC80 !important;
+  border-top: 4px solid #dc1d2e !important;
 }
 
 .mode-object:hover, .mode-placeholder, .mode-graphic-container:hover {
-  border-top-color: #52CC80 !important;
+  border-top-color: #dc1d2e !important;
 }
 
 /* Placeholder header */
