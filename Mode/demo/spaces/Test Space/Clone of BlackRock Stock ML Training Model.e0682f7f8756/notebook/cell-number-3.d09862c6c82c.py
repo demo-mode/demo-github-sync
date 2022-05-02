@@ -1,0 +1,1 @@
+! pip install yahoo_fin -t "/tmp" > /dev/null 2>&1
