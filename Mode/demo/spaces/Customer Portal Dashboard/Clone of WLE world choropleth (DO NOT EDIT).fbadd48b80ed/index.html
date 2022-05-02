@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="https://d3js.org/d3-geo.v1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.4/queue.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.1.0/topojson.min.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+
+
+<style>
+  
+.mode-graphic-title {
+    font-size: 14px;
+    line-height: 48px;
+    height: 48px;
+    padding-left: 16px;
+    font-weight: 500;
+    color: #379FC9;
+}  
+
+.mode-world-chorolpleth-legend {
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+    color: #379FC9;
+}
+  
+</style>
+
+
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+
+
+<script>
+alamode.worldChoropleth(
+  {
+    query_name: "Query 1",
+    width: 780,
+    country_column: "country_code",
+    country_code_type: "iso_code_alpha_3",
+    // Options for country_code_type:
+    //    name
+    //    iso_code_numeric
+    //    iso_code_alpha_2
+    //    iso_code_alpha_3
+    value_column: "life_expectancy",
+    title: "Total Revenue by Country",
+    color_gradient: ["#3C4D73", "#80E9DC", "#38D9C5", "#7FEBA3"]
+  }
+)
+
+</script>
