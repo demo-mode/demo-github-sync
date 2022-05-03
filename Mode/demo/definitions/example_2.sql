@@ -4,7 +4,7 @@ SELECT *,
 
     FROM (
     SELECT 
-REPLACE(REPLACE(r.name, 'Midwest', 'Southwest'),'West', 'Southeast') AS "City Region",
+REPLACE(REPLACE(r.name, 'Midwest', 'Southwest'),'West', 'Northwest') AS "City Region",
 REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(we.channel, 'twitter', 'JapanTown'),
 'linkedin', 'Outer Richmond'), 'adroll', 'Laurel Heights'), 'adwords', 'Outer Sunset'), 'email', 'Mission District'), 'direct', 'Balboa Park'), 'facebook', 'Westwood Park'), 'banner', 'Oceanview'), 'organic', 'Sunnyside') AS Townships,
 SUM(o.gloss_qty) AS "Under An Hour Parking",
