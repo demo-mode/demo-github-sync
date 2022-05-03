@@ -4,7 +4,7 @@ SELECT *,
 
     FROM (
     SELECT 
-REPLACE(REPLACE(r.name, 'Midwest', 'Southwest'),'West', 'Northwest') AS "City Region",
+REPLACE(REPLACE(REPLACE(REPLACE(r.name, 'Midwest', 'City_Municipalities'),'West', 'Commercial_Business'),'Northeast', 'Events'),'Southeast', 'Test') AS "Parking Type",
 REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(we.channel, 'twitter', 'Japantown'),
 'linkedin', 'Outer Richmond'), 'adroll', 'Laurel Heights'), 'adwords', 'Outer Sunset'), 'email', 'Southpark-Giants Field'), 'direct', 'Mission Bay'), 'facebook', 'Balboa Park'), 'banner', 'Oceanview'), 'organic', 'Sunnyside') AS Townships,
 SUM(o.gloss_qty) AS "Under_An_Hour_Parking",
