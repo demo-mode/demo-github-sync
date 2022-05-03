@@ -57,7 +57,7 @@ body.mode-embed.embed-preview {
 
 /* Red top Bar */
 .mode-object, .mode-placeholder, .mode-graphic-container {
-  border-top: 4px solid #dc1d2e !important;
+  border-top: 4px solid #000000 !important;
 }
 
 .mode-object:hover, .mode-placeholder, .mode-graphic-container:hover {
