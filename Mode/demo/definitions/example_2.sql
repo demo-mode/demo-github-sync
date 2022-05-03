@@ -6,10 +6,10 @@ SELECT *,
     SELECT 
 REPLACE(REPLACE(r.name, 'Midwest', 'Southwest'),'West', 'Northwest') AS "City Region",
 REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(we.channel, 'twitter', 'JapanTown'),
-'linkedin', 'Outer Richmond'), 'adroll', 'Laurel Heights'), 'adwords', 'Outer Sunset'), 'email', 'Mission District'), 'direct', 'Balboa Park'), 'facebook', 'Westwood Park'), 'banner', 'Oceanview'), 'organic', 'Sunnyside') AS Townships,
-SUM(o.gloss_qty) AS "Under An Hour Parking",
-SUM(o.poster_qty) AS "Single Hour Parking",
-SUM(o.standard_qty) AS "Multi-Hour Parking",
+'linkedin', 'Outer Richmond'), 'adroll', 'Laurel Heights'), 'adwords', 'Outer Sunset'), 'email', 'Southpark-Giants Field'), 'direct', 'Mission Bay'), 'facebook', 'Balboa Park'), 'banner', 'Oceanview'), 'organic', 'Sunnyside') AS Townships,
+SUM(o.gloss_qty) AS "Under_An_Hour_Parking",
+SUM(o.poster_qty) AS "Single_Hour_Parking",
+SUM(o.standard_qty) AS "Multi_Hour_Parking",
 SUM((o.total_amt_usd)*100) AS total_sales_usd,
 to_date(cast(o.occurred_at as TEXT),'YYYY-MM-DD') AS calc_date_no_use
 FROM demo.accounts a
