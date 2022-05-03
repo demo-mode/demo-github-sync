@@ -1,0 +1,715 @@
+/* CUSTOM FONT */
+@import url('https://fonts.googleapis.com/css?family=Suez+One&display=swap');
+/* REPORT */
+/* Background color */
+body,
+body.mode-embed.embed-preview {
+  background-color: #ffffff;
+  background-attachment: fixed;
+}
+
+/* Gutters */
+.mode-embed .mode-grid.container .row {
+  margin-left: -6px;
+  margin-right: -6px;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+  .mode-embed .mode-grid.container .row {
+    margin-left: -2px;
+    margin-right: -2px;
+    margin-bottom: 8px;
+  }
+}
+
+.mode-embed .mode-grid.container [class^="col-"] {
+  padding: 0 8px;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .mode-embed .mode-grid.container [class^="col-"] {
+    padding: 0 2px;
+  }
+}
+
+.editor-module.editor-chart.mode-object.editor-multi.big-number.ng-scope.is-report-mode,
+.editor-module.editor-chart.mode-object.editor-multi {
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .editor-module.editor-chart.mode-object.editor-multi.big-number.ng-scope.is-report-mode,
+  .editor-module.editor-chart.mode-object.editor-multi {
+    border: 0;
+    margin: 0;
+  }
+}
+
+.row .mode-object:first-of-type {
+  margin-left: 0;
+}
+
+.row .mode-object:last-of-type {
+  margin-right: 0;
+}
+
+/* Red top Bar */
+.mode-object, .mode-placeholder, .mode-graphic-container {
+  border-top: 4px solid #dc1d2e !important;
+}
+
+.mode-object:hover, .mode-placeholder, .mode-graphic-container:hover {
+  border-top-color: #dc1d2e !important;
+}
+
+/* Placeholder header */
+.mode-placeholder::before {
+  border-bottom: transparent;
+}
+
+span.chart-title,
+in-place-edit {
+  line-height: 40px;
+}
+
+.row {
+  margin-top: 16px;
+}
+
+/* TEXT */
+/* Use custom font for all charting */
+.mode-embed .mode-header,
+.mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+.editor-table .chart-header,
+.editor-chart .chart-header,
+.mode-placeholder .placeholder-title,
+.mode-object .chart-title.chart-description .in-place-edit-text,
+.mode-embed .mode-object .chart-title.chart-description .in-place-edit-text,
+span.fb-content.ng-binding,
+span.trend-value.ng-binding,
+.highcharts-axis-labels tspan,
+.highcharts-legend-item tspan,
+.nvd3 text {
+  font-family: "Suez One", serif;, sans-serif;
+}
+
+/* Report title */
+.mode-embed .mode-header h1 {
+  color: #003da5;
+  font-family: "Suez One", serif;, sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+/* Report description */
+.mode-header p,
+.mode-embed .mode-header p {
+  color: #003da5;
+  font-family: "Suez One", serif;, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+/* Chart titles */
+.mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+.editor-table .chart-header,
+.editor-chart .chart-header,
+.mode-placeholder .placeholder-title {
+  color: #003da5;
+  font-family:'Suez One', serif;, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Output styles */
+.mode-graphic-title {
+font-family:'Suez One', serif;, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+  
+  .mode-retention-heatmap-label{
+  font-family:'Suez One', serif;, sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+  
+/* Big Number styles */
+.mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .in-place-edit .in-place-edit-text {
+  line-height: 21px;
+}
+
+.chart-header {
+  padding-top: 10px;
+}
+
+/* Big number descriptions */
+.mode-object .chart-title.chart-description .in-place-edit-text,
+.mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
+  color: #191925;
+  font-family:"Suez One", serif;, sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+/* Big number */
+span.fb-content.ng-binding {
+  color: #000;
+}
+
+/* Text editor text */
+.mode-embed .mode-object h1,
+.mode-embed .mode-object h2,
+.mode-embed .mode-object h3,
+.mode-embed .mode-object h4,
+.editor-chart.mode-object.text-block-container .ql-editor h5,
+.mode-embed .mode-object h6,
+.mode-embed .mode-object p,
+.mode-embed .mode-object li,
+.mode-embed .mode-object .error-message .message,
+.mode-embed .centered-content {
+  color: #000;
+}
+
+.mode-embed .mode-object p{
+  font-family:'Suez One', serif;, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* CHARTS */
+/* Chart Placeholders */
+.ph-color-light {
+  fill: #D8D8D8;
+}
+
+.ph-color-medium {
+  fill: #CCD3DD;
+}
+
+.ph-color-dark {
+  fill: #B9C4D5;
+}
+
+.loading-message {
+  color: #191925;
+}
+
+/* Chart background */
+.editor-module.editor-chart.mode-object.editor-multi, .mode-placeholder, .mode-graphic-container {
+  transition: all 0.2s ease;
+  background-color: #fff;
+  border: 1px solid #D8D8D8;
+  border-radius: 6px;
+}
+
+.mode-embed .editor-table {
+  background: transparent;
+}
+
+/* Chart hover */
+.editor-module.editor-chart.mode-object.editor-multi, .mode-graphic-container:hover {
+  background-color: #F7F7F9;
+  box-shadow: 5px 10px 13px #D8D8D8;
+  border: 1px solid #D8D8D8;
+  border-radius: 6px;
+}
+
+.mode-embed .mode-object.editor-chart,
+.mode-embed .mode-object.editor-table,
+.mode-placeholder {
+  border: transparent;
+}
+
+/* Pies */
+.nvd3.nv-pie path {
+  fill-opacity: 1;
+  stroke: transparent;
+}
+
+/* Text background */
+.editor-module.editor-chart.editor-multi.mode-object.text-block-container.report-view,
+.chart-content.text-block-content {
+  background: transparent;
+}
+
+/* Chart text */
+.nvd3 text {
+  fill: #000;
+}
+
+.highcharts-root {
+  font-family: "Suez One", serif;
+}
+
+.highcharts-root tspan {
+  fill: #000;
+}
+
+.highcharts-text-outline {
+  stroke: transparent;
+}
+
+/* Chart tick text, Chart legend */
+.nvd3 .tick text,
+.nvd3 .nv-legend .nv-legend-text,
+.highcharts-axis-labels tspan,
+.highcharts-legend-item tspan,
+.highcharts-legend-item text tspan {
+  fill: #000;
+  font-family: "Suez One", serif;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.highcharts-legend .highcharts-legend-title text {
+  fill: #000;
+  font-family: "Suez One", serif;
+  font-weight: 500 !important;
+}
+
+/* Axis labels */
+.mode-object .chart .xlabel,
+.mode-object .chart .ylabel {
+  background: none;
+  fill: #000;
+  
+}
+
+.mode-object .chart .xlabel h4,
+.mode-object .chart .ylabel h4 {
+
+}
+
+.highcharts-axis-title tspan {
+  font-family: "Suez One", serif;
+  font-weight: 500 !important;
+  font-size: 12px;
+  fill: #000;
+}
+
+/* Y Ticks */
+.chart-svg .nv-y line,
+.highcharts-yaxis-grid .highcharts-grid-line,
+.highcharts-xaxis .highcharts-axis-line,
+.highcharts-xaxis .highcharts-tick {
+  stroke: #D8D8D8;
+}
+
+/* Bars */
+.nvd3 .nv-multibar .nv-groups rect,
+.nvd3 .nv-multibarHorizontal .nv-groups rect,
+.nvd3 .nv-candlestickBar .nv-ticks rect,
+.nvd3 .nv-discretebar .nv-groups rect,
+.highcharts-root .highcharts-series-group .highcharts-series:not(.highcharts-bubble-series) .highcharts-point {
+  fill-opacity: 1;
+  stroke: transparent;
+}
+
+.nvd3 .nv-multibar .nv-groups rect.highcharts-point-select,
+.nvd3 .nv-multibarHorizontal .nv-groups rect.highcharts-point-select,
+.nvd3 .nv-candlestickBar .nv-ticks rect.highcharts-point-select,
+.nvd3 .nv-discretebar .nv-groups rect.highcharts-point-select,
+.highcharts-root .highcharts-series-group .highcharts-series:not(.highcharts-bubble-series) .highcharts-point.highcharts-point-select {
+  stroke: #53535C;
+}
+
+.nvd3 .nv-multibar .nv-groups rect:hover,
+.nvd3 .nv-multibarHorizontal .nv-groups rect:hover,
+.nvd3 .nv-candlestickBar .nv-ticks rect:hover,
+.nvd3 .nv-discretebar .nv-groups rect:hover,
+.highcharts-root .highcharts-series-group .highcharts-series:not(.highcharts-bubble-series) .highcharts-point:hover {
+  stroke: #53535C;
+}
+
+.highcharts-root .highcharts-series-group .highcharts-series:not(.highcharts-bubble-series) .highcharts-point:hover {
+  stroke: #53535C;
+}
+
+.highcharts-series-hover .highcharts-markers:not(.highcharts-line-series) path.highcharts-graph {
+  stroke: #53535C;
+  stroke-width: 1px;
+}
+
+.highcharts-series-hover.highcharts-scatter-series path.highcharts-point-hover {
+  stroke: #53535C;
+}
+
+rect.updated-column-mark {
+  stroke: #53535C;
+}
+
+.highcharts-markers.highcharts-tracker.highcharts-area-series > path:nth-child(2) {
+  stroke: #53535C;
+}
+
+.highcharts-markers.highcharts-tracker.highcharts-scatter-series path.highcharts-point-hover {
+  stroke: #53535C;
+}
+
+.highcharts-area-series.highcharts-series-hover .highcharts-graph {
+  stroke: #53535C;
+}
+
+.highcharts-markers.highcharts-tracker.highcharts-line-series > .highcharts-point.highcharts-point-hover, .highcharts-markers.highcharts-tracker.highcharts-line-series .highcharts-point-select, .highcharts-markers.highcharts-tracker.highcharts-area-series > .highcharts-point.highcharts-point-hover, .highcharts-markers.highcharts-tracker.highcharts-area-series .highcharts-point-select {
+  stroke: #53535C;
+}
+
+.highcharts-series .highcharts-scatter-series .highcharts-point-hover, .highcharts-series .highcharts-scatter-series .highcharts-point-select, .highcharts-series.highcharts-bubble-series .highcharts-point-hover, .highcharts-series.highcharts-bubble-series .highcharts-point-select, .highcharts-series-group .highcharts-scatter-series .highcharts-point-hover, .highcharts-series-group .highcharts-scatter-series .highcharts-point-select, .highcharts-series-group.highcharts-bubble-series .highcharts-point-hover, .highcharts-series-group.highcharts-bubble-series .highcharts-point-select {
+  stroke: #53535C;
+}
+
+/* Tooltips */
+div.nvtooltip.xy-tooltip {
+  border: none;
+  background-color: #fff;
+  color: #000;
+}
+
+.highcharts-tooltip,
+.highcharts-tooltip-box {
+  stroke: transparent;
+  fill: transparent;
+}
+
+.highcharts-tooltip .tooltip-container,
+.highcharts-tooltip-box .tooltip-container {
+  background-color: #fff;
+  border-color: #D8D8D8;
+  color: #000;
+  box-shadow: 0px 3px 4px #CCD3DD;
+}
+
+.highcharts-tooltip .tooltip-container .tooltip-header,
+.highcharts-tooltip-box .tooltip-container .tooltip-header {
+  background-color: #9EE8B8;
+  border-color: #D8D8D8;
+  color: #000;
+}
+
+.highcharts-tooltip .tooltip-container .tooltip-body,
+.highcharts-tooltip-box .tooltip-container .tooltip-body {
+  color: #000;
+}
+
+.highcharts-tooltip .tooltip-container .tooltip-body .tooltip-row > .tooltip-label > .percent-label,
+.highcharts-tooltip-box .tooltip-container .tooltip-body .tooltip-row > .tooltip-label > .percent-label {
+  color: #000;
+}
+
+.highcharts-tooltip .tooltip-container .tooltip-body tr.highlight,
+.highcharts-tooltip-box .tooltip-container .tooltip-body tr.highlight {
+  background-color: #E2FAEB;
+}
+
+.highcharts-tooltip .tooltip-container div.total-segment-divider,
+.highcharts-tooltip-box .tooltip-container div.total-segment-divider {
+  background-color: #D8D8D8;
+}
+
+.chart-context-menu {
+  color: #000;
+  background-color: #fff;
+  border-color: #D8D8D8;
+  box-shadow: 0px 3px 4px #D8D8D8;
+}
+
+.chart-context-menu .section-descriptor {
+  background-color: #0c0b14;
+  border-color: #323773;
+}
+
+.chart-context-menu .section-descriptor .value.label-section-name {
+  color: #ada2bb;
+}
+
+.chart-context-menu .context-menu-link:hover .context-menu-label-wrapper {
+  background-color: #E2FAEB;
+}
+
+.chart-context-menu .section-divider {
+  border-color: #D8D8D8;
+}
+
+.chart-context-menu.has-explorer-icon .viz-action-icon .svg-icon-stroke {
+  stroke: #000;
+}
+
+.chart-context-menu.has-explorer-icon .viz-action-icon .svg-icon-fill {
+  fill: #000;
+}
+
+/* Legend color */
+td div {
+  border: none !important;
+  border-radius: 50%;
+}
+
+.nvtooltip table tr.highlight {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* TABLES */
+.mode-table-grid,
+.mode-table-grid th {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.mode-table-grid:not(.pivot-table-container),
+.mode-table-grid:not(.pivot-table-container) td,
+.mode-table-grid:not(.pivot-table-container) thead th,
+.mode-table-grid:not(.pivot-table-container) tbody th {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mode-table-grid thead {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.mode-table-grid thead tr th .table-header-label,
+.mode-table-grid thead tr th .axel-table-header-label {
+  color: #FCFCFC !important;
+}
+
+.mode-table-grid thead th {
+  background: rgba(25, 25, 37, 0.8);
+}
+
+/* Table filter */
+.filter-module.with-lightbox {
+  background: transparent;
+  border: transparent;
+}
+
+.filter-module.with-lightbox.with-focus {
+  border: 1px solid #0078A3;
+}
+
+/* Table filter text */
+input.filter-field {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Sort toggle */
+.axel-dropdown:hover .axel-dropdown-toggle {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Selected table header */
+.mode-table-grid th.is-selected-col {
+  color: #fff;
+}
+
+/* Selected table rows */
+.mode-table-grid td.is-selected-col {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.axel-text-highlight .highlight {
+  background: #0078A3;
+}
+
+/* PIVOT TABLES */
+/* Table container, Column head bottom divider */
+.pivot-table-container,
+.pivot-table .pvtMainHeaderWrapper {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pivot-table .pvtMainHeaderWrapper {
+  border-left: 0;
+  border-top: 0;
+}
+
+/* Table base color */
+.pivot-table .mode-table-grid td,
+.pivot-table .mode-table-grid th {
+  background-color: #191925;
+}
+
+/* Pivot table row and column header panels */
+.pivot-table .pvtFixedHeaderPanel {
+  background: #191925;
+}
+
+/* Coarse dividers */
+/* Row header divider */
+tbody tr th:last-of-type .pvtFixedHeader {
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Column section divider */
+.pivot-table-container .pvtDividerVertical.pvtVal,
+.pivot-table-container .pvtDividerVertical.pvtTotal,
+.pivot-table-container .pvtDividerVertical .pvtFixedHeader,
+thead tr:last-child th:last-child .pvtFixedHeader {
+  border-right: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Row header row section divider */
+.pivot-table-container .pvtDivider.pvtVal,
+.pivot-table-container .pvtDivider.pvtTotal,
+.pivot-table-container .pvtDivider .pvtFixedHeader {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Cell dividers */
+/* Column header row dividers, Row header column dividers */
+.pvtFixedHeader {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pvtFixedHeader .table-header-label {
+  color: #FCFCFC !important;
+}
+
+/* Column section subdivider */
+.pivot-table .pivot-table-container td {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Row header subdivider zebra striping, Table row zebra striping */
+.pivot-table-container tbody > tr:nth-child(even) td,
+.pivot-table-container tbody > tr:nth-child(even) th,
+.pivot-table-container tbody > tr:nth-child(even) .pvtRowLabel:last-of-type .pvtFixedHeader,
+.pivot-table-container tbody > tr:nth-child(even) .pvtTotalFillerLabel .pvtFixedHeader,
+.pivot-table-container tbody > tr:nth-child(even) .pvtTotalLabel .pvtFixedHeader {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Sort hovers */
+.pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper):hover,
+.pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper).dropdown-open {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper):hover .table-header-label,
+.pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper).dropdown-open .table-header-label {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sort toggles */
+.pvtFixedHeader .axel-dropdown-toggle {
+  border-radius: 0;
+}
+
+/* New Report Viz Toolbar */
+.new-viz-actions .tooltip {
+  color: #393945;
+}
+
+.new-viz-actions .table-filter-module {
+  border: 1px solid transparent;
+}
+
+.new-viz-actions .table-filter-module.with-focus {
+  background-color: #15143d;
+  border: 1px solid #323773;
+}
+
+.new-viz-actions .table-filter-module.with-focus .filter-apply-btn {
+  background-color: inherit;
+}
+
+.new-viz-actions .table-filter-module .filter-apply-btn {
+  border: 1px solid #323773;
+  background-color: #15143d;
+}
+
+.new-viz-actions .table-filter-module .filter-apply-btn .viz-action-icon .svg-icon-stroke {
+  stroke: #C9CAD1;
+}
+
+.new-viz-actions .table-filter-module .filter-apply-btn .viz-action-icon .svg-icon-fill {
+  fill: #C9CAD1;
+}
+
+.new-viz-actions .table-filter-module .filter-apply-btn:hover:not(.disabled) .viz-action-icon .svg-icon-fill {
+  fill: #d44f34;
+}
+
+.new-viz-actions .table-filter-module .filter-apply-btn:hover:not(.disabled) .viz-action-icon .svg-icon-stroke {
+  stroke: #d44f34;
+}
+
+.new-viz-actions .filter-apply-btn .viz-action-icon .svg-icon-stroke, .new-viz-actions .new-viz-action .viz-action-icon .svg-icon-stroke {
+  stroke: #C9CAD1;
+}
+
+.new-viz-actions .filter-apply-btn .viz-action-icon .svg-icon-fill, .new-viz-actions .new-viz-action .viz-action-icon .svg-icon-fill {
+  fill: #C9CAD1;
+}
+
+.new-viz-actions .filter-apply-btn:active:not(.disabled), .new-viz-actions .new-viz-action:active:not(.disabled) {
+  background-color: #15143d;
+  border: 1px solid #323773;
+}
+
+.new-viz-actions .filter-apply-btn:hover:not(.disabled), .new-viz-actions .new-viz-action:hover:not(.disabled) {
+  box-shadow: 0 3px 4px #282f46;
+}
+
+.new-viz-actions .filter-apply-btn:hover:not(.disabled) .viz-action-icon .svg-icon-fill, .new-viz-actions .new-viz-action:hover:not(.disabled) .viz-action-icon .svg-icon-fill {
+  fill: #d44f34;
+}
+
+.new-viz-actions .filter-apply-btn:hover:not(.disabled) .viz-action-icon .svg-icon-stroke, .new-viz-actions .new-viz-action:hover:not(.disabled) .viz-action-icon .svg-icon-stroke {
+  stroke: #d44f34;
+}
+
+.new-viz-actions .new-viz-action {
+  background-color: #15143d;
+  border: 1px solid #323773;
+}
+
+.new-viz-actions span.divider {
+  border-left-color: #323773;
+}
+
+/* Hierarchy Buttons */
+.drill-actions .drill-action-btn {
+  background-color: #15143d;
+  border: 1px solid #323773;
+}
+
+.drill-actions .drill-action-btn .icon-hierarchy-down rect, .drill-actions .drill-action-btn .icon-hierarchy-down path, .drill-actions .drill-action-btn .icon-hierarchy-up rect, .drill-actions .drill-action-btn .icon-hierarchy-up path {
+  stroke: #C9CAD1;
+}
+
+.drill-actions .drill-action-btn:hover {
+  box-shadow: 0px 3px 4px #282f46;
+}
+
+.drill-actions .drill-action-btn:active {
+  background-color: #4D4F68;
+}
+
+.tooltip.hierarchy-tooltip.top .tooltip-inner {
+  background-color: #53535C;
+}
+
+.tooltip.hierarchy-tooltip.top .tooltip-arrow {
+  border-top-color: #53535C;
+}
