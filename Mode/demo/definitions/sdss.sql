@@ -7,7 +7,7 @@ SELECT *,
 r.name  AS region,
 we.channel AS channel,
 SUM(o.gloss_qty) AS gloss_units,
-SUM(o.poster_qty) AS porter_units,
+SUM(o.poster_qty) AS poster_units,
 SUM(o.standard_qty) AS standard_units,
 SUM((o.total_amt_usd)*100) AS total_sales_usd,
 to_date(cast(o.occurred_at as TEXT),'YYYY-MM-DD') AS calc_date_no_use
