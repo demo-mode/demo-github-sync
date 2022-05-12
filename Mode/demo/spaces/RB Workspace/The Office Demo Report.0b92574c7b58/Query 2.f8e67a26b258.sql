@@ -1,5 +1,7 @@
 SELECT * FROM {{ @Paper_Sales }}
+
 WHERE region in ({{ region }})
+
 
 
 {% form %}
