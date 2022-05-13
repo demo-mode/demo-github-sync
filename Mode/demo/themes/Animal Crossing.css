@@ -1,0 +1,578 @@
+/* CUSTOM FONT */
+
+/* THIS IS WHERE WE WOULD CHANGE THE FONT STYLE, IF WE WANTED TO INCLUDE ANIMAL CROSSING STYLE TEXT*/
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* CUSTOM FONT DETAILS
+font-family: 'Arvo', serif;
+ */
+ 
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Report layout & background
+2. Text
+3. Basic chart formatting
+4. Chart axes, labels, & legends
+5. Bar charts
+6. Tooltips & context menus
+7. Display & Flat tables
+8. Legacy Pivot tables
+9. Report Viz toolbar
+10. Drill down buttons
+
+-------------------------------------------------------------------*/
+
+
+/* -------------------------------------------------------------------
+[1. REPORT layout & background]
+ADD BACKGROUND COLOR DETAIL
+-------------------------------------------------------------------*/
+/* Embed background color */
+body,
+body.mode-embed.embed-preview,
+body.mode-embed,
+table-renderer
+{
+  background-color: #fff;
+  background-attachment: fixed;
+  color: #3D3D49;
+  font-family: 'Arvo', serif !important;
+  font-weight: 500 !important;
+}
+
+.chart-content, .pvtVal{
+  background-color: #fff;
+  background-attachment: fixed;
+  color: #1e1e20;
+  font-family: 'Arvo', serif !important;
+  font-weight: 500 !important;
+
+}
+
+
+/* Report background color */
+.mode-embed
+{
+  background-color: #FCFCFC !important;
+  font-family: 'Arvo', serif !important;
+}
+
+/* Gutters 
+***MEGAN****
+Use this to modify gutters (spacing) between chart objects. Larger gutters will results in more background showing through.
+*/
+.mode-embed .mode-grid.container .row {
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .mode-embed .mode-grid.container .row {
+    margin-left: -2px;
+    margin-right: -2px;
+    margin-bottom: 8px;
+  }
+}
+
+.mode-embed .mode-grid.container [class^="col-"] {
+  padding: 0 8px;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .mode-embed .mode-grid.container [class^="col-"] {
+    padding: 0 2px;
+  }
+}
+
+.editor-module.editor-chart.mode-object.editor-multi.big-number.ng-scope.is-report-mode,
+.editor-module.editor-chart.mode-object.editor-multi {
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .editor-module.editor-chart.mode-object.editor-multi.big-number.ng-scope.is-report-mode,
+  .editor-module.editor-chart.mode-object.editor-multi {
+    border: 0;
+    margin: 0;
+  }
+}
+
+.row .mode-object:first-of-type {
+  margin-left: 0;
+}
+
+.row .mode-object:last-of-type {
+  margin-right: 0;
+}
+
+/*MEGAN CHANGE THE CONTAINER STYLE, THE BORDER SURROUNDING THE VISUALS/TEXTS */
+/* container styling */
+.mode-object, .mode-placeholder {
+ 
+}
+/* ADD STYLES ON HOVER OVER VISUALS/TEXT */
+.mode-object:hover, .mode-placeholder:hover, 
+ vegas-renderer:hover .chart-content:hover, mode-viz-renderer:hover .chart-content:hover
+ {
+   box-shadow: none !important;
+}
+
+
+/* Placeholder header */
+.mode-placeholder::before {
+  border-bottom: transparent;
+}
+
+/* CHANGE THE FONT STYLE + MARGINS OF CHART TITLES*/
+span.chart-title,
+in-place-edit {
+  line-height: 40px;
+  font-weight: 500 !important;
+  letter-spacing: 0.4px;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+
+.row {
+  margin-top: 16px;
+}
+
+/*-------------------------------------------------------------------
+[2. TEXT]
+
+------------------------------------------------------------------- */
+
+/* UPDATE THE TEXT OF THE VIZ EXPLORER CHARTS*/
+
+/* Use custom font for all charting */
+.mode-embed .mode-header,
+.mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+.editor-table .chart-header,
+.editor-chart .chart-header,
+.mode-placeholder .placeholder-title,
+.mode-object .chart-title.chart-description .in-place-edit-text,
+.mode-embed .mode-object .chart-title.chart-description .in-place-edit-text,
+span.fb-content.ng-binding,
+span.trend-value.ng-binding,
+.highcharts-axis-labels tspan,
+.highcharts-legend-item tspan,
+.nvd3 text,
+.axel-table-header-label, .table-header-label,
+.mode-table-grid td,
+.viz-explore-action,
+.muze-ticks,
+.muze-title-cell,
+.muze-subtitle-cell,
+.muze-legend-title-text,
+.muze-legend-title,
+.muze-legend-item-info,
+.muze-axis-name,
+.muze-group-container div.muze-axis-container,
+.muze-text-cell,
+.muze-layer-text-cell,
+.muze-layer-group text,
+.muze-legend-title-text
+{
+  font-family: 'Arvo', serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.4px;
+
+}
+
+.muze-axis-name {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+}
+
+.muze-ticks,
+.muze-title-cell,
+.muze-subtitle-cell,
+.muze-legend-title-text,
+.muze-legend-title,
+.muze-legend-item-info,
+.muze-axis-name,
+.muze-group-container div.muze-axis-container,
+.muze-text-cell,
+.muze-layer-text-cell,
+.muze-layer-group text,
+.muze-legend-title-text
+{color: #444A53 !important;
+}
+
+/* Report title  FOR ALL CHARTS*/
+.mode-embed .mode-header h1 {
+  color: #444A53;
+  font-size: 44px;
+  margin-bottom: 0;
+  font-family: 'Arvo', serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0px;
+}
+
+/* Report description */
+.mode-header p,
+.mode-embed .mode-header p {
+  color: #717A89;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+/* Chart titles FOR BIG VALUE CHARTS AND ALL CHART TITLES */
+.mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+.editor-table .chart-header,
+.editor-chart .chart-header,
+.mode-placeholder .placeholder-title {
+  color: #3D3D49;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+
+.mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .in-place-edit .in-place-edit-text {
+  line-height: 21px;
+}
+
+.chart-header {
+  padding-top: 10px;
+}
+
+/* Big number descriptions */
+.mode-object .chart-title.chart-description .in-place-edit-text,
+.mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
+  color: #717A89;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Big number */
+
+.mode-object.big-number .chart-title .in-place-edit-text
+{
+  letter-spacing: 0px;
+  color: #3D3D49;
+  font-size: 22px;
+}
+
+span.fb-content.ng-binding,
+.chart-big-number span.fb-content {
+  font-family: 'Arvo', serif !important;
+  font-size: 54px;
+  font-weight: 700;
+  color: #3D3D49;
+}
+
+.trend, .trend-with-palette {
+  font-family: 'Arvo', serif;
+  font-size: 16px;
+}
+
+/* Text box element
+This section controls the styling of text box objects within Reports.
+ */
+ 
+.editor-module.editor-chart.editor-multi.mode-object.text-block-container.report-view, .chart-content.text-block-content {
+    background: transparent;
+    /*filter: drop-shadow(2px 4px 6px white);*/
+}
+.editor-chart.mode-object.text-block-container .ql-editor h2, mode-text .ql-editor h2, .ql-editor h1 {
+  font-family: 'Arvo', serif;
+}
+
+}
+
+.editor-chart.mode-object.text-block-container:hover .ql-editor:hover {
+    background: transparent;
+    filter: drop-shadow(2px 4px 6px white);
+}
+
+.chart-content:hover {
+  box-shadow: none;
+}
+
+.text-block-content:hover {
+  box-shadow: none;
+}
+
+.chart-content.text-block-content:hover {
+  box-shadow: none;
+}
+
+
+.editor-chart.mode-object.text-block-container .ql-editor, mode-text .ql-editor {
+background-color: #FFFFFF;
+border: 1px solid #FFFFFF;
+box-sizing: border-box;
+filter: drop-shadow none !important;
+border-radius: 2px;
+}
+
+.editor-chart.mode-object.text-block-container .ql-editor p, .editor-chart.mode-object.text-block-container .ql-editor ol, .editor-chart.mode-object.text-block-container .ql-editor ul, mode-text .ql-editor p, mode-text .ql-editor ol, mode-text .ql-editor ul {
+color: 3D3D49;
+letter-spacing: .5px;
+}
+ 
+
+/* Text editor text */
+.mode-embed .mode-object h1,
+.mode-embed .mode-object h2,
+.mode-embed .mode-object h3,
+.mode-embed .mode-object h4,
+.editor-chart.mode-object.text-block-container .ql-editor h5,
+.mode-embed .mode-object h6,
+.mode-embed .mode-object p,
+.mode-embed .mode-object li,
+.mode-embed .mode-object .error-message .message,
+.mode-embed .centered-content {
+  color: #444A53;
+  font-family: 'Arvo', serif;
+}
+
+.mode-object h5, .ql-editor h5 {
+font-size: 11 px !important
+}
+
+
+/*-------------------------------------------------------------------
+[3. Basic Chart formatting] 
+This section of the stylesheet controls styling for each individual chart type.
+
+
+NOTE: Any selectors that contain .nvd3 will impact legacy chart styling, and any selectors with .highcharts will impact Quick Chart styling.
+-------------------------------------------------------------------*/
+
+/* Chart Placeholders 
+This section modifies styling for loading state text, and colors for placeholder svg chart illustrations.
+*/
+.ph-color-light {
+  fill: #E3F2FC;
+}
+
+.ph-color-medium {
+  fill: #B9DEF8;
+}
+
+.ph-color-dark {
+  fill: #8DCAF5;
+}
+
+.loading-message {
+  color: #3D3D49;
+  font-family: 'Arvo', serif;
+}
+
+/* Chart background 
+This modifies the background for all charts shown in the Report. 
+*/
+.editor-module.editor-chart.mode-object.editor-multi, .mode-placeholder, .editor-table {
+transition: all 0.2s ease;
+background-color: #fff;
+border: 1px solid #F1F2F5;
+border-radius: 2px;
+box-sizing: border-box;
+/* filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.15)); this applies a drop shadow on all charts */
+border-radius: 2px;
+}
+
+.mode-embed .editor-table {
+background: #fff;
+border: none;
+}
+
+/* Chart hover 
+This modifies the hover state for all charts shown in the Report. 
+*/
+.editor-module.editor-chart.mode-object.editor-multi:hover {
+  color: #fff;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+border: none;
+}
+
+.editor-table:hover {
+  color: #fff;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+border: none;
+}
+
+.chart-content:hover {
+    background-color: #fff;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+border: none;
+} 
+
+.mode-embed .mode-object.editor-chart,
+.mode-embed .mode-object.editor-table,
+.mode-placeholder {
+  border: 1px solid #fff;
+}
+
+/* Pies */
+.nvd3.nv-pie path {
+  fill-opacity: 1;
+  stroke: transparent;
+  font-family: 'Arvo', serif;
+}
+
+
+style attribute {
+  font-family: 'Arvo', serif;
+}
+
+/* Text background 
+This modifies the background for all text that appears on charts (?legend text, etc?)
+*/
+
+.editor-module.editor-chart.editor-multi.mode-object.text-block-container.report-view,
+.chart-content.text-block-content {
+  background: transparent;
+}
+
+.editor-module.editor-chart.editor-multi.mode-object.text-block-container.report-view,
+.chart-content.text-block-content:hover {
+  background: transparent !important;
+}
+
+/* Chart text */
+.nvd3 text {
+  fill: #444A53;
+}
+
+.highcharts-root {
+  font-family: 'Arvo', serif;
+  font-weight: 500;
+}
+
+.highcharts-root tspan {
+  fill: #444A53;
+}
+
+.highcharts-text-outline {
+  stroke: transparent;
+}
+
+
+/* -------------------------------------------------------------------
+[4. Chart axes, labels, & legends]
+
+This section styles chart tick text, names, and legends.
+
+-------------------------------------------------------------------*/
+.nvd3 .tick text,
+.nvd3 .nv-legend .nv-legend-text,
+.highcharts-axis-labels text,
+.highcharts-axis-labels tspan,
+.highcharts-legend-item tspan,
+.highcharts-legend-item text tspan,
+.highcharts-stack-labels,
+.highcharts-data-label,
+.highcharts-label{
+  fill: #444A53 !important;
+  color: #444A53 !important; 
+  font-family: 'Arvo', serif;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.highcharts-legend .highcharts-legend-title text {
+  fill: #444A53;
+  font-weight: 500 !important;
+  font-family: 'Arvo', serif;
+}
+
+/* Axis labels 
+This modifies the styling for quick charts’ axis name text. 
+*/
+.mode-object .chart .xlabel,
+.mode-object .chart .ylabel {
+  background: none;
+}
+
+.mode-object .chart .xlabel h4,
+.mode-object .chart .ylabel h4 {
+}
+
+.highcharts-axis-title tspan {
+  font-family: 'Arvo', serif;
+  font-weight: 500;
+  font-size: 12px;
+  fill: #717A89;
+}
+
+/* Chart Ticks 
+This modifies the styling for quick charts’ axes ticks (both X & Y axes). 
+*/
+.chart-svg .nv-y line,
+.highcharts-yaxis-grid .highcharts-grid-line,
+.highcharts-xaxis .highcharts-axis-line,
+.highcharts-xaxis .highcharts-tick {
+  stroke: #EBEFF4;
+}
+
+/*-------------------------------------------------------------------
+[5. Bar charts] 
+This modifies styling for all bar chart types (hover states, strokes, etc)
+
+-------------------------------------------------------------------*/
+.nvd3 .nv-multibar .nv-groups rect,
+.nvd3 .nv-multibarHorizontal .nv-groups rect,
+.nvd3 .nv-candlestickBar .nv-ticks rect,
+.nvd3 .nv-discretebar .nv-groups rect,
+.highcharts-root .highcharts-series-group .highcharts-series:not(.highcharts-bubble-series) .highcharts-point {
+  fill-opacity: 1;
+  stroke: transparent;
+}
+
+.nvd3 .nv-multibar .nv-groups rect.highcharts-point-select,
+.nvd3 .nv-multibarHorizontal .nv-groups rect.highcharts-point-select,
+.nvd3 .nv-candlestickBar .nv-ticks rect.highcharts-point-select,
+.nvd3 .nv-discretebar .nv-groups rect.highcharts-point-select,
+.highcharts-root .highcharts-series-group .highcharts-series:not(.highcharts-bubble-series) .highcharts-point.highcharts-point-select {
+  stroke: white;
+}
+
+.nvd3 .nv-multibar .nv-groups rect:hover,
+.nvd3 .nv-multibarHorizontal .nv-groups rect:hover,
+.nvd3 .nv-candlestickBar .nv-ticks rect:hover,
+.nvd3 .nv-discretebar .nv-groups rect:hover,
+.highcharts-root .highcharts-series-group .highcharts-series:not(.highcharts-bubble-series) .highcharts-point:hover {
+  stroke: white;
+}
+
+.highcharts-root .highcharts-series-group .highcharts-series:not(.highcharts-bubble-series) .highcharts-point:hover {
+  stroke: white;
+}
+
+.highcharts-series-hover .highcharts-markers:not(.highcharts-line-series) path.highcharts-graph {
+  stroke: white;
+  stroke-width: 1px;
+}
+
+.highcharts-series-hover.highcharts-scatter-series path.highcharts-point-hover {
+  stroke: white;
+}
+
+rect.updated-column-mark {
+  stroke: white;
+}
+
+.highcharts-markers.highcharts-tracker.highcharts-area-series > path:nth-child(2) {
+  stroke: white;
+}
+
+.highcharts-markers.highcharts-tracker.highcharts-scatter-series path.highcharts-point-hover {
+  stroke: white;
+}
