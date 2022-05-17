@@ -1,0 +1,130 @@
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<script src="https://d3js.org/d3-geo.v1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.4/queue.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.1.0/topojson.min.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<style>
+  .mode-graphic-title {
+    font-size: 14px;
+    line-height: 48px;
+    height: 48px;
+    padding-left: 16px;
+    font-weight: 500;
+    color: #379FC9;
+  }
+
+  .mode-world-chorolpleth-legend {
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+    color: #379FC9;
+  }
+</style>
+<p>.</p>
+<div class="row" data-row-height="small">
+  <div class="col-md-12">
+    <mode-text id="text_0d7ea739-e0cb-4df4-f618-c9071d7ac863" dataset="dataset" options="text_options" class="">
+      <h1 class="ql-align-center">Global Customer Success Dashboard</h1>
+    </mode-text>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <mode-chart id="chart_4ec11614d514" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+  <div class="col-md-6">
+    <mode-chart id="chart_0376f19f0d90" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2">
+    <mode-chart id="chart_b18a56834459" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+  <div class="col-md-2">
+    <mode-chart id="chart_6e1ea249c543" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+  <div class="col-md-2">
+    <mode-chart id="chart_9d883ea5d7e9" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+  <div class="col-md-2">
+    <mode-chart id="chart_bccf21533958" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+  <div class="col-md-2">
+    <mode-chart id="chart_93fd39cab06d" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+  <div class="col-md-2">
+    <mode-chart id="chart_321ded7771e9" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+</div>
+<div class="row" data-row-height="small">
+  <div class="col-md-6">
+    <mode-chart id="chart_8d9e2b480a58" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+  <div class="col-md-6">
+    <mode-text id="text_99767f58-a54b-47f0-84db-31772cc8d7a0" dataset="dataset" options="text_options">
+      <p>Context:</p>
+      <ul>
+        <li>Gross Online Revenue =</li>
+        <li>Active Venues =</li>
+        <li>Transaction Fees =</li>
+      </ul>
+      <p><br></p>
+      <p>Team, explore from here! Click on the "Explore" button on top of each chart.</p>
+    </mode-text>
+  </div>
+</div>
+<div class="row" data-row-height="small">
+  <div class="col-md-2">
+    <mode-chart id="chart_ecb397273a72" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+  <div class="col-md-2">
+    <mode-chart id="chart_1a11aeaa6f5b" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+  <div class="col-md-2">
+    <mode-chart id="chart_cfadf7091847" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+  <div class="col-md-6">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <mode-chart id="chart_acd4eb2140de" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+  <div class="col-md-6">
+    <mode-chart id="chart_384631273551" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <mode-chart id="chart_3b848511c768" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+  <div class="col-md-6">
+    <mode-chart id="chart_40f5932423ba" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <mode-chart id="chart_07de57373f5a" dataset="dataset" options="chart_options"></mode-chart>
+  </div>
+  <div class="col-md-6"></div>
+</div>
+<div id="map"></div>
+<script>
+  alamode.worldChoropleth({
+    query_name: "Map",
+    width: 780,
+    country_column: "country_code",
+    country_code_type: "iso_code_alpha_3",
+    // Options for country_code_type:
+    //    name
+    //    iso_code_numeric
+    //    iso_code_alpha_2
+    //    iso_code_alpha_3
+    value_column: "life_expectancy",
+    title: "Total Revenue by Country",
+    color_gradient: ["#3C4D73", "#80E9DC", "#38D9C5", "#7FEBA3"]
+  })
+</script>
+<div class="mode-grid container">
+</div>
