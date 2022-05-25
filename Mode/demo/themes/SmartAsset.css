@@ -99,7 +99,7 @@ span.trend-value.ng-binding,
 
 /* Report title */
 .mode-embed .mode-header h1 {
-  color: #000000;
+  color: #ffffff;
   font-family: "Suez One", serif;, sans-serif;
   font-size: 36px;
   font-weight: 300;
@@ -110,7 +110,7 @@ span.trend-value.ng-binding,
 /* Report description */
 .mode-header p,
 .mode-embed .mode-header p {
-  color: #000000;
+  color: #ffffff;
   font-family: "Suez One", serif;, sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -217,7 +217,7 @@ span.fb-content.ng-binding {
 /* Chart background */
 .editor-module.editor-chart.mode-object.editor-multi, .mode-placeholder, .mode-graphic-container {
   transition: all 0.2s ease;
-  background-color: #f7f7f9;
+  background-color: #ffffff;
   border: 1px solid #D8D8D8;
   border-radius: 6px;
 }
@@ -228,7 +228,7 @@ span.fb-content.ng-binding {
 
 /* Chart hover */
 .editor-module.editor-chart.mode-object.editor-multi, .mode-graphic-container:hover {
-  background-color: #F7F7F9;
+  background-color: #ffffff;
   box-shadow: 5px 10px 13px #D8D8D8;
   border: 1px solid #D8D8D8;
   border-radius: 6px;
@@ -249,7 +249,7 @@ span.fb-content.ng-binding {
 /* Text background */
 .editor-module.editor-chart.editor-multi.mode-object.text-block-container.report-view,
 .chart-content.text-block-content {
-  background: #f7f7f9;
+  background: #ffffff;
 }
 
 /* Chart text */
@@ -381,7 +381,7 @@ rect.updated-column-mark {
 /* Tooltips */
 div.nvtooltip.xy-tooltip {
   border: none;
-  background-color: #f7f7f9;
+  background-color: #ffffff;
   color: #000;
 }
 
@@ -393,7 +393,7 @@ div.nvtooltip.xy-tooltip {
 
 .highcharts-tooltip .tooltip-container,
 .highcharts-tooltip-box .tooltip-container {
-  background-color: #f7f7f9;
+  background-color: #ffffff;
   border-color: #D8D8D8;
   color: #000;
   box-shadow: 0px 3px 4px #CCD3DD;
@@ -428,7 +428,7 @@ div.nvtooltip.xy-tooltip {
 
 .chart-context-menu {
   color: #000;
-  background-color: #f7f7f9;
+  background-color: #ffffff;
   border-color: #D8D8D8;
   box-shadow: 0px 3px 4px #D8D8D8;
 }
