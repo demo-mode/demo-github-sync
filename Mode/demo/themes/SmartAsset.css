@@ -57,11 +57,11 @@ body.mode-embed.embed-preview {
 
 /* Red top Bar */
 .mode-object, .mode-placeholder, .mode-graphic-container {
-  border-top: 4px solid #000000 !important;
+  border-top: 4px solid #89ce33 !important;
 }
 
 .mode-object:hover, .mode-placeholder, .mode-graphic-container:hover {
-  border-top-color: #f96432 !important;
+  border-top-color: #89ce33 !important;
 }
 
 /* Placeholder header */
