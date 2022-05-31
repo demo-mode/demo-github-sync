@@ -63,7 +63,7 @@ body.mode-embed.embed-preview.ng-scope,
 .editor-module.editor-chart.mode-object.editor-multi.big-number.ng-scope.is-report-mode,
 .editor-module.editor-chart.mode-object.editor-multi.ng-scope {
   border: 0;
-  margin: 1px;
+  margin: 10px;
 }
 div.row {
   margin-bottom: 2px;
