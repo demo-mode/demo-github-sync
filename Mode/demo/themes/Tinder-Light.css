@@ -1,5 +1,5 @@
 /* Style Sheet */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
 
 :root {
     --primary-color: #ff4458;
@@ -9,7 +9,7 @@
     --chart-background: #fefefe;
     --chart-border: #fd267a;
     --chart-highlight: #ffefea;
-    --font-family: 'Metropolis', sans-serif;
+    --font-family: 'proxima-nova', sans-serif;
 
   }
 
