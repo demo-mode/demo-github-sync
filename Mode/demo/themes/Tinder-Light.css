@@ -11,8 +11,8 @@ CSS Report Theme
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 :root {
-    --primary-color: #0d2c40;
-    --secondary-color:#4783aa;
+    --primary-color: #ff4458;
+    --secondary-color:#d6002f;
     --report-background-color: #ffffff;
     --paragraph-color: #333333;
     --chart-background: #fefefe;
