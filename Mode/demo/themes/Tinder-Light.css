@@ -95,7 +95,11 @@ mode-text .ql-editor ul {
 
 .mode-embed .mode-object:hover {
   border-color: var(--chart-border);
+  background-color: var(--chart-highlight);
 }
+
+
+
 
 /* Big Number Header */
 .mode-object.big-number .chart-title .in-place-edit-text, 
