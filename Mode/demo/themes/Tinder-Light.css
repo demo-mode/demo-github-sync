@@ -57,6 +57,15 @@ mode-text .ql-editor h6 {
   font-weight: 700;
 }
 
+/* Big Number Header */
+.mode-object.big-number .chart-title .in-place-edit-text, 
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text{
+  color: var(--paragraph-color);
+  font-family: var(--font-family);
+  text-transform: uppercase;
+}
+
+
 /* Report Text Paragraph */
 .editor-chart.mode-object.text-block-container .ql-editor p, 
 .editor-chart.mode-object.text-block-container .ql-editor ol, 
@@ -69,24 +78,6 @@ mode-text .ql-editor ul {
   font-weight: 400;
 }
 
-/* TEXT */
-/* Use custom font for all charting */
-.mode-embed .mode-header,
-.mode-object.big-number .chart-title .in-place-edit-text,
-.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
-.editor-table .chart-header,
-.editor-chart .chart-header,
-.mode-placeholder .placeholder-title,
-.mode-object .chart-title.chart-description .in-place-edit-text,
-.mode-embed .mode-object .chart-title.chart-description .in-place-edit-text,
-.new-viz-actions .viz-explore-action,
-span.fb-content.ng-binding,
-span.trend-value.ng-binding,
-.highcharts-axis-labels tspan,
-.highcharts-legend-item tspan,
-.nvd3 text {
-  font-family: var(--font-family);
-}
 
 /* Chart Top Bar */
 .mode-embed .mode-object.editor-chart,
@@ -140,7 +131,6 @@ span.trend-value.ng-binding,
 /* Chart Header */
 .editor-table .chart-header .in-place-edit-text, 
 .editor-chart .chart-header .in-place-edit-text {
-  color: var(--paragraph-color);
   font-family: var(--font-family);
 }
 
