@@ -5,7 +5,7 @@
     --primary-color: #ff4458;
     --secondary-color:#d6002f;
     --report-background-color: #ffffff;
-    --paragraph-color: #333333;
+    --paragraph-color: #424242;
     --chart-background: #fefefe;
     --chart-border: #fd267a;
     --chart-highlight: #ff6036;
@@ -102,7 +102,7 @@ mode-text .ql-editor ul {
 .embed-preview .mode-object.big-number .chart-title .in-place-edit-text{
   color: var(--paragraph-color);
   font-family: var(--font-family);
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 /* Deprecated Display Table Header */
@@ -110,7 +110,7 @@ mode-text .ql-editor ul {
 .mode-embed .mode-object .chart-title {
   color: var(--paragraph-color);
   font-family: var(--font-family);
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 /* Chart Header */
@@ -118,7 +118,7 @@ mode-text .ql-editor ul {
 .editor-chart .chart-header .in-place-edit-text {
   color: var(--paragraph-color);
   font-family: var(--font-family);
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 /* Chart Legend */
