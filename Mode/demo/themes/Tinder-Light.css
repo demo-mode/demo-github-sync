@@ -19,13 +19,17 @@ font-family: 'Metropolis', sansserif;
 --gray-700: #63656E;
 --gray-800: #53535C;
 --gray-950; #19193B;
+--brand-primary: #ff4458;
+--brand-primary-a11y: #d6002f;
+--brand-gradient-start: #fd267a;
+--brand-gradient-end: #ff6036;
 }
 
 /* Background color */
 body,
 body.mode-embed.embed-preview.ng-scope,
 .report-view-container {
-  background-color: #19193B !important; /* gray-950 but has to be specified for some reason */
+  background-color: #ffffff !important; 
 }
 
 /* Chart background */
