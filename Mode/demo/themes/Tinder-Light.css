@@ -147,7 +147,7 @@ text.nv-legend-text,
 
 /* Big Number */
 span.fb-content.ng-binding {
-  color: var(--gray-500);
+  color: var(--brand-primary);
 }
 /* Big Number Trend */
 span.trend-value.ng-binding {}
