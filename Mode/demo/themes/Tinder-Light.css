@@ -1,12 +1,3 @@
-HTML Logo
-
-<div class="mode-header logo">
-    <img class="img-logo" src="https://www.bolthouse.com/wp-content/themes/pfw-wp-bolthouse/images/bhf_logo_navy.svg" height="50">
-  </div>
-
-
-CSS Report Theme
-
 /* Style Sheet */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
@@ -18,7 +9,7 @@ CSS Report Theme
     --chart-background: #fefefe;
     --chart-border: #4783aa;
     --chart-highlight: #b6bcc0;
-    --font-family: 'Montserrat', sans-serif;
+    --font-family: 'Metropolise', sans-serif;
 
   }
 
