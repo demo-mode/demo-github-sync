@@ -93,13 +93,13 @@ span.trend-value.ng-binding,
 .highcharts-axis-labels tspan,
 .highcharts-legend-item tspan,
 .nvd3 text {
-  font-family: "Suez One", serif;, sans-serif;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
 /* Report title */
 .mode-embed .mode-header h1 {
   color: #003da5;
-  font-family: "Suez One", serif;, sans-serif;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 36px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -110,7 +110,7 @@ span.trend-value.ng-binding,
 .mode-header p,
 .mode-embed .mode-header p {
   color: #003da5;
-  font-family: "Suez One", serif;, sans-serif;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -125,7 +125,7 @@ span.trend-value.ng-binding,
 .editor-chart .chart-header,
 .mode-placeholder .placeholder-title {
   color: #003da5;
-  font-family:'Suez One', serif;, sans-serif;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -133,14 +133,14 @@ span.trend-value.ng-binding,
 
 /* Output styles */
 .mode-graphic-title {
-font-family:'Suez One', serif;, sans-serif;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
 }
   
   .mode-retention-heatmap-label{
-  font-family:'Suez One', serif;, sans-serif;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 10px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -162,7 +162,7 @@ font-family:'Suez One', serif;, sans-serif;
 .mode-object .chart-title.chart-description .in-place-edit-text,
 .mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
   color: #191925;
-  font-family:"Suez One", serif;, sans-serif;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 1px;
@@ -189,7 +189,7 @@ span.fb-content.ng-binding {
 }
 
 .mode-embed .mode-object p{
-  font-family:'Suez One', serif;, sans-serif;
+  font-family:'Helvetica Neue', serif;, sans-serif;
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -257,7 +257,7 @@ span.fb-content.ng-binding {
 }
 
 .highcharts-root {
-  font-family: "Suez One", serif;
+  font-family: "Helvetica Neue", serif;
 }
 
 .highcharts-root tspan {
@@ -275,14 +275,14 @@ span.fb-content.ng-binding {
 .highcharts-legend-item tspan,
 .highcharts-legend-item text tspan {
   fill: #000;
-  font-family: "Suez One", serif;
+  font-family: "Helvetica Neue", serif;
   font-size: 13px;
   font-weight: 300;
 }
 
 .highcharts-legend .highcharts-legend-title text {
   fill: #000;
-  font-family: "Suez One", serif;
+  font-family: "Helvetica Neue", serif;
   font-weight: 500 !important;
 }
 
@@ -300,7 +300,7 @@ span.fb-content.ng-binding {
 }
 
 .highcharts-axis-title tspan {
-  font-family: "Suez One", serif;
+  font-family: "Helvetica Neue", serif;
   font-weight: 500 !important;
   font-size: 12px;
   fill: #000;
