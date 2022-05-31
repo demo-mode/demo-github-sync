@@ -1,5 +1,12 @@
-/* Let's use a web font */
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400');
+/* CUSTOM FONT */
+
+/* THIS IS WHERE WE WOULD CHANGE THE FONT STYLE, IF WE WANTED TO INCLUDE ANIMAL CROSSING STYLE TEXT*/
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/metropolis.min.css");
+
+/* CUSTOM FONT DETAILS
+font-family: 'Metropolis', sansserif;
+ */
+ 
 
 /* Brand colors */
 /* Variable declarations not supported in Edge or Android browsers: http://caniuse.com/#feat=css-variables */
@@ -12,13 +19,17 @@
 --gray-700: #63656E;
 --gray-800: #53535C;
 --gray-950; #19193B;
+--brand-primary: #ff4458;
+--brand-primary-a11y: #d6002f;
+--brand-gradient-start: #fd267a;
+--brand-gradient-end: #ff6036;
 }
 
 /* Background color */
 body,
 body.mode-embed.embed-preview.ng-scope,
 .report-view-container {
-  background-color: #19193B !important; /* gray-950 but has to be specified for some reason */
+  background-color: #ffffff !important; /* gray-950 but has to be specified for some reason */
 }
 
 /* Chart background */
@@ -71,7 +82,7 @@ div.row {
 .editor-chart .chart-header,
 span.fb-content.ng-binding,
 span.trend-value.ng-binding {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Metropolis', sansserif ;
 }
 text.nv-legend-text,
 .chart-svg .nv-x text,
