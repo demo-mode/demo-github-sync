@@ -131,7 +131,8 @@ mode-text .ql-editor ul {
 /* Chart Header */
 .editor-table .chart-header .in-place-edit-text, 
 .editor-chart .chart-header .in-place-edit-text {
-  font-family: var(--font-family);
+  color: var(--paragraph-color);
+  font-family: 'proxima-nova', sans-serif;
 }
 
 /* Chart Legend */
