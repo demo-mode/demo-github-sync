@@ -3,9 +3,9 @@
 /* THIS IS WHERE WE WOULD CHANGE THE FONT STYLE, IF WE WANTED TO INCLUDE ANIMAL CROSSING STYLE TEXT*/
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/metropolis.min.css");
 
-/* CUSTOM FONT DETAILS
+/* CUSTOM FONT DETAILS*/
 font-family: 'Metropolis', sansserif;
- */
+ 
  
 
 /*------------------------------------------------------------------
@@ -38,7 +38,7 @@ table-renderer
   background-color: #fff;
   background-attachment: fixed;
   color: #3D3D49;
-  font-family: 'Arvo', serif !important;
+  font-family: 'Metropolis', sansserif !important;
   font-weight: 500 !important;
 }
 
@@ -46,7 +46,7 @@ table-renderer
   background-color: #fff;
   background-attachment: fixed;
   color: #1e1e20;
-  font-family: 'Arvo', serif !important;
+  font-family: 'Metropolis', sansserif !important;
   font-weight: 500 !important;
 
 }
@@ -56,7 +56,7 @@ table-renderer
 .mode-embed
 {
   background-color: #FCFCFC !important;
-  font-family: 'Arvo', serif !important;
+  font-family: 'Metropolis', sansserif !important;
 }
 
 /* Gutters 
@@ -179,7 +179,7 @@ span.trend-value.ng-binding,
 .muze-layer-group text,
 .muze-legend-title-text
 {
-  font-family: 'Arvo', serif !important;
+  font-family: 'Metropolis', sansserif !important;
   font-weight: 500 !important;
   letter-spacing: 0.4px;
 
@@ -210,7 +210,7 @@ span.trend-value.ng-binding,
   color: #444A53;
   font-size: 44px;
   margin-bottom: 0;
-  font-family: 'Arvo', serif !important;
+  font-family: 'Metropolis', sansserif !important;
   font-weight: 600 !important;
   letter-spacing: 0px;
 }
@@ -270,7 +270,7 @@ span.trend-value.ng-binding,
 
 span.fb-content.ng-binding,
 .chart-big-number span.fb-content {
-  font-family: 'Arvo', serif !important;
+  font-family: 'Metropolis', sansserif !important;
   font-size: 54px;
   font-weight: 700;
   color: #3D3D49;
