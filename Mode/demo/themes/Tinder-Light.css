@@ -1,212 +1,143 @@
-/* CUSTOM FONT */
+HTML Logo
 
-/* THIS IS WHERE WE WOULD CHANGE THE FONT STYLE, IF WE WANTED TO INCLUDE ANIMAL CROSSING STYLE TEXT*/
-@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/metropolis.min.css");
+<div class="mode-header logo">
+    <img class="img-logo" src="https://www.bolthouse.com/wp-content/themes/pfw-wp-bolthouse/images/bhf_logo_navy.svg" height="50">
+  </div>
 
-/* CUSTOM FONT DETAILS
-font-family: 'Metropolis', sansserif;
- */
- 
 
-/* Brand colors */
-/* Variable declarations not supported in Edge or Android browsers: http://caniuse.com/#feat=css-variables */
+CSS Report Theme
+
+/* Style Sheet */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
 :root {
-    --cyan: rgb(24, 204, 225);
-  --purple: rgb(137, 95, 216);
---gray-400: #D6D9DE;
---gray-500: #C9CAD1;
---gray-600: #B1B3BA;
---gray-700: #63656E;
---gray-800: #53535C;
---gray-950; #19193B;
---brand-primary: #ff4458;
---brand-primary-a11y: #d6002f;
---brand-gradient-start: #fd267a;
---brand-gradient-end: #ff6036;
+    --primary-color: #0d2c40;
+    --secondary-color:#4783aa;
+    --report-background-color: #ffffff;
+    --paragraph-color: #333333;
+    --chart-background: #fefefe;
+    --chart-border: #4783aa;
+    --chart-highlight: #b6bcc0;
+    --font-family: 'Montserrat', sans-serif;
+
+  }
+
+/* Report Background */
+.embed-preview,
+.mode-embed {
+  background-color: var(--report-background-color);
 }
 
-/* Background color */
-body,
-body.mode-embed.embed-preview.ng-scope,
-.report-view-container {
-  background-color: #ffffff !important; 
+/* Report Logo */
+.mode-embed .mode-header .logo {
+  text-align: right;
+  margin-bottom: 2rem;
 }
 
-/* Chart background */
-.editor-module.editor-chart.mode-object.editor-multi.ng-scope {
-  transition: box-shadow 0.2s ease;
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-/* Chart Hover */
-.editor-module.editor-chart.mode-object.editor-multi.ng-scope:hover {
-  box-shadow: inset 0 0 128px rgba(255, 255, 255, 0.09);
-}
-
-/* Gutters */
-.editor-module.editor-chart.mode-object.editor-multi.ng-scope {
-  margin: 0;
-}
-.col-md-3,
-.col-md-4,
-.col-md-5,
-.col-md-6,
-.col-md-6,
-.col-md-7,
-.col-md-8,
-.col-md-9,
-.col-md-10,
-.col-md-11,
-.col-md-12 {
-  padding: 0;
-}
-.editor-module.editor-chart.mode-object.editor-multi.big-number.ng-scope.is-report-mode,
-.editor-module.editor-chart.mode-object.editor-multi.ng-scope {
-  border: 0;
-  margin: 10px;
-}
-div.row {
-  margin-bottom: 2px;
-}
-.mode-grid.container {
-  margin-bottom: 32px;
-}
-
-/* FONTS */
-/* Use custom font for everything but chart info */
-.mode-embed .mode-header,
-.mode-embed .mode-header h1,
-.mode-object.big-number .chart-title .in-place-edit-text,
-.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
-.editor-table .chart-header,
-.editor-chart .chart-header,
-span.fb-content.ng-binding,
-span.trend-value.ng-binding {
-  font-family: 'Metropolis', sansserif ;
-}
-text.nv-legend-text,
-.chart-svg .nv-x text,
-.chart-svg .nv-y text,
-.nvtooltip.xy-tooltip {
-  font-family: "Metropolis", sans-serif;
-}
-
-/*Report title*/
+/* Report Header */
 .mode-embed .mode-header h1 {
-  color: var(--brand-primary);
-  margin-bottom: 0;
-  font-weight: 600;
+  color: var(--primary-color);
+  font-family: var(--font-family);
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
 
-/*Report description*/
+/* Report Header Paragraph */
 .mode-embed .mode-header p {
-  color: var(--gray-400);
-  margin-bottom: 32px;
-  margin-top: 0;
-  padding-left: 50px;
-  font-size: 18px;
-  font-weight: 300;
-}
-
-/* Chart Titles */
-/*.in-place-edit .in-place-edit-text,*/
-/*.in-place-edit-text.ng-binding*/
-.in-place-edit-text,
-.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
-.mode-object.big-number .chart-title .in-place-edit-text {
-  font-size: 22px;
-  line-height: 28px;
+  color: var(--paragraph-color);
   font-weight: 400;
-  color: var(--brand-primary-a11y);
-}
-.chart-content:hover .in-place-edit-text.ng-binding {
-  color: var(--brand-primary-a11y);
-}
-/*.chart-title,*/
-.chart-header.ng-scope {
-  padding-top: 10px;
+  font-family: var(--font-family);
 }
 
-/* Big Number Descriptions */
-.mode-object .chart-title.chart-description .in-place-edit-text,
-.mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
-  font-size: 12px;
-  line-height: 12px;
-  margin-top: 4px;
-  color: var(--gray-600);
+/* Report Text Header */
+.editor-chart.mode-object.text-block-container .ql-editor h1, 
+.editor-chart.mode-object.text-block-container .ql-editor h2, 
+.editor-chart.mode-object.text-block-container .ql-editor h3, 
+.editor-chart.mode-object.text-block-container .ql-editor h4, 
+.editor-chart.mode-object.text-block-container .ql-editor h5, 
+.editor-chart.mode-object.text-block-container .ql-editor h6, 
+mode-text .ql-editor h1, 
+mode-text .ql-editor h2, 
+mode-text .ql-editor h3, 
+mode-text .ql-editor h4, 
+mode-text .ql-editor h5, 
+mode-text .ql-editor h6 {
+  color: var(--secondary-color);
+  font-family: var(--font-family);
   text-transform: uppercase;
-  font-family: "Metropolis", sans-serif;
+  font-weight: 700;
 }
 
-/* Big Number */
-span.fb-content.ng-binding {
-  color: var(--brand-primary);
-}
-/* Big Number Trend */
-span.trend-value.ng-binding {}
-
-/* CHARTS */
-/* Axis Labels */
-.mode-object .chart .xlabel,
-.mode-object .chart .ylabel {
-  background: none;
-}
-.mode-object .chart .xlabel h4.ng-binding,
-.mode-object .chart .ylabel h4.ng-binding {
-  color: var(--brand-primary-a11y);
-  font-style: italic;
-  font-size: 12px;
+/* Report Text Paragraph */
+.editor-chart.mode-object.text-block-container .ql-editor p, 
+.editor-chart.mode-object.text-block-container .ql-editor ol, 
+.editor-chart.mode-object.text-block-container .ql-editor ul, 
+mode-text .ql-editor p, 
+mode-text .ql-editor ol, 
+mode-text .ql-editor ul {
+  color: var(--paragraph-color);
+  font-family: var(--font-family);
+  font-weight: 400;
 }
 
-/* Tick Labels */
-.chart-svg .nv-x text,
-.chart-svg .nv-y text {
-  fill: var(--gray-700);
-  font-size: 12px;
+/* Chart Top Bar */
+.mode-embed .mode-object.editor-chart,
+.mode-embed .full-width-report .editor-table { 
+  border-top: 4px solid var(--chart-highlight);
+  border-right: 1px solid var(--chart-highlight);
+  border-left: 1px solid var(--chart-highlight);
+  border-bottom: 1px solid var(--chart-highlight);
 }
 
-/* Y Ticks */
-.chart-svg .nv-y line {
-  stroke: var(--gray-700);
+/* Chart Top Bar for Notebook Charts */
+.mode-graphic-container  {
+  border-radius: 0.5rem;
+  margin: 0.5rem;
 }
 
-/* Legend Labels */
-text.nv-legend-text {
+.mode-graphic-container :hover {
+  border-top: 4px solid var(--chart-border)
+  border-color: var(--chart-border);
+}
+
+/* Chart Background */
+.mode-embed .mode-object {
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  background: var(--chart-background);
+}
+
+.mode-embed .mode-object:hover {
+  border-color: var(--chart-border);
+}
+
+/* Big Number Header */
+.mode-object.big-number .chart-title .in-place-edit-text, 
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text{
+  color: var(--paragraph-color);
+  font-family: var(--font-family);
   text-transform: uppercase;
 }
-.chart-header.ng-scope {
-  padding-top: 14px;
+
+/* Deprecated Display Table Header */
+.mode-object .chart-title, 
+.mode-embed .mode-object .chart-title {
+  color: var(--paragraph-color);
+  font-family: var(--font-family);
+  text-transform: uppercase;
 }
 
-/* Pie charts */
-.nvd3.nv-pie path {
-  stroke: var(--gray-950);
+/* Chart Header */
+.editor-table .chart-header .in-place-edit-text, 
+.editor-chart .chart-header .in-place-edit-text {
+  color: var(--paragraph-color);
+  font-family: var(--font-family);
+  text-transform: uppercase;
 }
 
-/* Slice labels */
-.nvd3 text {
-  fill: var(--gray-700) !important;
-}
-
-/* TOOLTIPS */
-/* Tooltip */
-div.nvtooltip.xy-tooltip {
-  border: none;
-  background-color: var(--gray-800)
-  color: var(--gray-400);
-}
-
-/* Legend color */
-td div {
-  border: none !important;
-  border-radius: 50%;
-}
-circle.nv-legend-symbol {
-  r: 4;
-}
-
-/*Correct font weight for bold*/
-.nvtooltip.xy-tooltip strong,
-td.value {
-  font-weight: 400 !important;
-}
+/* Chart Legend */
+.highcharts-legend .highcharts-legend-title text, 
+.highcharts-legend .highcharts-legend-item text, 
+.highcharts-legend .highcharts-legend-item text tspan {
+  font-family: var(--font-family);
+} 
