@@ -3,576 +3,213 @@
 /* THIS IS WHERE WE WOULD CHANGE THE FONT STYLE, IF WE WANTED TO INCLUDE ANIMAL CROSSING STYLE TEXT*/
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/metropolis.min.css");
 
-/* CUSTOM FONT DETAILS*/
+/* CUSTOM FONT DETAILS
 font-family: 'Metropolis', sansserif;
+ */
  
- 
 
-/*------------------------------------------------------------------
-[Table of contents]
+/* Brand colors */
+/* Variable declarations not supported in Edge or Android browsers: http://caniuse.com/#feat=css-variables */
+:root {
+    --cyan: rgb(24, 204, 225);
+  --purple: rgb(137, 95, 216);
+--gray-400: #D6D9DE;
+--gray-500: #C9CAD1;
+--gray-600: #B1B3BA;
+--gray-700: #63656E;
+--gray-800: #53535C;
+--gray-950; #19193B;
+}
 
-1. Report layout & background
-2. Text
-3. Basic chart formatting
-4. Chart axes, labels, & legends
-5. Bar charts
-6. Tooltips & context menus
-7. Display & Flat tables
-8. Legacy Pivot tables
-9. Report Viz toolbar
-10. Drill down buttons
-
--------------------------------------------------------------------*/
-
-
-/* -------------------------------------------------------------------
-[1. REPORT layout & background]
-ADD BACKGROUND COLOR DETAIL
--------------------------------------------------------------------*/
-/* Embed background color */
+/* Background color */
 body,
-body.mode-embed.embed-preview,
-body.mode-embed,
-table-renderer
-{
-  background-color: #fff;
-  background-attachment: fixed;
-  color: #3D3D49;
-  font-family: 'Metropolis', sansserif !important;
-  font-weight: 500 !important;
+body.mode-embed.embed-preview.ng-scope,
+.report-view-container {
+  background-color: #19193B !important; /* gray-950 but has to be specified for some reason */
 }
 
-.chart-content, .pvtVal{
-  background-color: #fff;
-  background-attachment: fixed;
-  color: #1e1e20;
-  font-family: 'Metropolis', sansserif !important;
-  font-weight: 500 !important;
-
+/* Chart background */
+.editor-module.editor-chart.mode-object.editor-multi.ng-scope {
+  transition: box-shadow 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
-
-/* Report background color */
-.mode-embed
-{
-  background-color: #FCFCFC !important;
-  font-family: 'Metropolis', sansserif !important;
+/* Chart Hover */
+.editor-module.editor-chart.mode-object.editor-multi.ng-scope:hover {
+  box-shadow: inset 0 0 128px rgba(255, 255, 255, 0.09);
 }
 
-/* Gutters 
-***MEGAN****
-Use this to modify gutters (spacing) between chart objects. Larger gutters will results in more background showing through.
-*/
-.mode-embed .mode-grid.container .row {
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-bottom: 8px;
+/* Gutters */
+.editor-module.editor-chart.mode-object.editor-multi.ng-scope {
+  margin: 0;
 }
-
-@media (max-width: 768px) {
-  .mode-embed .mode-grid.container .row {
-    margin-left: -2px;
-    margin-right: -2px;
-    margin-bottom: 8px;
-  }
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12 {
+  padding: 0;
 }
-
-.mode-embed .mode-grid.container [class^="col-"] {
-  padding: 0 8px;
-  border: 0;
-}
-
-@media (max-width: 768px) {
-  .mode-embed .mode-grid.container [class^="col-"] {
-    padding: 0 2px;
-  }
-}
-
 .editor-module.editor-chart.mode-object.editor-multi.big-number.ng-scope.is-report-mode,
-.editor-module.editor-chart.mode-object.editor-multi {
+.editor-module.editor-chart.mode-object.editor-multi.ng-scope {
   border: 0;
+  margin: 1px;
 }
-
-@media (max-width: 768px) {
-  .editor-module.editor-chart.mode-object.editor-multi.big-number.ng-scope.is-report-mode,
-  .editor-module.editor-chart.mode-object.editor-multi {
-    border: 0;
-    margin: 0;
-  }
+div.row {
+  margin-bottom: 2px;
 }
-
-.row .mode-object:first-of-type {
-  margin-left: 0;
-}
-
-.row .mode-object:last-of-type {
-  margin-right: 0;
-}
-
-/*MEGAN CHANGE THE CONTAINER STYLE, THE BORDER SURROUNDING THE VISUALS/TEXTS */
-/* container styling */
-.mode-object, .mode-placeholder {
- 
-}
-/* ADD STYLES ON HOVER OVER VISUALS/TEXT */
-.mode-object:hover, .mode-placeholder:hover, 
- vegas-renderer:hover .chart-content:hover, mode-viz-renderer:hover .chart-content:hover
- {
-   box-shadow: none !important;
-}
-
-
-/* Placeholder header */
-.mode-placeholder::before {
-  border-bottom: transparent;
-}
-
-/* CHANGE THE FONT STYLE + MARGINS OF CHART TITLES*/
-span.chart-title,
-in-place-edit {
-  line-height: 40px;
-  font-weight: 500 !important;
-  letter-spacing: 0.4px;
-  margin-top: 8px;
-  margin-left: 8px;
-  margin-bottom: 8px;
-}
-
-.row {
-  margin-top: 16px;
-}
-
-/*-------------------------------------------------------------------
-[2. TEXT]
-
-------------------------------------------------------------------- */
-
-/* UPDATE THE TEXT OF THE VIZ EXPLORER CHARTS*/
-
-/* Use custom font for all charting */
-.mode-embed .mode-header,
-.mode-object.big-number .chart-title .in-place-edit-text,
-.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
-.editor-table .chart-header,
-.editor-chart .chart-header,
-.mode-placeholder .placeholder-title,
-.mode-object .chart-title.chart-description .in-place-edit-text,
-.mode-embed .mode-object .chart-title.chart-description .in-place-edit-text,
-span.fb-content.ng-binding,
-span.trend-value.ng-binding,
-.highcharts-axis-labels tspan,
-.highcharts-legend-item tspan,
-.nvd3 text,
-.axel-table-header-label, .table-header-label,
-.mode-table-grid td,
-.viz-explore-action,
-.muze-ticks,
-.muze-title-cell,
-.muze-subtitle-cell,
-.muze-legend-title-text,
-.muze-legend-title,
-.muze-legend-item-info,
-.muze-axis-name,
-.muze-group-container div.muze-axis-container,
-.muze-text-cell,
-.muze-layer-text-cell,
-.muze-layer-group text,
-.muze-legend-title-text
-{
-  font-family: 'Metropolis', sansserif !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.4px;
-
-}
-
-.muze-axis-name {
-  font-size: 11px !important;
-  font-weight: 600 !important;
-}
-
-.muze-ticks,
-.muze-title-cell,
-.muze-subtitle-cell,
-.muze-legend-title-text,
-.muze-legend-title,
-.muze-legend-item-info,
-.muze-axis-name,
-.muze-group-container div.muze-axis-container,
-.muze-text-cell,
-.muze-layer-text-cell,
-.muze-layer-group text,
-.muze-legend-title-text
-{color: #444A53 !important;
-}
-
-/* Report title  FOR ALL CHARTS*/
-.mode-embed .mode-header h1 {
-  color: #444A53;
-  font-size: 44px;
-  margin-bottom: 0;
-  font-family: 'Metropolis', sansserif !important;
-  font-weight: 600 !important;
-  letter-spacing: 0px;
-}
-
-/* Report description */
-.mode-header p,
-.mode-embed .mode-header p {
-  color: #717A89;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 0px;
-  margin-top: 0;
+.mode-grid.container {
   margin-bottom: 32px;
 }
 
-/* Chart titles FOR BIG VALUE CHARTS AND ALL CHART TITLES */
+/* FONTS */
+/* Use custom font for everything but chart info */
+.mode-embed .mode-header,
+.mode-embed .mode-header h1,
 .mode-object.big-number .chart-title .in-place-edit-text,
 .embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
 .editor-table .chart-header,
 .editor-chart .chart-header,
-.mode-placeholder .placeholder-title {
-  color: #3D3D49;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 1px;
+span.fb-content.ng-binding,
+span.trend-value.ng-binding {
+  font-family: 'Roboto Slab', serif;
+}
+text.nv-legend-text,
+.chart-svg .nv-x text,
+.chart-svg .nv-y text,
+.nvtooltip.xy-tooltip {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/*Report title*/
+.mode-embed .mode-header h1 {
+  color: var(--gray-600);
+  margin-bottom: 0;
+  font-weight: 300;
+}
+.mode-embed .mode-header h1:before {
+  content: url(data:image/png;base64,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);
+  position: relative;
+  top: 5px;
+  margin-right: 10px;
+  display: none;
+}
 
-.mode-object.big-number .chart-title .in-place-edit-text,
+/*Report description*/
+.mode-embed .mode-header p {
+  color: var(--gray-400);
+  margin-bottom: 32px;
+  margin-top: 0;
+  padding-left: 50px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* Chart Titles */
+/*.in-place-edit .in-place-edit-text,*/
+/*.in-place-edit-text.ng-binding*/
+.in-place-edit-text,
 .embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
-.embed-preview .in-place-edit .in-place-edit-text {
-  line-height: 21px;
+.mode-object.big-number .chart-title .in-place-edit-text {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 400;
+  color: var(--cyan);
 }
-
-.chart-header {
+.chart-content:hover .in-place-edit-text.ng-binding {
+  color: var(--cyan);
+}
+/*.chart-title,*/
+.chart-header.ng-scope {
   padding-top: 10px;
 }
 
-/* Big number descriptions */
+/* Big Number Descriptions */
 .mode-object .chart-title.chart-description .in-place-edit-text,
 .mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
-  color: #717A89;
   font-size: 12px;
-  letter-spacing: 1px;
+  line-height: 12px;
   margin-top: 4px;
-  font-weight: 500;
+  color: var(--gray-600);
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* Big number */
-
-.mode-object.big-number .chart-title .in-place-edit-text
-{
-  letter-spacing: 0px;
-  color: #3D3D49;
-  font-size: 22px;
+/* Big Number */
+span.fb-content.ng-binding {
+  color: var(--gray-500);
 }
+/* Big Number Trend */
+span.trend-value.ng-binding {}
 
-span.fb-content.ng-binding,
-.chart-big-number span.fb-content {
-  font-family: 'Metropolis', sansserif !important;
-  font-size: 54px;
-  font-weight: 700;
-  color: #3D3D49;
-}
-
-.trend, .trend-with-palette {
-  font-family: 'Arvo', serif;
-  font-size: 16px;
-}
-
-/* Text box element
-This section controls the styling of text box objects within Reports.
- */
- 
-.editor-module.editor-chart.editor-multi.mode-object.text-block-container.report-view, .chart-content.text-block-content {
-    background: transparent;
-    /*filter: drop-shadow(2px 4px 6px white);*/
-}
-.editor-chart.mode-object.text-block-container .ql-editor h2, mode-text .ql-editor h2, .ql-editor h1 {
-  font-family: 'Arvo', serif;
-}
-
-}
-
-.editor-chart.mode-object.text-block-container:hover .ql-editor:hover {
-    background: transparent;
-    filter: drop-shadow(2px 4px 6px white);
-}
-
-.chart-content:hover {
-  box-shadow: none;
-}
-
-.text-block-content:hover {
-  box-shadow: none;
-}
-
-.chart-content.text-block-content:hover {
-  box-shadow: none;
-}
-
-
-.editor-chart.mode-object.text-block-container .ql-editor, mode-text .ql-editor {
-background-color: #FFFFFF;
-border: 1px solid #FFFFFF;
-box-sizing: border-box;
-filter: drop-shadow none !important;
-border-radius: 2px;
-}
-
-.editor-chart.mode-object.text-block-container .ql-editor p, .editor-chart.mode-object.text-block-container .ql-editor ol, .editor-chart.mode-object.text-block-container .ql-editor ul, mode-text .ql-editor p, mode-text .ql-editor ol, mode-text .ql-editor ul {
-color: 3D3D49;
-letter-spacing: .5px;
-}
- 
-
-/* Text editor text */
-.mode-embed .mode-object h1,
-.mode-embed .mode-object h2,
-.mode-embed .mode-object h3,
-.mode-embed .mode-object h4,
-.editor-chart.mode-object.text-block-container .ql-editor h5,
-.mode-embed .mode-object h6,
-.mode-embed .mode-object p,
-.mode-embed .mode-object li,
-.mode-embed .mode-object .error-message .message,
-.mode-embed .centered-content {
-  color: #444A53;
-  font-family: 'Arvo', serif;
-}
-
-.mode-object h5, .ql-editor h5 {
-font-size: 11 px !important
-}
-
-
-/*-------------------------------------------------------------------
-[3. Basic Chart formatting] 
-This section of the stylesheet controls styling for each individual chart type.
-
-
-NOTE: Any selectors that contain .nvd3 will impact legacy chart styling, and any selectors with .highcharts will impact Quick Chart styling.
--------------------------------------------------------------------*/
-
-/* Chart Placeholders 
-This section modifies styling for loading state text, and colors for placeholder svg chart illustrations.
-*/
-.ph-color-light {
-  fill: #E3F2FC;
-}
-
-.ph-color-medium {
-  fill: #B9DEF8;
-}
-
-.ph-color-dark {
-  fill: #8DCAF5;
-}
-
-.loading-message {
-  color: #3D3D49;
-  font-family: 'Arvo', serif;
-}
-
-/* Chart background 
-This modifies the background for all charts shown in the Report. 
-*/
-.editor-module.editor-chart.mode-object.editor-multi, .mode-placeholder, .editor-table {
-transition: all 0.2s ease;
-background-color: #fff;
-border: 1px solid #F1F2F5;
-border-radius: 2px;
-box-sizing: border-box;
-/* filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.15)); this applies a drop shadow on all charts */
-border-radius: 2px;
-}
-
-.mode-embed .editor-table {
-background: #fff;
-border: none;
-}
-
-/* Chart hover 
-This modifies the hover state for all charts shown in the Report. 
-*/
-.editor-module.editor-chart.mode-object.editor-multi:hover {
-  color: #fff;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
-border: none;
-}
-
-.editor-table:hover {
-  color: #fff;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
-border: none;
-}
-
-.chart-content:hover {
-    background-color: #fff;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
-border: none;
-} 
-
-.mode-embed .mode-object.editor-chart,
-.mode-embed .mode-object.editor-table,
-.mode-placeholder {
-  border: 1px solid #fff;
-}
-
-/* Pies */
-.nvd3.nv-pie path {
-  fill-opacity: 1;
-  stroke: transparent;
-  font-family: 'Arvo', serif;
-}
-
-
-style attribute {
-  font-family: 'Arvo', serif;
-}
-
-/* Text background 
-This modifies the background for all text that appears on charts (?legend text, etc?)
-*/
-
-.editor-module.editor-chart.editor-multi.mode-object.text-block-container.report-view,
-.chart-content.text-block-content {
-  background: transparent;
-}
-
-.editor-module.editor-chart.editor-multi.mode-object.text-block-container.report-view,
-.chart-content.text-block-content:hover {
-  background: transparent !important;
-}
-
-/* Chart text */
-.nvd3 text {
-  fill: #444A53;
-}
-
-.highcharts-root {
-  font-family: 'Arvo', serif;
-  font-weight: 500;
-}
-
-.highcharts-root tspan {
-  fill: #444A53;
-}
-
-.highcharts-text-outline {
-  stroke: transparent;
-}
-
-
-/* -------------------------------------------------------------------
-[4. Chart axes, labels, & legends]
-
-This section styles chart tick text, names, and legends.
-
--------------------------------------------------------------------*/
-.nvd3 .tick text,
-.nvd3 .nv-legend .nv-legend-text,
-.highcharts-axis-labels text,
-.highcharts-axis-labels tspan,
-.highcharts-legend-item tspan,
-.highcharts-legend-item text tspan,
-.highcharts-stack-labels,
-.highcharts-data-label,
-.highcharts-label{
-  fill: #444A53 !important;
-  color: #444A53 !important; 
-  font-family: 'Arvo', serif;
-  font-size: 11px;
-  font-weight: 500;
-}
-
-.highcharts-legend .highcharts-legend-title text {
-  fill: #444A53;
-  font-weight: 500 !important;
-  font-family: 'Arvo', serif;
-}
-
-/* Axis labels 
-This modifies the styling for quick charts’ axis name text. 
-*/
+/* CHARTS */
+/* Axis Labels */
 .mode-object .chart .xlabel,
 .mode-object .chart .ylabel {
   background: none;
 }
-
-.mode-object .chart .xlabel h4,
-.mode-object .chart .ylabel h4 {
-}
-
-.highcharts-axis-title tspan {
-  font-family: 'Arvo', serif;
-  font-weight: 500;
+.mode-object .chart .xlabel h4.ng-binding,
+.mode-object .chart .ylabel h4.ng-binding {
+  color: var(--gray-700);
+  font-style: italic;
   font-size: 12px;
-  fill: #717A89;
 }
 
-/* Chart Ticks 
-This modifies the styling for quick charts’ axes ticks (both X & Y axes). 
-*/
-.chart-svg .nv-y line,
-.highcharts-yaxis-grid .highcharts-grid-line,
-.highcharts-xaxis .highcharts-axis-line,
-.highcharts-xaxis .highcharts-tick {
-  stroke: #EBEFF4;
+/* Tick Labels */
+.chart-svg .nv-x text,
+.chart-svg .nv-y text {
+  fill: var(--gray-700);
+  font-size: 12px;
 }
 
-/*-------------------------------------------------------------------
-[5. Bar charts] 
-This modifies styling for all bar chart types (hover states, strokes, etc)
-
--------------------------------------------------------------------*/
-.nvd3 .nv-multibar .nv-groups rect,
-.nvd3 .nv-multibarHorizontal .nv-groups rect,
-.nvd3 .nv-candlestickBar .nv-ticks rect,
-.nvd3 .nv-discretebar .nv-groups rect,
-.highcharts-root .highcharts-series-group .highcharts-series:not(.highcharts-bubble-series) .highcharts-point {
-  fill-opacity: 1;
-  stroke: transparent;
+/* Y Ticks */
+.chart-svg .nv-y line {
+  stroke: var(--gray-700);
 }
 
-.nvd3 .nv-multibar .nv-groups rect.highcharts-point-select,
-.nvd3 .nv-multibarHorizontal .nv-groups rect.highcharts-point-select,
-.nvd3 .nv-candlestickBar .nv-ticks rect.highcharts-point-select,
-.nvd3 .nv-discretebar .nv-groups rect.highcharts-point-select,
-.highcharts-root .highcharts-series-group .highcharts-series:not(.highcharts-bubble-series) .highcharts-point.highcharts-point-select {
-  stroke: white;
+/* Legend Labels */
+text.nv-legend-text {
+  text-transform: uppercase;
+}
+.chart-header.ng-scope {
+  padding-top: 14px;
 }
 
-.nvd3 .nv-multibar .nv-groups rect:hover,
-.nvd3 .nv-multibarHorizontal .nv-groups rect:hover,
-.nvd3 .nv-candlestickBar .nv-ticks rect:hover,
-.nvd3 .nv-discretebar .nv-groups rect:hover,
-.highcharts-root .highcharts-series-group .highcharts-series:not(.highcharts-bubble-series) .highcharts-point:hover {
-  stroke: white;
+/* Pie charts */
+.nvd3.nv-pie path {
+  stroke: var(--gray-950);
 }
 
-.highcharts-root .highcharts-series-group .highcharts-series:not(.highcharts-bubble-series) .highcharts-point:hover {
-  stroke: white;
+/* Slice labels */
+.nvd3 text {
+  fill: var(--gray-700) !important;
 }
 
-.highcharts-series-hover .highcharts-markers:not(.highcharts-line-series) path.highcharts-graph {
-  stroke: white;
-  stroke-width: 1px;
+/* TOOLTIPS */
+/* Tooltip */
+div.nvtooltip.xy-tooltip {
+  border: none;
+  background-color: var(--gray-800)
+  color: var(--gray-400);
 }
 
-.highcharts-series-hover.highcharts-scatter-series path.highcharts-point-hover {
-  stroke: white;
+/* Legend color */
+td div {
+  border: none !important;
+  border-radius: 50%;
+}
+circle.nv-legend-symbol {
+  r: 4;
 }
 
-rect.updated-column-mark {
-  stroke: white;
-}
-
-.highcharts-markers.highcharts-tracker.highcharts-area-series > path:nth-child(2) {
-  stroke: white;
-}
-
-.highcharts-markers.highcharts-tracker.highcharts-scatter-series path.highcharts-point-hover {
-  stroke: white;
+/*Correct font weight for bold*/
+.nvtooltip.xy-tooltip strong,
+td.value {
+  font-weight: 400 !important;
 }
