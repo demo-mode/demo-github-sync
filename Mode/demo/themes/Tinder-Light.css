@@ -7,8 +7,8 @@
     --report-background-color: #ffffff;
     --paragraph-color: #333333;
     --chart-background: #fefefe;
-    --chart-border: #4783aa;
-    --chart-highlight: #b6bcc0;
+    --chart-border: #fd267a;
+    --chart-highlight: #ff6036;
     --font-family: 'Metropolise', sans-serif;
 
   }
@@ -19,11 +19,6 @@
   background-color: var(--report-background-color);
 }
 
-/* Report Logo */
-.mode-embed .mode-header .logo {
-  text-align: right;
-  margin-bottom: 2rem;
-}
 
 /* Report Header */
 .mode-embed .mode-header h1 {
