@@ -93,7 +93,7 @@ text.nv-legend-text,
 
 /*Report title*/
 .mode-embed .mode-header h1 {
-  color: var(--gray-600);
+  color: var(--brand-primary);
   margin-bottom: 0;
   font-weight: 300;
 }
