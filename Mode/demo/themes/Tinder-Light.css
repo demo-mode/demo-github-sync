@@ -78,7 +78,7 @@ div.row {
 .editor-chart .chart-header,
 span.fb-content.ng-binding,
 span.trend-value.ng-binding {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Metropolis', sansserif ;
 }
 text.nv-legend-text,
 .chart-svg .nv-x text,
