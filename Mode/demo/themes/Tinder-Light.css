@@ -1,5 +1,23 @@
 /* CUSTOM FONT */
-/* @import url('https://fonts.googleapis.com/css?family=Suez+One&display=swap'); */
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot');
+  src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+     url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff') format('woff'),
+     url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf') format('truetype'),
+     url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+body{
+  font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
+}
+h1{
+   font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+}
 /* REPORT */
 /* Background color */
 body,
@@ -93,13 +111,13 @@ span.trend-value.ng-binding,
 .highcharts-axis-labels tspan,
 .highcharts-legend-item tspan,
 .nvd3 text {
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "proxima_nova_rgregular", Arial, Helvetica, sans-serif;
 }
 
 /* Report title */
 .mode-embed .mode-header h1 {
   color: #003da5;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "proxima_nova_rgregular", Arial, Helvetica, sans-serif;
   font-size: 36px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -110,7 +128,7 @@ span.trend-value.ng-binding,
 .mode-header p,
 .mode-embed .mode-header p {
   color: #003da5;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "proxima_nova_rgregular", Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -125,7 +143,7 @@ span.trend-value.ng-binding,
 .editor-chart .chart-header,
 .mode-placeholder .placeholder-title {
   color: #003da5;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "proxima_nova_rgregular", Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -133,14 +151,14 @@ span.trend-value.ng-binding,
 
 /* Output styles */
 .mode-graphic-title {
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "proxima_nova_rgregular", Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
 }
   
   .mode-retention-heatmap-label{
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "proxima_nova_rgregular", Arial, Helvetica, sans-serif;
   font-size: 10px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -162,7 +180,7 @@ span.trend-value.ng-binding,
 .mode-object .chart-title.chart-description .in-place-edit-text,
 .mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
   color: #191925;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "proxima_nova_rgregular", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 1px;
@@ -189,7 +207,7 @@ span.fb-content.ng-binding {
 }
 
 .mode-embed .mode-object p{
-  font-family:'Helvetica Neue', serif;, sans-serif;
+  font-family:'proxima_nova_rgregular', serif;, sans-serif;
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -257,7 +275,7 @@ span.fb-content.ng-binding {
 }
 
 .highcharts-root {
-  font-family: "Helvetica Neue", serif;
+  font-family: "proxima_nova_rgregular", serif;
 }
 
 .highcharts-root tspan {
@@ -275,14 +293,14 @@ span.fb-content.ng-binding {
 .highcharts-legend-item tspan,
 .highcharts-legend-item text tspan {
   fill: #000;
-  font-family: "Helvetica Neue", serif;
+  font-family: "proxima_nova_rgregular", serif;
   font-size: 13px;
   font-weight: 300;
 }
 
 .highcharts-legend .highcharts-legend-title text {
   fill: #000;
-  font-family: "Helvetica Neue", serif;
+  font-family: "proxima_nova_rgregular", serif;
   font-weight: 500 !important;
 }
 
@@ -300,7 +318,7 @@ span.fb-content.ng-binding {
 }
 
 .highcharts-axis-title tspan {
-  font-family: "Helvetica Neue", serif;
+  font-family: "proxima_nova_rgregular", serif;
   font-weight: 500 !important;
   font-size: 12px;
   fill: #000;
@@ -819,5 +837,5 @@ thead tr:last-child th:last-child .pvtFixedHeader {
   --color--brand-gradient-start: #fd267a;
   --color--brand-gradient-end: #ff6036;
   --font-name--proxima-nova: 'Proxima Nova';
-  --font-family--base: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  --font-family--base: 'proxima_nova_rgregular', Arial, Helvetica, sans-serif;
   */
