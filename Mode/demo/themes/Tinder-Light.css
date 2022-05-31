@@ -9,9 +9,12 @@
     --chart-background: #fefefe;
     --chart-border: #fd267a;
     --chart-highlight: #ffefea;
-    --font-family: 'Metropolise', sans-serif;
+    --font-family: 'Metropolis', sans-serif;
 
   }
+
+
+
 
 /* Report Background */
 .embed-preview,
