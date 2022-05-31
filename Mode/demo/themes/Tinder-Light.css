@@ -88,7 +88,7 @@ text.nv-legend-text,
 .chart-svg .nv-x text,
 .chart-svg .nv-y text,
 .nvtooltip.xy-tooltip {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Metropolis", sans-serif;
 }
 
 /*Report title*/
@@ -97,14 +97,6 @@ text.nv-legend-text,
   margin-bottom: 0;
   font-weight: 600;
 }
-/*
-.mode-embed .mode-header h1:before {
-  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAACO5JREFUWAmFmFtsHVcVhv+Zc3Hs42tqp46bNE0iaNNWSlsjV4VGCrSFVlAJIVCFuAhSwQtCvJCHVopUCakSygsvvCAQlAopqCARqKCKSltImqBSN4KiNGnSXBziOImd+HaOj89t+P+1954zdhwx0nhm9uy917f+tfaafRzBH2NnJ3blms29cROjUSMZybUA3vOM/BUIbVEzQY7vInvPPg2+03M6RuOSVc+un+ZTP99/kjbG8wn2739+22GhRPozdvb885zgR3EjiQWhznE6eeSerY1G/HuDIUi7nyB0Jna19+kc7l3UoHMG4+Zx/TVH1IoT7PvxC9tejKRM3Gy9FTdaDiadxCkTlHAeOWU0kYERqK2KQDTm/ynThgnQkRQmFOfanc81G3vZEJsq5qERm5epYUG2nOdpm6BSeKeA9WGbwXromKqon+u7Ur0w3sCaCRmivXl6NaqcMPnMcFsZa9O7jGF5Y89ZdTysGfZOOSMuRA7QKePaPaDmYP8gRpS0RvNpAptRB2MqGJzkd2EIyrgccBNyLFp28plXm5z9LfmTNkw2r9pqOVU1xrXZ+JF8WDnZ1eQUEIzovcyKsx8siKQODBRibBkoYlNvEf3rcmBiorzUwtRMDZNX6pibbRCO47l2TBnOZ1evjDng5wwOM2Q+/v4aAB1M2wu1a4JGPcHmUgFP3N+LT2zqwobughbqTcd8uYkT5yo4Mj6PCxNVB0VglYhgXI5HIdyyL9DH3j2XqEN7FbVDlA7ke+WOcu2p7X340r396OnI3QSxVkOdDhx5dw6H3riBOtXLK5Rmz0VA92bHg6YKOUUkrQ+RIGwgzTBEeebGsw8N4TPbem6yO1tuYHaxiQb7ldbFWN+TR0cxtn6FQoRPP9KPO4aKOPDbq6jMNZ1aVCc47JylPSn25LFziVs57epranlyyZjQ0HceGsTj23tTmITyv3duEYdPLODilWUsVVxSF9m+vpTHfXd1YtdoH4Zua4f09OkKXv75FPOPtnwKWJg8nADzlmQZ2gATrsqZz27tWQGzUG3iN0em8c8PF72KLPiEZh1BnTkxXanhzUvLOH58EU8/vh5jo72QA6dPVG6CsTzyzouFhdF5JroAEa4ysoGr5yv3D6TKlJdb+OmhKZy8uIQOip9Qwf6uHEb6i+jMRZifb+DKVA1sxtJiC6/87hpqVG/+RgNH/jqLQuxyyISgTYUphE5qOYUyMOlLtikhd3+sBwOdeQOSlweOTjuYJMa6OMaTn+zDI/f1oL/b9WnSwYuTy3jt9es4c3KJBiL85eC0KVkkjEBuhmHe2neOVwFkIdrPTFAafHhzKVXn5OQS/nFqwZQp0tCezw3hqYcHUhh1zFGluzavw7Nf34jRnd30iqGkIzptbqqQhXJtfmXzXQoUQMJVmg935THSV0yB3v5gHq0a7HzsgT7s3N6GTTv5G62uboY7a9zuMwlsz4KQKL49XfYBJFybzJ9hFsACPdaxXG/h/OWaLf8Sl/SnGKZbHQrtnxmmY39jzlDJMKcAVtxrIRDE8sgrtwqIMWS9UfWUQj2FdvFbYFGrsPpq0sH+PNb3upxZDaW8e+3VGRx7s53AgggwpoqByZZv9zDq1waSZP5DGgbr2xSOliBtIjiv6flaR63WwoUzSw6AQ7Iwq+/1bHXIz2vP9sfiR+JsCWBbucKe/ujqiNHJVSKJF7m0K6xFax2lUg5f2zOMTXd0oLnULikrYWQrA8M5U+VCMq0YwA7c52L6Rh11QuooMUGH+1l1Gfc51pRTVOFWxwCr81e/uxF3bl0H1JxxU90SeBUMwexLIUCdTpWMJ55W367pmYZtJWRYEXrw41xVmpR9Xn/jOosgZ7jF0T+Yx46drn+aAv7LnjrvbRlIAEs7i44d9DJnnkSoMZGPnyqnJke5su7cUDSPrl6u4+VfT+HyJOvAqkMr9J1Ds3j74A0o9ZNlqhyUUgLb/O2riWJtFOZbL31k248A4zq7parwDHTm8MNvbkJfj1tx5y9U8YtfXUat3LKELDG3dtzbhS1bO/mFjzA33cCZ42VcOlkFqxASOrX9gS7U5lq48kEVRZaRFEiqSAidAlUO7/mlBzJCV9oNjjC6NqsJHn2wF898YSjV4dTJCn5/4CrmGVIyIKFINrFCwJ2kVWbeS5kdY934/PdvR5XhffXFKUx/SFC/J3LpQudpy8aTITf69A9esJhauHwR0709K7kjXPrvMvq4pdDK0TE4WMA9O7pQ5R5onoqkq0lOcXIZvG2ogF1fXo/d3xhEgSp2dOdQIP3Zv5ft/UplnELisDrk6ATjV4CHCV6DCX7wj9O2Zx4bc3uioduLeObbw7jG6n3xTBXXmVNN7gRK3Jxt3MJ99t0MYZfbpMmJieMVHP3ZjKvMqk+KQAiZRYfq8uq+9vrSKo4qjH4lpB5oEAG1qfrDK9dw7VINu58YQIke6xjaWLTTHtb402Ay//tPc3jnpRk0uR3JZzb8KZBsmLpSKIXx6gRqAWbvGQZ9Uo6+Posz/6pg7NFe3MNlPcDQrHWUWasujFfwPmGu/KdqIAaTUUZOCyTA2PP3fnLWrTIfrhXKeChTT4O9eraMmbzdrMrDI0VsoErdve5nUHW+hesTNcx8tIzylH4GKQwuAm5uJrBXw55178FizskcascywNhmewWMXwWcXJNpOXOrhNpCCxPvL2HivYot2wAuiBwhbHeofJFBm29tGFvyhPFAEf8lkoxkYdQhTO6WJp89TNquZ56xvGc6KX1Vzfm5ywAIRM5IoTZMG5DvaUulQjA8J2MaGjcYGZAXt4DJtpuCab+2wgF2RUgEI6Pqr6vUCve6EiTigom1s6xjPM63sN/+FWKSskN6pUdSwIMGBbPvs+EO7Wv1y/7WU78UyitDEMS1qJVrJPtj+89VC/v4E6aVTsrkNZiMNzaR4HTKMw9uAP453JtBvVcFDn2zV93rpCqmDmGiWrLviwt3H2bE3fHcc2d3sdPeHP8lwi/6iA3w3gQYu6oSZ2HCfTBoYxgCPgdAN845YYCmjMKEyVw9GpcyghHJ/wA95cAAuHxehwAAAABJRU5ErkJggg==);
-  position: relative;
-  top: 5px;
-  margin-right: 10px;
-  display: none;
-}*/
 
 /*Report description*/
 .mode-embed .mode-header p {
@@ -125,10 +117,10 @@ text.nv-legend-text,
   font-size: 22px;
   line-height: 28px;
   font-weight: 400;
-  color: var(--cyan);
+  color: var(--brand-primary-a11y);
 }
 .chart-content:hover .in-place-edit-text.ng-binding {
-  color: var(--cyan);
+  color: var(--brand-primary-a11y);
 }
 /*.chart-title,*/
 .chart-header.ng-scope {
@@ -143,7 +135,7 @@ text.nv-legend-text,
   margin-top: 4px;
   color: var(--gray-600);
   text-transform: uppercase;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Metropolis", sans-serif;
 }
 
 /* Big Number */
@@ -161,7 +153,7 @@ span.trend-value.ng-binding {}
 }
 .mode-object .chart .xlabel h4.ng-binding,
 .mode-object .chart .ylabel h4.ng-binding {
-  color: var(--gray-700);
+  color: var(--brand-primary-a11y);
   font-style: italic;
   font-size: 12px;
 }
