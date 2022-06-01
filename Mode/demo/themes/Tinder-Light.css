@@ -1,14 +1,6 @@
 /* Style Sheet */
 @import url('https://fonts.googleapis.com/css?family=Proxima+Nova:wght@400;600&display=swap');
 
-.chart-content, .pvtVal{
-  background-color: #fff;
-  background-attachment: fixed;
-  color: #1e1e20;
-  font-family: 'Arvo', serif !important;
-  font-weight: 500 !important;
-
-}
 
 :root {
     --primary-color: #ff4458;
@@ -185,3 +177,39 @@ span.trend-value.ng-binding,
 .highcharts-legend .highcharts-legend-item text tspan {
   font-family: var(--font-family);
 } 
+
+/* Use custom font for all charting */
+.mode-embed .mode-header,
+.mode-object.big-number .chart-title .in-place-edit-text,
+.embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
+.editor-table .chart-header,
+.editor-chart .chart-header,
+.mode-placeholder .placeholder-title,
+.mode-object .chart-title.chart-description .in-place-edit-text,
+.mode-embed .mode-object .chart-title.chart-description .in-place-edit-text,
+span.fb-content.ng-binding,
+span.trend-value.ng-binding,
+.highcharts-axis-labels tspan,
+.highcharts-legend-item tspan,
+.nvd3 text,
+.axel-table-header-label, .table-header-label,
+.mode-table-grid td,
+.viz-explore-action,
+.muze-ticks,
+.muze-title-cell,
+.muze-subtitle-cell,
+.muze-legend-title-text,
+.muze-legend-title,
+.muze-legend-item-info,
+.muze-axis-name,
+.muze-group-container div.muze-axis-container,
+.muze-text-cell,
+.muze-layer-text-cell,
+.muze-layer-group text,
+.muze-legend-title-text
+{
+  font-family: 'Arvo', serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.4px;
+
+}
