@@ -180,8 +180,8 @@ span.trend-value.ng-binding,
 } 
 
 .editor-chart.mode-object.text-block-container .ql-editor, mode-text .ql-editor {
-background-color: #FFFFFF;
-border: 1px solid #FFFFFF;
+background-color: #414141;
+border: 1px solid #414141;
 box-sizing: border-box;
 filter: drop-shadow none !important;
 border-radius: 2px;
