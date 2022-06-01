@@ -5,9 +5,9 @@
 :root {
     --primary-color: #ffc6cc;
     --secondary-color:#d6002f;
-    --report-background-color: #121212;
+    --report-background-color: #414141;
     --paragraph-color: #d6002f;
-    --chart-background: #414141;
+    --chart-background: #292929;
     --chart-border: #ffc6cc;
     --chart-highlight: #ffc6cc;
     --font-family: 'proxima-nova', sans-serif;
