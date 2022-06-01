@@ -1,6 +1,15 @@
 /* Style Sheet */
 @import url('https://fonts.googleapis.com/css?family=Proxima+Nova:wght@400;600&display=swap');
 
+.chart-content, .pvtVal{
+  background-color: #fff;
+  background-attachment: fixed;
+  color: #1e1e20;
+  font-family: 'Arvo', serif !important;
+  font-weight: 500 !important;
+
+}
+
 :root {
     --primary-color: #ff4458;
     --secondary-color:#d6002f;
