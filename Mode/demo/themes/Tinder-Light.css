@@ -62,7 +62,6 @@ mode-text .ql-editor h6 {
 .embed-preview .mode-object.big-number .chart-title .in-place-edit-text{
   color: var(--paragraph-color);
   font-family: var(--font-family);
-  text-transform: uppercase;
 }
 
 
