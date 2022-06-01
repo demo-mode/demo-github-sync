@@ -55,7 +55,7 @@ mode-text .ql-editor h6 {
   color: var(--secondary-color);
   font-family: var(--font-family);
   text-transform: lowercase;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 /* Big Number Header */
