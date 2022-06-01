@@ -177,3 +177,8 @@ span.trend-value.ng-binding,
 .highcharts-legend .highcharts-legend-item text tspan {
   font-family: var(--font-family);
 } 
+
+.editor-chart.mode-object.text-block-container .ql-editor h2, mode-text .ql-editor h2, .ql-editor h1 {
+  font-family: 'Arvo', serif;
+}
+
