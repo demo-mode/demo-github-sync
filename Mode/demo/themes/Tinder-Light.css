@@ -63,6 +63,7 @@ mode-text .ql-editor h6 {
 .embed-preview .mode-object.big-number .chart-title .in-place-edit-text{
   color: var(--paragraph-color);
   font-family: var(--font-family);
+  
 }
 
 
@@ -166,7 +167,7 @@ span.trend-value.ng-binding,
 {
   color: var(--paragraph-color);
   font-family: 'proxima-nova', sans-serif;
-
+  text-transform: lowercase;
 }
 
 
