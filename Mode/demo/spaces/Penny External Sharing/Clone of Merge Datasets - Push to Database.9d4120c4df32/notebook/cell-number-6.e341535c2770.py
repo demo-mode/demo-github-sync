@@ -1,1 +1,0 @@
-#  Write to Postgres - https://www.geeksforgeeks.org/how-to-insert-a-pandas-dataframe-to-an-existing-postgresql-table
