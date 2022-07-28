@@ -4,11 +4,11 @@
 :root {
     --primary-color: #ffffff;
     --secondary-color:#ffffff;
-    --report-background-color: #003044;
+    --report-background-color: #161616;
     --paragraph-color: #37b2ad;
     --chart-background: #ffffff;
     --chart-border: #9c9481;
-    --chart-highlight: #20958d;
+    --chart-highlight: #9c9481;
     --font-family: 'Montserrat', sans-serif;
 
   }
