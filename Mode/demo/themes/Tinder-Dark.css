@@ -1,194 +1,811 @@
-/*
-v0.1 
-7/29/2022
-Tinder (Dark) Mode Theme
-*/
+// = require embed_report
 
-/* Style Sheet */
-@import url('https://fonts.googleapis.com/css?family=Proxima+Nova:wght@400;600&display=swap');
+@import 'application/ui_styles';
+
+@import 'components/flat-table-themes';
+
+// Theme Specific Colors
+$dark-report-background-color: $ds-gray-1100;
+$dark-chart-background-color: $ds-gray-1200;
+$dark-report-title-color: $ds-gray-700;
+$dark-report-description-color: $ds-gray-700;
+$dark-chart-title-color: $ds-gray-700;
+$dark-big-number-color: $ds-gray-600;
+$dark-big-number-description-color: $ds-gray-900;
+$dark-tooltip-background-color: $ds-gray-1100;
+$dark-tooltip-text-color: $ds-gray-700;
+$dark-tooltip-header-background-color: $report-theme-gray-920;
+$dark-muze-text-color: #b1b2ba;
+$dark-muze-table-grid-color: #393845;
+$dark-muze-table-even-row-color: map-get($ds-table-mode-dark, primary);
+$dark-muze-tooltip-border-color: #191825;
+$dark-muze-scrollbar-track-color: #474651;
+$dark-legend-text-color: $ds-gray-800;
+$dark-legend-text-hover-color: $ds-gray-700;
+$dark-muze-tooltip-divider-color: $ds-gray-1200;
+$dark-muze-tooltip-text-color: $ds-gray-100;
+$dark-muze-tooltip-highlight-background-color: $ds-gray-1000;
 
 
-:root {
-    --primary-color: #ffc6cc;
-    --secondary-color:#d6002f;
-    --report-background-color: #414141;
-    --paragraph-color: #d6002f;
-    --text-color: #ffc6cc;
-    --chart-background: #464545;
-    --chart-border: #ffc6cc;
-    --chart-highlight: #ffc6cc;
-    --font-family: 'proxima-nova', sans-serif;
+/* Background color */
+body,
+body.mode-embed.embed-preview {
+  background-color: $dark-report-background-color;
+}
+/* Chart background */
+.mode-embed .mode-object,
+.mode-placeholder {
+  background-color: $dark-chart-background-color;
+}
 
+.mode-embed .mode-object.editor-chart,
+.mode-embed .mode-object.editor-table,
+.mode-placeholder {
+  border: transparent;
+}
+
+/* ql-editor placeholder text color */
+.mode-embed .ql-editor.ql-blank::before {
+  color: $ds-gray-800;
+}
+
+/* Placeholder header */
+.mode-placeholder {
+  &::before {
+    border-bottom: transparent;
+  }
+}
+
+/* Text background */
+.editor-module.editor-chart.editor-multi.mode-object.text-block-container.report-view,
+.chart-content.text-block-content {
+  background: transparent;
+}
+
+/* Report title */
+.mode-embed .mode-header h1 {
+  margin-bottom: 0;
+  color: $dark-report-title-color;
+}
+
+/*Report description*/
+.mode-embed .mode-header p {
+  margin-top: 0;
+  margin-bottom: 32px;
+  color: $dark-report-description-color;
+}
+
+/* Muze Charts */
+//Table headers.
+.muze-text-cell {
+  color: $dark-muze-text-color !important;
+}
+
+.muze-ticks {
+  color: $dark-muze-text-color !important;
+  fill: $dark-muze-text-color !important;
+}
+
+.muze-group-container {
+  color: $dark-muze-text-color !important;
+}
+
+.muze-text-row-even {
+  background-color: $dark-muze-table-even-row-color !important;
+}
+
+.muze-scroll-rect,
+.muze-legend-body::-webkit-scrollbar-track {
+  background-color: $dark-muze-scrollbar-track-color;
+}
+
+.muze-scroll-mover,
+.muze-legend-body::-webkit-scrollbar-thumb {
+  background-color: rgba($ds-white, 0.3);
+}
+
+.muze-grid-normal,
+.muze-grid-dark,
+.muze-grid-dark-top,
+.muze-grid-darker-top,
+.muze-grid-dark-bottom,
+.muze-grid-darker-bottom {
+  border-color: $dark-muze-table-grid-color !important;
+}
+
+.muze-grid-lines {
+  color: $dark-muze-table-grid-color !important;
+  stroke: $dark-muze-table-grid-color !important;
+}
+
+.muze-axis-grid-lines-y,
+.muze-axis-grid-lines-x {
+  stroke: $dark-muze-table-grid-color !important;
+}
+
+.muze-tooltip-content {
+  .muze-tooltip-key, .muze-tooltip-value {
+    color: $dark-muze-tooltip-text-color;
   }
 
+  .tooltip-compare-grid-container {
+    border-top: 1px solid $dark-muze-tooltip-divider-color;
 
-
-
-/* Report Background */
-.embed-preview,
-.mode-embed {
-  background-color: var(--report-background-color);
+    .label-value {
+      overflow: hidden;
+    }
+    .number-value {
+      font-weight: $font-weight-medium;
+    }
+    .label-value, .percent-value, .number-value, .summary-row {
+      color: $dark-muze-tooltip-text-color;
+    }
+    .highlight {
+      background-color: $dark-muze-tooltip-highlight-background-color;
+    }
+    .total {
+      color: $dark-muze-text-color;
+      border-top: 1px solid $dark-muze-tooltip-divider-color;
+    }
+  }
 }
 
 
-/* Report Header */
-.mode-embed .mode-header h1 {
-  color: var(--primary-color);
-  font-family: var(--font-family);
-  font-weight: 700;
-  margin-bottom: 2rem;
-}
-
-/* Report Header Paragraph */
-.mode-embed .mode-header p {
-  color: var(--paragraph-color);
-  font-weight: 400;
-  font-family: var(--font-family);
-}
-
-/* Report Text Header */
-.editor-chart.mode-object.text-block-container .ql-editor h1, 
-.editor-chart.mode-object.text-block-container .ql-editor h2, 
-.editor-chart.mode-object.text-block-container .ql-editor h3, 
-.editor-chart.mode-object.text-block-container .ql-editor h4, 
-.editor-chart.mode-object.text-block-container .ql-editor h5, 
-.editor-chart.mode-object.text-block-container .ql-editor h6, 
-mode-text .ql-editor h1, 
-mode-text .ql-editor h2, 
-mode-text .ql-editor h3, 
-mode-text .ql-editor h4, 
-mode-text .ql-editor h5, 
-mode-text .ql-editor h6 {
-  color: var(--secondary-color);
-  font-family: var(--font-family);
-  text-transform: lowercase;
-  font-weight: 900;
-}
-
-/* Big Number Header */
-.mode-object.big-number .chart-title .in-place-edit-text, 
-.embed-preview .mode-object.big-number .chart-title .in-place-edit-text{
-  color: var(--paragraph-color);
-  font-family: var(--font-family);
-  
+.muze-tooltip-row-content {
+  color: $dark-muze-tooltip-text-color;
 }
 
 
-/* Report Text Paragraph */
-.editor-chart.mode-object.text-block-container .ql-editor p, 
-.editor-chart.mode-object.text-block-container .ql-editor ol, 
-.editor-chart.mode-object.text-block-container .ql-editor ul, 
-mode-text .ql-editor p, 
-mode-text .ql-editor ol, 
-mode-text .ql-editor ul {
-  color: var(--paragraph-color);
-  font-family: var(--font-family);
-  font-weight: 400;
+/* Data element labels */
+// Specific text color override for all layers except text
+.muze-layer-bar-labels text,
+.muze-layer-line-labels text,
+.muze-layer-area-labels text,
+.muze-layer-point text,
+.muze-layer-arc-labels text {
+  fill: $ds-gray-800 !important;
 }
 
-
-/* Chart Top Bar */
-.mode-embed .mode-object.editor-chart,
-.mode-embed .full-width-report .editor-table { 
-  border-top: 4px solid var(--chart-highlight);
-  border-right: 1px solid var(--chart-highlight);
-  border-left: 1px solid var(--chart-highlight);
-  border-bottom: 1px solid var(--chart-highlight);
+.muze-layer-group text {
+  stroke: $dark-chart-background-color;
 }
 
-/* Chart Top Bar for Notebook Charts */
-.mode-graphic-container  {
-  border-radius: 0.5rem;
-  margin: 0.5rem;
+.muze-tooltip-box {
+  border: 1px solid $dark-muze-tooltip-border-color;
+  background-color: $dark-tooltip-background-color;
 }
 
-.mode-graphic-container :hover {
-  border-top: 4px solid var(--chart-border)
-  border-color: var(--chart-border);
+.muze-tooltip-key,
+.muze-tooltip-value {
+  color: $dark-tooltip-text-color;
 }
 
-/* Chart Background */
-.mode-embed .mode-object {
-  border-radius: 0.5rem;
-  margin: 0.5rem;
-  background: var(--chart-background);
-}
-
-.mode-embed .mode-object:hover {
-  border-color: var(--chart-border);
-  background-color: var(--chart-highlight);
-}
-
-
-
-.mode-object.big-number .chart-title .in-place-edit-text, 
-.embed-preview .mode-object.big-number .chart-title .in-place-edit-text{
-  color: var(--paragraph-color);
-  font-family: var(--font-family);
-}
-
-.mode-object .chart-title, 
-.mode-embed .mode-object .chart-title {
-  color: var(--paragraph-color);
-  font-family: var(--font-family);
-}
-
-.editor-table .chart-header .in-place-edit-text, 
-.editor-chart .chart-header .in-place-edit-text {
-  color: var(--paragraph-color);
-  font-family: 'proxima-nova', sans-serif;
-}
-
-
-/* Use custom font for all charting */
-.mode-embed .mode-header,
+/* Chart titles */
 .mode-object.big-number .chart-title .in-place-edit-text,
 .embed-preview .mode-object.big-number .chart-title .in-place-edit-text,
 .editor-table .chart-header,
 .editor-chart .chart-header,
-.mode-placeholder .placeholder-title,
+.mode-placeholder .placeholder-title {
+  color: $dark-chart-title-color;
+  font-size: $font-med-large;
+  font-weight: $font-weight-regular;
+}
+
+/* Big number descriptions */
 .mode-object .chart-title.chart-description .in-place-edit-text,
-.mode-embed .mode-object .chart-title.chart-description .in-place-edit-text,
+.mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
+  color: $dark-big-number-description-color;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/* Big number numbers */
 span.fb-content.ng-binding,
-span.trend-value.ng-binding,
-.highcharts-axis-labels tspan,
-.highcharts-legend-item tspan,
-.nvd3 text,
-.axel-table-header-label, .table-header-label,
-.mode-table-grid td,
-.viz-explore-action,
-.muze-ticks,
-.muze-title-cell,
-.muze-subtitle-cell,
-.muze-legend-title-text,
-.muze-legend-title,
-.muze-legend-item-info,
-.muze-axis-name,
-.muze-group-container div.muze-axis-container,
-.muze-text-cell,
-.muze-layer-text-cell,
-.muze-layer-group text,
-.muze-legend-title-text
-{
-  color: var(--paragraph-color);
-  font-family: 'proxima-nova', sans-serif;
-  text-transform: lowercase;
+.chart-big-number span.fb-content {
+  color: $dark-big-number-color;
+}
+
+/* NVD3 Pie charts, all Highcharts */
+.nvd3.nv-pie path,
+.highcharts-series:not(.highcharts-bubble-series) .highcharts-point,
+.highcharts-text-outline {
+  stroke: $ds-gray-1200; /* From chart background color */
+}
+
+/* Y grid lines */
+.nvd3 .nv-axis line,
+.highcharts-yaxis-grid .highcharts-grid-line,
+.highcharts-xaxis .highcharts-axis-line,
+.highcharts-xaxis .highcharts-tick {
+  stroke: $ds-gray-1100;
+}
+
+/* Axis labels */
+.mode-object .chart .xlabel,
+.mode-object .chart .ylabel {
+  background: rgba($ds-black, 0);
+}
+
+/* Chart Placeholders */
+.ph-color-light {
+  fill: $ds-gray-1000;
+}
+
+.ph-color-medium {
+  fill: $ds-gray-1100;
+}
+
+.ph-color-dark {
+  fill: $report-theme-gray-920;
+}
+
+.loading-message {
+  color: $ds-gray-500;
+}
+
+/* Chart text */
+.highcharts-label text {
+  fill: $ds-gray-900 !important;
+}
+
+/* Bars */
+.highcharts-root .highcharts-series-group .highcharts-series:not(.highcharts-bubble-series) .highcharts-point {
+  fill-opacity: 1;
+  stroke: transparent;
+
+  &:hover {
+    stroke: $ds-white;
+  }
+
+  &.highcharts-point-select {
+    stroke: $ds-white;
+  }
+}
+
+.highcharts-series-hover {
+  .highcharts-markers:not(.highcharts-line-series) {
+    path.highcharts-graph {
+      stroke: $ds-white;
+      stroke-width: 1px;
+    }
+  }
+
+  &.highcharts-scatter-series {
+    path.highcharts-point-hover {
+      stroke: $ds-white;
+    }
+  }
+}
+
+.highcharts-area-series.highcharts-series-hover {
+  .highcharts-graph {
+    stroke: $ds-white;
+  }
+}
+
+.highcharts-markers.highcharts-tracker {
+  &.highcharts-line-series,
+  &.highcharts-area-series {
+    > .highcharts-point.highcharts-point-hover,
+    .highcharts-point-select {
+      stroke: $ds-white;
+    }
+  }
+}
+
+.highcharts-series,
+.highcharts-series-group {
+  .highcharts-scatter-series,
+  &.highcharts-bubble-series {
+    .highcharts-point-hover,
+    .highcharts-point-select {
+      stroke: $ds-white;
+    }
+  }
+}
+
+/* TOOLTIPS */
+/* Tooltip */
+div.nvtooltip.xy-tooltip {
+  color: $ds-gray-500;
+  border: none;
+  background-color: $ds-gray-1000;
+}
+
+.highcharts-tooltip,
+.highcharts-tooltip-box {
+  fill: transparent;
+  stroke: transparent;
+
+  .tooltip-container {
+    color: $dark-tooltip-text-color;
+    border-color: $ds-gray-1200;
+    background-color: $dark-tooltip-background-color;
+    box-shadow: 0 3px 4px rgba($ds-gray-1200, 1);
+
+    .tooltip-header {
+      color: $ds-gray-700;
+      border-color: $ds-gray-1200;
+      background-color: $dark-tooltip-header-background-color;
+    }
+
+    .tooltip-body {
+      color: $ds-gray-100;
+
+      .tooltip-row > .tooltip-label > .percent-label {
+        color: $ds-gray-500;
+      }
+
+      .highlight {
+        background-color: $ds-gray-1000;
+      }
+    }
+
+    .tooltip-footer {
+      border-top-color: $ds-gray-1200;
+    }
+  }
+}
+
+.chart-context-menu {
+  color: $ds-gray-100;
+  border-color: $ds-gray-1200;
+  background-color: $ds-gray-1100;
+  box-shadow: 0 3px 4px rgba($ds-gray-1200, 1);
+
+  .section-descriptor {
+    border-color: $ds-gray-1200;
+    background-color: $report-theme-gray-920;
+
+    .value.label-section-name {
+      color: $ds-gray-100;
+    }
+  }
+
+  .context-menu-link:hover .context-menu-label-wrapper {
+    background-color: $ds-gray-1000;
+  }
+
+  .section-divider {
+    border-color: $ds-gray-1200;
+  }
+
+  &.has-explorer-icon .viz-action-icon {
+    .svg-icon-stroke {
+      stroke: $ds-gray-700;
+    }
+
+    .svg-icon-fill {
+      fill: $ds-gray-700;
+    }
+  }
+}
+
+/* Tooltip Legend Color */
+td div {
+  border: none !important;
+  border-radius: 50%;
+}
+
+.nvtooltip table tr.highlight {
+  background-color: rgba($ds-white, 0.15);
+}
+
+/* Text Editor */
+.mode-embed .mode-object h1,
+.mode-embed .mode-object h2,
+.mode-embed .mode-object h3,
+.mode-embed .mode-object h4,
+.editor-chart.mode-object.text-block-container .ql-editor h5,
+.mode-embed .mode-object h6,
+.mode-embed .mode-object p,
+.mode-embed .mode-object li,
+.mode-embed .mode-object .error-message .message,
+.mode-embed .centered-content {
+  color: $ds-gray-700;
+}
+
+/* TABLES */
+.mode-table-grid,
+.mode-table-grid th {
+  color: rgba($ds-white, 0.65);
+  background: rgba($ds-black, 0);
+}
+
+.mode-table-grid:not(.pivot-table-container),
+.mode-table-grid:not(.pivot-table-container) td,
+.mode-table-grid:not(.pivot-table-container) thead th,
+.mode-table-grid:not(.pivot-table-container) tbody th {
+  border-right: 1px solid rgba($ds-white, 0.2);
+  border-bottom: 1px solid rgba($ds-white, 0.2);
+}
+
+.mode-table-grid thead {
+  background-color: rgba($ds-white, 0.2) !important;
+
+  tr {
+    th {
+      .table-header-label,
+      .axel-table-header-label {
+        color: $ds-gray-100 !important;
+      }
+    }
+  }
+}
+
+.mode-table-grid thead th {
+  background: rgba($ds-gray-1200, 0.8);
+}
+
+/* Table filter */
+.filter-module.with-lightbox {
+  border: transparent;
+  background: transparent;
+}
+
+.filter-module.with-lightbox.with-focus {
+  border: 1px solid $ds-blue-800;
+}
+
+/* Table filter text */
+input.filter-field {
+  color: rgba($ds-white, 0.65);
+}
+
+/* Sort toggle */
+.axel-dropdown:hover .axel-dropdown-toggle {
+  background-color: rgba($ds-black, 0.2);
+}
+
+/* Selected table header */
+.mode-table-grid th.is-selected-col {
+  color: $ds-white;
+}
+
+/* Selected table rows */
+.mode-table-grid td.is-selected-col {
+  color: $ds-white;
+  background: rgba($ds-white, 0.15);
+}
+
+.axel-text-highlight .highlight {
+  background: $ds-blue-800;
 }
 
 
+/* PIVOT TABLES */
+/* Table container, Column head bottom divider */
+.pivot-table-container,
+.pivot-table .pvtMainHeaderWrapper {
+  border: 1px solid rgba($ds-white, 0.2);
+}
 
-/* Chart Legend */
-.highcharts-legend .highcharts-legend-title text, 
-.highcharts-legend .highcharts-legend-item text, 
-.highcharts-legend .highcharts-legend-item text tspan {
-  font-family: var(--font-family);
-  color: var(--text-color);
-} 
+.pivot-table .pvtMainHeaderWrapper {
+  border-top: 0;
+  border-left: 0;
+}
+/* Table base color */
+.pivot-table .mode-table-grid td,
+.pivot-table .mode-table-grid th {
+  background-color: $ds-gray-1200;
+}
+/* Pivot table row and column header panels */
+.pivot-table .pvtFixedHeaderPanel {
+  background: $ds-gray-1200;
+}
 
-.editor-chart.mode-object.text-block-container .ql-editor, mode-text .ql-editor {
-background-color: #414141;
-border: 1px solid #414141;
-box-sizing: border-box;
-filter: drop-shadow none !important;
-border-radius: 2px;
+/* Coarse dividers */
+/* Row header divider */
+tbody tr th:last-of-type .pvtFixedHeader {
+  border-right: 1px solid rgba($ds-white, 0.4);
+}
+/* Column section divider */
+.pivot-table-container .pvtDividerVertical.pvtVal,
+.pivot-table-container .pvtDividerVertical.pvtTotal,
+.pivot-table-container .pvtDividerVertical .pvtFixedHeader,
+thead tr:last-child th:last-child .pvtFixedHeader {
+  border-right: 1px solid rgba($ds-white, 0.4) !important;
+}
+/* Row header row section divider */
+.pivot-table-container .pvtDivider.pvtVal,
+.pivot-table-container .pvtDivider.pvtTotal,
+.pivot-table-container .pvtDivider .pvtFixedHeader {
+  border-bottom: 1px solid rgba($ds-white, 0.4) !important;
+}
+
+/* Cell dividers */
+/* Column header row dividers, Row header column dividers */
+.pvtFixedHeader {
+  border-right: 1px solid rgba($ds-white, 0.2);
+  border-bottom: 1px solid rgba($ds-white, 0.2);
+
+  .table-header-label {
+    color: $ds-gray-100 !important;
+  }
+}
+/* Column section subdivider */
+.pivot-table .pivot-table-container td {
+  border-color: rgba($ds-white, 0.2);
+}
+
+/* Row header subdivider zebra striping, Table row zebra striping */
+.pivot-table-container tbody>tr:nth-child(even) td,
+.pivot-table-container tbody>tr:nth-child(even) th,
+.pivot-table-container tbody>tr:nth-child(even) .pvtRowLabel:last-of-type .pvtFixedHeader,
+.pivot-table-container tbody>tr:nth-child(even) .pvtTotalFillerLabel .pvtFixedHeader,
+.pivot-table-container tbody>tr:nth-child(even) .pvtTotalLabel .pvtFixedHeader {
+  background: rgba($ds-white, 0.05);
+}
+
+/* Chart hover states */
+.highcharts-root .highcharts-series-group .highcharts-series:not(.highcharts-bubble-series) .highcharts-point:hover {
+  stroke: $ds-white;
+}
+
+.highcharts-series-hover {
+  .highcharts-markers:not(.highcharts-line-series) {
+    path.highcharts-graph,
+    path.highcharts-point {
+      stroke: $ds-white;
+      stroke-width: 1px;
+    }
+  }
+}
+
+// selected stacked column bar
+rect.updated-column-mark {
+  stroke: $ds-white;
+}
+
+.highcharts-markers.highcharts-tracker {
+  &.highcharts-line-series,
+  &.highcharts-area-series {
+    > path:nth-child(2) {
+      stroke: $ds-white;
+    }
+  }
+
+  &.highcharts-scatter-series {
+    path.highcharts-point-hover {
+      stroke: $ds-white;
+    }
+  }
+}
+
+.highcharts-pie-series {
+  .highcharts-point:hover {
+    z-index: 1;
+  }
+
+  .highcharts-point:hover + .highcharts-point {
+    z-index: -1;
+    stroke: none;
+  }
+}
+
+.highcharts-area-series.highcharts-series-hover {
+  .highcharts-graph {
+    stroke: $ds-white;
+  }
+}
+
+/* Sort hovers */
+.pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper):hover,
+.pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper).dropdown-open {
+  background: rgba($ds-white, 0.8);
+}
+
+.pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper):hover .table-header-label,
+.pvtAxisLabel:not(.pvtNoSort) .pvtFixedHeader:not(.pvtMainHeaderWrapper).dropdown-open .table-header-label {
+  color: rgba($ds-black, 0.8);
+}
+
+/* Sort toggles */
+.pvtFixedHeader .axel-dropdown-toggle {
+  border-radius: 0;
+}
+
+/* New Report Viz Toolbar */
+.new-viz-actions {
+  .tooltip {
+    color: $ds-gray-1000;
+  }
+
+  .table-filter-module {
+    border: 1px solid transparent;
+
+    &.with-focus {
+      border: 1px solid $ds-black;
+      background-color: $ds-gray-1100;
+
+      .filter-apply-btn {
+        background-color: inherit;
+      }
+    }
+
+    .filter-apply-btn {
+      border: 1px solid $ds-black;
+      background-color: $ds-gray-1100;
+
+      .viz-action-icon {
+        .svg-icon-stroke {
+          stroke: $ds-gray-600;
+        }
+
+        .svg-icon-fill {
+          fill: $ds-gray-600;
+        }
+      }
+
+      &:hover:not(.disabled) {
+        .viz-action-icon {
+          .svg-icon-fill {
+            fill: $ds-blue-400;
+          }
+
+          .svg-icon-stroke {
+            stroke: $ds-blue-400;
+          }
+        }
+      }
+    }
+  }
+
+  .filter-apply-btn,
+  .new-viz-action {
+    .viz-action-icon {
+      .svg-icon-stroke {
+        stroke: $ds-gray-600;
+      }
+
+      .svg-icon-fill {
+        fill: $ds-gray-600;
+      }
+    }
+
+    &:active:not(.disabled) {
+      border: 1px solid $ds-black;
+      background-color: $ds-gray-1000;
+    }
+
+    &:hover:not(.disabled) {
+      box-shadow: 0 3px 4px rgba($ds-gray-1200, 100);
+
+      .viz-action-icon {
+        .svg-icon-fill {
+          fill: $ds-blue-400;
+        }
+
+        .svg-icon-stroke {
+          stroke: $ds-blue-400;
+        }
+      }
+    }
+  }
+
+  .new-viz-action {
+    border: 1px solid $ds-black;
+    background-color: $ds-gray-1100;
+  }
+
+  .viz-explore-action {
+    @extend .new-viz-action;
+    color: $ds-gray-600;
+
+    &:hover {
+      color: $ds-blue-400;
+    }
+  }
+
+  span.divider {
+    border-left-color: $ds-gray-1100;
+  }
+}
+
+/* Hierarchy Buttons */
+.drill-actions {
+  .drill-action-btn {
+    border: 1px solid $ds-black;
+    background-color: $ds-gray-1100;
+
+    .icon-hierarchy-down,
+    .icon-hierarchy-up {
+      rect,
+      path {
+        stroke: $ds-gray-600;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 3px 4px rgba($ds-gray-1200, 100);
+    }
+
+    &:active {
+      background-color: $ds-gray-1000;
+    }
+  }
+}
+
+.tooltip.hierarchy-tooltip.top {
+  .tooltip-inner {
+    background-color: $ds-gray-1000;
+  }
+
+  .tooltip-arrow {
+    border-top-color: $ds-gray-1000;
+  }
+}
+
+// Flat table themes (ag-grid)
+.flat-table-container {
+  .table-pagination-container {
+    @include flat-pagination(mode-dark);
+  }
+}
+
+.flat-table {
+  .ag-theme-mode {
+    @include ag-grid-custom-theme(mode-dark);
+    @include ag-grid-link-colors(dark);
+
+    &.color-scheme-default {
+      @include ag-grid-zebra-striping(default-dark);
+    }
+
+    &.color-scheme-green {
+      @include ag-grid-zebra-striping(green-dark);
+    }
+
+    &.color-scheme-purple {
+      @include ag-grid-zebra-striping(purple-dark);
+    }
+
+    &.color-scheme-orange {
+      @include ag-grid-zebra-striping(orange-dark);
+    }
+
+    &.color-scheme-pink {
+      @include ag-grid-zebra-striping(pink-dark);
+    }
+
+    &.color-scheme-blue {
+      @include ag-grid-zebra-striping(blue-dark);
+    }
+  }
+}
+
+/* Legend Overrides */
+.highcharts-legend {
+  .highcharts-legend-item text {
+    color: $dark-legend-text-color !important;
+    fill: $dark-legend-text-color !important;
+  }
+
+  .highcharts-legend-item:hover text {
+    color: $dark-legend-text-hover-color !important;
+    fill: $dark-legend-text-hover-color !important;
+  }
+
+  .highcharts-legend-item.highcharts-legend-item-hidden .highcharts-point {
+    fill: none;
+    stroke: $dark-legend-text-color;
+    stroke-width: 1px;
+  }
+
+  path.highcharts-legend-nav-active {
+    fill: $dark-legend-text-color;
+
+    &:hover {
+      fill: $dark-legend-text-hover-color;
+    }
+  }
+
+  path.highcharts-legend-nav-inactive {
+    fill: $ds-gray-1100;
+  }
+
+  .highcharts-legend-navigation {
+    color: $dark-legend-text-color;
+    fill: $dark-legend-text-color;
+  }
 }
