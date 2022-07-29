@@ -11,7 +11,7 @@ Tinder (Dark) Mode Theme
 :root {
     --primary-color: #ffc6cc;
     --secondary-color:#d6002f;
-    --report-background-color: #414141;
+    --report-background-color: #797979;
     --paragraph-color: #d6002f;
     --text-color: #ffc6cc;
     --chart-background: #464545;
@@ -185,56 +185,7 @@ span.trend-value.ng-binding,
   color: var(--text-color);
 } 
 
-/* line 126, app/assets/stylesheets/components/muze-override.scss */
-.muze-legend-title-text {
-    overflow: hidden !important;
-    font-family: "Graphik", Helvetica, sans-serif !important;
-    font-size: 13px !important;
-    font-weight: 400 !important;
-    fill: #63656e !important;
-    }
-    
-    /* line 134, app/assets/stylesheets/components/muze-override.scss */
-    .muze-legend-item-info {
-    margin-left: 0 !important;
-    color: #63656e !important;
-    font-family: "Graphik", Helvetica, sans-serif !important;
-    font-size: 11px !important;
-    fill: #63656e !important;
-    }
-    
-    /* line 142, app/assets/stylesheets/components/muze-override.scss */
-    .muze-legend-row {
-    float: none !important;
-    height: 18px !important;
-    color: #63656e !important;
-    }
-    
-    /* line 148, app/assets/stylesheets/components/muze-override.scss */
-    .muze-legend-body {
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    }
-    
-    /* line 153, app/assets/stylesheets/components/muze-override.scss */
-    .muze-legend-columns {
-    margin-left: -8px !important;
-    }
-    
-    /* line 157, app/assets/stylesheets/components/muze-override.scss */
-    .muze-scroll-mover,
-    .muze-legend-body::-webkit-scrollbar-thumb {
-    width: 7px;
-    border-radius: 3px;
-    background-color: #b1b2ba;
-    }
-    
-    /* line 164, app/assets/stylesheets/components/muze-override.scss */
-    .muze-legend-body::-webkit-scrollbar {
-    width: 7px;
-    background-color: #f7f7f9;
-    }
-    
+
 
 
 .editor-chart.mode-object.text-block-container .ql-editor, mode-text .ql-editor {
