@@ -1,3 +1,9 @@
+/*
+v0.1 
+7/29/2022
+Tinder (Dark) Mode Theme
+*/
+
 /* Style Sheet */
 @import url('https://fonts.googleapis.com/css?family=Proxima+Nova:wght@400;600&display=swap');
 
@@ -7,6 +13,7 @@
     --secondary-color:#d6002f;
     --report-background-color: #414141;
     --paragraph-color: #d6002f;
+    --text-color: #ffc6cc;
     --chart-background: #464545;
     --chart-border: #ffc6cc;
     --chart-highlight: #ffc6cc;
@@ -113,7 +120,6 @@ mode-text .ql-editor ul {
 }
 
 
-/*
 
 .mode-object.big-number .chart-title .in-place-edit-text, 
 .embed-preview .mode-object.big-number .chart-title .in-place-edit-text{
@@ -133,7 +139,6 @@ mode-text .ql-editor ul {
   font-family: 'proxima-nova', sans-serif;
 }
 
-*/
 
 /* Use custom font for all charting */
 .mode-embed .mode-header,
