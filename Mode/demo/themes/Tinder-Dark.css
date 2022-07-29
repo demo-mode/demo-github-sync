@@ -182,6 +182,7 @@ span.trend-value.ng-binding,
 .highcharts-legend .highcharts-legend-item text, 
 .highcharts-legend .highcharts-legend-item text tspan {
   font-family: var(--font-family);
+  color: var(--text-color);
 } 
 
 .editor-chart.mode-object.text-block-container .ql-editor, mode-text .ql-editor {
