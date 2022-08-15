@@ -13,4 +13,4 @@
       join demo.region r on r.id = sr.region_id
       WHERE r.name in ({{region}})
       GROUP BY 1,2
-      ORDER BY 1,2
+      ORDER BY 1,2,3
