@@ -1,0 +1,1 @@
+select * from customer_2.touchdown_data
