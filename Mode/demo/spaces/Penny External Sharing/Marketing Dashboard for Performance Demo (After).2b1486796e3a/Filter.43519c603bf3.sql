@@ -1,0 +1,1 @@
+select distinct(state) from benn.state_populations
