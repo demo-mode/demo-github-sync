@@ -218,7 +218,7 @@ span.fb-content.ng-binding,
 .mode-embed .mode-object .error-message .message,
 .mode-embed .centered-content {
   color: #1e1e20;
-  font-family: 'Montserrat', sans-serif;
+   font-family: 'Titillium Web', sans-serif; !important;
 }
 
 /* CHARTS */
@@ -237,7 +237,7 @@ span.fb-content.ng-binding,
 
 .loading-message {
   color: #D6D9DE;
-  font-family: 'Montserrat', sans-serif;
+   font-family: 'Titillium Web', sans-serif; !important;
 }
 
 /* Chart background */
