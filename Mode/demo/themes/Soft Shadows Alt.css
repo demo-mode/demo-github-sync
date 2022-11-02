@@ -40,7 +40,7 @@ table-renderer
 .mode-embed .mode-grid.container .row {
   margin-left: -8px;
   margin-right: -8px;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 }
 
 @media (max-width: 768px) {
