@@ -3,9 +3,9 @@ plt.style.use('bmh')
 plt.figure(figsize=(14.5, 5.5))  
 
 plt.plot(day, rolling, 'ro', ms=8, alpha=.5, label='Actual',
-  markerfacecolor="#008392", markeredgecolor='None', markeredgewidth=5)
+  markerfacecolor="#0052FF", markeredgecolor='None', markeredgewidth=5)
 
-plt.plot(future, p(future_idx), color='#363533', 
+plt.plot(future, p(future_idx), color='#000000', 
   linewidth=3, label='Predicted')
 
 ax = plt.gca()
