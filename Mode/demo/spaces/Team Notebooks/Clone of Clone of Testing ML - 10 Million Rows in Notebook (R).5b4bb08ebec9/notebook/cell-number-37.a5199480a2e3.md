@@ -1,0 +1,1 @@
+# Number of SKUs offered per categories. The area of the rectangles are proportional to the number considered.

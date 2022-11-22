@@ -1,0 +1,3 @@
+# 3) Predictive Analysis
+# Predict what product will the customer purchase in the next basket means estimation of probably if each product being purchased before will be purchased again. This is a classification problem, as well as a regression of probability of repurchases.
+# First, let’s create a training label, which is the value (either 1 or 0) to indicate the actual basket content. All prediction will be evaluated against this training label.

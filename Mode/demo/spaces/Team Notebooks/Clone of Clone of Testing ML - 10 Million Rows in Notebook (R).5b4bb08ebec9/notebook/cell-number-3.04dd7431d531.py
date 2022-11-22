@@ -1,0 +1,1 @@
+# object.size(x=lapply(ls(), get))

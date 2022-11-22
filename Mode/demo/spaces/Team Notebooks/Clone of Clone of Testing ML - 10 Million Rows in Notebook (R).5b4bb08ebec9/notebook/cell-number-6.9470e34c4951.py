@@ -1,0 +1,1 @@
+# print(object.size(x=lapply(ls(), get)), units="Gb")

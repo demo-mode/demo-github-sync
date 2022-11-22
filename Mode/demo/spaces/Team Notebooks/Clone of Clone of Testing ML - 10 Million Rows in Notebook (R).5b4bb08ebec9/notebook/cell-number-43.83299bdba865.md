@@ -1,0 +1,1 @@
+# Personal care has lowest Reorder Ratio and dairy eggs have highest Reorder Ratio.

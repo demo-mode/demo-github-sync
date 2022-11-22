@@ -1,0 +1,1 @@
+# Model 1: Naive Prediction: As a baseline model, we simply predict the basket based on users's last order
