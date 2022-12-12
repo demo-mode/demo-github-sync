@@ -320,10 +320,9 @@ This modifies the background for all charts shown in the Report.
 */
 .editor-module.editor-chart.mode-object.editor-multi, .mode-placeholder, .editor-table {
 transition: all 0.2s ease;
-background-color: #fff;
+background-color: #F6F5F8;
 border: none;
 box-sizing: border-box;
-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.15));
 border-radius: 2px;
 margin-bottom: 0px;
 }
