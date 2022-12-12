@@ -316,7 +316,11 @@ letter-spacing: .5px;
 /* Text editor text */
 .mode-embed .mode-object h1,
 .mode-embed .mode-object h2,
-.mode-embed .mode-object h3,
+.mode-embed .mode-object h3
+{
+font-family: 'Lora', serif;
+}
+
 .mode-embed .mode-object h4,
 .editor-chart.mode-object.text-block-container .ql-editor h5,
 .mode-embed .mode-object h6,
