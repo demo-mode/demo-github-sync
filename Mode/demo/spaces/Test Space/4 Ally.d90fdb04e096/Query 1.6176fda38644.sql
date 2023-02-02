@@ -1,0 +1,1 @@
+SELECT * FROM allison_buchberg546.clean_clay_platte_jackson3
