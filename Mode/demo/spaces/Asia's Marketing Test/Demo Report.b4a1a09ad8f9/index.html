@@ -1,0 +1,29 @@
+<div class="mode-header embed-hidden">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+<div class="mode-grid container">
+  <div class="row" data-row-height="small">
+    <div class="col-md-6">
+      <mode-chart id="chart_e4bf2529245a" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-text id="text_d0cf9cd3-ba37-4d7e-f92a-7fb34b9fe0ef" dataset="dataset" options="text_options">
+        <p>description of the report</p>
+        <ol>
+          <li>abc</li>
+          <li>xyz</li>
+          <li> </li>
+        </ol>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mode-chart id="chart_a102e1dcaece" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-python id="python_4f54e62038f5" options="python_options"></mode-python>
+    </div>
+  </div>
+</div>
