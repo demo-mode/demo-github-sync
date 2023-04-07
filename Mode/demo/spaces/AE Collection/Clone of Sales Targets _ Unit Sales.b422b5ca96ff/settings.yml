@@ -1,0 +1,5 @@
+---
+report_description: Shows shared axis, chart descriptions, quick context, uses datasets
+  with descriptions
+is_full_width: false
+hide_run_button: false
