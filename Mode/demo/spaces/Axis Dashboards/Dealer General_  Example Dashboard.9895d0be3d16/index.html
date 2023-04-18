@@ -1,0 +1,124 @@
+<style>
+  .mode-bullet-chart,
+  .mode-funnel,
+  .mode-sunburst,
+  .mode-sunburst-sequence,
+  .mode-graphic-title {
+    background-color: white;
+  }
+
+  .mode-graphic-container {
+    margin: 1px !important;
+  }
+</style>
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+<script src="https://cdn.rawgit.com/mode/playbook/master/assets/leaflet-heatmap.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<div class="mode-header embed-hidden">
+
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_16cc3d65-dc52-44d1-c06c-46776d2f4629" dataset="dataset" options="text_options">
+        <h3 class="ql-align-center"><img src="https://www.dealergeneral.com/wp-content/uploads/2014/07/logo.png" alt="Dealer General Supply Co."> </h3>
+        <h3 class="ql-align-center">Example Company KPI Dashboard</h3>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <mode-chart id="chart_e02b1b7d919f" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_ad2ff17ead30" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_7aa02253cd78" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_f735b9d3d971" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-6">
+      <mode-chart id="chart_c45bfa5f19f5" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_f6acfec83141" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="bullet"></div>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-4">
+      <mode-chart id="chart_f07b985a8084" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-8">
+      <mode-python id="python_ec7a452626ba" options="python_options"></mode-python>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="map"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_9997a3d4-b696-401d-ce7e-d4b4e88d91c6" dataset="dataset" options="text_options">
+        <h3>Revenue Exploration </h3>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="small">
+    <div class="col-md-8">
+      <mode-chart id="chart_fb2fe664524b" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-text id="text_ef29e256-3112-47c0-9058-00ee0feda8a4" dataset="dataset" options="text_options">
+        <p class="ql-align-center"><br></p>
+        <p class="ql-align-center"><br></p>
+        <p class="ql-align-center"><img src="https://www.dealergeneral.com/wp-content/uploads/2014/07/logo.png" alt="Dealer General Supply Co."></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="extra-large">
+    <div class="col-md-12">
+      <mode-chart id="chart_350860294122" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <script>
+    alamode.leafletMap({
+      html_element: "#map",
+      title: "Subscriber Growth",
+      height: 500,
+      lat_column: "lat",
+      lng_column: "long",
+      query_name: "Heat map",
+      center_lat: 39.5,
+      center_lng: -98.35,
+      starting_zoom: 5,
+      dot_size: .4,
+      dot_opacity: .7
+    })
+
+    if ($('#bullet:empty').length) {
+      alamode.bulletChart({
+        html_element: "#bullet",
+        color: "#113c55",
+        chart_width: 550,
+        left_pad: 75,
+        query_name: "Bullet",
+        title: "Region Performance: Sales ($100k)",
+        title_column: "region",
+        bar_column: "sales_16",
+        marker_column: "goal",
+        scale_columns: ["sales_14", "sales_15", "max"]
+      })
+    }
+  </script>
+</div>
