@@ -13,7 +13,7 @@
 /* font fixing */
 .editor-table .chart-header .in-place-edit-text, .editor-chart .chart-header .in-place-edit-text {
   font-size: 20px !important;
-  color: #043F2E;
+  color: #053249;
 }
  .chart-header {
   font-family: Graphik !important;
@@ -163,7 +163,7 @@ in-place-edit {
   font-weight: 400 !important;
   font-variant-ligatures: none;
   font-size: 16px;
-  color: #043F2E;
+  color: #053249;
 }
 
 .row {
@@ -201,7 +201,7 @@ span.trend-value.ng-binding,
 
 /* Report title */
 .mode-embed .mode-header h1 {
-  color: #043F2E;
+  color: #053249;
   font-size: 42px;
   letter-spacing: 1px;
   margin-bottom: 0;
