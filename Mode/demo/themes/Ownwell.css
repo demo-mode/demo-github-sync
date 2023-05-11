@@ -7,22 +7,22 @@ body {
 body, h1, h2, h3, h4, h5, h6, p, ul, ol {
   font-family: 'Larken-Medium', sans-serif;
 ;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 /* Set the font color for headings */
 h1, h2, h3, h4, h5, h6 {
-  color: #333333;
+  color: #053349;
 }
 
 /* Set the font color for regular text */
 p {
-  color: #666666;
+  color: #053349;
 }
 
 /* Set the font color and size for links */
 a {
-  color: #2091b9;
+  color: #053349;
   font-size: 16px;
 }
 
