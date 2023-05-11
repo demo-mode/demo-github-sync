@@ -66,13 +66,13 @@ table-renderer
 {
   background-color: #F7F7F0;
   background-attachment: fixed;
-  color: #1e1e20;
+  color: ##F7F7F0;
 }
 
 .chart-content, .pvtVal{
   background-color: #F7F7F0;
   background-attachment: fixed;
-  color: #1e1e20;
+  color: #F7F7F0;
 
 }
 
@@ -80,7 +80,7 @@ table-renderer
 /* Report background color */
 .mode-embed
 {
-  background: #EEF2E3 !important;
+  background: #F7F7F0 !important;
   font-family: 'Corben', cursive;
   font-weight: 400 !important;
   font-variant-ligatures: none;
