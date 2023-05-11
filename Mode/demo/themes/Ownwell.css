@@ -64,15 +64,15 @@ body.mode-embed.embed-preview,
 body.mode-embed,
 table-renderer
 {
-  background-color: #F7F7F0;
+  background-color: ##FFFFFF;
   background-attachment: fixed;
-  color: ##F7F7F0;
+  color: ###FFFFFF;
 }
 
 .chart-content, .pvtVal{
-  background-color: #F7F7F0;
+  background-color: ##FFFFFF;
   background-attachment: fixed;
-  color: #F7F7F0;
+  color: ##FFFFFF;
 
 }
 
