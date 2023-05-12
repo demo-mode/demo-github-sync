@@ -16,7 +16,7 @@
   color: #053249;
 }
  .chart-header {
-  font-family: Graphik !important;
+  font-family: Corben !important;
   font-size: 16px !important;
  }
  
@@ -201,7 +201,7 @@ span.trend-value.ng-binding,
 
 /* Report title */
 .mode-embed .mode-header h1 {
-  color: #053249;
+  color: #053249 !important;
   font-size: 42px;
   letter-spacing: 1px;
   margin-bottom: 0;
