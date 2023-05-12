@@ -1,0 +1,411 @@
+<style>
+  .mode-bullet-chart,
+  .mode-funnel,
+  .mode-sunburst,
+  .mode-sunburst-sequence,
+  .mode-graphic-title {
+    background-color: white;
+  }
+
+  .mode-graphic-container {
+    margin: 1px !important;
+  }
+
+
+  .heatmap-container {
+    border: 1px solid #F2F3F3;
+    margin: 20px;
+    overflow: scroll;
+  }
+
+  .heatmap-title {
+    background: #F2F3F3;
+    line-height: 26px;
+    height: 26px;
+    padding-left: 8px;
+    font-weight: 500;
+  }
+
+  .heatmap-pivot-label {
+    font-size: 12px;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .heatmap-table {
+    table-layout: fixed;
+    border-collapse: separate;
+    font-size: 10px;
+    border-spacing: 1px;
+    margin: 5px auto 10px auto;
+  }
+
+  .heatmap-table-header-cell {
+    overflow: hidden;
+    font-size: 12px;
+    padding: 4px;
+    color: white;
+    background: gray;
+  }
+
+  .heatmap-string {
+    text-align: left;
+  }
+
+  .heatmap-number {
+    text-align: center;
+  }
+
+
+  .heatmap-table td {
+    overflow: hidden;
+    padding: 6px 6px 4px 6px;
+    /*border-radius: 4px;*/
+  }
+
+  .label {
+    text-align: center;
+    color: #8D9D9F;
+  }
+
+  .title {
+    padding-left: 10px;
+  }
+</style>
+<link rel="stylesheet" href="https://mode.github.io/alamode/alamode.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+<script src="https://cdn.rawgit.com/mode/playbook/master/assets/leaflet-heatmap.js"></script>
+<script src="https://mode.github.io/alamode/alamode.min.js"></script>
+<div class="mode-header embed-hidden">
+
+</div>
+<div class="mode-grid container">
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_16cc3d65-dc52-44d1-c06c-46776d2f4629" dataset="dataset" options="text_options">
+        <h3 class="ql-align-center"><img src="https://www.dealergeneral.com/wp-content/uploads/2014/07/logo.png" alt="Dealer General Supply Co."> </h3>
+        <h3 class="ql-align-center">Example Company KPI Dashboard</h3>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <mode-chart id="chart_0fa81e4dcc2a" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_fedeefc72b2d" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_aa5071f9fa85" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-3">
+      <mode-chart id="chart_eb4d713e8d07" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-6">
+      <mode-chart id="chart_64f9a5dabfa4" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-6">
+      <mode-chart id="chart_cb19baad9df1" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="bullet"></div>
+    </div>
+  </div>
+  <div class="row" data-row-height="medium">
+    <div class="col-md-4">
+      <mode-chart id="chart_dd034ef25352" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-8">
+      <mode-python id="python_a55ae742d875" options="python_options"></mode-python>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="map"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_9997a3d4-b696-401d-ce7e-d4b4e88d91c6" dataset="dataset" options="text_options">
+        <h3>Revenue Exploration </h3>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row" data-row-height="small">
+    <div class="col-md-8">
+      <mode-chart id="chart_34ff1581bc76" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+    <div class="col-md-4">
+      <mode-text id="text_ef29e256-3112-47c0-9058-00ee0feda8a4" dataset="dataset" options="text_options">
+        <p class="ql-align-center"><br></p>
+        <p class="ql-align-center"><br></p>
+        <p class="ql-align-center"><img src="https://www.dealergeneral.com/wp-content/uploads/2014/07/logo.png" alt="Dealer General Supply Co."></p>
+      </mode-text>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mode-text id="text_187c751e-c541-4c5a-8719-83e986986ae8" dataset="dataset" options="text_options">
+        <h1><strong>Cohort Analysis</strong></h1>
+      </mode-text>
+    </div>
+      <div id="graphic1"></div>
+  </div>
+  <div class="row" data-row-height="extra-large">
+    <div class="col-md-12">
+      <mode-chart id="chart_b55d17154e98" dataset="dataset" options="chart_options"></mode-chart>
+    </div>
+  </div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js"></script>
+<script>
+  alamode.leafletMap({
+    html_element: "#map",
+    title: "Subscriber Growth",
+    height: 500,
+    lat_column: "lat",
+    lng_column: "long",
+    query_name: "Heat map",
+    center_lat: 39.5,
+    center_lng: -98.35,
+    starting_zoom: 5,
+    dot_size: .4,
+    dot_opacity: .7
+  })
+
+  if ($('#bullet:empty').length) {
+    alamode.bulletChart({
+      html_element: "#bullet",
+      color: "#113c55",
+      chart_width: 550,
+      left_pad: 75,
+      query_name: "Bullet",
+      title: "Region Performance: Sales ($100k)",
+      title_column: "region",
+      bar_column: "sales_16",
+      marker_column: "goal",
+      scale_columns: ["sales_14", "sales_15", "max"]
+    })
+  }
+</script>
+<script>
+  var options = [{
+    html_element: "#graphic1",
+    query_name: "Cohort Query",
+    cohort_column: "Date",
+    pivot_column: "period_age",
+    value_column: "retention_rate",
+    total_column: "New Users",
+    title: "Retention rate by signup date",
+    pivot_label: "Retention rates by weeks after signup",
+    value_is_percent: true,
+    include_first_period: false
+  }]
+
+
+  drawGrid(options[0])
+
+  function drawGrid(o) {
+
+
+
+    if (o["html_element"]) {
+      htmlElement = o["html_element"];
+    } else {
+      htmlElement = "body";
+    }
+
+    $(htmlElement).addClass("heatmap-container");
+
+    var data = datasets.filter(function(d) {
+        return d.queryName == o["query_name"];
+      })[0].content,
+      columns = datasets.filter(function(d) {
+        return d.queryName == o["query_name"];
+      })[0].columns,
+      cohorts = _.uniq(_.pluck(data, o["cohort_column"])),
+      pivots = _.uniq(_.pluck(data, o["pivot_column"])),
+      filteredDataForColors = data;
+
+    if (o["include_first_period"] == false) {
+      var firstPeriod = pivots[0],
+        filteredDataForColors = data.filter(function(d) {
+          return d[o["pivot_column"]] != firstPeriod;
+        });
+
+      pivots = pivots.slice(1, 10000);
+    }
+
+
+
+    var color = d3.scale.quantize()
+      .domain(d3.extent(filteredDataForColors, function(d) {
+        return d[o["value_column"]];
+      }))
+      .range(["#d73027", "#f46d43", "#fdae61", "#fee08b", "#ffffbf", "#d9ef8b", "#a6d96a", "#66bd63", "#1a9850"])
+
+    d3.select(htmlElement)
+      .append("div")
+      .attr("class", "heatmap-title")
+      .text(function() {
+        if (o["title"]) {
+          return o["title"];
+        }
+      })
+
+    d3.select(htmlElement)
+      .append("div")
+      .attr("class", "heatmap-pivot-label")
+      .text(function() {
+        if (o["pivot_label"]) {
+          return o["pivot_label"];
+        }
+      })
+
+
+    if (o["total_column"]) {
+      headers = [o["cohort_column"], o["total_column"]].concat(pivots)
+    } else {
+      headers = [o["cohort_column"]].concat(pivots)
+    }
+
+    var table = d3.select(htmlElement).append("table")
+      .attr("class", "heatmap-table");
+
+    table.selectAll(".heatmap-table-header")
+      .data([0])
+      .enter().append("tr")
+      .attr("class", "heatmap-table-header")
+      .selectAll("heatmap-table-header-cell")
+      .data(headers)
+      .enter().append("td")
+      .attr("class", function(d) {
+        if (isNaN(d)) {
+          return "heatmap-table-header-cell heatmap-string";
+        } else {
+          return "heatmap-table-header-cell heatmap-number";
+        }
+      })
+      .text(function(d) {
+        return d;
+      })
+
+    table.selectAll(".heatmap-table-row")
+      .data(cohorts)
+      .enter().append("tr")
+      .attr("class", "heatmap-table-row")
+      .selectAll(".heatmap-table-cell")
+      .data(function(d) {
+        return makeRow(data, d, pivots, o);
+      })
+      .enter().append("td")
+      .style("background", function(d) {
+        if (checkShade(d, o)) {
+          return color(d.value);
+        }
+      })
+      .attr("class", function(d) {
+        return cellClass(d);
+      })
+      .text(function(d) {
+        return fmt(d, o);
+      })
+
+    function checkShade(entry, options) {
+      if (entry.value == "") {
+        return false;
+      } else if (entry.column == options["pivot_column"] || entry.column == options["total_column"]) {
+        return false;
+      } else if (entry.column == options["value_column"]) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function cellClass(entry) {
+      var type = getDataType(entry.column);
+
+      if (type == "float" || type == "integer") {
+        return "heatmap-number";
+      } else {
+        return "heatmap-string";
+      }
+    }
+
+    function getDataType(column) {
+      return columns.filter(function(d) {
+        return d.name == column
+      })[0].type;
+    }
+
+    function makeRow(data, cohort, pivots, options) {
+      var row = [{
+        column: options["cohort_column"],
+        value: cohort
+      }];
+
+      if (options["total_column"]) {
+        var total = _.filter(data, function(d) {
+            return d[options["cohort_column"]] == cohort;
+          })[0],
+          totalObject = {
+            column: options["total_column"],
+            value: total[options["total_column"]]
+          };
+        row = row.concat(totalObject);
+      }
+
+      pivots.forEach(function(p, i) {
+        var matches = _.filter(data, function(d) {
+          return d[options["cohort_column"]] == cohort && d[options["pivot_column"]] == p
+        });
+
+        if (matches.length > 0) {
+          entry = d3.mean(_.pluck(matches, options["value_column"]));
+        } else {
+          entry = "";
+        }
+        row = row.concat({
+          column: options["value_column"],
+          value: entry
+        })
+      })
+      return row;
+    }
+
+    function fmt(entry, options) {
+
+      var type = getDataType(entry.column),
+        valueColumn = options["value_column"],
+        totalColumn = options["total_column"];
+
+      var c = d3.format(","),
+        p = d3.format(".2p"),
+        t = d3.time.format("%b %d, %Y"),
+        r = d3.time.format("%Y-%m-%dT%H:%M:%S.000Z").parse;
+
+      if (entry.value === "") {
+        return entry.value;
+      } else if (type == "datetime" || type == "timestamp") {
+        var newDate = new Date(Date.parse(entry.value));
+        parsedString = r(newDate.toISOString());
+        return t(parsedString);
+      } else if (entry.column == totalColumn) {
+        return c(entry.value);
+      } else if (entry.column == valueColumn && options["value_is_percent"]) {
+        return p(entry.value);
+      } else if (entry.column == valueColumn && !options["value_is_percent"]) {
+        return c(entry.value);
+      } else {
+        return entry.value;
+      }
+    }
+
+
+  }
+</script>
