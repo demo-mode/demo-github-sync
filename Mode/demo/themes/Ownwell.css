@@ -229,7 +229,7 @@ span.trend-value.ng-binding,
 .editor-table .chart-header,
 .editor-chart .chart-header,
 .mode-placeholder .placeholder-title {
-  color: #1E1E20;
+  color: #053249 !important;
   font-size: 16px;
   font-family: 'Corben', cursive;
   font-variant-ligatures: none;
@@ -263,7 +263,7 @@ span.trend-value.ng-binding,
 .mode-object.big-number .chart-title .in-place-edit-text, .embed-preview .mode-object.big-number .chart-title .in-place-edit-text, .embed-preview .in-place-edit .in-place-edit-text
 {
   font-size: 20px;
-  color: #043F2E;
+  color: #053249 !important;
 }
 
 span.fb-content.ng-binding,
