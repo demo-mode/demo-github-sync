@@ -287,10 +287,11 @@ span.fb-content.ng-binding,
 .mode-embed .mode-object h2,
 .mode-embed .mode-object h3,
 .mode-embed .centered-content {
-  color: #043F2E;
+  color: #053249 !important;
   font-family: 'Corben', cursive;
   font-variant-ligatures: none;
   font-weight: 400 !important;
+ 
 }
 
 /* CHARTS */
