@@ -1,0 +1,1 @@
+Select * from tutorial.flight_revenue
