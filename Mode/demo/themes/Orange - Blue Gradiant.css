@@ -29,7 +29,7 @@ table-renderer
 /* Report background color */
 .mode-embed
 {
-  background: linear-gradient(180deg, #0d2c4d 0%, #000000 50%, #fa4244 100%) !important;
+  background-image: linear-gradient(to bottom, #0d2c4d, #3c4967, #646982, #8b8c9e, #b1b0bb, #bdb7ca, #cdbdd8, #dfc3e4, #eba5d3, #fa83b1, #ff6080, #fa4244) !important;
   font-family: 'Sharp Sans', sans-serif !important;
 }
 
