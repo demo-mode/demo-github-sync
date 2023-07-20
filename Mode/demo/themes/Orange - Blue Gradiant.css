@@ -137,7 +137,7 @@ span.trend-value.ng-binding,
 
 /* Report title */
 .mode-embed .mode-header h1 {
-  background-color: #fa4244;  
+  background-color: #fa4244;   
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
   -moz-background-clip: text;
@@ -185,7 +185,7 @@ span.trend-value.ng-binding,
 /* Big number descriptions */
 .mode-object .chart-title.chart-description .in-place-edit-text,
 .mode-embed .mode-object .chart-title.chart-description .in-place-edit-text {
-  color: #0d2c4d;   
+  color: #0d2c4d;    
   font-size: 12px;
   letter-spacing: 1px;
   margin-top: 4px;
@@ -222,11 +222,11 @@ span.fb-content.ng-binding,
 /* CHARTS */
 /* Chart Placeholders */
 .ph-color-light {
-  fill: #E5EFF4; 
+  fill: #E5EFF4;  
 }
 
 .ph-color-medium {
-  fill: #C4DAE5;
+  fill: #C4DAE5; 
 }
 
 .ph-color-dark {
@@ -247,7 +247,7 @@ span.fb-content.ng-binding,
 
 .mode-embed .editor-table {
   background: #fff;
-  border: 1px solid #F1F2F5;
+  border: 1px solid #F1F2F5; 
 }
 
 /* Chart hover */
@@ -262,7 +262,7 @@ span.fb-content.ng-binding,
 .mode-embed .mode-object.editor-chart,
 .mode-embed .mode-object.editor-table,
 .mode-placeholder {
-  border: 1px solid #F1F2F5;
+  border: 1px solid #F1F2F5; 
 }
 
 /* Pies */
@@ -302,7 +302,7 @@ style attribute {
 }
 
 .highcharts-root tspan {
-  fill: #1e1e20;
+  fill: #1e1e20; 
 }
 
 .highcharts-text-outline {
@@ -320,7 +320,7 @@ style attribute {
 .highcharts-stack-labels,
 .highcharts-data-label,
 .highcharts-label{
-  fill: #1e1e20 !important;
+  fill: #1e1e20 !important; 
   color: #1e1e20 !important; 
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
@@ -355,7 +355,7 @@ style attribute {
 .highcharts-yaxis-grid .highcharts-grid-line,
 .highcharts-xaxis .highcharts-axis-line,
 .highcharts-xaxis .highcharts-tick {
-  stroke: #DBEBF3;
+  stroke: #DBEBF3; 
 }
 
 /* Bars */
@@ -440,7 +440,7 @@ div.nvtooltip.xy-tooltip {
 .highcharts-tooltip .tooltip-container,
 .highcharts-tooltip-box .tooltip-container {
   background-color: #ffffff;
-  border-color: #E4E7ED;
+  border-color: #E4E7ED; 
   color: #1e1e20;
   box-shadow: 0px 4px 29px rgba(0, 0, 0, 0.15);
 }
@@ -484,7 +484,7 @@ div.nvtooltip.xy-tooltip {
   border-color: #E4E7ED;
   box-shadow: 0px 3px 4px #8f8f8f;
   font-family: 'Montserrat', sans-serif;
-}
+} 
 
 .chart-context-menu .section-descriptor {
   background-color: #EBF1F4;
@@ -495,10 +495,10 @@ div.nvtooltip.xy-tooltip {
 .chart-context-menu .value.label-section-name {
   font-size: 13px;
   color: #191925;
-}
+} 
 
 .chart-context-menu .context-menu-link:hover {
-  background: #DCEFF6;
+  background: #DCEFF6; 
 
 .chart-context-menu .section-descriptor .value.label-section-name {
   color: #000;
