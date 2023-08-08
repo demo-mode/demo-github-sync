@@ -1,0 +1,1 @@
+SELECT  * FROM sadavath.event_distribution

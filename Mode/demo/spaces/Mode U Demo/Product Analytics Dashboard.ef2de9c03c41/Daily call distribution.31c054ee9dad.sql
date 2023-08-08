@@ -1,0 +1,1 @@
+select * from sadavath.daily_call_distribution
