@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pandas
  
 def cluster_points(X, mu):
     clusters  = {}
